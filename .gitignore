@@ -1,0 +1,30 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+coverage/
+node_modules/
+platforms/
+plugins/
+www/**
+.DS_Store
+node_modules
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+log.txt
+example/cordova/iOS/www/js/framework
+example/cordova/iOS/www/js/framework
+.sass-cache/
+framework.sublime-project
+framework.sublime-workspace
+UserInterfaceState.xcuserstate
+*.sublime-project
+*.sublime-workspace
+bower_components/
+components/
+tmp
+temp
+dist
+.idea
+.versions

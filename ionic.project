@@ -1,0 +1,9 @@
+{
+  "name": "olmixEvaluator",
+  "gulpStartupTasks": [
+    "webpack",
+    "copy-assets",
+    "scss",
+    "watch"
+  ]
+}
