@@ -6,7 +6,7 @@ module.exports = function(config) {
         basePath: '',
 
         // use headless PhantomJS
-        browsers: ['PhantomJS'],
+        browsers: ['PhantomJS2'],
 
         // use Jasmine with Sinon for mocking and stubs
         frameworks: ['mocha', 'sinon-chai'],
