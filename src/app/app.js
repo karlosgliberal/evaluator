@@ -17,6 +17,7 @@ import appServices from './app.services';
 // basically, import aboutModule.name
 import aboutModule from './views/about/about.module';
 import idiomaModule from './views/idiomas/idioma.module';
+import userDetailModule from './views/userDetail/userDetail.module.js';
 
 const appModule = angular
     .module('olmixEvaluator', [
@@ -33,11 +34,12 @@ const appModule = angular
 
         // all other application modules will be imported here
         aboutModule.name,
-        idiomaModule.name
+        idiomaModule.name,
+        userDetailModule.name
 
     ])
+    .config(appConfig)
     .controller('AppController', appController)
     .run(appRun)
-    .config(appConfig)
 
 export default appModule;
