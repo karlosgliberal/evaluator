@@ -22,21 +22,18 @@
 <ion-side-menus>
 	<ion-side-menu side="left">
 		<ion-header-bar align-title="left" class="bar-dark bar-gradient-dark">
-			<h1 class="title">Bienvenido </h1>
+			<h1 class="title">{{'menu.welcome' | translate}} </h1>
 		</ion-header-bar>
 		<ion-content>
 			<ion-list>
 				<ion-item class="item-icon-left" ui-sref="home" menu-close>
-					<i class="icon ion-ios-home-outline"></i> Home
+					<i class="icon ion-ios-home-outline"></i> {{'menu.home' | translate}}
 				</ion-item>
 				<ion-item class="item-icon-left" ui-sref="about" menu-close>
-					<i class="icon ion-ios-help-outline"></i> About
+					<i class="icon ion-ios-help-outline"></i> {{'menu.about' | translate}}
 				</ion-item>
 				<ion-item class="item-icon-left" ui-sref="idioma">
-					<i class="icon ion-ios-gear-outline"></i> Idioma
-				</ion-item>
-				<ion-item class="item-icon-left" ui-sref="chat">
-					<i class="icon ion-ios-gear-outline"></i> Chat
+					<i class="icon ion-ios-gear-outline"></i> {{'menu.language' | translate}}
 				</ion-item>
 			</ion-list>
 		</ion-content>
