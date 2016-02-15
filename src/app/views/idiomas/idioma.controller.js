@@ -2,20 +2,18 @@ import { assign } from 'lodash';
 
 export default class IdiomaController {
     /*@ngInject*/
-    constructor($scope) {
+    constructor($scope, $state, $translate) {
         assign(this, {
             $scope,
-            idioma: [
-                'Es',
-                'En',
-                'Eu',
-                'Gr',
-                'Ru'
-            ]
+            $state,
+            $translate,
+            languages: [{name: 'Castellano', code: 'es'}, {name: 'English', code: 'en'}]
         });
     }
 
-    removeIdioma(technology) {
-        this.idioma.splice(this.idoma.indexOf(idioma), 1);
+    setLanguage(language) {
+        this.$translate.use(language.code);
+        this.$translate.refresh(language.code);
+        this.$state.go('home',null,{reload:true});
     }
 }

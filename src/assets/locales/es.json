@@ -1,0 +1,17 @@
+{
+  "main": {
+    "view-title": "Principal"
+  },
+  "detail": {
+    "view-title": "Detalle de usuario"
+  },
+  "menu":{
+    "welcome": "Welcome",
+    "home": "Inicio",
+    "about": "Info",
+    "language": "Idioma"
+  },
+  "language":{
+    "view-title": "Selección de idioma"
+  }
+}

@@ -1,11 +1,8 @@
-<ion-view view-title="Idioma">
+<ion-view view-title="{{'language.view-title' | translate }}">
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="idi in idioma.idioma">
-                {{ idi }}
-                <ion-option-button class="button-positive" ng-click="about.removeIdioma(idi)">
-                    Delete
-                </ion-option-button>
+            <ion-item ng-repeat="language in idioma.languages" ng-click="idioma.setLanguage(language)">
+                {{ language.name }}
             </ion-item>
         </ion-list>
     </ion-content>

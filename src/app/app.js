@@ -2,6 +2,8 @@ import 'angular/angular';
 import 'angular-animate/angular-animate';
 import 'angular-sanitize/angular-sanitize';
 import 'ionic-sdk/release/js/angular-ui/angular-ui-router';
+import 'angular-translate/dist/angular-translate';
+import 'angular-translate-loader-static-files';
 import 'ionic-sdk/release/js/ionic';
 import 'ionic-sdk/release/js/ionic-angular';
 
@@ -25,6 +27,7 @@ const appModule = angular
         // include ionic, and angular
         'ionic',
         'ngCordova',
+        'pascalprecht.translate',
 
         // high level app directives
         appDirectives.name,

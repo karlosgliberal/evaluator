@@ -1,10 +1,9 @@
-<ion-view view-title="Olmix Evaluator">
+<ion-view view-title="{{ 'main.view-title' | translate }}">
     <ion-content padding="true">
         <user-menu user="app.user"></user-menu>
         <button ng-click="app.onAboutTap()" class="button button-block button-positive button-outline">
             <strong>About</strong>
         </button>
-
         <ion-list>
             <ion-item class="item-avatar" ng-click= "app.onUserClick(user.name)" ng-repeat="user in app.users">
                 <img ng-src="{{ user.avatar }}">
