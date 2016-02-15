@@ -11,6 +11,7 @@ const popoverTemplate = `
 const userMenu = {
     /*@ngInject*/
     controller: function($ionicPopover) {
+        var ctrl = this;
         // load our popover
         this.popover = $ionicPopover.fromTemplate(popoverTemplate);
         this.openMenu = (ev) => {
@@ -21,8 +22,8 @@ const userMenu = {
         user: '='
     },
     template: `
-        <button ng-click="userMenu.openMenu($event)" class="button button-block">
-            Logged in as: <strong>{{ userMenu.user.name }}</strong>
+        <button ng-click="$ctrl.openMenu($event)" class="button button-block">
+            Logged in as: <strong>{{ $ctrl.user.name }}</strong>
         </button>
     `
 }
