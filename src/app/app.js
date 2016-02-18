@@ -1,9 +1,10 @@
 import 'angular/angular';
 import 'angular-animate/angular-animate';
+import 'angular-messages/angular-messages.js';
 import 'angular-sanitize/angular-sanitize';
-import 'ionic-sdk/release/js/angular-ui/angular-ui-router';
 import 'angular-translate/dist/angular-translate';
 import 'angular-translate-loader-static-files';
+import 'ionic-sdk/release/js/angular-ui/angular-ui-router';
 import 'ionic-sdk/release/js/ionic';
 import 'ionic-sdk/release/js/ionic-angular';
 
@@ -19,7 +20,8 @@ import appServices from './app.services';
 // basically, import aboutModule.name
 import aboutModule from './views/about/about.module';
 import idiomaModule from './views/idiomas/idioma.module';
-import userDetailModule from './views/userDetail/userDetail.module.js';
+import userDetailModule from './views/userDetail/userDetail.module';
+import userFormModule from './views/userForm/userForm.module';
 
 const appModule = angular
     .module('olmixEvaluator', [
@@ -28,6 +30,7 @@ const appModule = angular
         'ionic',
         'ngCordova',
         'pascalprecht.translate',
+        'ngMessages',
 
         // high level app directives
         appDirectives.name,
@@ -38,8 +41,8 @@ const appModule = angular
         // all other application modules will be imported here
         aboutModule.name,
         idiomaModule.name,
-        userDetailModule.name
-
+        userDetailModule.name,
+        userFormModule.name
     ])
     .config(appConfig)
     .controller('AppController', appController)
