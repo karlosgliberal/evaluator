@@ -4,6 +4,9 @@
         <button ng-click="app.onAboutTap()" class="button button-block button-positive button-outline">
             <strong>About</strong>
         </button>
+        <button ng-click="app.onFormTap()" class="button button-block button-positive button-outline">
+            <strong>Form</strong>
+        </button>
         <ion-list>
             <ion-item class="item-avatar" ng-click= "app.onUserClick(user.name)" ng-repeat="user in app.users">
                 <img ng-src="{{ user.avatar }}">

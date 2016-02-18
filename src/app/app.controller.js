@@ -24,6 +24,10 @@ export default class AppController {
         this.$state.go('about');
     }
 
+    onFormTap() {
+        this.$state.go('userForm');
+    }
+
     onUserClick(name) {
         this.$state.go('userDetail', {user: name});
     }
