@@ -8,7 +8,19 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
         template: appTemplate,
         controller: 'AppController',
         controllerAs: 'app',
-        cache: false
+        cache: false,
+        resolve: {
+            users : function(userService, $stateParams){
+              return userService.getUsers().then(response => {
+                userService.saveUsers(response.data.users);
+                return this.users = response.data.users;
+              },
+              (error) => {
+                return this.error = 'something went wrong';
+              });
+            }
+
+        }
     });
     $translateProvider
         .useStaticFilesLoader({

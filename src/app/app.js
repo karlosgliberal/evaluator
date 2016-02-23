@@ -20,8 +20,8 @@ import appServices from './app.services';
 // basically, import aboutModule.name
 import aboutModule from './views/about/about.module';
 import idiomaModule from './views/idiomas/idioma.module';
-import userDetailModule from './views/userDetail/userDetail.module';
 import userFormModule from './views/userForm/userForm.module';
+import userDetailModule from './views/userDetail/userDetail.module';
 
 const appModule = angular
     .module('olmixEvaluator', [

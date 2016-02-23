@@ -6,15 +6,15 @@ describe('Application Tests', () => {
     let sandbox, stubs, controller, deferred, scope;
 
     let usersData = [{
-        "id" : 1,
-        "name": "Dave Ackerman",
-        "email": "dave@nugget.com",
-        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+        'id' : 1,
+        'name': 'Dave Ackerman',
+        'email': 'dave@nugget.com',
+        'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'
     }, {
-        "id" : 2,
-        "name": "Joe Schmoe",
-        "email": "joe@nugget.com",
-        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg"
+        'id' : 2,
+        'name': 'Joe Schmoe',
+        'email': 'joe@nugget.com',
+        'avatar': 'https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg'
     }];
 
     before(() => {
