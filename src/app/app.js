@@ -1,5 +1,6 @@
 import 'angular/angular';
 import 'angular-animate/angular-animate';
+import 'angular-formly-templates-ionic';
 import 'angular-messages/angular-messages.js';
 import 'angular-sanitize/angular-sanitize';
 import 'angular-translate/dist/angular-translate';
@@ -10,6 +11,7 @@ import 'ionic-sdk/release/js/ionic-angular';
 
 // import ngCordova
 import 'ng-cordova';
+import 'angular-formly/dist/formly';
 
 import appRun from './app.run';
 import appConfig from './app.config';
@@ -17,21 +19,19 @@ import appController from './app.controller';
 import appDirectives from './app.directives';
 import appServices from './app.services';
 
-// basically, import aboutModule.name
-import aboutModule from './views/about/about.module';
 import idiomaModule from './views/idiomas/idioma.module';
 import userFormModule from './views/userForm/userForm.module';
+import aboutModule from './views/about/about.module';
 import userDetailModule from './views/userDetail/userDetail.module';
 
 const appModule = angular
     .module('olmixEvaluator', [
-
-        // include ionic, and angular
         'ionic',
         'ngCordova',
         'pascalprecht.translate',
         'ngMessages',
-
+        'formly',
+        'formlyIonic',
         // high level app directives
         appDirectives.name,
 

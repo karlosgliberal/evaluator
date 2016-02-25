@@ -2,14 +2,20 @@ import { assign } from 'lodash';
 
 export default class AppController {
     /*@ngInject*/
-    constructor($state, userService, $stateParams) {
-      assign(this, {$state, userService});
-      this.text = 'Bienvenidos a Olmix Evaluator';
-      this.user = {
-        name: 'Dave Ackerman',
-        email: 'dave@dude.com'
-      };
-      console.log($stateParams);
+    constructor($state, userService) {
+        assign(this, {$state, userService});
+        this.text = 'Bienvenidos a Olmix Evaluator';
+        this.user = {
+            name: 'Dave Ackerman',
+            email: 'dave@dude.com'
+        };
+        this.userService.getUsers().then(response => {
+                userService.saveUsers(response.data.users);
+                return this.users = response.data.users;
+            },
+            (error) => {
+                return this.error = 'something went wrong';
+            });
     }
 
     onAboutTap() {

@@ -8,19 +8,7 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
         template: appTemplate,
         controller: 'AppController',
         controllerAs: 'app',
-        cache: false,
-        resolve: {
-            users : function(userService, $stateParams){
-              return userService.getUsers().then(response => {
-                userService.saveUsers(response.data.users);
-                return this.users = response.data.users;
-              },
-              (error) => {
-                return this.error = 'something went wrong';
-              });
-            }
-
-        }
+        cache: false
     });
     $translateProvider
         .useStaticFilesLoader({
@@ -28,8 +16,8 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
             suffix: '.json'
         })
         .registerAvailableLanguageKeys(['en', 'es'], {
-            'en' : 'en', 'en_GB': 'en', 'en_US': 'en',
-            'es' : 'es'
+            'en': 'en', 'en_GB': 'en', 'en_US': 'en',
+            'es': 'es'
         })
         .preferredLanguage('en')
         .fallbackLanguage('en')
