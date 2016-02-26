@@ -23,29 +23,32 @@ module.exports = {
 
     module: {
         loaders: [{
-            test: /\.js?$/,
+          test: /\.js?$/,
             include: [
                 path.resolve(__dirname, 'src')
             ],
             exclude: /node_modules/,
             loaders: ['ng-annotate', 'babel-loader']
-        }, {
+          },{
             test: /\.js$/,
             include: [
                 path.resolve(__dirname, 'src')
             ],
             loader: 'eslint-loader',
             exclude: /node_modules/
-        },{
+          },{
             test: /\.html$/,
             loader: 'html'
-        }]
+         }]
     },
     resolve: {
         root: [
             path.join(__dirname, 'node_modules')
         ],
         extensions: ['', '.js']
+    },
+    eslint: {
+      configFile: path.resolve(__dirname, './.eslintrc')
     },
 
     plugins: [

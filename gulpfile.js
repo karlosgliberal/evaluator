@@ -51,6 +51,15 @@ gulp.task('test', function(cb) {
     server.start()
 });
 
+var webpackCmdConfig = require('./karma.cmd.conf.js');
+gulp.task('test_cmd', function(cb) {
+  return gulp.src('./src/app/app.js')
+      .pipe(webpack(webpackConfig), null, function(err, stats) {
+          console.log(stats);
+      })
+      .pipe(gulp.dest('./www'))
+});
+
 // we just need a watch for scss. webpack watches everything else.
 gulp.task('watch', function() {
     gulp.watch('./src/**/*.scss', ['scss']);
