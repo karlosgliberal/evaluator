@@ -25,27 +25,27 @@ import aboutModule from './views/about/about.module';
 import userDetailModule from './views/userDetail/userDetail.module';
 
 const appModule = angular
-    .module('olmixEvaluator', [
-        'ionic',
-        'ngCordova',
-        'pascalprecht.translate',
-        'ngMessages',
-        'formly',
-        'formlyIonic',
-        // high level app directives
-        appDirectives.name,
+  .module('olmixEvaluator', [
+    'ionic',
+    'ngCordova',
+    'pascalprecht.translate',
+    'ngMessages',
+    'formly',
+    'formlyIonic',
+    // high level app directives
+    appDirectives.name,
 
-        // high level app services
-        appServices.name,
+    // high level app services
+    appServices.name,
 
-        // all other application modules will be imported here
-        aboutModule.name,
-        idiomaModule.name,
-        userDetailModule.name,
-        userFormModule.name
-    ])
+    // all other application modules will be imported here
+    aboutModule.name,
+    idiomaModule.name,
+    userDetailModule.name,
+    userFormModule.name
+  ])
     .config(appConfig)
     .controller('AppController', appController)
-    .run(appRun)
+    .run(appRun);
 
 export default appModule;

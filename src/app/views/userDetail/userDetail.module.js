@@ -3,7 +3,7 @@ import userDetailControllers from './userDetail.controllers.js';
 
 const userDetailModule = angular
     .module('olmixEvaluator.userDetail', [
-        userDetailControllers.name
+      userDetailControllers.name
     ])
     .config(userDetailConfig);
 

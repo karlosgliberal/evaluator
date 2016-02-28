@@ -4,9 +4,9 @@ import aboutControllers from './about.controllers';
 
 const aboutModule = angular
     .module('olmixEvaluator.about', [
-        aboutControllers.name
+      aboutControllers.name
     ])
     .run(aboutRun)
-    .config(aboutConfig)
+    .config(aboutConfig);
 
 export default aboutModule;

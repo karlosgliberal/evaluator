@@ -4,9 +4,9 @@ import idiomaControllers from './idioma.controllers';
 
 const idiomaModule = angular
     .module('olmixEvaluator.idioma', [
-        idiomaControllers.name
+      idiomaControllers.name
     ])
     .run(idiomaRun)
-    .config(idiomaConfig)
+    .config(idiomaConfig);
 
 export default idiomaModule;

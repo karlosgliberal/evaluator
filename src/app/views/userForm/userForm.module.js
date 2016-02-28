@@ -4,9 +4,9 @@ import userFormService from './userForm.services.js';
 
 const userFormModule = angular
     .module('olmixEvaluator.userForm', [
-        userFormControllers.name,
-        userFormService.name
+      userFormControllers.name,
+      userFormService.name
     ])
-    .config(userFormConfig)
+    .config(userFormConfig);
 
 export default userFormModule;
