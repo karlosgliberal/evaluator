@@ -21,8 +21,15 @@ $font-family-base: -apple-system, "Helvetica Neue", "Roboto", sans-serif;
 // The path for our ionicons font files
 $ionicons-font-path: "assets/fonts";
 
+//variables
 $dark: #263238;
 $positive: #2196F3;
+$brand-color:#76405D;
+
+//genericos
+.row{
+  padding: 0!important;
+}
 
 // include all of Ionic
 @import "../../node_modules/ionic-sdk/scss/ionic";
@@ -32,12 +39,39 @@ $positive: #2196F3;
 @import '../app/views/seleccionAnimal/seleccionAnimal.scss';
 
 .bar {
-  border-bottom-width: 0;
 
-  &.bar-gradient {
-    background: linear-gradient(to right, #1976D2, #90CAF9);
+  &.bar-solid{
+    border-bottom:3px solid $brand-color;
+    background: white;
+
   }
-  &.bar-gradient-dark {
-    background: linear-gradient(to right, #263238, #546E7A);
+
+  .title{
+    color: $brand-color!important;
+  }
+
+  .button{
+    color: black!important;
+  }
+
+  // &.bar-gradient {
+  //   background: linear-gradient(to right, #1976D2, #90CAF9);
+  // }
+  // &.bar-gradient-dark {
+  //   background: linear-gradient(to right, #263238, #546E7A);
+  // }
+}
+
+.bar-menu{
+  h1{
+    img{
+      width: auto;
+      height: 40px;
+      position: relative;
+      top: 4px;
+    }
+  }
+  .icon{
+    color:$brand-color;
   }
 }
