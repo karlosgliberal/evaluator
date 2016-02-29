@@ -1,0 +1,23 @@
+#!/bin/sh
+#!/bin/sh
+
+# exit if no files changed
+[[ `git diff-index --cached --name-only HEAD` ]] || exit 0
+
+# run the unit tests
+#webpack  --display-error-details --progress --config webpack.cmd.config.js
+./node_modules/.bin/webpack --progress --colors --config webpack.cmd.config.js
+#reject the commit in case of failures
+if [[ $? != 0 ]]; then
+    echo "Errores en el eslint"
+    exit 1
+fi;
+
+
+#gulp test
+/usr/local/bin/karma start karma.cmd.conf.js
+# reject the commit in case of failures
+if [[ $? != 0 ]]; then
+    echo "Unit tests have failures. Commit rejected."
+    exit 1
+fi;
