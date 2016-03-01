@@ -1,21 +1,14 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// const hashPostfix = options.useHash ? '.[hash]' : '';
-// const imagesLoaders = [
-//   `file?name=[path][name]${hashPostfix}.[ext]`
-// ];
-
+//imagesLoaders.push('image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}');
 module.exports = {
   watch: true,
 
-  eslint: {
-    configFile: '.eslintrc'
-  },
-
   entry: [
-    './src/app/app.js'
+    './src/app/app.js',
   ],
 
   output: {
@@ -23,7 +16,7 @@ module.exports = {
     filename: 'app.js'
   },
 
-    // use inline source maps.
+  // use inline source maps.
   devtool: 'cheap-module-source-map',
 
   module: {
@@ -44,7 +37,12 @@ module.exports = {
     }, {
       test: /\.html$/,
       loader: 'html'
-    }]
+    }, {
+      // Copia a la carpeta del bundle las imágenes relacionadas en html y css
+      test: /\.(png|jpg|jpeg|svg|gif)$/,
+      loaders: ['file?name=assets/images/[name].[ext]']
+    }
+  ]
   },
   resolve: {
     root: [
@@ -61,7 +59,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       // load our index.html "template"
       template: './src/index.html',
-
       // inject all scripts into the body
       inject: 'body',
       filename: 'index.html'

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var notify = require('gulp-notify');
 var karma = require('karma');
 var sass = require('gulp-sass');
+var shell = require('gulp-shell');
 
 // need this to prevent the pipe from breaking on errors, and continue
 // watching files for changes.
@@ -10,14 +11,9 @@ var plumber = require('gulp-plumber');
 var webpack = require('webpack-stream');
 var webpackConfig = require('./webpack.config.js');
 
-gulp.task('webpack', function () {
-  return gulp.src('./src/app/app.js')
-    .pipe(plumber())
-    .pipe(webpack(webpackConfig), null, function (err, stats) {
-      console.log(stats);
-    })
-    .pipe(gulp.dest('./www'));
-});
+gulp.task('webpack', shell.task([
+  './node_modules/.bin/webpack --progress --colors --config webpack.config.js'
+]));
 
 // copies our `src/assets` folder into `www`
 gulp.task('copy-assets', function () {
@@ -63,10 +59,9 @@ gulp.task('test_cmd', function (cb) {
 // we just need a watch for scss. webpack watches everything else.
 gulp.task('watch', function () {
   gulp.watch('./src/**/*.scss', ['scss']);
-  gulp.watch('./src/assets/**/*', ['copy-assets']);
 });
 
 // @TODO
 // production build
 
-gulp.task('default', ['webpack', 'copy-assets', 'watch']);
+gulp.task('default', ['webpack', 'scss', 'copy-assets']);

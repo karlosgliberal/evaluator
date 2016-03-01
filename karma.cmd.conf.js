@@ -50,6 +50,10 @@ module.exports = function (config) {
         }, {
           test: /\.html$/,
           loader: 'html'
+        }, {
+          // Copia a la carpeta del bundle las imágenes relacionadas en html y css
+          test: /\.(png|jpg|jpeg|svg|gif)$/,
+          loaders: ['file?name=assets/images/[name].[ext]']
         }]
       },
       stats: {
