@@ -77,10 +77,12 @@
   },
   "scripts": {
     "test": "karma start",
-    "style": "./utils/pre-commit"
+    "codeQA": "./utils/pre-commit"
   },
-  "pre-commit": [
-    "style"
+  "precommit.silent": true,
+  "pre-commit":
+  [
+    "codeQA"
   ],
   "cordovaPlugins": [
     "cordova-plugin-device",
