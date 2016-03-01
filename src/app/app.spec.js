@@ -57,23 +57,15 @@ describe('Application Tests', () => {
       expect(controller).to.be.ok;
     });
 
-    it('should define an onAboutTap method', () => {
-      expect(controller.onAboutTap).to.be.ok;
+    it('should define an onSeleccionAnimalTap method', () => {
+      expect(controller.onSeleccionAnimalTap).to.be.ok;
     });
 
     //test
-    it('should transition to the About component', () => {
-      controller.onAboutTap();
+    it('should transition to the seleccion Animal component', () => {
+      controller.onSeleccionAnimalTap();
       expect(stubs.$state.go).to.have.been.called.once;
-      expect(stubs.$state.go).to.have.been.calledWith('about');
-    });
-
-    it('should fetch an array of users from our service', () => {
-          //  expect(stubs.userService.getUsers).to.have.been.called.once;
-          //  // get through the promise
-          //  scope.$digest();
-          //  expect(controller.users).to.be.ok;
-          //  expect(controller.users.length).to.equal(2);
+      expect(stubs.$state.go).to.have.been.calledWith('seleccionAnimal');
     });
 
   });
