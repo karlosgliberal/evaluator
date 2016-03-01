@@ -80,8 +80,7 @@
     "codeQA": "./utils/pre-commit"
   },
   "precommit.silent": true,
-  "pre-commit":
-  [
+  "pre-commit": [
     "codeQA"
   ],
   "cordovaPlugins": [

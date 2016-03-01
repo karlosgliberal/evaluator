@@ -17,12 +17,9 @@ import appRun from './app.run';
 import appConfig from './app.config';
 import appController from './app.controller';
 import appDirectives from './app.directives';
-import appServices from './app.services';
 
 import idiomaModule from './views/idiomas/idioma.module';
 import userFormModule from './views/userForm/userForm.module';
-import aboutModule from './views/about/about.module';
-import userDetailModule from './views/userDetail/userDetail.module';
 import seleccionAnimalModule from './views/seleccionAnimal/seleccionAnimal.module';
 
 const appModule = angular
@@ -35,14 +32,9 @@ const appModule = angular
     'formlyIonic',
     // high level app directives
     appDirectives.name,
-
-    // high level app services
-    appServices.name,
-
+    // // high level app services
     // all other application modules will be imported here
-    aboutModule.name,
     idiomaModule.name,
-    userDetailModule.name,
     userFormModule.name,
     seleccionAnimalModule.name
   ])
