@@ -10,7 +10,6 @@ export default class AppController {
         email: 'dave@dude.com'
       };
       this.userService.getUsers().then(response => {
-        userService.saveUsers(response.data.users);
         return this.users = response.data.users;
       },
       (error) => {

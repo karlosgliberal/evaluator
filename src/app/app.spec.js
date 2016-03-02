@@ -3,79 +3,95 @@
 import App from './app';
 
 describe('Application Tests', () => {
-  let sandbox, stubs, controller, deferred, scope;
-  let usersData = [{
-    id: 1,
-    name: 'Dave Ackerman',
-    email: 'dave@nugget.com',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'
-  }, {
-    id: 2,
-    name: 'Joe Schmoe',
-    email: 'joe@nugget.com',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg'
-  }];
+    let sandbox, stubs, controller, scope;
+    let usersData = [{
+        id: 1,
+        name: 'Dave Ackerman',
+        email: 'dave@nugget.com',
+        avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'
+    }, {
+        id: 2,
+        name: 'Joe Schmoe',
+        email: 'joe@nugget.com',
+        avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg'
+    }];
 
-  before(() => {
-    sandbox = sinon.sandbox.create();
-  });
-
-  beforeEach(angular.mock.module(App.name));
-
-  beforeEach(inject(($controller, $q, $rootScope) => {
-   // Since we don't want ui router changing the browser url on state transistions,
-   // we'll mock the state server and test that it was called as expected.
-    scope = $rootScope.$new();
-
-    stubs = {
-      userService: {
-        getUsers: sandbox.stub().returns($q.when({
-          data: {
-            users: usersData
-          }
-        }))
-      },
-      $state: {
-        go: sandbox.stub()
-      }
-    };
-
-    controller = $controller('AppController', {
-      $state: stubs.$state,
-      userService: stubs.userService
+    before(() => {
+        sandbox = sinon.sandbox.create();
     });
 
-  }));
+    beforeEach(angular.mock.module(App.name));
 
-  afterEach(() => {
-    sandbox.reset();
-  });
+    beforeEach(angular.mock.module(App.name, function ($provide, $translateProvider) {
+        $provide.factory('customLoader', function ($q) {
+            return function () {
+                var deferred = $q.defer();
+                deferred.resolve({});
+                return deferred.promise;
+            };
+        });
 
-  describe('App Controller', () => {
+        $translateProvider.useLoader('customLoader');
+    }));
 
-    it('should be defined', () => {
-      expect(controller).to.be.ok;
+    beforeEach(inject(($controller, $q, $rootScope) => {
+        // Since we don't want ui router changing the browser url on state transistions,
+        // we'll mock the state server and test that it was called as expected.
+        scope = $rootScope.$new();
+
+        stubs = {
+            userService: {
+                getUsers: sandbox.stub().returns($q.when({
+                    data: {
+                        users: usersData
+                    }
+                })),
+                saveUsers: sandbox.stub().returns({
+                    data: {
+                        users: usersData
+                    }
+                }),
+            },
+            $state: {
+                go: sandbox.stub()
+            }
+        };
+
+        controller = $controller('AppController', {
+            $state: stubs.$state,
+            userService: stubs.userService
+        });
+    }));
+
+    afterEach(() => {
+        sandbox.reset();
     });
 
-    it('should define an onAboutTap method', () => {
-      expect(controller.onAboutTap).to.be.ok;
-    });
+    describe('App Controller', () => {
 
-    //test
-    it('should transition to the About component', () => {
-      controller.onAboutTap();
-      expect(stubs.$state.go).to.have.been.called.once;
-      expect(stubs.$state.go).to.have.been.calledWith('about');
-    });
+        it('should be defined', () => {
+            expect(controller).to.be.ok;
+        });
 
-    it('should fetch an array of users from our service', () => {
-          //  expect(stubs.userService.getUsers).to.have.been.called.once;
-          //  // get through the promise
-          //  scope.$digest();
-          //  expect(controller.users).to.be.ok;
-          //  expect(controller.users.length).to.equal(2);
-    });
+        it('should define an onAboutTap method', () => {
+            expect(controller.onAboutTap).to.be.ok;
+        });
 
-  });
+        //test
+        it('should transition to the About component', () => {
+            controller.onAboutTap();
+            expect(stubs.$state.go).to.have.been.called.once;
+            expect(stubs.$state.go).to.have.been.calledWith('about');
+        });
+
+        it('should fetch an array of users from our service', () => {
+            expect(stubs.userService.getUsers).to.have.been.called.once;
+            // get through the promise
+            scope.$digest();
+            expect(controller.users).to.be.ok;
+            expect(controller.users.length).to.equal(2);
+        });
+
+    });
 
 });

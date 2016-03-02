@@ -26,13 +26,6 @@ module.exports = {
             exclude: /node_modules/,
             loaders: ['ng-annotate', 'babel-loader']
           },{
-            test: /\.js$/,
-            include: [
-                path.resolve(__dirname, 'src')
-            ],
-            loader: 'eslint-loader',
-            exclude: /node_modules/
-          },{
             test: /\.html$/,
             loader: 'html'
          }]
@@ -44,10 +37,10 @@ module.exports = {
         ],
         extensions: ['', '.js']
     },
-    eslint: {
-      emitError: false,
-      configFile: path.resolve(__dirname, './.eslintrc')
-    },
+    //eslint: {
+    //  emitError: false,
+    //  configFile: path.resolve(__dirname, './.eslintrc')
+    //},
 
     plugins: [
         new webpack.NoErrorsPlugin(),
