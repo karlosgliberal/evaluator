@@ -16,7 +16,7 @@ export default class AppController {
     }
 
     onFormTap() {
-      this.$state.go('userForm');
+      this.$state.go('form');
     }
 
 }

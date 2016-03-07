@@ -67,7 +67,5 @@ describe('Application Tests', () => {
       expect(stubs.$state.go).to.have.been.called.once;
       expect(stubs.$state.go).to.have.been.calledWith('seleccionAnimal');
     });
-
   });
-
 });
