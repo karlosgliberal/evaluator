@@ -23,10 +23,7 @@ const appModule = angular
       'ionic',
       'ngCordova',
       'pascalprecht.translate',
-      // high level app directives
       appDirectives.name,
-      // // high level app services
-      // all other application modules will be imported here
       idiomaModule.name,
       formModule.name,
       seleccionAnimalModule.name

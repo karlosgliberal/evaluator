@@ -1,6 +1,6 @@
 import formServices from '../../views/forms/form.services';
 
-describe('User form service', () => {
+describe('form service', () => {
 
   var formService;
 
@@ -10,22 +10,20 @@ describe('User form service', () => {
     formService = _formService_;
   }));
 
-  describe('user form service', function () {
-    it('should fetch form initial fields', () => {
-      expect(formService.getFormFields()).to.be.ok;
-    })
+  it('should fetch form initial fields', () => {
+    expect(formService.getFormFields()).to.be.ok;
+  })
 
-    it('should return type1 fields', () => {
-      expect(formService.changeFormFieldsForValues('::state::', 'type1')[1]).to.eql(firstModelFields('::state::')[0]);
-    })
+  it('should return type1 fields', () => {
+    expect(formService.changeFormFieldsForValues('::state::', 'type1')[1]).to.eql(firstModelFields()[0]);
+  })
 
-    it('should return type2 fields', () => {
-      expect(formService.changeFormFieldsForValues('::state::', 'type2')[1]).to.eql(secondModelFields('::state::')[0]);
-    })
+  it('should return type2 fields', () => {
+    expect(formService.changeFormFieldsForValues('::state::', 'type2')[1]).to.eql(secondModelFields()[0]);
   })
 });
 
-function firstModelFields(state) {
+function firstModelFields() {
   return [
     {
       key: 'type1name',
@@ -38,7 +36,7 @@ function firstModelFields(state) {
   ];
 };
 
-function secondModelFields(state) {
+function secondModelFields() {
   return [
     {
       key: 'type2name',
