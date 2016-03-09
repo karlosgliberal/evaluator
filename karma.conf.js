@@ -29,7 +29,6 @@ module.exports = function (config) {
       'coverage'
     ],
 
-
     // configure webpack within Karma
     webpack: {
 

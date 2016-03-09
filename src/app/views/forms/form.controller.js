@@ -6,11 +6,11 @@ export default class formController {
     assign(this, {
       formService
     });
-    this.model = {};
+    this.viewModel = {};
     this.fields = this.formService.getFormFields(this);
   }
 
   onFormBaseChange(){
-    this.fields = this.formService.changeFormFieldsForValues(this, this.model.typeSelector);
+    this.fields = this.formService.changeFormFieldsForValues(this, this.viewModel.typeSelector);
   }
 }

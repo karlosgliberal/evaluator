@@ -1,11 +1,7 @@
 import formControllers from './form.controllers';
-var sandbox, scope, formServiceSpy, form, $compile, directiveHTML;
+var controller, scope, formServiceSpy, form, $compile, directiveHTML;
 
-describe('user from controller', () => {
-
-  before(() => {
-    sandbox = sinon.sandbox.create();
-  });
+describe('Form controller', () => {
 
   beforeEach(angular.mock.module(formControllers.name));
 
@@ -13,9 +9,9 @@ describe('user from controller', () => {
     $compile = _$compile_;
     scope = $rootScope.$new();
 
-    formServiceSpy = {getFormFields: sandbox.spy(), getFormFieldsChange: sandbox.spy()};
+    formServiceSpy = {getFormFields: sinon.spy(), changeFormFieldsForValues: sinon.spy()};
 
-    $controller('formController', {
+    controller = $controller('formController', {
       formService: formServiceSpy
     });
     prepareFormly();
@@ -27,26 +23,25 @@ describe('user from controller', () => {
       expect($compile.find('input').length).to.equal(2);
     });
 
-    it('should have empty scope model', function () {
-      expect(scope.model).to.eql({typeSelector: 'carnívoros'});
+    it('should have not empty scope model', function () {
+      expect(scope.viewModel).to.eql({typeSelector: 'carnívoros'});
     });
   });
 
-  describe('form base change', function () {
+  describe('form interaction', function () {
     it('should ask field form change', function () {
-      //TODO
-    });
+      controller.onFormBaseChange();
 
-    describe('form fields request', function () {
-      it('should get form fields', () => {
-        expect(formServiceSpy.getFormFields).to.have.been.called.once;
-      });
+      expect(formServiceSpy.changeFormFieldsForValues).to.have.been.called.once;
+    });
+    it('should get form fields', () => {
+      expect(formServiceSpy.getFormFields).to.have.been.called.once;
     });
   });
 });
 
 function prepareFormly() {
-  scope.model = {};
+  scope.viewModel = {};
 
   scope.fields = [{
     key: 'typeSelector',
@@ -87,7 +82,7 @@ function prepareFormly() {
 
   directiveHTML =
       '<form novalidate>' +
-      '<formly-form form="form" model="model" fields="fields">' +
+      '<formly-form form="form" model="viewModel" fields="fields">' +
       '</form>';
 
   $compile = $compile(directiveHTML)(scope);
