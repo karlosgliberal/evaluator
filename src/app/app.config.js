@@ -1,6 +1,5 @@
 import appTemplate from './app.html';
 
-
 /*@ngInject*/
 const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
   $stateProvider.state('home', {
@@ -11,18 +10,17 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
     cache: false
   });
   $translateProvider
-    .useStaticFilesLoader({
-      prefix: 'assets/locales/',
-      suffix: '.json'
-    })
-    .registerAvailableLanguageKeys(['en', 'es'], {
-      en: 'en', enGB: 'en', enUS: 'en',
-      es: 'es'
-    })
-    .preferredLanguage('en')
-    .fallbackLanguage('en')
-    .determinePreferredLanguage()
-    .useSanitizeValueStrategy('sanitize');
+      .useStaticFilesLoader({
+        prefix: 'assets/locales/',
+        suffix: '.json'
+      })
+      .registerAvailableLanguageKeys(['es', 'en'], {
+        en: 'en', es: 'es'
+      })
+      .preferredLanguage('es')
+      .fallbackLanguage('es')
+      .determinePreferredLanguage('es')
+      .useSanitizeValueStrategy('sanitizeParameters');
 
   $urlRouterProvider.otherwise('/');
 };
