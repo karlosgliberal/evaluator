@@ -1,17 +1,9 @@
 <ion-view view-title="Selecciona">
     <ion-content>
-        <!-- <ion-list>
-            <ion-item ng-repeat="animal in seleccionAnimal.animales">
-                {{ animal }}
-                <ion-option-button class="button-positive" ng-click="seleccionAnimal.removeAnimales(animal)">
-                    Delete
-                </ion-option-button>
-            </ion-item>
-        </ion-list> -->
         <div class="row">
           <div class="col-33">
               <div class="animal vaca">
-                <img src="./images/vacas.png" alt="Imagen de una vaca" />
+                <img src="./images/vacas.png" alt="Imagen de una vaca" ng-click="seleccionAnimal.onAnimalSelection('cow')"/>
                 <p class="animal--titulo">Vaca</p>
               </div>
           </div>

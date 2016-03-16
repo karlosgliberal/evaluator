@@ -1,4 +1,5 @@
 import formControllers from './form.controllers';
+
 var controller, scope, formServiceSpy, form, $compile, directiveHTML;
 
 describe('Form controller', () => {

@@ -13,5 +13,49 @@
   },
   "language": {
     "view-title": "Language selection"
+  },
+  "forms": {
+    "cow": {
+      "herd": {
+        "title": "",
+        "fields": {
+          "feed-intake": "",
+          "low-milk-production": "",
+          "body-condition": "",
+          "coat-condition": "",
+          "chewing-activity": "",
+          "somatic-cells": "",
+          "leg-troubles": "",
+          "metabolic-troubles": "",
+          "turnovers": "",
+          "feces": "",
+          "milk-urea": "",
+          "weak-calves": "",
+          "fertility-troubles": "",
+          "reproduction-performance": "",
+          "troubles-from-raw-materials": ""
+        }
+      },
+      "on-field": {
+        "title": "",
+        "fields": {
+          "corn-procedence": "",
+          "corn-fields": "",
+          "fusarium": "",
+          "silage-harvest": "",
+          "grass-silage": ""
+        }
+      },
+      "storage": {
+        "title": "",
+        "fields": {
+          "molds": "",
+          "silage-trobules": "",
+          "warm-silage": "",
+          "grass-silage": "",
+          "silage-front-consuption": ""
+        }
+      }
+    }
   }
 }

@@ -1,8 +1,13 @@
 import { assign } from 'lodash';
 
 export default class formService {
-  getFormFields(state) {
-    return this.firstModelFields(state);
+  /*@ngInject*/
+  constructor(cowFormService){
+    assign(this, {cowFormService});
+  };
+
+  getFormFields() {
+    return this.cowFormService.generateCowForm();
   };
 
   changeFormFieldsForValues(state, modelValue) {

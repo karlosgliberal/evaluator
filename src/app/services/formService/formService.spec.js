@@ -1,8 +1,14 @@
-import formServices from '../../views/forms/form.services';
+import formServices from './form.services.js';
+import cowFormServices from '../AnimalFormsServices/cowForm.services';
 
 describe('form service', () => {
 
-  var formService;
+  var formService, cowFormServiceSpy;
+
+  beforeEach(angular.mock.module(cowFormServices.name, ($provide) => {
+    cowFormServiceSpy = {generateCowForm: sinon.spy()};
+    $provide.value("cowFormService", cowFormServiceSpy);
+  }));
 
   beforeEach(angular.mock.module(formServices.name));
 
@@ -11,15 +17,8 @@ describe('form service', () => {
   }));
 
   it('should fetch form initial fields', () => {
-    expect(formService.getFormFields()).to.be.ok;
-  })
-
-  it('should return type1 fields', () => {
-    expect(formService.changeFormFieldsForValues('::state::', 'type1')[1]).to.eql(firstModelFields()[0]);
-  })
-
-  it('should return type2 fields', () => {
-    expect(formService.changeFormFieldsForValues('::state::', 'type2')[1]).to.eql(secondModelFields()[0]);
+    formService.getFormFields();
+    expect(formService.cowFormService.generateCowForm).to.be.called.once;
   })
 });
 

@@ -18,7 +18,8 @@ module.exports = function (config) {
 
     // preprocess with webpack and our sourcemap loader
     preprocessors: {
-      'test/index.js': ['webpack']
+      'test/index.js': ['webpack'],
+      'src/*.js': ['coverage']
     },
 
     reporters: [

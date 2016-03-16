@@ -8,6 +8,11 @@ const formConfig = ($stateProvider, formlyConfigProvider) => {
     controller: 'formController',
     controllerAs: 'form'
   });
+
+  formlyConfigProvider.setWrapper({
+    name: 'panel',
+    templateUrl: 'panel.html'
+  });
 };
 
 export default formConfig;

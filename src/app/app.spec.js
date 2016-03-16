@@ -61,7 +61,6 @@ describe('Application Tests', () => {
       expect(controller.onSeleccionAnimalTap).to.be.ok;
     });
 
-    //test
     it('should transition to the seleccion Animal component', () => {
       controller.onSeleccionAnimalTap();
       expect(stubs.$state.go).to.have.been.called.once;
