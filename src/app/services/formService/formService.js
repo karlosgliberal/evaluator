@@ -1,13 +1,19 @@
 import { assign } from 'lodash';
+import animal from '../../utils/animal';
 
 export default class formService {
   /*@ngInject*/
-  constructor(cowFormService){
-    assign(this, {cowFormService});
+  constructor(cowFormService, swineFormService) {
+    assign(this, {cowFormService, swineFormService});
   };
 
-  getFormFields() {
-    return this.cowFormService.generateCowForm();
+  getFormFields(selectedAnimal) {
+    console.log(animal.COW);
+    console.log(selectedAnimal);
+    if (selectedAnimal === animal.COW) {
+      return this.cowFormService.generateForm();
+    }
+    return this.swineFormService.generateForm();
   };
 
   changeFormFieldsForValues(state, modelValue) {

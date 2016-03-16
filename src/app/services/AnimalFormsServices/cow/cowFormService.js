@@ -1,6 +1,6 @@
 import {assign} from 'lodash';
 
-const labelReferenceBase = 'forms.cow.herd.fields.';
+const labelReferenceBase = 'forms.cow.';
 
 export default class cowFormService {
   /*@ngInject*/
@@ -8,38 +8,38 @@ export default class cowFormService {
     assign(this, {$translate});
   };
 
-  generateCowForm() {
+  generateForm() {
     return [{
-      key: 'herd-title',
+      key: 'herd',
       wrapper: 'panel',
       templateOptions: {label: this.$translate.instant('forms.cow.herd.title')},
-      fieldGroup: this.createFieldGroup(cowFormService.cowHerdFieldsList())
+      fieldGroup: this.createFieldGroup(cowFormService.cowHerdFieldsList(), 'herd.fields.')
     }, {
       key: 'on-field',
       wrapper: 'panel',
-      templateOptions: {label: this.$translate.instant('forms.cow.herd.title')},
-      fieldGroup: this.createFieldGroup(cowFormService.cowOnFieldFieldsList())
+      templateOptions: {label: this.$translate.instant('forms.cow.on-field.title')},
+      fieldGroup: this.createFieldGroup(cowFormService.cowOnFieldFieldsList(), 'on-field.fields.')
     }, {
       key: 'storage',
       wrapper: 'panel',
-      templateOptions: {label: this.$translate.instant('forms.cow.herd.title')},
-      fieldGroup: this.createFieldGroup(cowFormService.cowStorageFieldsList())
+      templateOptions: {label: this.$translate.instant('forms.cow.storage.title')},
+      fieldGroup: this.createFieldGroup(cowFormService.cowStorageFieldsList(), 'storage.fields.')
     }
     ];
   }
 
-  createFieldGroup(fieldsList) {
+  createFieldGroup(fieldsList, fieldGroup) {
     return _.map(fieldsList, (field) => {
-      return this.createCheckbox(field);
+      return this.createCheckbox(field, fieldGroup);
     });
   }
 
-  createCheckbox(fieldName) {
+  createCheckbox(fieldName, fieldGroup) {
     return {
       type: 'checkbox',
       key: fieldName,
       templateOptions: {
-        label: this.$translate.instant(labelReferenceBase + fieldName)
+        label: this.$translate.instant(labelReferenceBase + fieldGroup + fieldName)
       }
     };
   }
@@ -56,7 +56,7 @@ export default class cowFormService {
   }
 
   static cowStorageFieldsList() {
-    return ['molds', 'sillage-trobules', 'warm-silage', 'grass-silage', 'silage-front-consuption'];
+    return ['molds', 'sillage-troubles', 'warm-silage', 'grass-silage', 'silage-front-consuption'];
   }
 }
 

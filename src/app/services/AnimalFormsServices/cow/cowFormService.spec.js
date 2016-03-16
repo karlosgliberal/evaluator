@@ -1,5 +1,5 @@
-import cowFormServices from '../AnimalFormsServices/cowForm.services';
-import App from '../../app';
+import cowFormServices from './cowForm.services.js';
+import App from '../../../app';
 
 const labelReferenceBase = 'forms.cow.herd.fields.';
 
@@ -16,7 +16,6 @@ describe('cow form service', () => {
   beforeEach(angular.mock.module(cowFormServices.name));
 
   beforeEach(inject((_cowFormService_)=> {
-    //cowFormService = {cowFormService : _cowFormService_, createFieldGroup: sinon.spy()};
     cowFormService = _cowFormService_;
   }));
 
@@ -27,6 +26,11 @@ describe('cow form service', () => {
   it('should return checkboxList from field list', () => {
     expect(cowFormService.createFieldGroup(['::field1::', '::field2::'])[0].key).to.be.equal(checkBoxFieldList()[0].key);
     expect(cowFormService.createFieldGroup(['::field1::', '::field2::'])[1].key).to.be.equal(checkBoxFieldList()[1].key);
+  });
+
+  it('should call field group generation', () => {
+    //TODO
+    //expect(cowFormService.createFieldGroup(any)).to.be.called.once;
   });
 });
 
