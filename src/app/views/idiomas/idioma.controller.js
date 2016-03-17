@@ -1,19 +1,15 @@
 import { assign } from 'lodash';
+import languages from '../../utils/language';
 
 export default class IdiomaController {
-    /*@ngInject*/
-  constructor($scope, $state, $translate) {
+  /*@ngInject*/
+  constructor(languageFormService, $translate, $state) {
     assign(this, {
-      $scope,
-      $state,
+      languageFormService,
       $translate,
-      languages: [{name: 'Castellano', code: 'es'}, {name: 'English', code: 'en'}]
+      $state
     });
-  }
-
-  setLanguage(language) {
-    this.$translate.use(language.code);
-    this.$translate.refresh(language.code);
-    this.$state.go('home', null, {reload: true});
+    this.viewModel = {};
+    this.fields = this.languageFormService.generateLanguageForm(this.$translate, this.$state);
   }
 }

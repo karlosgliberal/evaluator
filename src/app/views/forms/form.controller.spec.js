@@ -115,4 +115,3 @@ function prepareFormly() {
   $compile = $compile(directiveHTML)(scope);
   scope.$digest();
 }
-

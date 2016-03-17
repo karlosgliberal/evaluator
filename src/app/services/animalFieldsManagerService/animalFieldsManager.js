@@ -5,6 +5,8 @@ import poultryFields from './../../utils/fields/poultryFields';
 
 export default class animalFieldsManager {
   /*@ngInject*/
+  constructor(){};
+
   getFieldsFor(animal, specie) {
     if (animals.COW === animal) {
       return cowFields.getAllFields();
