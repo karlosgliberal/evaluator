@@ -2,12 +2,13 @@ import { assign } from 'lodash';
 
 export default class formController {
   /*@ngInject*/
-  constructor(formService) {
+  constructor(formService, $stateParams) {
     assign(this, {
-      formService
+      formService,
+      $stateParams
     });
     this.viewModel = {};
-    this.fields = this.formService.getFormFields(this);
+    this.fields = this.formService.getFormFields($stateParams.animal);
   }
 
   onFormBaseChange(){

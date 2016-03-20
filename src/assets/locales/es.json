@@ -56,6 +56,38 @@
           "silage-front-consuption": "El frente del silo avanza lentamente"
         }
       }
+    },
+    "swine": {
+      "animal": {
+        "title": "Cerdos",
+        "fields": {
+          "sows-status": "Estado general de las cerdas insatisfactorio",
+          "poor-growth": "Condición corporal pobre",
+          "intake": "Ingesta insuficiente",
+          "skin-color": "Mal color en las cerdas ",
+          "milk-production": "Baja producción de leche ",
+          "veterinary-intervention": "Intervenciones veterinarias más frecuentes de lo deseado",
+          "lactation-start": "Problemas para empezar la lactación",
+          "stillborn-piglets": "Demasiados lechones muertos/momificados/pequeños",
+          "small-piglets-at-birth": "Lechones demasiado pequeños o heterogéneos",
+          "splay-legs": "Más splay legs de lo habitual",
+          "red-vulva": "Vulvas en cereza",
+          "neonatal-diarrea": "Diarreas neonatales, lechones que no crecen bien",
+          "necrosis": "Necrosis en orejas y cola y/o nerviosismo",
+          "reproduction-troubles": "Problemas de fertilidad (metiritis, retención de placenta)",
+          "heat-detection": "Problemas en la detección de celos, demasiadas repeticiones",
+          "weaning-insemination": "Intervalo destete-inseminación demasiado largo"
+        }
+      },
+      "feed": {
+        "title": "Alimentación",
+        "fields": {
+          "home-grown": "Pienso hecho en la granja ",
+          "use-of-corn": "Uso de corn cob mix (CCM)",
+          "storage-facilities": "Problemas de conservación del cereal",
+          "grains-preservation-problems": "Mucho tiempo entre las limpiezas de silo "
+        }
+      }
     }
   }
 }

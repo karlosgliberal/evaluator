@@ -24,4 +24,10 @@ describe('seleccion animal controller', () => {
     expect(stateSpy.$state.go).to.have.been.called.once;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'cow'});
   });
+
+  it('should transition to cow form', () => {
+    controller.onAnimalSelection('swine');
+    expect(stateSpy.$state.go).to.have.been.called.once;
+    expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'swine'});
+  });
 })

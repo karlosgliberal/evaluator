@@ -6,7 +6,10 @@ const formConfig = ($stateProvider, formlyConfigProvider) => {
     url: '/forms',
     template: form,
     controller: 'formController',
-    controllerAs: 'form'
+    controllerAs: 'form',
+    params: {
+      animal: ''
+    }
   });
 
   formlyConfigProvider.setWrapper({

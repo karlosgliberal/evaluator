@@ -27,7 +27,7 @@ module.exports = function (config) {
       'nyan',
 
         // https://github.com/karma-runner/karma-coverage
-      'coverage'
+      //'coverage'
     ],
 
     // configure webpack within Karma

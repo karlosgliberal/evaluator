@@ -1,8 +1,14 @@
 import formControllers from './form.controllers';
+import animal from '../../utils/animal.js';
 
-var controller, scope, formServiceSpy, form, $compile, directiveHTML;
+var controller, scope, formServiceSpy, form, $compile, directiveHTML, stateParmsStub;
 
 describe('Form controller', () => {
+
+  beforeEach(angular.mock.module(formControllers.name, ($provide) => {
+    stateParmsStub = {animal : animal.SWINE};
+    $provide.value("$stateParams.animal", stateParmsStub);
+  }));
 
   beforeEach(angular.mock.module(formControllers.name));
 
@@ -30,16 +36,17 @@ describe('Form controller', () => {
   });
 
   describe('form interaction', function () {
+    it('should get form fields', () => {
+      expect(formServiceSpy.getFormFields.calledWith(stateParmsStub.animal));
+    });
     it('should ask field form change', function () {
       controller.onFormBaseChange();
 
       expect(formServiceSpy.changeFormFieldsForValues).to.have.been.called.once;
     });
-    it('should get form fields', () => {
-      expect(formServiceSpy.getFormFields).to.have.been.called.once;
-    });
   });
 });
+
 
 function prepareFormly() {
   scope.viewModel = {};
