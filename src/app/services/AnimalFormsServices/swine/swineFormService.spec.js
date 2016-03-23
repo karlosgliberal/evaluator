@@ -1,12 +1,18 @@
 import swineFormServices from './swineForm.services.js';
 import App from '../../../app';
+import swineFields from '../../../utils/fields/swineFields';
+import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBuilder.services'
 
-const labelReferenceBase = 'forms.cow.herd.fields.';
-
+const labelReferenceBase = 'forms.swine.';
 
 describe('swine form service', () => {
 
-  var swineFormService, translateStub;
+  var swineFormService, translateStub, formPartsBuilderServiceSpy;
+
+  beforeEach(angular.mock.module(formPartsBuilderServices.name, ($provide) => {
+    formPartsBuilderServiceSpy = {buildWrapperFor: sinon.spy()};
+    $provide.value("formPartsBuilderService", formPartsBuilderServiceSpy);
+  }));
 
   beforeEach(angular.mock.module(swineFormServices.name, ($provide) => {
     translateStub = {instant: sinon.stub()};
@@ -19,18 +25,12 @@ describe('swine form service', () => {
     swineFormService = _swineFormService_;
   }));
 
-  it('should create checkbox field', () => {
-    expect(swineFormService.createCheckbox('::fieldName::').key).to.be.equal(checboxField().key);
-  });
+  it('should call herd wrappers', () => {
+    swineFormService.generateForm();
 
-  it('should return checkboxList from field list', () => {
-    expect(swineFormService.createFieldGroup(['::field1::', '::field2::'])[0].key).to.be.equal(checkBoxFieldList()[0].key);
-    expect(swineFormService.createFieldGroup(['::field1::', '::field2::'])[1].key).to.be.equal(checkBoxFieldList()[1].key);
-  });
-
-  it('should call field group generation', () => {
-    //TODO
-    //expect(cowFormService.createFieldGroup(any)).to.be.called.once;
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledTwice;
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledWith(labelReferenceBase, 'animal', swineFields.swineOnAnimalFieldsList());
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledWith(labelReferenceBase, 'feed', swineFields.swineOnFeedFieldsList());
   });
 });
 

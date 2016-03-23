@@ -1,12 +1,18 @@
 import cowFormServices from './cowForm.services.js';
 import App from '../../../app';
+import cowFields from '../../../utils/fields/cowFields';
+import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBuilder.services'
 
-const labelReferenceBase = 'forms.cow.herd.fields.';
-
+const labelReferenceBase = 'forms.cow.';
 
 describe('cow form service', () => {
 
-  var cowFormService, translateStub;
+  var cowFormService, translateStub, formPartsBuilderServiceSpy;
+
+  beforeEach(angular.mock.module(formPartsBuilderServices.name, ($provide) => {
+    formPartsBuilderServiceSpy = {buildWrapperFor: sinon.spy()};
+    $provide.value("formPartsBuilderService", formPartsBuilderServiceSpy);
+  }));
 
   beforeEach(angular.mock.module(cowFormServices.name, ($provide) => {
     translateStub = {instant: sinon.stub()};
@@ -19,41 +25,12 @@ describe('cow form service', () => {
     cowFormService = _cowFormService_;
   }));
 
-  it('should create checkbox field', () => {
-    expect(cowFormService.createCheckbox('::fieldName::').key).to.be.equal(checboxField().key);
-  });
+  it('should call herd wrappers', () => {
+    cowFormService.generateForm();
 
-  it('should return checkboxList from field list', () => {
-    expect(cowFormService.createFieldGroup(['::field1::', '::field2::'])[0].key).to.be.equal(checkBoxFieldList()[0].key);
-    expect(cowFormService.createFieldGroup(['::field1::', '::field2::'])[1].key).to.be.equal(checkBoxFieldList()[1].key);
-  });
-
-  it('should call field group generation', () => {
-    //TODO
-    //expect(cowFormService.createFieldGroup(any)).to.be.called.once;
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledThrice;
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledWith(labelReferenceBase, 'herd', cowFields.cowHerdFieldsList());
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledWith(labelReferenceBase, 'on-field', cowFields.cowOnFieldFieldsList());
+    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledWith(labelReferenceBase, 'storage', cowFields.cowStorageFieldsList());
   });
 });
-
-function checboxField() {
-  return {
-    type: 'checkbox',
-    key: '::fieldName::',
-    templateOptions: {
-      label: '::fieldName::'
-    }
-  };
-}
-
-function checkBoxFieldList() {
-  return [{
-    type: 'checkbox',
-    key: '::field1::',
-    templateOptions: {}
-  },
-    {
-      type: 'checkbox',
-      key: '::field2::',
-      templateOptions: {}
-    }
-  ]
-}

@@ -1,4 +1,6 @@
 import seleccionAnimalControllers from './seleccionAnimal.controllers';
+import animal from '../../utils/animal';
+
 
 var controller, stateSpy;
 
@@ -19,15 +21,23 @@ describe('seleccion animal controller', () => {
   }));
 
   it('should transition to cow form', () => {
-    controller.onAnimalSelection('cow');
+    controller.onAnimalSelection(animal.COW);
 
     expect(stateSpy.$state.go).to.have.been.called.once;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'cow'});
   });
 
-  it('should transition to cow form', () => {
-    controller.onAnimalSelection('swine');
+  it('should transition to swine form', () => {
+    controller.onAnimalSelection(animal.SWINE);
+
     expect(stateSpy.$state.go).to.have.been.called.once;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'swine'});
+  });
+
+  it('should transition to cow form', () => {
+    controller.onAnimalSelection(animal.POULTRY);
+
+    expect(stateSpy.$state.go).to.have.been.called.once;
+    expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'poultry'});
   });
 })

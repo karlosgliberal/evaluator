@@ -1,27 +1,15 @@
 <ion-view view-title="{{'detail.view-title' | translate }}">
     <ion-content>
         <h4 style="text-align: center;">Form validation example</h4><br/>
+        <form>
+            <formly-form form="form.form" model="form.selectorViewModel" fields="form.selector">
+            </formly-form>
+        </form>
         <form ng-submit="form.onSubmit()" novalidate>
             <formly-form form="form.form" model="form.viewModel" fields="form.fields">
                 <button type="submit" class="btn btn-primary submit-button">Submit</button>
             </formly-form>
         </form>
-        <div>
-            <h2>Model Value</h2>
-            <pre>{{form.viewModel | json}}</pre>
-        </div>
-        <div>
-            <h4>Form</h4>
-            <pre>{{form.form | json}}</pre>
-        </div>
-        <div>
-            <h4>Fields <small>(note, functions are not shown)</small></h4>
-            <pre>{{form.originalFields | json}}</pre>
-        </div>
-        <div>
-            <h4>Form State</h4>
-            <pre>{{form.options.formState | json}}</pre>
-        </div>
     </ion-content>
 </ion-view>
 
