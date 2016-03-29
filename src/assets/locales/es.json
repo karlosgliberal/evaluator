@@ -88,6 +88,74 @@
           "grains-preservation-problems": "Mucho tiempo entre las limpiezas de silo "
         }
       }
+    },
+    "poultry": {
+      "selector": {
+        "title": "tipo de animal",
+        "fields": {
+          "hens": "Gallinas de puesta",
+          "breeder": "Reproductoras",
+          "broiler": "Broiler"
+        }
+      },
+      "animals": {
+        "title": "Los animales",
+        "fields": {
+          "feed-intake": "Ingesta insuficiente",
+          "body-weight": "Condición corporal pobre",
+          "liquid-droppings": "Blandeos",
+          "water-consumption": "Elevado consumo de agua",
+          "vaccination": "Ineficacia de vacunas o tratamientos",
+          "infectious-diseases": "Alta incidencia de enfermedades infecciosas",
+          "dermatitis": "Necrosis de la mucosa, dermatitis",
+          "gizzard": "Inflamación del buche, proventrículo, molleja, intestino",
+          "mortality": "Alta mortalidad",
+          "liver damage": "Daño hepático y/o renal",
+          "ovaries-size": "Reducido tamaño ovárico",
+          "tibial": "Casos de discondroplasia tibial",
+          "thymus": "Desarrollo anormal del timo y de la bolsa de Fabricio"
+        },
+        "broiler": {
+          "title": "Los animales",
+          "fields": {
+            "feed-intake": "Menor ingesta de alimento",
+            "body-weight": "Menor peso corporal",
+            "fcr": "Mayor IC / síndrome de malabsorción / plumas en helicóptero",
+            "droppings": "Camas húmedas",
+            "water-consumption": "Mayor consumo de agua",
+            "infectious-diseases": "Fallo vacunal o terapéutico",
+            "vaccination": "Alta incidencia de enfermedades infecciosas",
+            "mucosal-necrosis": "Necrosis de la mucosa, dermatitis",
+            "gizzard": "Inflamación del buche, proventrículo, molleja, intestino",
+            "mortality": "Alta mortalidad",
+            "liver-damage": "Daño hepático y/o renal",
+            "tibial-dyschondroplasia": "Casos de discondroplasia tibial",
+            "thymus": "Desarrollo anormal del timo y de la bolsa de Fabricio",
+            "sphinganine": "Ratio de esfinganina:esfingosina elevado en sangre"
+          }
+        }
+      },
+      "feed": {
+        "title": "Alimento",
+        "fields": {
+          "home-mixed": "El alimento se mezcla en la granja",
+          "home-grown": "Alimento hecho en la granja",
+          "use-of-corn": "Uso significativo de maiz o subproductos del maiz",
+          "storage-facilities": "Instalaciones y gestión de almacenamiento deficientes (ventilación, limpieza)",
+          "feed-management": "Los problemas se producen tras un cambio en la gestión de la alimentación",
+          "preservation-problems": "Problemas durante el almacenamiento de los cereales (calor, plagas, humedad)"
+        }
+      },
+      "egg-production": {
+        "title": "Producción de huevos",
+        "fields": {
+          "egg-production": "Baja producción de huevos",
+          "egg-weight": "Huevos de peso bajo",
+          "shell-quality": "Cáscara de baja calidad ( aumento de grietas, huevos sin cáscara, huevos claros)",
+          "egg-hatchability": "Reducida eclosión de huevos",
+          "progeny": "Viabilidad baja de las crías"
+        }
+      }
     }
   }
 }

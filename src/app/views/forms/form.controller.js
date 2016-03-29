@@ -7,11 +7,15 @@ export default class formController {
       formService,
       $stateParams
     });
+
+    this.selectorViewModel = {};
+    this.selector = this.formService.getFormSelector(this.$stateParams.animal, this);
+
     this.viewModel = {};
-    this.fields = this.formService.getFormFields($stateParams.animal);
+    this.fields = this.formService.getFormFields(this.$stateParams.animal);
   }
 
-  onFormBaseChange(){
-    this.fields = this.formService.changeFormFieldsForValues(this, this.viewModel.typeSelector);
+  onSelectorChange() {
+    this.fields = this.formService.changeFormFieldsFor(this.selectorViewModel.poultrySelector);
   }
 }

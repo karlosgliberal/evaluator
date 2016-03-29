@@ -12,7 +12,8 @@
     "language": "Language"
   },
   "language": {
-    "view-title": "Language selection"
+    "es": "Spanish",
+    "en": "English"
   },
   "forms": {
     "cow": {
@@ -86,6 +87,74 @@
           "use-of-corn": "Significant use of corn or corn by-products",
           "storage-facilities": "Poor storage facilities and management (ventilation, cleaning)",
           "grains-preservation-problems": "Troubles during grains or feed preservation (heat, pests, moisture)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Type of animal",
+        "fields": {
+          "hens": "Laying hens",
+          "breeder": "Breeder",
+          "broiler": "Broiler"
+        }
+      },
+      "animals": {
+        "title": "Animals",
+        "fields": {
+          "feed-intake": "Insufficient feed intake",
+          "body-weight": "Insufficient body weight",
+          "liquid-droppings": "Liquid droppings",
+          "water-consumption": "High water consumption",
+          "vaccination": "Vaccination or therapeutic failure",
+          "infectious-diseases": "High occurrence of infectious diseases",
+          "dermatitis": "Mucosal necrosis, dermatitis",
+          "gizzard": "Inflammation in crop, proventriculus, gizzard, intestine",
+          "mortality": "High mortality",
+          "liver damage": "Liver and/or kidney damage",
+          "ovaries-size": "Low ovaries size",
+          "tibial": "Cases of tibial dyschondroplasia",
+          "thymus": "Abnormal development of thymus and bursa of Fabricius"
+        },
+        "broiler": {
+          "title": "Animals",
+          "fields": {
+            "feed-intake": "Decreased feed intake",
+            "body-weight": "Decreased body weight",
+            "fcr": "Higher FCR/Maladsortion symdrom/Feather in helicopter",
+            "droppings": "Wet droppings",
+            "water-consumption": "Increased water consumption",
+            "infectious-diseases": "Increased occurrence of infectious diseases",
+            "vaccination": "Vaccination or therapeutic failure",
+            "mucosal-necrosis": "Mucosal necrosis, dermatitis",
+            "gizzard": "Inflammation in crop, proventriculus, gizzard, intestine",
+            "mortality": "Increased mortality",
+            "liver-damage": "Liver and/or kidney damage",
+            "tibial-dyschondroplasia": "Cases of tibial dyschondroplasia",
+            "thymus": "Abnormal development of thymus and bursa of Fabricius",
+            "sphinganine": "Increase sphinganine : sphingonisine blood ratio"
+          }
+        }
+      },
+      "feed": {
+        "title": "Feed",
+        "fields": {
+          "home-mixed": "Home mixed feed",
+          "home-grown": "Home grown feed",
+          "use-of-corn": "Significant use of corn or corn by-product",
+          "storage-facilities": "Poor storage facilities and management (ventilation, cleaning)",
+          "feed-management": "All above described troubles followed a change in feed management",
+          "preservation-problems": "Troubles during grains or feed preservation (heat, pests, moisture)"
+        }
+      },
+      "egg-production": {
+        "title": "Eggs production",
+        "fields": {
+          "egg-production": "Low egg production",
+          "egg-weight": "Low egg weight",
+          "shell-quality": "Low egg shell quality (increased cracked, shell-less, pale eggs)",
+          "egg-hatchability": "Low egg hatchability",
+          "progeny": "Low progeny viability"
         }
       }
     }
