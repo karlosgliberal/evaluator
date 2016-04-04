@@ -11,7 +11,7 @@ export default class poultryFormService {
   };
 
   generateFormSelector(state) {
-    return this.formPartsBuilderService.buildSelectorFor(labelReferenceBase, 'poultrySelector', poultry, state);
+    return this.formPartsBuilderService.buildSelectorFor(labelReferenceBase, 'selector', poultry, state);
   }
 
   generateForm(poultrySpecie) {

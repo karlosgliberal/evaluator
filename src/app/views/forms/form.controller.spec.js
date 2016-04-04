@@ -2,7 +2,7 @@ import formControllers from './form.controllers';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
 
-var controller, scope, formServiceSpy, form, $compile, directiveHTML, stateParmsStub;
+var controller, scope, formServiceSpy, form, $compile, directiveHTML, stateParamsStub, formSubmitSpy;
 
 describe('Form controller', () => {
 
@@ -11,14 +11,16 @@ describe('Form controller', () => {
   beforeEach(inject(($controller, $rootScope, _$compile_) => {
     $compile = _$compile_;
     scope = $rootScope.$new();
-    stateParmsStub = {animal : animal.SWINE};
+    stateParamsStub = {animal: animal.SWINE};
     formServiceSpy = {getFormFields: sinon.spy(), getFormSelector: sinon.spy(), changeFormFieldsFor: sinon.spy()};
+    formSubmitSpy = {processData: sinon.spy()};
 
     prepareFormly();
 
     controller = $controller('formController', {
       formService: formServiceSpy,
-      $stateParams: stateParmsStub
+      $stateParams: stateParamsStub,
+      formSubmitService: formSubmitSpy
     });
   }));
 
@@ -35,20 +37,31 @@ describe('Form controller', () => {
 
   describe('form interaction', function () {
     it('should get form fields', () => {
-      expect(formServiceSpy.getFormSelector).to.be.calledWith(stateParmsStub.animal);
-      expect(formServiceSpy.getFormFields).to.be.calledWith(stateParmsStub.animal);
+      expect(formServiceSpy.getFormSelector).to.be.calledWith(stateParamsStub.animal);
+      expect(formServiceSpy.getFormFields).to.be.calledWith(stateParamsStub.animal);
     });
-    it('should ask field form change', function () {
-      //TODO
-      //scope.selectorViewModel = {poultrySelector: poultry.BROILER};
 
-      //scope.$digest();
-      //controller.onSelectorChange();
-      //expect(formServiceSpy.changeFormFieldsFor).to.be.calledWith(poultry.BROILER);
+    it('should ask field form change', function () {
+      controller.selectorViewModel = {selector: poultry.BROILER};
+      scope.$digest();
+      controller.onSelectorChange();
+      expect(formServiceSpy.changeFormFieldsFor.withArgs(poultry.BROILER).callCount).to.be.equal(1);
     });
+
+    it('should ask submit service to process data', () => {
+      controller.viewModel = {';;field1::': true, '::field2::': true};
+      controller.selectorViewModel = {};
+      scope.$digest();
+
+      controller.onSubmit();
+
+      expect(formSubmitSpy.processData.withArgs(animal.SWINE, undefined, {
+        ';;field1::': true,
+        '::field2::': true
+      }).callCount).to.be.equal(1);
+    })
   });
 });
-
 
 function prepareFormly() {
   scope.viewModel = {};
@@ -94,7 +107,7 @@ function prepareFormly() {
   directiveHTML =
       '<form novalidate>' +
       '<formly-form form="form2" model="selectorViewModel" fields="selector">' +
-      '</form>'+
+      '</form>' +
       '<form novalidate>' +
       '<formly-form form="form" model="viewModel" fields="fields">' +
       '</form>';

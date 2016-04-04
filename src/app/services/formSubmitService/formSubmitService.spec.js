@@ -1,0 +1,118 @@
+import formSubmitServices from './formSubmit.services.js';
+import animal from './../../utils/animal';
+import poultry from './../../utils/poultry';
+import animalFieldsManager from '../animalFieldsManagerService/animalFieldsManager.services';
+
+describe('form service', () => {
+
+  var formSubmitService, animalFieldsManagerSpy;
+
+  beforeEach(angular.mock.module(animalFieldsManager.name, ($provide) => {
+    animalFieldsManagerSpy = {getFieldsFor: sinon.stub()};
+
+    $provide.value("animalFieldsManager", animalFieldsManagerSpy);
+  }));
+
+  beforeEach(angular.mock.module(formSubmitServices.name));
+
+  beforeEach(inject((_formSubmitService_)=> {
+    formSubmitService = _formSubmitService_;
+  }));
+
+  describe('data processor calls', () => {
+    it('should make call process', () => {
+      var fieldList = [{'herd': {'feed-intake': true, 'feed-intake': false}}, {'on-field': {'corn-fields': false}}];
+      var flattenerStub = sinon.stub(formSubmitService, 'flattenFieldList');
+      var animalFieldsStub = sinon.stub(formSubmitService, 'getAnimalFields');
+      var performEvaluationStub = sinon.stub(formSubmitService, 'performEvaluation');
+      var prepareResultStub = sinon.stub(formSubmitService, 'prepareResult');
+
+      flattenerStub.withArgs(fieldList).returns(['feed-intake']);
+      animalFieldsStub.withArgs(animal.COW, undefined).returns({'body-condition': 5.9, 'feed-intake': 6.1});
+      performEvaluationStub.withArgs(['feed-intake'], {'body-condition': 5.9, 'feed-intake': 6.1}).returns(6.1);
+      prepareResultStub.withArgs(6.1).returns(6);
+      var dataProcessResult = formSubmitService.processData(animal.COW, undefined, fieldList);
+
+      expect(flattenerStub.withArgs(fieldList)).to.be.called.once;
+      expect(animalFieldsStub.withArgs(animal.COW)).to.be.called.once;
+      expect(performEvaluationStub.withArgs(['feed-intake'], {'body-condition': 5.9, 'feed-intake': 6.1})).to.be.called.once;
+      expect(prepareResultStub.withArgs(6.1)).to.be.called.once;
+      expect(dataProcessResult).to.be.equal(6);
+    });
+  });
+
+  describe('processing actions', () => {
+    it('should flatten fieldList', () => {
+      var filteredFields = formSubmitService.flattenFieldList({
+        'herd': {
+          'feed-intake': true,
+          'body-condition': false
+        }
+      }, {'on-field': {'corn-fields': false}});
+
+      expect(filteredFields).to.be.eql(['feed-intake']);
+    });
+
+    it('should get Cow fields', () => {
+      formSubmitService.getAnimalFields(animal.COW);
+
+      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.COW).callCount).to.be.equal(1);
+    });
+
+    it('should get Swine fields', () => {
+      formSubmitService.getAnimalFields(animal.SWINE);
+
+      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.SWINE).callCount).to.be.equal(1);
+    });
+
+    it('should get Poultry breeder fields', () => {
+      formSubmitService.getAnimalFields(animal.POULTRY, poultry.BREEDER);
+
+      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.POULTRY, poultry.BREEDER).callCount).to.be.equal(1);
+    });
+
+    it('should perform evaluation with matching elements', () => {
+      var fieldsSum = formSubmitService.performEvaluation(['feed-intake', 'body-condition'], {
+        'feed-intake': 4.2,
+        'body-condition': 10.1,
+        'body-weight': 8.2
+      });
+
+      expect(fieldsSum).to.be.equal(39.3);
+    });
+
+    it('should perform evaluation without matching elements', () => {
+      var fieldsSum = formSubmitService.performEvaluation(['intake', 'condition'], {
+        'feed-intake': 4.2,
+        'body-condition': 10.2,
+        'body-weight': 8.2
+      });
+
+      expect(fieldsSum).to.be.equal(25);
+    });
+
+    it('should prepare the result', () => {
+      var fieldsSum = formSubmitService.prepareResult(30);
+
+      expect(fieldsSum).to.be.equal(30);
+    });
+
+    it('should prepare round the result', () => {
+      var fieldsSum = formSubmitService.prepareResult(50.14);
+
+      expect(fieldsSum).to.be.equal(50);
+    });
+
+    it('should prepare max result', () => {
+      var fieldsSum = formSubmitService.prepareResult(115);
+
+      expect(fieldsSum).to.be.equal(95);
+    });
+
+    it('should prepare min result', () => {
+      var fieldsSum = formSubmitService.prepareResult(25);
+
+      expect(fieldsSum).to.be.equal(25);
+    });
+  });
+});

@@ -58,7 +58,7 @@ describe('poultry form service', () => {
   it('shoulw call poultry selector', () => {
     poultryFormService.generateFormSelector();
 
-    expect(formPartsBuilderServiceSpy.buildSelectorFor).to.be.calledWith('forms.poultry.', 'poultrySelector', poultry, undefined);
+    expect(formPartsBuilderServiceSpy.buildSelectorFor).to.be.calledWith('forms.poultry.', 'selector', poultry, undefined);
   })
 
 });

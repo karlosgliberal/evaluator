@@ -44,14 +44,14 @@
           "corn-fields": "Corn fields are not ploughed",
           "fusarium": "Fusarium molds/diseases were observed on field",
           "silage-harvest": "Silage was harvested late",
-          "grass-silage": "Grass silage was cropped after corn"
+          "grass-silage-cropped": "Grass silage was cropped after corn"
         }
       },
       "storage": {
         "title": "Storage",
         "fields": {
           "molds": "Molds are present (red, blue, white or black...)",
-          "silage-trobules": "Troubles to press silage (high DM, speed of harvesting)",
+          "silage-troubles": "Troubles to press silage (high DM, speed of harvesting)",
           "warm-silage": "Silage is warm or took a long time to cool down",
           "grass-silage": "Grass silage is not as clean as usual",
           "silage-front-consuption": "Silage front is consumed too slowly"
@@ -111,7 +111,7 @@
           "dermatitis": "Mucosal necrosis, dermatitis",
           "gizzard": "Inflammation in crop, proventriculus, gizzard, intestine",
           "mortality": "High mortality",
-          "liver damage": "Liver and/or kidney damage",
+          "liver-damage": "Liver and/or kidney damage",
           "ovaries-size": "Low ovaries size",
           "tibial": "Cases of tibial dyschondroplasia",
           "thymus": "Abnormal development of thymus and bursa of Fabricius"
