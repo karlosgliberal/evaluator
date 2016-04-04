@@ -7,16 +7,6 @@ export default class formPartsBuilderService {
     assign(this, {$translate});
   };
 
-  buildWrapperFor(labelReferenceBase, key, fieldList) {
-    this.labelReferenceBase = labelReferenceBase;
-    return {
-      key: key,
-      wrapper: 'panel',
-      templateOptions: {label: this.$translate.instant(this.labelReferenceBase + key + '.title')},
-      fieldGroup: this.buildFieldGroupFor(fieldList, key + '.fields.')
-    };
-  }
-
   buildSelectorFor(labelReferenceBase, key, animal, state) {
     this.labelReferenceBase = labelReferenceBase;
     return [
@@ -36,6 +26,16 @@ export default class formPartsBuilderService {
       }];
   }
 
+  buildWrapperFor(labelReferenceBase, key, fieldList) {
+    this.labelReferenceBase = labelReferenceBase;
+    return {
+      key: key,
+      wrapper: 'panel',
+      templateOptions: {label: this.$translate.instant(this.labelReferenceBase + key + '.title')},
+      fieldGroup: this.buildFieldGroupFor(fieldList, key + '.fields.')
+    };
+  }
+
   buildChoiceListFor(animal) {
     return _.map(animal, (type) => {
       return {
@@ -46,17 +46,17 @@ export default class formPartsBuilderService {
   }
 
   buildFieldGroupFor(fieldsList, fieldGroup) {
-    return _.map(fieldsList, (field) => {
-      return this.buildCheckboxFor(field, fieldGroup);
+    return _.map(fieldsList, (field, value) => {
+      return this.buildCheckboxFor(value, fieldGroup);
     });
   }
 
-  buildCheckboxFor(fieldName, fieldGroup) {
+  buildCheckboxFor(field, fieldGroup) {
     return {
       type: 'checkbox',
-      key: fieldName,
+      key: field,
       templateOptions: {
-        label: this.$translate.instant(this.labelReferenceBase + fieldGroup + fieldName),
+        label: this.$translate.instant(this.labelReferenceBase + fieldGroup + field)
       }
     };
   }

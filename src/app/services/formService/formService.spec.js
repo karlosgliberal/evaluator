@@ -1,7 +1,7 @@
 import formServices from './form.services.js';
-import cowFormServices from '../AnimalFormsServices/cow/cowForm.services.js';
-import swineFormServices from '../AnimalFormsServices/swine/swineForm.services.js';
-import poultryFormServices from '../AnimalFormsServices/poultry/poultryForm.services.js';
+import cowFormServices from '../animalFormsServices/cow/cowForm.services.js';
+import swineFormServices from '../animalFormsServices/swine/swineForm.services.js';
+import poultryFormServices from '../animalFormsServices/poultry/poultryForm.services.js';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
 
