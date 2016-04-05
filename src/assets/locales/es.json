@@ -12,7 +12,8 @@
     "language": "Idioma"
   },
   "language": {
-    "view-title": "Selección de idioma"
+    "es": "Castellano",
+    "en": "Ingles"
   },
   "forms": {
     "cow": {

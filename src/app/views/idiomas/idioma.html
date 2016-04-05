@@ -1,9 +1,6 @@
 <ion-view view-title="{{'language.view-title' | translate }}">
     <ion-content>
-        <ion-list>
-            <ion-item ng-repeat="language in idioma.languages" ng-click="idioma.setLanguage(language)">
-                {{ language.name }}
-            </ion-item>
-        </ion-list>
+      <formly-form form="idioma.form" model="idioma.viewModel" fields="idioma.fields" ng-click="idioma.setLanguage">
+      </formly-form>
     </ion-content>
 </ion-view>
