@@ -4,7 +4,7 @@ import swineFields from './../../utils/fields/swineFields';
 import poultryFields from './../../utils/fields/poultryFields';
 
 export default class animalFieldsManager {
-
+  /*@ngInject*/
   getFieldsFor(animal, specie) {
     if (animals.COW === animal) {
       return cowFields.getAllFields();
@@ -14,4 +14,3 @@ export default class animalFieldsManager {
     return poultryFields.getAllFieldsFor(specie);
   }
 }
-

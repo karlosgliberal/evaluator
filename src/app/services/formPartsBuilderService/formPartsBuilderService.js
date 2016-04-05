@@ -2,7 +2,7 @@ import poultry from '../../utils/poultry';
 import {assign} from 'lodash';
 
 export default class formPartsBuilderService {
-
+  /*@ngInject*/
   constructor($translate) {
     assign(this, {$translate});
   };

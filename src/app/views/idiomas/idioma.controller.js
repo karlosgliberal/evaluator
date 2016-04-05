@@ -11,7 +11,6 @@ export default class IdiomaController {
     });
   }
 
-
   setLanguage(language) {
     this.$translate.use(language.code);
     this.$translate.refresh(language.code);
