@@ -2,7 +2,7 @@ import formControllers from './form.controllers';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
 
-var controller, scope, formServiceSpy, form, $compile, directiveHTML, stateParamsStub, formSubmitSpy;
+var controller, scope, formServiceSpy, form, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy;
 
 describe('Form controller', () => {
 
@@ -13,18 +13,27 @@ describe('Form controller', () => {
     scope = $rootScope.$new();
     stateParamsStub = {animal: animal.SWINE};
     formServiceSpy = {getFormFields: sinon.spy(), getFormSelector: sinon.spy(), changeFormFieldsFor: sinon.spy()};
-    formSubmitSpy = {processData: sinon.spy()};
-
+    formSubmitSpy = {processData: sinon.stub()};
+    formSubmitSpy.processData.withArgs(animal.SWINE, undefined, {
+      ';;field1::': true,
+      '::field2::': true
+    }).returns(6);
+    stateSpy = {
+      $state: {
+        go: sinon.spy()
+      }
+    };
     prepareFormly();
 
     controller = $controller('formController', {
+      $state: stateSpy.$state,
       formService: formServiceSpy,
       $stateParams: stateParamsStub,
       formSubmitService: formSubmitSpy
     });
   }));
 
-  describe('form and fields construction', function () {
+  describe('form and fields construction', () => {
     it('should have compiled input text', function () {
       expect($compile.find('select').length).to.equal(1);
       expect($compile.find('input').length).to.equal(2);
@@ -35,7 +44,7 @@ describe('Form controller', () => {
     });
   });
 
-  describe('form interaction', function () {
+  describe('form interaction', () => {
     it('should get form fields', () => {
       expect(formServiceSpy.getFormSelector).to.be.calledWith(stateParamsStub.animal);
       expect(formServiceSpy.getFormFields).to.be.calledWith(stateParamsStub.animal);
@@ -51,7 +60,6 @@ describe('Form controller', () => {
     it('should ask submit service to process data', () => {
       controller.viewModel = {';;field1::': true, '::field2::': true};
       controller.selectorViewModel = {};
-      scope.$digest();
 
       controller.onSubmit();
 
@@ -59,7 +67,13 @@ describe('Form controller', () => {
         ';;field1::': true,
         '::field2::': true
       }).callCount).to.be.equal(1);
-    })
+    });
+    it('should got to evaluation result view', () => {
+      controller.viewModel = {';;field1::': true, '::field2::': true};
+      controller.onSubmit();
+
+      expect(stateSpy.$state.go).to.have.been.calledWith('evaluationResult', {animal: "swine", result: 6});
+    });
   });
 });
 

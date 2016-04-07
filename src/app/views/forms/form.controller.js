@@ -2,8 +2,9 @@ import { assign } from 'lodash';
 
 export default class formController {
   /*@ngInject*/
-  constructor(formService, $stateParams, formSubmitService) {
+  constructor($state, formService, $stateParams, formSubmitService) {
     assign(this, {
+      $state,
       formService,
       $stateParams,
       formSubmitService
@@ -22,6 +23,7 @@ export default class formController {
   }
 
   onSubmit() {
-    var evaluation = this.formSubmitService.processData(this.$stateParams.animal, this.selectorViewModel.selector, this.viewModel);
+    var evaluationResult = this.formSubmitService.processData(this.$stateParams.animal, this.selectorViewModel.selector, this.viewModel);
+    this.$state.go('evaluationResult', {animal: this.$stateParams.animal, result: evaluationResult});
   }
 }
