@@ -24,10 +24,12 @@ export default class languageFormService {
         }
       },
       controller: /*@ngInject*/ function ($scope, $translate) {
-        for (var i = 0; i < languages.length; i++) {
-          languages[i].name = $translate.instant('language.' + languages[i].code);
-        }
-        $scope.to.options = languages;
+        var lang = [];
+        _.each(languages, (langCode) => {
+          lang.push({name: $translate.instant('language.' + langCode), code: langCode});
+        });
+
+        $scope.to.options = lang;
       }
     }];
   }

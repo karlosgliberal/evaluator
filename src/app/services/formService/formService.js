@@ -14,7 +14,6 @@ export default class formService {
   };
 
   getFormFields(selectedAnimal) {
-    console.log(animal);
     if (selectedAnimal === animal.COW) {
       return this.cowFormService.generateForm();
     } else if (selectedAnimal === animal.POULTRY) {

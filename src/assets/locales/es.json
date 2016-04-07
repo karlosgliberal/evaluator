@@ -13,7 +13,10 @@
   },
   "language": {
     "es": "Castellano",
-    "en": "Ingles"
+    "en": "Inglés",
+    "ch": "Chino",
+    "vi": "Vietnamita",
+    "tr": "Turco"
   },
   "forms": {
     "cow": {

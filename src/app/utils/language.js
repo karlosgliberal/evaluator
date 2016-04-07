@@ -1,11 +1,9 @@
-const languages = [
-  {
-    name: 'ENGLISH',
-    code: 'en'
-  }, {
-    name: 'SPANISH',
-    code: 'es'
-  }
-];
+const languages = {
+  ENGLISH: 'en',
+  SPANISH: 'es',
+  CHINESE: 'ch',
+  VIETNAMESE: 'vi',
+  TURKISH: 'tr'
+};
 
 export default languages;

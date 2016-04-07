@@ -1,3 +1,5 @@
+import languages from '../language';
+
 export default class cowFields {
   static cowHerdFieldsList() {
     return {
@@ -10,7 +12,11 @@ export default class cowFields {
 
   static cowOnFieldFieldsList() {
     return {
-      'corn-procedence': 5.714, 'corn-fields': 11.429, fusarium: 8.571, 'silage-harvest': 8.571, 'grass-silage-cropped': 5.714
+      'corn-procedence': 5.714,
+      'corn-fields': 11.429,
+      fusarium: 8.571,
+      'silage-harvest': 8.571,
+      'grass-silage-cropped': 5.714
     };
   }
 
@@ -21,7 +27,20 @@ export default class cowFields {
     };
   }
 
-  static getAllFields() {
-    return _.merge(this.cowHerdFieldsList(), this.cowOnFieldFieldsList(), this.cowStorageFieldsList());
+  static cowFeedFieldsList() {
+    return {
+      'corn-silages': 20,
+      'storage-facilities': 15,
+      'storage-period': 10,
+      moulds: 15
+    };
+  }
+
+  static getAllFieldsFor(language) {
+    if (language === languages.CHINESE || language === languages.VIETNAMESE) {
+      return _.merge(this.cowHerdFieldsList(), this.cowFeedFieldsList());
+    } else {
+      return _.merge(this.cowHerdFieldsList(), this.cowOnFieldFieldsList(), this.cowStorageFieldsList());
+    }
   };
 }

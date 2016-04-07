@@ -15,7 +15,7 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
         suffix: '.json'
       })
       .registerAvailableLanguageKeys(['es', 'en'], {
-        en: 'en', es: 'es'
+        en: 'en', es: 'es', tr: 'tr', ch: 'ch', vi: 'vi'
       })
       .preferredLanguage('en')
       .fallbackLanguage('en')
