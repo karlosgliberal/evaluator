@@ -40,24 +40,13 @@
           "troubles-from-raw-materials": "The above troubles started with the use of new forages or raw materials"
         }
       },
-      "on-field": {
-        "title": "On field",
+      "feed": {
+        "title": "The feed",
         "fields": {
-          "corn-procedence": "Corn is produced on single-crop farming field",
-          "corn-fields": "Corn fields are not ploughed",
-          "fusarium": "Fusarium molds/diseases were observed on field",
-          "silage-harvest": "Silage was harvested late",
-          "grass-silage-cropped": "Grass silage was cropped after corn"
-        }
-      },
-      "storage": {
-        "title": "Storage",
-        "fields": {
-          "molds": "Molds are present (red, blue, white or black...)",
-          "silage-troubles": "Troubles to press silage (high DM, speed of harvesting)",
-          "warm-silage": "Silage is warm or took a long time to cool down",
-          "grass-silage": "Grass silage is not as clean as usual",
-          "silage-front-consuption": "Silage front is consumed too slowly"
+          "corn-silages": "Significant use of corn or sorgho silages, grains or by product",
+          "storage-facilities": "Poor storage facilities and management (high temperature, poor cleaning)",
+          "storage-period": "Long period of storage",
+          "moulds": "Presence of moulds in raw material (red, blue, white or black…)"
         }
       }
     },

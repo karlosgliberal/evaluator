@@ -13,6 +13,7 @@ export default class formSubmitService {
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);
     var evaluationResult = this.performEvaluation(flattenedList, allFieldsList);
+    console.log(evaluationResult);
     return this.prepareResult(evaluationResult);
   }
 

@@ -16,7 +16,7 @@ import appDirectives from './app.directives';
 
 import idiomaModule from './views/idiomas/idioma.module';
 import formModule from './views/forms/form.module';
-import seleccionAnimalModule from './views/seleccionAnimal/seleccionAnimal.module';
+import animalSelectionModule from './views/animalSelection/animalSelection.module';
 
 const appModule = angular
     .module('olmixEvaluator', [
@@ -26,7 +26,7 @@ const appModule = angular
       appDirectives.name,
       idiomaModule.name,
       formModule.name,
-      seleccionAnimalModule.name
+      animalSelectionModule.name
     ])
     .config(appConfig)
     .controller('AppController', appController)

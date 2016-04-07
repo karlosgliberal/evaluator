@@ -1,12 +1,17 @@
-import seleccionAnimalControllers from './seleccionAnimal.controllers';
+import animalSelectionControllers from './animalSelection.controllers';
 import animal from '../../utils/animal';
 
 
-var controller, stateSpy;
+var controller, stateSpy, translateStub, availableAnimalsSpy;
 
-describe('seleccion animal controller', () => {
+describe('animal controller selection', () => {
 
-  beforeEach(angular.mock.module(seleccionAnimalControllers.name));
+  beforeEach(angular.mock.module(animalSelectionControllers.name, ($provide) => {
+    translateStub = {use: sinon.stub()};
+    $provide.value("$translate", translateStub);
+  }));
+
+  beforeEach(angular.mock.module(animalSelectionControllers.name));
 
   beforeEach(inject(($controller) => {
     stateSpy = {
@@ -14,9 +19,9 @@ describe('seleccion animal controller', () => {
         go: sinon.spy()
       }
     };
-
-    controller = $controller('SeleccionAnimalController', {
-      $state: stateSpy.$state
+    controller = $controller('animalSelectionController', {
+      $state: stateSpy.$state,
+      $translate: translateStub
     });
   }));
 

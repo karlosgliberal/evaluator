@@ -64,7 +64,7 @@ describe('Application Tests', () => {
     it('should transition to the seleccion Animal component', () => {
       controller.onSeleccionAnimalTap();
       expect(stubs.$state.go).to.have.been.called.once;
-      expect(stubs.$state.go).to.have.been.calledWith('seleccionAnimal');
+      expect(stubs.$state.go).to.have.been.calledWith('animalSelection');
     });
   });
 });

@@ -23,6 +23,5 @@ export default class formController {
 
   onSubmit() {
     var evaluation = this.formSubmitService.processData(this.$stateParams.animal, this.selectorViewModel.selector, this.viewModel);
-    console.log(evaluation);
   }
 }

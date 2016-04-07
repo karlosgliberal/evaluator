@@ -6,11 +6,17 @@ import swineFields from './../../utils/fields/swineFields';
 import poultryFields from './../../utils/fields/poultryFields';
 
 describe('animal fields manager', () => {
-  var animalFieldsManager, sandbox, spy;
+  var animalFieldsManager, sandbox, spy, translateStub;
 
   before(() => {
     sandbox = sinon.sandbox.create();
   });
+
+  beforeEach(angular.mock.module(animalFieldsManagerServices.name, ($provide) => {
+    translateStub = {use: sinon.stub()};
+
+    $provide.value("$translate", translateStub);
+  }));
 
   beforeEach(angular.mock.module(animalFieldsManagerServices.name));
 
@@ -19,9 +25,9 @@ describe('animal fields manager', () => {
   }));
 
   it('should get cow fields', () => {
-    var spy = sinon.spy(cowFields, 'getAllFields');
+    var spy = sinon.spy(cowFields, 'getAllFieldsFor');
 
-    animalFieldsManager.getFieldsFor(animals.COW);
+    animalFieldsManager.getFieldsFor(animals.COW, 'es');
 
     expect(spy.withArgs().callCount).to.be.equal(1);
   });

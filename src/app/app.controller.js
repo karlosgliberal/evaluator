@@ -12,7 +12,7 @@ export default class AppController {
   }
 
   onSeleccionAnimalTap() {
-    this.$state.go('seleccionAnimal');
+    this.$state.go('animalSelection');
   }
 
   onFormTap() {

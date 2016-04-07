@@ -1,0 +1,19 @@
+<ion-view view-title="Selecciona">
+    <ion-content>
+        <div class="row">
+            <div ng-repeat="anim in animalSelection.animals">
+                <div class="col-33">
+                    <div class="animal">
+                        <label>{{anim.name}}</label>
+                        <img ng-src="{{ anim.path}}"
+                             ng-click="animalSelection.onAnimalSelection(anim.name)"/>
+                        <p class="animal--titulo">anim</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p class="texto-seleccion">Elige el tipo de animal a evaluar</p>
+        </div>
+    </ion-content>
+</ion-view>
