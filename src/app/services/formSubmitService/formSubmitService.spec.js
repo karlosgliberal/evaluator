@@ -3,29 +3,43 @@ import animal from './../../utils/animal';
 import poultry from './../../utils/poultry';
 import animalFieldsManager from '../animalFieldsManagerService/animalFieldsManager.services';
 
+//define(['can', 'localCache'], function(can, localCache) {
+
 describe('form service', () => {
 
   var formSubmitService, animalFieldsManagerSpy;
 
+  var sandbox;
+  beforeEach(function () {
+    sandbox = sinon.sandbox.create();
+  });
+
+  afterEach(function () {
+    sandbox.restore();
+  });
+
   beforeEach(angular.mock.module(animalFieldsManager.name, ($provide) => {
     animalFieldsManagerSpy = {getFieldsFor: sinon.stub()};
-
     $provide.value("animalFieldsManager", animalFieldsManagerSpy);
   }));
 
   beforeEach(angular.mock.module(formSubmitServices.name));
 
   beforeEach(inject((_formSubmitService_)=> {
+    Object.defineProperty(sessionStorage, "setItem", {writable: true});
+
+
     formSubmitService = _formSubmitService_;
   }));
 
   describe('data processor calls', () => {
     it('should make call process', () => {
       var fieldList = [{'herd': {'feed-intake': true, 'feed-intake': false}}, {'on-field': {'corn-fields': false}}];
-      var flattenerStub = sinon.stub(formSubmitService, 'flattenFieldList');
-      var animalFieldsStub = sinon.stub(formSubmitService, 'getAnimalFields');
-      var performEvaluationStub = sinon.stub(formSubmitService, 'performEvaluation');
-      var prepareResultStub = sinon.stub(formSubmitService, 'prepareResult');
+      var flattenerStub = sandbox.stub(formSubmitService, 'flattenFieldList');
+      var animalFieldsStub = sandbox.stub(formSubmitService, 'getAnimalFields');
+      var performEvaluationStub = sandbox.stub(formSubmitService, 'performEvaluation');
+      var prepareResultStub = sandbox.stub(formSubmitService, 'prepareResult');
+      var dataSaveStub = sandbox.stub(formSubmitService, 'saveData');
 
       flattenerStub.withArgs(fieldList).returns(['feed-intake']);
       animalFieldsStub.withArgs(animal.COW, undefined).returns({'body-condition': 5.9, 'feed-intake': 6.1});
@@ -35,8 +49,12 @@ describe('form service', () => {
 
       expect(flattenerStub.withArgs(fieldList)).to.be.called.once;
       expect(animalFieldsStub.withArgs(animal.COW)).to.be.called.once;
-      expect(performEvaluationStub.withArgs(['feed-intake'], {'body-condition': 5.9, 'feed-intake': 6.1})).to.be.called.once;
+      expect(performEvaluationStub.withArgs(['feed-intake'], {
+        'body-condition': 5.9,
+        'feed-intake': 6.1
+      })).to.be.called.once;
       expect(prepareResultStub.withArgs(6.1)).to.be.called.once;
+      expect(dataSaveStub.withArgs(6, animal.COW, undefined, fieldList)).to.be.called.once;
       expect(dataProcessResult).to.be.equal(6);
     });
   });
@@ -113,6 +131,23 @@ describe('form service', () => {
       var fieldsSum = formSubmitService.prepareResult(25);
 
       expect(fieldsSum).to.be.equal(25);
+    });
+
+    it('should save data', () => {
+      var store = {}, localStorageKey, dataToSave = {
+        animal: 'cow',
+        selector: 'breeder',
+        fields: undefined,
+        result: 6
+      }, expected = JSON.stringify(dataToSave);
+      sandbox.stub(window.localStorage, 'setItem', function (key, value) {
+        store[key] = value;
+        localStorageKey = key;
+      });
+
+      formSubmitService.saveData(6, animal.COW, poultry.BREEDER);
+
+      expect(store[localStorageKey]).to.be.equal(expected);
     });
   });
 });

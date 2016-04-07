@@ -5,16 +5,19 @@ const baseSumValue = 25;
 
 export default class formSubmitService {
   /*@ngInject*/
-  constructor(animalFieldsManager) {
-    assign(this, {animalFieldsManager});
+  constructor(animalFieldsManager, $window) {
+    assign(this, {animalFieldsManager, $window});
   };
 
   processData(animal, selector, fields) {
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);
     var evaluationResult = this.performEvaluation(flattenedList, allFieldsList);
+    var result = this.prepareResult(evaluationResult);
+    this.saveData(result, animal, selector, fields);
+
     console.log(evaluationResult);
-    return this.prepareResult(evaluationResult);
+    return result;
   }
 
   flattenFieldList(fieldsList) {
@@ -51,5 +54,16 @@ export default class formSubmitService {
       return 25;
     }
     return _.round(evaluationResult);
+  }
+
+  saveData(result, animal, selector, fields) {
+    var data = {};
+    _.assign(data, {animal: animal});
+    if (selector) {
+      _.assign(data, {selector: selector});
+    }
+    _.assign(data, {fields: fields}, {result: result});
+
+    this.$window.localStorage.setItem('Evaluation' + Date.now(), JSON.stringify(data));
   }
 }
