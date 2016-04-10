@@ -5,8 +5,8 @@ const baseSumValue = 25;
 
 export default class formSubmitService {
   /*@ngInject*/
-  constructor(animalFieldsManager, $window) {
-    assign(this, {animalFieldsManager, $window});
+  constructor(animalFieldsManager, localStorageManager) {
+    assign(this, {animalFieldsManager, localStorageManager});
   };
 
   processData(animal, selector, fields) {
@@ -64,6 +64,6 @@ export default class formSubmitService {
     }
     _.assign(data, {fields: fields}, {result: result});
 
-    this.$window.localStorage.setItem('Evaluation' + Date.now(), JSON.stringify(data));
+    this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(data));
   }
 }

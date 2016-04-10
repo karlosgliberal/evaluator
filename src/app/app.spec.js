@@ -3,18 +3,7 @@
 import App from './app';
 
 describe('Application Tests', () => {
-  let sandbox, stubs, controller, deferred, scope;
-  let usersData = [{
-    id: 1,
-    name: 'Dave Ackerman',
-    email: 'dave@nugget.com',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'
-  }, {
-    id: 2,
-    name: 'Joe Schmoe',
-    email: 'joe@nugget.com',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/teleject/128.jpg'
-  }];
+  let sandbox, stateStub, controller, scope, localStorageManagerStub;
 
   before(() => {
     sandbox = sinon.sandbox.create();
@@ -23,28 +12,14 @@ describe('Application Tests', () => {
   beforeEach(angular.mock.module(App.name));
 
   beforeEach(inject(($controller, $q, $rootScope) => {
-   // Since we don't want ui router changing the browser url on state transistions,
-   // we'll mock the state server and test that it was called as expected.
     scope = $rootScope.$new();
-
-    stubs = {
-      userService: {
-        getUsers: sandbox.stub().returns($q.when({
-          data: {
-            users: usersData
-          }
-        }))
-      },
-      $state: {
-        go: sandbox.stub()
-      }
-    };
+    localStorageManagerStub = {getDataFor: sinon.stub()};
+    stateStub = {$state: {go: sandbox.stub()}};
 
     controller = $controller('AppController', {
-      $state: stubs.$state,
-      userService: stubs.userService
+      $state: stateStub.$state,
+      localStorageManager: localStorageManagerStub
     });
-
   }));
 
   afterEach(() => {
@@ -57,14 +32,33 @@ describe('Application Tests', () => {
       expect(controller).to.be.ok;
     });
 
-    it('should define an onSeleccionAnimalTap method', () => {
-      expect(controller.onSeleccionAnimalTap).to.be.ok;
+    it('should transition to language selection component', () => {
+      controller.goToLanguageSelection();
+      expect(stateStub.$state.go).to.have.been.called.once;
+      expect(stateStub.$state.go).to.have.been.calledWith('idioma');
     });
 
-    it('should transition to the seleccion Animal component', () => {
-      controller.onSeleccionAnimalTap();
-      expect(stubs.$state.go).to.have.been.called.once;
-      expect(stubs.$state.go).to.have.been.calledWith('animalSelection');
+    it('should transition to animal selection component', () => {
+      controller.goToAnimalSelection();
+      expect(stateStub.$state.go).to.have.been.called.once;
+      expect(stateStub.$state.go).to.have.been.calledWith('animalSelection');
+    });
+
+    it('should call localStorage', () => {
+      expect(localStorageManagerStub.getDataFor.withArgs('language').callCount).to.be.equal(1);
+    });
+
+    it('should decide to go to animal selection', () => {
+      controller.goToNextScreen('::language::');
+
+      expect(stateStub.$state.go).to.have.been.calledWith('animalSelection');
+    });
+
+    it('should decide to go to language selection', () => {
+      controller.goToNextScreen(null);
+
+      expect(stateStub.$state.go).to.have.been.calledWith('idioma');
     });
   });
 });
+
