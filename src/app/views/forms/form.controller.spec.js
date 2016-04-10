@@ -50,7 +50,7 @@ describe('Form controller', () => {
       expect(formServiceSpy.getFormFields).to.be.calledWith(stateParamsStub.animal);
     });
 
-    it('should ask field form change', function () {
+    it('should ask field form change', () => {
       controller.selectorViewModel = {selector: poultry.BROILER};
       scope.$digest();
       controller.onSelectorChange();

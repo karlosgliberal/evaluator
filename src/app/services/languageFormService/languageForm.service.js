@@ -28,7 +28,6 @@ export default class languageFormService {
         _.each(languages, (langCode) => {
           lang.push({name: $translate.instant('language.' + langCode), code: langCode});
         });
-
         $scope.to.options = lang;
       }
     }];

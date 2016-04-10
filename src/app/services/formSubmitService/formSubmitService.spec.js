@@ -2,21 +2,25 @@ import formSubmitServices from './formSubmit.services.js';
 import animal from './../../utils/animal';
 import poultry from './../../utils/poultry';
 import animalFieldsManager from '../animalFieldsManagerService/animalFieldsManager.services';
-
-//define(['can', 'localCache'], function(can, localCache) {
+import localStorageManager from '../localStorageManagerService/localStorageManager.services';
 
 describe('form service', () => {
 
-  var formSubmitService, animalFieldsManagerSpy;
+  var formSubmitService, animalFieldsManagerSpy, localStorageManagerSpy, moment;
 
   var sandbox;
-  beforeEach(function () {
+  beforeEach(() => {
     sandbox = sinon.sandbox.create();
   });
 
   afterEach(function () {
     sandbox.restore();
   });
+
+  beforeEach(angular.mock.module(localStorageManager.name, ($provide) => {
+    localStorageManagerSpy = {save: sinon.spy()};
+    $provide.value("localStorageManager", localStorageManagerSpy);
+  }));
 
   beforeEach(angular.mock.module(animalFieldsManager.name, ($provide) => {
     animalFieldsManagerSpy = {getFieldsFor: sinon.stub()};
@@ -27,7 +31,6 @@ describe('form service', () => {
 
   beforeEach(inject((_formSubmitService_)=> {
     Object.defineProperty(sessionStorage, "setItem", {writable: true});
-
 
     formSubmitService = _formSubmitService_;
   }));
@@ -134,20 +137,19 @@ describe('form service', () => {
     });
 
     it('should save data', () => {
-      var store = {}, localStorageKey, dataToSave = {
+      var dataToSave = {
         animal: 'cow',
         selector: 'breeder',
         fields: undefined,
         result: 6
-      }, expected = JSON.stringify(dataToSave);
-      sandbox.stub(window.localStorage, 'setItem', function (key, value) {
-        store[key] = value;
-        localStorageKey = key;
-      });
+      };
+
+      var clock = sinon.useFakeTimers(new Date(2016, 2, 15).getTime());
+      clock.tick(60 * 60 * 2 * 1000);
 
       formSubmitService.saveData(6, animal.COW, poultry.BREEDER);
 
-      expect(store[localStorageKey]).to.be.equal(expected);
+      expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave)).callCount).to.be.equal(1);
     });
   });
 });

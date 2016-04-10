@@ -9,6 +9,7 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
     controllerAs: 'app',
     cache: false
   });
+
   $translateProvider
       .useStaticFilesLoader({
         prefix: 'assets/locales/',

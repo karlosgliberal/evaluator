@@ -2,20 +2,27 @@ import { assign } from 'lodash';
 
 export default class AppController {
   /*@ngInject*/
-  constructor($state) {
-    assign(this, {$state});
-    this.text = 'Bienvenidos a Olmix Evaluator';
-    this.user = {
-      name: 'Dave Ackerman',
-      email: 'dave@dude.com'
-    };
+  constructor($state, localStorageManager) {
+    assign(this, {$state, localStorageManager});
+
+    var language = this.localStorageManager.getDataFor('language');
+
+    this.goToNextScreen(language);
   }
 
-  onSeleccionAnimalTap() {
+  goToNextScreen(language) {
+    if (language) {
+      this.goToAnimalSelection();
+    } else {
+      this.goToLanguageSelection();
+    }
+  }
+
+  goToLanguageSelection() {
+    this.$state.go('idioma');
+  }
+
+  goToAnimalSelection() {
     this.$state.go('animalSelection');
-  }
-
-  onFormTap() {
-    this.$state.go('form');
   }
 }

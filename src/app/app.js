@@ -13,11 +13,11 @@ import appRun from './app.run';
 import appConfig from './app.config';
 import appController from './app.controller';
 import appDirectives from './app.directives';
-
 import idiomaModule from './views/idiomas/idioma.module';
 import formModule from './views/forms/form.module';
 import animalSelectionModule from './views/animalSelection/animalSelection.module';
 import evaluationResultModule from './views/evaluationResult/evaluationResult.module';
+import localStorageManagerService from './services/localStorageManagerService/localStorageManager.services';
 
 
 const appModule = angular
@@ -29,7 +29,8 @@ const appModule = angular
       idiomaModule.name,
       formModule.name,
       animalSelectionModule.name,
-      evaluationResultModule.name
+      evaluationResultModule.name,
+      localStorageManagerService.name
     ])
     .config(appConfig)
     .controller('AppController', appController)
