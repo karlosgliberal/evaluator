@@ -15,14 +15,14 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
         prefix: 'assets/locales/',
         suffix: '.json'
       })
-      .registerAvailableLanguageKeys(['es', 'en'], {
-        en: 'en', es: 'es', tr: 'tr', ch: 'ch', vi: 'vi'
-      })
+       .registerAvailableLanguageKeys(['ch', 'en', 'es', 'tr'], {
+         ch: 'ch', en: 'en', es: 'es', tr: 'tr'
+       })
       .preferredLanguage('en')
       .fallbackLanguage('en')
-      .determinePreferredLanguage('en')
+      //.determinePreferredLanguage('en')
+      .forceAsyncReload(true)
       .useSanitizeValueStrategy('sanitizeParameters');
-
   $urlRouterProvider.otherwise('/');
 };
 

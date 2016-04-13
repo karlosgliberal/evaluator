@@ -7,7 +7,7 @@ export default class formPartsBuilderService {
     assign(this, {$translate});
   };
 
-  buildSelectorFor(labelReferenceBase, key, animal, state) {
+  buildSelectorFor(labelReferenceBase, key, options, state, isAnimal) {
     this.labelReferenceBase = labelReferenceBase;
     return [
       {
@@ -19,7 +19,7 @@ export default class formPartsBuilderService {
             state.onSelectorChange();
           },
           label: this.$translate.instant(this.labelReferenceBase + 'selector.title'),
-          options: this.buildChoiceListFor(animal),
+          options: this.buildChoiceListFor(options, isAnimal),
           valueProp: 'id',
           labelProp: 'label'
         }
@@ -36,10 +36,14 @@ export default class formPartsBuilderService {
     };
   }
 
-  buildChoiceListFor(animal) {
-    return _.map(animal, (type) => {
+  buildChoiceListFor(options, isAnimal) {
+    var selectorFields = '';
+    if (isAnimal) {
+      selectorFields = 'selector.fields.';
+    }
+    return _.map(options, (type) => {
       return {
-        label: this.$translate.instant(this.labelReferenceBase + 'selector.fields.' + type),
+        label: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
         id: type
       };
     });

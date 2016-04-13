@@ -16,7 +16,6 @@ export default class formSubmitService {
     var result = this.prepareResult(evaluationResult);
     this.saveData(result, animal, selector, fields);
 
-    console.log(evaluationResult);
     return result;
   }
 

@@ -3,13 +3,23 @@ import languages from '../../utils/language';
 
 export default class IdiomaController {
   /*@ngInject*/
-  constructor(languageFormService, $translate, $state) {
+  constructor(formService, $translate, $state, $stateParams) {
     assign(this, {
-      languageFormService,
+      formService,
       $translate,
-      $state
+      $state,
+      $stateParams
     });
-    this.viewModel = {};
-    this.fields = this.languageFormService.generateLanguageForm(this.$translate, this.$state);
+
+    this.selectorViewModel = {};
+    //this.fields = this.languageFormService.generateLanguageForm(this.$translate, this.$state);
+    this.selector = this.formService.getFormSelector(languages, this);
+  }
+
+  onSelectorChange() {
+    this.$translate.use(this.selectorViewModel.selector);
+    console.log(this.$translate.use(this.selectorViewModel.selector));
+    this.$translate.refresh(this.selectorViewModel.selector);
+    this.$state.go('animalSelection', null, {reload: true});
   }
 }

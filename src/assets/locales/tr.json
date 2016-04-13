@@ -12,10 +12,12 @@
     "language": "Language"
   },
   "language": {
+    "selector": {
+      "title": "Language Selection"
+    },
     "es": "Spanish",
     "en": "English",
     "ch": "Chinese",
-    "vi": "Vietnamese",
     "tr": "turkish"
   },
   "forms": {

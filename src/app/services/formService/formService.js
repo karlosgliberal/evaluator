@@ -1,15 +1,18 @@
 import { assign } from 'lodash';
 import animal from '../../utils/animal';
+import language from '../../utils/language';
 
 export default class formService {
   /*@ngInject*/
-  constructor(cowFormService, swineFormService, poultryFormService) {
-    assign(this, {cowFormService, swineFormService, poultryFormService});
+  constructor(cowFormService, swineFormService, poultryFormService, languageFormService) {
+    assign(this, {cowFormService, swineFormService, poultryFormService, languageFormService});
   };
 
   getFormSelector(selectedAnimal, state) {
     if (selectedAnimal === animal.POULTRY) {
       return this.poultryFormService.generateFormSelector(state);
+    } else {
+      return this.languageFormService.generateFormSelector(state);
     }
   };
 

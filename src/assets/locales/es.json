@@ -12,6 +12,10 @@
     "language": "Idioma"
   },
   "language": {
+    "title": "Elije tu lenguaje preferido",
+    "selector": {
+      "title": "Selección idioma"
+    },
     "es": "Castellano",
     "en": "Inglés",
     "ch": "Chino",

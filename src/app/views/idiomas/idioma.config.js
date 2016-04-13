@@ -6,7 +6,8 @@ const IdiomaConfig = ($stateProvider) => {
     url: '/idioma',
     template: idiomaTemplate,
     controller: 'IdiomaController',
-    controllerAs: 'idioma'
+    controllerAs: 'idioma',
+    cache: false
   });
 };
 

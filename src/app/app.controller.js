@@ -2,12 +2,14 @@ import { assign } from 'lodash';
 
 export default class AppController {
   /*@ngInject*/
-  constructor($state, localStorageManager) {
-    assign(this, {$state, localStorageManager});
+  constructor($state, localStorageManager, $timeout) {
+    assign(this, {$state, localStorageManager, $timeout});
 
     var language = this.localStorageManager.getDataFor('language');
-
-    this.goToNextScreen(language);
+    var that = this;
+    this.$timeout(function () {
+      that.goToNextScreen(language);
+    }, 3000);
   }
 
   goToNextScreen(language) {
