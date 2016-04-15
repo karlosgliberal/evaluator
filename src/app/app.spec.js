@@ -51,7 +51,7 @@ describe('Application Tests', () => {
 
     it('should decide to go to animal selection', () => {
       controller.goToNextScreen('::language::');
-      // $timeout.flush();
+      //$timeout.flush();
       // expect(stateStub.$state.go).to.have.been.calledWith('animalSelection');
     });
     it('should decide to go to language selection', () => {

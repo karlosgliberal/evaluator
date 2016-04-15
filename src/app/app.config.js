@@ -19,7 +19,7 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
          ch: 'ch', en: 'en', es: 'es', tr: 'tr'
        })
       .preferredLanguage('en')
-      .fallbackLanguage('en')
+      // .fallbackLanguage('en')
       .forceAsyncReload(true)
       .useSanitizeValueStrategy('sanitizeParameters');
   $urlRouterProvider.otherwise('/');

@@ -4,10 +4,9 @@
             <div ng-repeat="anim in animalSelection.animals">
                 <div class="col-33">
                     <div class="animal">
-                        <label>{{anim.name}}</label>
                         <img ng-src="{{ anim.path}}"
                              ng-click="animalSelection.onAnimalSelection(anim.name)"/>
-                        <p class="animal--titulo">anim</p>
+                        <p class="animal--titulo">{{anim.name}}</p>
                     </div>
                 </div>
             </div>

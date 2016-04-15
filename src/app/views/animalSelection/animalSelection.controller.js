@@ -1,8 +1,11 @@
 import { assign } from 'lodash';
 import language from '../../utils/language';
 import animal from '../../utils/animal';
+import './images/poultry.png';
+import './images/swine.png';
+import './images/vaca.png';
 
-const imagePathBase = './images/';
+const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/

@@ -26,19 +26,20 @@ export default class formPartsBuilderService {
       }];
   }
 
-  buildRadioFor(labelReferenceBase, key, options, state) {
+  buildRadioFor(labelReferenceBase, key, languages, state, userLanguage) {
     this.labelReferenceBase = labelReferenceBase;
     return [
       {
         key: key,
         type: 'radio',
+        defaultValue: userLanguage,
         templateOptions: {
           onChange: function () {
             state.onSelectorChange();
           },
           label: this.$translate.instant(this.labelReferenceBase + 'selector.title'),
-          options: this.buildRadioChoiceListFor(options),
-        }
+          options: this.buildRadioChoiceListFor(languages),
+        },
       }];
   }
 

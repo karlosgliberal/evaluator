@@ -6,7 +6,7 @@ import 'angular-translate-loader-static-files';
 import 'ionic-sdk/release/js/angular-ui/angular-ui-router';
 import 'ionic-sdk/release/js/ionic';
 import 'ionic-sdk/release/js/ionic-angular';
-
+import 'angular-translate-storage-local/angular-translate-storage-local';
 import 'ng-cordova';
 
 import appRun from './app.run';
