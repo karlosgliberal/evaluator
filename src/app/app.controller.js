@@ -6,9 +6,9 @@ export default class AppController {
     assign(this, {$state, localStorageManager, $timeout});
 
     var language = this.localStorageManager.getDataFor('language');
-    var that = this;
-    this.$timeout(function () {
-      that.goToNextScreen(language);
+
+    this.$timeout(() => {
+      this.goToNextScreen(language);
     }, 3000);
   }
 
