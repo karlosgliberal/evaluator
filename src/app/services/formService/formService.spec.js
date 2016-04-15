@@ -5,6 +5,7 @@ import poultryFormServices from '../animalFormsServices/poultry/poultryForm.serv
 import languageFormServices from '../languageFormService/languageForm.services';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
+import language from '../../utils/language.js';
 
 describe('form service', () => {
 
@@ -26,7 +27,7 @@ describe('form service', () => {
   }));
 
   beforeEach(angular.mock.module(languageFormServices.name, ($provide) => {
-    languageFormServiceSpy = {generateFormSelector: sinon.spy()};
+    languageFormServiceSpy = {generateFormRadio: sinon.spy()};
     $provide.value('languageFormService', languageFormServiceSpy);
   }));
 
@@ -55,6 +56,11 @@ describe('form service', () => {
   it('should fetch poultry form selector for poultry', () => {
     formService.getFormSelector(animal.POULTRY);
     expect(formService.poultryFormService.generateFormSelector).to.be.called.once;
+  });
+
+  it('should fetch language radio form list', () => {
+    formService.getFormRadio(language);
+    expect(formService.languageFormService.generateFormRadio).to.be.called.once;
   });
 
   it('should not return selector fields for animals that are not poultry', () => {

@@ -9,8 +9,8 @@ export default class languageFormService {
     assign(this, {$translate, formPartsBuilderService});
   };
 
-  generateFormSelector(state) {
-    return this.formPartsBuilderService.buildSelectorFor('language.', 'selector', languages, state, false);
+  generateFormRadio(state) {
+    return this.formPartsBuilderService.buildRadioFor('language.', 'selector', languages, state, false);
   }
 
   // generateLanguageForm(translate, state) {

@@ -12,12 +12,11 @@ export default class IdiomaController {
     });
 
     this.selectorViewModel = {};
-    this.selector = this.formService.getFormSelector(languages, this);
+    this.selector = this.formService.getFormRadio(languages, this);
   }
 
   onSelectorChange() {
     this.$translate.use(this.selectorViewModel.selector);
-    console.log(this.$translate.use(this.selectorViewModel.selector));
     this.$translate.refresh(this.selectorViewModel.selector);
     this.$state.go('animalSelection', null, {reload: true});
   }

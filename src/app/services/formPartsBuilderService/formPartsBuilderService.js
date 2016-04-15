@@ -7,7 +7,7 @@ export default class formPartsBuilderService {
     assign(this, {$translate});
   };
 
-  buildSelectorFor(labelReferenceBase, key, options, state, isAnimal) {
+  buildSelectorFor(labelReferenceBase, key, options, state) {
     this.labelReferenceBase = labelReferenceBase;
     return [
       {
@@ -19,9 +19,25 @@ export default class formPartsBuilderService {
             state.onSelectorChange();
           },
           label: this.$translate.instant(this.labelReferenceBase + 'selector.title'),
-          options: this.buildChoiceListFor(options, isAnimal),
+          options: this.buildChoiceListFor(options),
           valueProp: 'id',
           labelProp: 'label'
+        }
+      }];
+  }
+
+  buildRadioFor(labelReferenceBase, key, options, state) {
+    this.labelReferenceBase = labelReferenceBase;
+    return [
+      {
+        key: key,
+        type: 'radio',
+        templateOptions: {
+          onChange: function () {
+            state.onSelectorChange();
+          },
+          label: this.$translate.instant(this.labelReferenceBase + 'selector.title'),
+          options: this.buildRadioChoiceListFor(options),
         }
       }];
   }
@@ -36,15 +52,22 @@ export default class formPartsBuilderService {
     };
   }
 
-  buildChoiceListFor(options, isAnimal) {
-    var selectorFields = '';
-    if (isAnimal) {
-      selectorFields = 'selector.fields.';
-    }
+  buildChoiceListFor(options) {
+    var selectorFields = 'selector.fields.';
     return _.map(options, (type) => {
       return {
         label: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
         id: type
+      };
+    });
+  }
+
+  buildRadioChoiceListFor(options) {
+    var selectorFields = '';
+    return _.map(options, (type) => {
+      return {
+        text: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
+        value: type
       };
     });
   }

@@ -72,6 +72,13 @@ describe('form parts builder service', () => {
 
     expect(stub.withArgs(['::first::', '::second::']).callCount).to.be.equal(1);
   });
+
+  it('should build wrapper for radio button', () => {
+    var stub = sinon.stub(formPartsBuilderService, 'buildRadioChoiceListFor');
+    formPartsBuilderService.buildRadioFor('::labelReference::', '::key::', ['::first::', '::second::'], undefined);
+
+    expect(stub.withArgs(['::first::', '::second::']).callCount).to.be.equal(1);
+  });
 });
 
 function checboxField(fieldName) {
