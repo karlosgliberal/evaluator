@@ -15,7 +15,7 @@ describe('animal fields manager', () => {
   beforeEach(angular.mock.module(animalFieldsManagerServices.name, ($provide) => {
     translateStub = {use: sinon.stub()};
 
-    $provide.value("$translate", translateStub);
+    $provide.value('$translate', translateStub);
   }));
 
   beforeEach(angular.mock.module(animalFieldsManagerServices.name));
@@ -25,15 +25,13 @@ describe('animal fields manager', () => {
   }));
 
   it('should get cow fields', () => {
-    var spy = sinon.spy(cowFields, 'getAllFieldsFor');
-
+    spy = sinon.spy(cowFields, 'getAllFieldsFor');
     animalFieldsManager.getFieldsFor(animals.COW, 'es');
-
     expect(spy.withArgs().callCount).to.be.equal(1);
   });
 
   it('should get swine fields', () => {
-    var spy = sandbox.spy(swineFields, 'getAllFields');
+    spy = sandbox.spy(swineFields, 'getAllFields');
 
     animalFieldsManager.getFieldsFor(animals.SWINE);
 

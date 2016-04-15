@@ -12,7 +12,6 @@ export default class IdiomaController {
     });
 
     this.selectorViewModel = {};
-    //this.fields = this.languageFormService.generateLanguageForm(this.$translate, this.$state);
     this.selector = this.formService.getFormSelector(languages, this);
   }
 

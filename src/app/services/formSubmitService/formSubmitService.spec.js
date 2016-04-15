@@ -65,7 +65,7 @@ describe('form service', () => {
   describe('processing actions', () => {
     it('should flatten fieldList', () => {
       var filteredFields = formSubmitService.flattenFieldList({
-        'herd': {
+        herd: {
           'feed-intake': true,
           'body-condition': false
         }

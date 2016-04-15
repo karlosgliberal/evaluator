@@ -1,7 +1,7 @@
 import cowFormServices from './cowForm.services.js';
 import App from '../../../app';
 import cowFields from '../../../utils/fields/cowFields';
-import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBuilder.services'
+import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBuilder.services';
 
 const labelReferenceBase = 'forms.cow.';
 
@@ -11,12 +11,12 @@ describe('cow form service', () => {
 
   beforeEach(angular.mock.module(formPartsBuilderServices.name, ($provide) => {
     formPartsBuilderServiceSpy = {buildWrapperFor: sinon.spy()};
-    $provide.value("formPartsBuilderService", formPartsBuilderServiceSpy);
+    $provide.value('formPartsBuilderService', formPartsBuilderServiceSpy);
   }));
 
   beforeEach(angular.mock.module(cowFormServices.name, ($provide) => {
     translateStub = {instant: sinon.stub()};
-    $provide.value("$translate", translateStub);
+    $provide.value('$translate', translateStub);
   }));
 
   beforeEach(angular.mock.module(cowFormServices.name));

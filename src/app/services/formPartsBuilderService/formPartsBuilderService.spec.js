@@ -6,7 +6,7 @@ describe('form parts builder service', () => {
 
   beforeEach(angular.mock.module(formPartsBuilderServices.name, ($provide) => {
     translateStub = {instant: sinon.stub()};
-    $provide.value("$translate", translateStub);
+    $provide.value('$translate', translateStub);
   }));
 
   beforeEach(angular.mock.module(formPartsBuilderServices.name));

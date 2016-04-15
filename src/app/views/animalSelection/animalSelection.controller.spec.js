@@ -8,7 +8,7 @@ describe('animal controller selection', () => {
 
   beforeEach(angular.mock.module(animalSelectionControllers.name, ($provide) => {
     translateStub = {use: sinon.stub()};
-    $provide.value("$translate", translateStub);
+    $provide.value('$translate', translateStub);
   }));
 
   beforeEach(angular.mock.module(animalSelectionControllers.name));
@@ -45,4 +45,4 @@ describe('animal controller selection', () => {
     expect(stateSpy.$state.go).to.have.been.called.once;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'poultry'});
   });
-})
+});

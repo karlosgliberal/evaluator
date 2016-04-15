@@ -1,5 +1,5 @@
 import poultryFormServices from './poultryForm.services.js';
-import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBuilder.services'
+import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBuilder.services';
 import poultryFields from '../../../utils/fields/poultryFields';
 import poultry from '../../../utils/poultry';
 import App from '../../../app';
@@ -10,12 +10,12 @@ describe('poultry form service', () => {
 
   beforeEach(angular.mock.module(formPartsBuilderServices.name, ($provide) => {
     formPartsBuilderServiceSpy = {buildWrapperFor: sinon.spy(), buildSelectorFor: sinon.spy()};
-    $provide.value("formPartsBuilderService", formPartsBuilderServiceSpy);
+    $provide.value('formPartsBuilderService', formPartsBuilderServiceSpy);
   }));
 
   beforeEach(angular.mock.module(poultryFormServices.name, ($provide) => {
     translateStub = {instant: sinon.stub()};
-    $provide.value("$translate", translateStub);
+    $provide.value('$translate', translateStub);
   }));
 
   beforeEach(angular.mock.module(poultryFormServices.name));
@@ -59,6 +59,5 @@ describe('poultry form service', () => {
     poultryFormService.generateFormSelector();
 
     expect(formPartsBuilderServiceSpy.buildSelectorFor).to.be.calledWith('forms.poultry.', 'selector', poultry, undefined);
-  })
-
+  });
 });

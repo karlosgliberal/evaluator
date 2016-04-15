@@ -72,7 +72,7 @@ describe('Form controller', () => {
       controller.viewModel = {';;field1::': true, '::field2::': true};
       controller.onSubmit();
 
-      expect(stateSpy.$state.go).to.have.been.calledWith('evaluationResult', {animal: "swine", result: 6});
+      expect(stateSpy.$state.go).to.have.been.calledWith('evaluationResult', {animal: 'swine', result: 6});
     });
   });
 });
@@ -100,22 +100,21 @@ function prepareFormly() {
       valueProp: 'id',
       labelProp: 'label'
     },
-  },
-    {
-      key: 'username',
-      type: 'inline-input',
-      templateOptions: {
-        type: 'text',
-        label: 'Username'
-      }
-    }, {
-      key: 'password',
-      type: 'inline-input',
-      templateOptions: {
-        type: 'password',
-        label: 'Password'
-      }
+  }, {
+    key: 'username',
+    type: 'inline-input',
+    templateOptions: {
+      type: 'text',
+      label: 'Username'
     }
+  }, {
+    key: 'password',
+    type: 'inline-input',
+    templateOptions: {
+      type: 'password',
+      label: 'Password'
+    }
+  }
   ];
 
   directiveHTML =
