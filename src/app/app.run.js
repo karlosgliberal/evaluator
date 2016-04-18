@@ -1,5 +1,5 @@
 /*@ngInject*/
-const AppRun = ($ionicPlatform, $cordovaStatusbar, $cordovaKeyboard, $cordovaSplashscreen) => {
+const AppRun = ($ionicPlatform, $cordovaStatusbar, $cordovaKeyboard, $cordovaSplashscreen, $cordovaNetwork) => {
   $ionicPlatform.ready(() => {
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       $cordovaKeyboard.hideAccessoryBar(true);
