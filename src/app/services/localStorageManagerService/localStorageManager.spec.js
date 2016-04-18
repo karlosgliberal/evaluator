@@ -14,8 +14,8 @@ describe('animal fields manager', () => {
   beforeEach(angular.mock.module(localStorageManagerServices.name));
 
   beforeEach(inject((_localStorageManager_)=> {
-    Object.defineProperty(sessionStorage, "setItem", {writable: true});
-    Object.defineProperty(sessionStorage, "getItem", {writable: true});
+    Object.defineProperty(sessionStorage, 'setItem', {writable: true});
+    Object.defineProperty(sessionStorage, 'getItem', {writable: true});
 
     localStorageManager = _localStorageManager_;
   }));
