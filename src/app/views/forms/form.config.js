@@ -7,6 +7,7 @@ const formConfig = ($stateProvider, formlyConfigProvider) => {
     template: form,
     controller: 'formController',
     controllerAs: 'form',
+    cache: false,
     params: {
       animal: ''
     }

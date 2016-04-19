@@ -19,7 +19,6 @@ import animalSelectionModule from './views/animalSelection/animalSelection.modul
 import evaluationResultModule from './views/evaluationResult/evaluationResult.module';
 import localStorageManagerService from './services/localStorageManagerService/localStorageManager.services';
 
-
 const appModule = angular
     .module('olmixEvaluator', [
       'ionic',

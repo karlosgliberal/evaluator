@@ -19,9 +19,10 @@ export default class poultryFormService {
       return this.generateBroilerForm();
     } else if (_.isEqual(poultrySpecie, poultry.BREEDER)) {
       return this.generateBreederForm();
-    } else {
+    } else if (_.isEqual(poultrySpecie, poultry.HENS)) {
       return this.generateLayingHensForm();
     }
+    return '';
   }
 
   generateLayingHensForm() {

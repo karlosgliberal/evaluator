@@ -12,5 +12,4 @@ export default class languageFormService {
   generateFormRadio(state, userLanguage) {
     return this.formPartsBuilderService.buildRadioFor('language.', 'selector', languages, state, userLanguage);
   }
-
 }

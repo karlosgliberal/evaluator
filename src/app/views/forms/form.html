@@ -2,12 +2,16 @@
     <ion-content>
         <h4 style="text-align: center;">Form validation example</h4><br/>
         <form>
-            <formly-form form="form.form" model="form.selectorViewModel" fields="form.selector">
+            <formly-form model="form.selectorViewModel" fields="form.selector" form="form.form1">
             </formly-form>
         </form>
+
         <form ng-submit="form.onSubmit()" novalidate>
-            <formly-form form="form.form" model="form.viewModel" fields="form.fields">
-                <button type="submit" class="btn btn-primary submit-button">Submit</button>
+            <formly-form form="form.form2" model="form.viewModel" fields="form.fields">
+                <div ng-if="form.selectorViewModel.selector != 'default'">
+                <button type="submit" ng-disabled="form.form1.$invalid" class="btn btn-primary submit-button">Submit
+                </button>
+                </div>
             </formly-form>
         </form>
     </ion-content>
@@ -15,7 +19,6 @@
 
 <script type="text/ng-template" id="panel.html">
     <div class="panel panel-primary">
-
         <div class="panel-heading px-nested-panel-heading clearfix">
             <strong class="control-label" ng-if="options.templateOptions.label">
                 {{options.templateOptions.label}}
@@ -25,6 +28,5 @@
         <div class="panel-body px-nested-panel-body">
             <formly-transclude></formly-transclude>
         </div>
-
     </div>
 </script>
