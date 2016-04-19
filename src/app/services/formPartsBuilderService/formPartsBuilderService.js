@@ -43,6 +43,20 @@ export default class formPartsBuilderService {
       }];
   }
 
+  buidInputEmailFor(labelReferenceBase, key, options, state) {
+    this.labelReferenceBase = '';
+    return [
+      {
+        key: 'email',
+        type: 'stacked-input',
+        templateOptions: {
+          type: 'email',
+          label: 'Email',
+          placeholder: 'Email'
+        }
+      }];
+  }
+
   buildWrapperFor(labelReferenceBase, key, fieldList) {
     this.labelReferenceBase = labelReferenceBase;
     return {
