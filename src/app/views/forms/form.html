@@ -1,25 +1,27 @@
 <ion-view view-title="{{'detail.view-title' | translate }}">
     <ion-content>
-        <h4 style="text-align: center;">Form validation example</h4><br/>
+      <div class="container-wrapper">
+        <h4 style="text-align: center;">Form validation example</h4>
         <form>
             <formly-form model="form.selectorViewModel" fields="form.selector" form="form.form1">
             </formly-form>
         </form>
-
         <form ng-submit="form.onSubmit()" novalidate>
             <formly-form form="form.form2" model="form.viewModel" fields="form.fields">
                 <div ng-if="form.selectorViewModel.selector != 'default'">
-                <button type="submit" ng-disabled="form.form1.$invalid" class="btn btn-primary submit-button">Submit
-                </button>
+                  <div class="buttom-wrapper">
+                    <button type="submit" ng-disabled="form.form1.$invalid" class="button submit-form">Evaluar
+                    </button>
+                  </div>
                 </div>
             </formly-form>
         </form>
+      </div>
     </ion-content>
 </ion-view>
-
 <script type="text/ng-template" id="panel.html">
     <div class="panel panel-primary">
-        <div class="panel-heading px-nested-panel-heading clearfix">
+        <div class="panel-heading px-nested-panel-heading clearfix form-label-wrapper">
             <strong class="control-label" ng-if="options.templateOptions.label">
                 {{options.templateOptions.label}}
             </strong>
