@@ -78,11 +78,6 @@ $brand-color:#76405D;
 
 .splash-container {
   width: 100%;
-  height: 100%;
-  // background-image: url('assets/images/olmix-splash.png');
-  // background-position: center;
-  // background-size: cover;
-  img {
-    max-width: 100%;
-  }
+  background-position: center;
+  background-size: cover;
 }

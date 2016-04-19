@@ -1,5 +1,8 @@
 .animal{
   position: relative;
+  img {
+    width: 100%;
+  }
 }
 .animal--titulo{
   position: absolute;
@@ -20,4 +23,24 @@
   padding: 10px 0;
   font-size: 16px;
   font-weight: bold;
+}
+
+  .animal-col {
+    &.col {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+
+.animal-temp {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width : 500px) {
+    .animal-temp {
+      height: 200px !important;
+    }
 }
