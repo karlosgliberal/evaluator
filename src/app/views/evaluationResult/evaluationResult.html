@@ -1,7 +1,23 @@
+<!-- {{evaluationResult.$stateParams.animal}} -->
 <ion-view view-title="{{'language.view-title' | translate }}">
     <ion-content>
-        <h1> Result</h1>
-        <h2>{{evaluationResult.$stateParams.animal}}</h2>
-        <h1>{{evaluationResult.$stateParams.result}}</h1>
+      <div class="container-wrapper">
+        <p class="result-intro center">Probabilidad de presencia significativa de micotoxinas en la dieta de sus vacas</p>
+        <div class="result-number-container">
+          <div class="result-number mediun">{{evaluationResult.$stateParams.result}}%</div>
+        </div>
+        <div class="result-border"></div>
+        <p class="result-text center">Riesgo medio</p>
+        <div class="result-send">
+          <div class="list list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="Email">
+            </label>
+            <button class="button button-stable">
+              Enviar email
+            </button>
+          </div>
+        </div>
+      </div>
     </ion-content>
 </ion-view>

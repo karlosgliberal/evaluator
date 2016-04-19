@@ -1,0 +1,28 @@
+.form-label-wrapper {
+  border-bottom: 1px solid $brand-color;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  color: $brand-color;
+}
+
+.item {
+  color: $brand-color;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+    background: $brand-color;
+    border-color: $brand-color;
+}
+
+.buttom-wrapper {
+  margin: 20px 0px;
+}
+
+button.submit-form {
+  background-color: $brand-color;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid $brand-color;
+  color: white;
+  font-weight: bold;
+}
