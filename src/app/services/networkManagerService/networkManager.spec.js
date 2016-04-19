@@ -30,7 +30,7 @@ describe('network Manager service', () => {
     };
   }));
 
-  it('should return isOnline as true when it\'s not NONE or UNKNOWN', () => {
+  it('should return isOnline as true when si es none o UNKNOW', () => {
     navigator.connection.type = window.Connection.CELL_2G;
     expect($cordovaNetwork.isOnline()).to.be.true;
     navigator.connection.type = window.Connection.UNKNOWN;
