@@ -48,11 +48,10 @@ describe('poultry form service', () => {
     expect(spy.callCount).to.be.equal(1);
   });
 
-  it('should call breeder wrappers', () => {
-    poultryFormService.generateForm();
+  it('should return empty if no specie is defined', () => {
+    var result = poultryFormService.generateForm();
 
-    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledThrice;
-    expect(formPartsBuilderServiceSpy.buildWrapperFor).to.be.calledWith('forms.poultry.', 'animals', poultryFields.poultryLayingHensAnimalFieldsList());
+    expect(result).to.be.eql('')
   });
 
   it('shoulw call poultry selector', () => {

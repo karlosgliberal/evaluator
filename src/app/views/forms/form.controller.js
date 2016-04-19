@@ -7,7 +7,7 @@ export default class formController {
       $state,
       formService,
       $stateParams,
-      formSubmitService
+      formSubmitService,
     });
 
     this.selectorViewModel = {};
