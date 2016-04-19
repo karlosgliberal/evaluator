@@ -9,10 +9,15 @@ const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/
-  constructor($state, $translate) {
-    assign(this, {$state, $translate});
+  constructor($state, $translate, $window) {
+    assign(this, {$state, $translate, $window});
 
     this.animals = this.availableAnimals();
+    this.dimensionHeight = this.calculateDimensionHeight();
+  }
+
+  calculateDimensionHeight(gesture) {
+    return this.$window.innerHeight;
   }
 
   availableAnimals() {
