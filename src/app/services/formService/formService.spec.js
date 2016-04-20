@@ -31,7 +31,6 @@ describe('form service', () => {
     $provide.value('languageFormService', languageFormServiceSpy);
   }));
 
-
   beforeEach(angular.mock.module(formServices.name));
 
   beforeEach(inject((_formService_)=> {

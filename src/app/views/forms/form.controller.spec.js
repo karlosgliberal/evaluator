@@ -2,7 +2,7 @@ import formControllers from './form.controllers';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
 
-var controller, scope, formServiceSpy, form, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy;
+var controller, scope, formServiceSpy, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy;
 
 describe('Form controller', () => {
 
@@ -34,12 +34,12 @@ describe('Form controller', () => {
   }));
 
   describe('form and fields construction', () => {
-    it('should have compiled input text', function () {
+    it('should have compiled input text', () => {
       expect($compile.find('select').length).to.equal(1);
       expect($compile.find('input').length).to.equal(2);
     });
 
-    it('should have not empty scope model', function () {
+    it('should have not empty scope model', () => {
       expect(scope.viewModel).to.eql({typeSelector: 'carnívoros'});
     });
   });
@@ -99,7 +99,7 @@ function prepareFormly() {
       }],
       valueProp: 'id',
       labelProp: 'label'
-    },
+    }
   }, {
     key: 'username',
     type: 'inline-input',

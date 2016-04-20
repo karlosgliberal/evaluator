@@ -15,12 +15,17 @@
         </div>
         <div class="result-send">
           <div class="list list-inset">
-            <label class="item item-input">
-              <input type="text" placeholder="Email">
-            </label>
-            <button class="button button-stable">
-              Enviar email
-            </button>
+            <form ng-submit="evaluationResult.onSubmit()" novalidate>
+              <formly-form form="evaluationResult.form" model="evaluationResult.viewModel" fields="evaluationResult.fields">
+                <div class="buttom-wrapper">
+                  <button type="submit" class="button button-stable">Enviar email
+                  </button>
+                </div>
+              </formly-form>
+            </form>
+            <div ng-if="evaluationResult.resultMessage">
+              <p>{{evaluationResult.resultMessage}}</p>
+            </div>
           </div>
         </div>
       </div>
