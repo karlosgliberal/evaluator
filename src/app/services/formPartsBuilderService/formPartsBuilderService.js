@@ -51,8 +51,8 @@ export default class formPartsBuilderService {
         type: 'stacked-input',
         templateOptions: {
           type: 'email',
-          label: 'Email',
-          placeholder: 'Email'
+          placeholder: 'Email',
+          required: true
         }
       }];
   }

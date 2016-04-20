@@ -2,30 +2,33 @@ import { assign } from 'lodash';
 
 export default class EvaluationResultController {
   /*@ngInject*/
-  constructor($stateParams, networkManagerService, $rootScope) {
+  constructor($stateParams, formPartsBuilderService, reportManagerService) {
     assign(this, {
       $stateParams,
-      networkManagerService,
-      $rootScope
+      formPartsBuilderService,
+      reportManagerService
     });
-    networkManagerService.startWatching();
-    console.log(networkManagerService.isOnline());
-//     this.network = $c  ordovaNetwork.getNetwork();
-//     this.isOnline = $cordovaNetwork.isOnline();
-//     //this.$apply();
-//
-//     $rootScope.$on('$cordovaNetwork:online', function (event, networkState) {
-//       console.log(Online);
-//       this.isOnline = true;
-//       this.network = $cordovaNetwork.getNetwork();
-//       console.log(this.network);
-//     });
-//
-// // listen for Offline event
-//     $rootScope.$on('$cordovaNetwork:offline', function (event, networkState) {
-//       console.log('got offline');
-//       this.isOnline = false;
-//       this.network = $cordovaNetwork.getNetwork();
-//     });
+
+    this.viewModel = {};
+    this.fields = this.formPartsBuilderService.buidInputEmailFor();
+  }
+
+  onSubmit() {
+    if (this.form.$valid) {
+      var reportSend = this.reportManagerService.sendReport(
+          this.$stateParams.animal,
+          this.$stateParams.result,
+          this.viewModel.email
+      );
+      if (reportSend.result === 'ok') {
+        console.log(reportSend.result);
+        this.resultMessage = 'ok';
+      } else {
+        this.resultMessage = reportSend.error;
+      }
+    } else {
+      console.log('error');
+      this.resultMessage = 'email error';
+    }
   }
 }

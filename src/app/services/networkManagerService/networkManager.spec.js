@@ -30,9 +30,12 @@ describe('network Manager service', () => {
     };
   }));
 
-  it('should return isOnline as true when si es none o UNKNOW', () => {
+  it('should return isOnline', () => {
     navigator.connection.type = window.Connection.CELL_2G;
     expect($cordovaNetwork.isOnline()).to.be.true;
+  });
+
+  it('should return isOffline', () => {
     navigator.connection.type = window.Connection.UNKNOWN;
     expect($cordovaNetwork.isOnline()).to.be.false;
   });
@@ -45,6 +48,4 @@ describe('network Manager service', () => {
     var isOnline = networkManagerService.isOnline();
     expect(isOnline).to.be.equal(true);
   });
-
-
 });
