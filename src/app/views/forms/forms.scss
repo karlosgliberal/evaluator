@@ -27,13 +27,11 @@ button.submit-form {
   font-weight: bold;
 }
 
-
 @media (max-width : 500px) {
-    .item {
-      white-space: normal;
-      font-size: 14px;
-    }
-    .result-border {
-      height: 20px;
+    .item{
+      .item-content {
+        font-size: 14px;
+        white-space: normal;
+      }
     }
 }

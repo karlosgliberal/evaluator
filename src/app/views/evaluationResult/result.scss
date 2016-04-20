@@ -1,8 +1,4 @@
 
-@function contraste($fondo, $val) {
-@return ( $fondo + $val );
-}
-
 .result-number-container {
   width: 100%;
   position: relative;
@@ -15,13 +11,10 @@
   margin: 20px 0;
 }
 
-
 .result-border {
   background-image: linear-gradient(90deg, #76405D 0%, rgba(118,63,93,0.14) 100%);
   height: 40px;
 }
-
-
 
 .result-number  {
   color: $brand-color;
@@ -39,10 +32,10 @@
     position: absolute;
     left: 90%;
   }
-  .mediun {
-    left: 50%;
-    color: contraste($brand-color + 40, 100);
-  }
+}
+
+.mediun {
+  left: 50%;
 }
 
 .result-text {
@@ -60,4 +53,79 @@
     .result-border {
       height: 20px;
     }
+}
+
+.text-footer {
+  font-family: SourceSansPro-It;
+  font-size: 20px;
+  color: #096454;
+  position: relative;
+  top: -29px;
+  padding: 0 15px 0 35px;
+}
+
+.logos-footer {
+  height: 100px;
+  margin: 0 auto;
+  .logo {
+    display: inline-block;
+  }
+}
+
+.result-footer{
+  height: 100px !important;
+}
+
+
+@media (max-width : 500px) {
+  .result-footer {
+    height: 150px !important;
+  }
+  .logos-footer {
+    .text-footer {
+      font-size: 14px;
+      top: 0;
+      padding: 0;
+    }
+    .logo {
+      display: block;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.result-container {
+  padding: 0 220px;
+}
+
+
+// ANIMAL COMPONENT
+
+.imagen-animal-container {
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  margin-top: 25px;
+}
+
+.texto-animal-imagen {
+  font-family: OpenSans-Bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 63px;
+  text-align: center;
+}
+
+@media (max-width : 500px) {
+  .imagen-animal-container {
+    height: 90px;
+  }
+  .result-container {
+    padding: 0 20px;
+  }
+  .texto-animal-imagen {
+    padding: 37px;
+  }
 }

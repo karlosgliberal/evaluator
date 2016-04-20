@@ -23,6 +23,8 @@
   padding: 10px 0;
   font-size: 16px;
   font-weight: bold;
+  position: absolute;
+  bottom: 0;
 }
 
   .animal-col {
@@ -43,4 +45,8 @@
     .animal-temp {
       height: 200px !important;
     }
+}
+
+.select-footer {
+  background-color: #000 !important;
 }

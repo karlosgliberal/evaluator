@@ -2,12 +2,17 @@
 <ion-view view-title="{{'language.view-title' | translate }}">
     <ion-content>
       <div class="container-wrapper">
-        <p class="result-intro center">Probabilidad de presencia significativa de micotoxinas en la dieta de sus vacas</p>
-        <div class="result-number-container">
-          <div class="result-number mediun">{{evaluationResult.$stateParams.result}}%</div>
+        <div class="imagen-animal-container" style="background-image: url(./assets/images/vacas-interior.png)";>
+          <p class="texto-animal-imagen">VACA</p>
         </div>
-        <div class="result-border"></div>
-        <p class="result-text center">Riesgo medio</p>
+        <p class="result-intro center">Probabilidad de presencia significativa de micotoxinas en la dieta de sus vacas</p>
+        <div class="result-container">
+          <div class="result-number-container">
+            <div class="result-number mediun">{{evaluationResult.$stateParams.result}}%</div>
+          </div>
+          <div class="result-border"></div>
+          <p class="result-text center">Riesgo medio</p>
+        </div>
         <div class="result-send">
           <div class="list list-inset">
             <label class="item item-input">
@@ -17,22 +22,14 @@
               Enviar email
             </button>
           </div>
-          <!-- <div class="list">
-            <p>Quiero recibir los resultados por email</p>
-            <div class="item item-input-inset">
-
-              <label class="item-input-wrapper">
-                <input type="text" placeholder="Email">
-              </label>
-              <button class="button button-small">
-                Submit
-              </button>
-            </div>
-          </div> -->
-
-
-
         </div>
       </div>
     </ion-content>
+    <ion-footer-bar class="result-footer">
+          <div class="logos-footer center">
+            <div class="logo"><img src="/assets/images/logo-olmix.png" alt="logotipo olmix group"/></div>
+            <div class="logo"><p class="text-footer">Especialistas en micotoxinas:</p></div>
+            <div class="logo"><img src="/assets/images/logos-mtx.png" alt="logotipo mtx"/></div>
+          </div>
+    </ion-footer-bar>
 </ion-view>
