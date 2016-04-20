@@ -21,10 +21,7 @@
   height: 40px;
 }
 
-.mediun {
-  left: 50%;
-  color: contraste($brand-color + 40, 100);
-}
+
 
 .result-number  {
   color: $brand-color;
@@ -42,6 +39,10 @@
     position: absolute;
     left: 90%;
   }
+  .mediun {
+    left: 50%;
+    color: contraste($brand-color + 40, 100);
+  }
 }
 
 .result-text {
@@ -49,4 +50,14 @@
   font-size: 36px;
   color: rgba(117,64,93,0.55);
   margin-top: 30px;
+}
+
+@media (max-width : 500px) {
+    .result-number {
+      font-size: 90px;
+      line-height: 100px;
+    }
+    .result-border {
+      height: 20px;
+    }
 }
