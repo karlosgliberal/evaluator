@@ -26,3 +26,14 @@ button.submit-form {
   color: white;
   font-weight: bold;
 }
+
+
+@media (max-width : 500px) {
+    .item {
+      white-space: normal;
+      font-size: 14px;
+    }
+    .result-border {
+      height: 20px;
+    }
+}
