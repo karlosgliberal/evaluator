@@ -10,7 +10,8 @@ export default class EvaluationResultController {
       formPartsBuilderService,
       reportManagerService
     });
-
+    this.resultPercentage = this.$stateParams.result.resultPercentage;
+    this.resultText = this.$stateParams.result.resultText;
     this.viewModel = {};
     this.fields = this.formPartsBuilderService.buidInputEmailFor();
     this.logoOlmix = './assets/images/logo-olmix.png';
@@ -21,7 +22,7 @@ export default class EvaluationResultController {
     if (this.form.$valid) {
       var reportSend = this.reportManagerService.sendReport(
           this.$stateParams.animal,
-          this.$stateParams.result,
+          this.$stateParams.result.resultPercentage,
           this.viewModel.email
       );
       if (reportSend.result === 'ok') {
