@@ -1,4 +1,6 @@
 import { assign } from 'lodash';
+import './images/logo-olmix.png';
+import './images/logos-mtx.png';
 
 export default class EvaluationResultController {
   /*@ngInject*/
@@ -11,6 +13,8 @@ export default class EvaluationResultController {
 
     this.viewModel = {};
     this.fields = this.formPartsBuilderService.buidInputEmailFor();
+    this.logoOlmix = './assets/images/logo-olmix.png';
+    this.logoMtx = './assets/images/logos-mtx.png';
   }
 
   onSubmit() {

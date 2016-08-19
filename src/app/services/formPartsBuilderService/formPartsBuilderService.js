@@ -52,7 +52,8 @@ export default class formPartsBuilderService {
         templateOptions: {
           type: 'email',
           placeholder: 'Email',
-          required: true
+          required: true,
+          className: 'movida'
         }
       }];
   }
