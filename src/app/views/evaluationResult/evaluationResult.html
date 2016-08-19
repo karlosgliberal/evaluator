@@ -8,17 +8,17 @@
         <p class="result-intro center">Probabilidad de presencia significativa de micotoxinas en la dieta de sus vacas</p>
         <div class="result-container">
           <div class="result-number-container">
-            <div class="result-number mediun">{{evaluationResult.$stateParams.result}}%</div>
+            <div class="result-number" style="position: relative; left: 0px; padding: 0 20px 0 0;">{{evaluationResult.$stateParams.result}}%</div>
           </div>
-          <div class="result-border"></div>
+          <div class="result-border" style="background-image: linear-gradient(90deg, #76405D 0%, rgba(118, 63, 93, 0.14) 100%);"></div>
           <p class="result-text center">Riesgo medio</p>
         </div>
         <div class="result-send">
           <div class="list list-inset">
-            <form ng-submit="evaluationResult.onSubmit()" novalidate>
+            <form class="envio-email" ng-submit="evaluationResult.onSubmit()" novalidate>
               <formly-form form="evaluationResult.form" model="evaluationResult.viewModel" fields="evaluationResult.fields">
                 <div class="buttom-wrapper">
-                  <button type="submit" class="button button-stable">Enviar email
+                  <button type="submit" class="button submit-form">Enviar por email
                   </button>
                 </div>
               </formly-form>
@@ -29,12 +29,15 @@
           </div>
         </div>
       </div>
+
+      <div class="result-footer">
+            <div class="logos-footer center">
+              <div class="logo"><img src="{{evaluationResult.logoOlmix}}" alt="logotipo olmix group"/></div>
+              <div class="logo"><p class="text-footer">Especialistas en micotoxinas:</p></div>
+              <div class="logo"><img src="{{evaluationResult.logoMtx}}" alt="logotipo mtx"/></div>
+            </div>
+      </div>
+
     </ion-content>
-    <ion-footer-bar class="result-footer">
-          <div class="logos-footer center">
-            <div class="logo"><img src="{{evaluationResult.logoOlmix}}" alt="logotipo olmix group"/></div>
-            <div class="logo"><p class="text-footer">Especialistas en micotoxinas:</p></div>
-            <div class="logo"><img src="{{evaluationResult.logoMtx}}" alt="logotipo mtx"/></div>
-          </div>
-    </ion-footer-bar>
+
 </ion-view>
