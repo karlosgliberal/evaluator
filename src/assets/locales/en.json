@@ -9,7 +9,8 @@
     "welcome": "Welcome",
     "home": "Home",
     "about": "About",
-    "language": "Language"
+    "language": "Language",
+    "selection": "seleccion animal"
   },
   "language": {
     "title": "Choose your preferred language",
