@@ -95,10 +95,17 @@
   }
 }
 
-.result-container, .result-send {
+.result-container {
   padding: 0 220px;
 }
 
+
+.result-send {
+  padding: 0 220px;
+  @media (max-width : 500px)  {
+    padding: 0;
+  }
+}
 
 // ANIMAL COMPONENT
 
