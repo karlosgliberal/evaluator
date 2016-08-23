@@ -5,15 +5,21 @@ const baseSumValue = 25;
 
 export default class formSubmitService {
   /*@ngInject*/
-  constructor(animalFieldsManager, localStorageManager) {
-    assign(this, {animalFieldsManager, localStorageManager});
+  constructor(animalFieldsManager, localStorageManager, resultManager) {
+    assign(this, {animalFieldsManager, localStorageManager, resultManager});
   };
 
   processData(animal, selector, fields) {
+    var result = {};
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);
     var evaluationResult = this.performEvaluation(flattenedList, allFieldsList);
-    var result = this.prepareResult(evaluationResult);
+    _.assign(result, {
+      resultPercentage: this.resultManager.prepareResultPercentage(evaluationResult)
+    }, {
+      resultText: this.resultManager.prepareResultText(evaluationResult)
+    });
+
     this.saveData(result, animal, selector, fields);
 
     return result;
@@ -44,15 +50,6 @@ export default class formSubmitService {
     });
 
     return sum + baseSumValue;
-  }
-
-  prepareResult(evaluationResult) {
-    if (evaluationResult > 95) {
-      return 95;
-    } else if (evaluationResult < 26) {
-      return 25;
-    }
-    return _.round(evaluationResult);
   }
 
   saveData(result, animal, selector, fields) {

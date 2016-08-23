@@ -8,10 +8,10 @@
         <p class="result-intro center">Probabilidad de presencia significativa de micotoxinas en la dieta de sus vacas</p>
         <div class="result-container">
           <div class="result-number-container">
-            <div class="result-number" style="position: relative; left: 0px; padding: 0 20px 0 0;">{{evaluationResult.$stateParams.result}}%</div>
+            <div class="result-number" style="position: relative; left: {{evaluationResult.resultPercentage}}px; padding: 0 20px 0 0;">{{evaluationResult.resultPercentage}}%</div>
           </div>
-          <div class="result-border" style="background-image: linear-gradient(90deg, #76405D 0%, rgba(118, 63, 93, 0.14) 100%);"></div>
-          <p class="result-text center">Riesgo medio</p>
+          <div class="result-border" style="width: {{evaluationResult.resultPercentage}}%; background-image: linear-gradient(90deg, #76405D 0%, rgba(118, 63, 93, 0.{{evaluationResult.resultPercentage}}) {{evaluationResult.resultPercentage}}%);"></div>
+          <p class="result-text center">{{evaluationResult.resultText}}</p>
         </div>
         <div class="result-send">
           <div class="list list-inset">
