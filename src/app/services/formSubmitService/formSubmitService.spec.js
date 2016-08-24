@@ -27,8 +27,7 @@ describe('form service', () => {
 
   beforeEach(angular.mock.module(resultManagerServices.name, ($provide) => {
     resultMangerSpy = {prepareResultPercentage: sinon.spy()};
-    resultTextMangerSpy = {prepareResultPercentage: sinon.spy()};
-    $provide.value('resultManager', resultMangerSpy, resultTextMangerSpy);
+    $provide.value('resultManager', resultMangerSpy);
   }));
 
   beforeEach(angular.mock.module(animalFieldsManager.name, ($provide) => {
@@ -94,9 +93,9 @@ describe('form service', () => {
             'corn-fields': false
           }
         }];
-      //formSubmitService.processData(animal.COW, fieldList);
+      formSubmitService.processData(animal.COW, fieldList);
 
-      //expect(resultMangerSpy.prepareResultPercentage.withArgs(6).callCount).to.be.equal(1);
+      expect(resultMangerSpy.prepareResultPercentage.withArgs(6).callCount).to.be.equal(1);
     });
 
     it('should get Cow fields', () => {
