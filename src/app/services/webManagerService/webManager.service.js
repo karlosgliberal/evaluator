@@ -15,8 +15,8 @@ export default class webManagerService {
       }
     };
     var movida = {movida: 'movida'};
-
-    return this.$http.post('http://dev-olmix.pantheon.io/evaluator/process', movida, config)
+    console.log('moooddo');
+    return this.$http.post('http://dev-olmix.pantheonsite.io/evaluator/process', movida, config)
       .then(
         function (response) {
           return response;
