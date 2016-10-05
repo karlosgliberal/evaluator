@@ -29,6 +29,7 @@
 
   .animal-col {
     &.col {
+      background-color: black;
       padding: 0 !important;
       margin: 0 !important;
     }
@@ -36,6 +37,7 @@
 
 .animal-temp {
   background-position: center;
+  background-color: black;
   background-size: cover;
   width: 100%;
   position: relative;

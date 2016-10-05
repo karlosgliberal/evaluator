@@ -11,7 +11,7 @@ export default class AppController {
 
     this.$timeout(() => {
       this.goToNextScreen(language);
-    }, 3000);
+    }, 500);
   }
 
   goToNextScreen(language) {
