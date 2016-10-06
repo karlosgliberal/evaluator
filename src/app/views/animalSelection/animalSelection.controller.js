@@ -4,6 +4,7 @@ import animal from '../../utils/animal';
 import './images/poultry.png';
 import './images/swine.png';
 import './images/vaca.png';
+import './images/logo-cabecera.png';
 
 const imagePathBase = './assets/images/';
 
@@ -14,6 +15,7 @@ export default class AnimalSelectionController {
 
     this.animals = this.availableAnimals();
     this.dimensionHeight = this.calculateDimensionHeight();
+    this.logoIcon = './assets/images/logo-cabecera.png';
   }
 
   calculateDimensionHeight(gesture) {

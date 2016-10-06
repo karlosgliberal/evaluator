@@ -1,4 +1,16 @@
 <ion-view view-title="Selecciona">
+    <ion-nav-title>
+        <div class="row">
+            <div class="nav-titulo col col-33">
+                <h4>Selecciona el animal</h4>
+            </div>
+            <div class="titulo col col-33">
+            </div>
+            <div class="nav-img col col-33">
+                <img src="{{animalSelection.logoIcon}}">
+            </div>
+        </div>
+    </ion-nav-title>
     <ion-content>
         <div class="row responsive-sm">
             <div class="animal-col col col-33" ng-repeat="anim in animalSelection.animals">
@@ -7,7 +19,7 @@
                     </div>
             </div>
         </div>
-    </ion-content>
+    </ion-content
        <ion-footer-bar class="select-footer">
         </ion-footer-bar>
 </ion-view>

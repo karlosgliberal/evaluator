@@ -52,3 +52,37 @@
 .select-footer {
   background-color: #000 !important;
 }
+
+.bar-menu{
+  h1{
+    img{
+      width: auto;
+      height: 40px;
+      position: relative;
+      top: 4px;
+    }
+  }
+  .icon{
+    color:$brand-color;
+  }
+}
+
+.nav-titulo {
+  text-align: left;
+  img{
+    width: auto;
+    height:40px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+.nav-img {
+  img{
+    width: auto;
+    height:30px;
+    position: relative;
+    top: -1px;
+    float: right;
+  }
+}
