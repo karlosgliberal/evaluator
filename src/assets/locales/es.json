@@ -2,8 +2,8 @@
   "main": {
     "view-title": "Principal"
   },
-  "detail": {
-    "view-title": "Detalle de usuario"
+  "animalSelection": {
+    "view-title": "Selecciona el Animal"
   },
   "menu": {
     "welcome": "Welcome",
@@ -24,6 +24,7 @@
     "tr": "Turco"
   },
   "forms": {
+    "view-title": "Formulario",
     "cow": {
       "herd": {
         "title": "Las vacas",

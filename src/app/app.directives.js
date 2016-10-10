@@ -1,5 +1,5 @@
-import userMenu from './components/userMenu/userMenu';
+import navIcon from './components/navIcon/navIcon';
 
 export default angular
-    .module('olmixEvaluator.directives', [])
-    .component('userMenu', userMenu);
+  .module('olmixEvaluator.directives', [])
+  .component('navIcon', navIcon);
