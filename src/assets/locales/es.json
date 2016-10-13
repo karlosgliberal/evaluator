@@ -28,6 +28,11 @@
     "vi": "Vietnamita",
     "tr": "Turco"
   },
+  "animal":{
+    "swine": "verdos",
+    "cow": "vacas",
+    "poultry": "gallinas"
+  },
   "forms": {
     "evaluate": "Evaluar",
     "view-title": "Formulario",

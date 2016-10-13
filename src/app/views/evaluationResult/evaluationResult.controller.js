@@ -4,11 +4,12 @@ import './images/logos-mtx.png';
 
 export default class EvaluationResultController {
   /*@ngInject*/
-  constructor($stateParams, formPartsBuilderService, reportManagerService) {
+  constructor($stateParams, formPartsBuilderService, reportManagerService, languageFormService) {
     assign(this, {
       $stateParams,
       formPartsBuilderService,
-      reportManagerService
+      reportManagerService,
+      languageFormService
     });
     this.resultPercentage = this.$stateParams.result.resultPercentage;
     this.resultText = this.$stateParams.result.resultText;
@@ -18,7 +19,9 @@ export default class EvaluationResultController {
     this.logoOlmix = './assets/images/logo-olmix.png';
     this.logoMtx = './assets/images/logos-mtx.png';
     this.logoIcon = './assets/images/logo-cabecera.png';
-    this.vaca = './assets/images/vaca-interior.png';
+    this.textImageObj = this.languageFormService.getTextImagen(this.$stateParams, this.animales);
+    this.imageAnimal = this.textImageObj.image;
+    this.textAnimal = this.textImageObj.text;
   }
 
   onSubmit() {

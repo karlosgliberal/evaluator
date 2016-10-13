@@ -27,6 +27,11 @@
     "ch": "Chinese",
     "tr": "turkish"
   },
+  "animal":{
+    "swine": "Cerdos",
+    "cow": "Vacas",
+    "poultry": "Gallinas"
+  },
   "forms": {
     "evaluate": "Evaluate",
     "view-title": "Formulario",

@@ -11,5 +11,20 @@ export default class languageFormService {
 
   generateFormRadio(state, userLanguage) {
     return this.formPartsBuilderService.buildRadioFor('language.', 'selector', languages, state, userLanguage);
-  }
+  };
+
+  getTextImagen(state){
+    var textoImagenAnimal = {};
+    if (state.animal === 'cow'){
+      textoImagenAnimal.image = './assets/images/vaca-interior.png';
+      textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
+    } else if (state.animal === 'poultry'){
+      textoImagenAnimal.image = './assets/images/vaca-interior.png';
+      textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
+    } else {
+      textoImagenAnimal.image = './assets/images/vaca-interior.png';
+      textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
+    }
+    return textoImagenAnimal;
+  };
 }
