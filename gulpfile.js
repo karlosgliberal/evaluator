@@ -58,6 +58,7 @@ gulp.task('test_cmd', function (cb) {
 
 // we just need a watch for scss. webpack watches everything else.
 gulp.task('watch', function () {
+  gulp.watch('./src/**/*.json', ['copy-assets']);
   gulp.watch('./src/**/*.scss', ['scss']);
   gulp.watch('./src/**/*.js', ['webpack']);
   gulp.watch('./src/**/*.html', ['webpack']);

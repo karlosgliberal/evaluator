@@ -1,9 +1,14 @@
 {
   "main": {
-    "view-title": "Principal"
+    "view-title": "Principal "
   },
   "animalSelection": {
     "view-title": "Selecciona el Animal"
+  },
+  "evaluationResult": {
+    "view-title": "Resultados",
+    "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta de sus",
+    "email": "Send Email"
   },
   "menu": {
     "welcome": "Welcome",
@@ -24,6 +29,7 @@
     "tr": "Turco"
   },
   "forms": {
+    "evaluate": "Evaluar",
     "view-title": "Formulario",
     "cow": {
       "herd": {

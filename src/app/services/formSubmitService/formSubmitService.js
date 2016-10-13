@@ -21,7 +21,6 @@ export default class formSubmitService {
     });
 
     this.saveData(result, animal, selector, fields);
-
     return result;
   }
 

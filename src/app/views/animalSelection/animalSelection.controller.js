@@ -34,6 +34,7 @@ export default class AnimalSelectionController {
   }
 
   onAnimalSelection(selectedAnimal) {
+    console.log(selectedAnimal);
     this.$state.go('form', {animal: selectedAnimal});
   }
 }

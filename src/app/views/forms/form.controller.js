@@ -10,8 +10,10 @@ export default class formController {
       formSubmitService,
     });
 
+    this.logoIcon = './assets/images/logo-cabecera.png';
     this.selectorViewModel = {};
     this.selector = this.formService.getFormSelector(this.$stateParams.animal, this);
+
 
     this.viewModel = {};
     this.fields = this.formService.getFormFields(this.$stateParams.animal);

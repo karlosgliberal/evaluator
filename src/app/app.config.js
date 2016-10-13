@@ -9,17 +9,16 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
     controllerAs: 'app',
     cache: false
   });
-
   $translateProvider
       .useStaticFilesLoader({
         prefix: 'assets/locales/',
         suffix: '.json'
       })
-       .registerAvailableLanguageKeys(['ch', 'en', 'es', 'tr'], {
-         ch: 'ch', en: 'en', es: 'es', tr: 'tr'
+       .registerAvailableLanguageKeys(['en', 'es'], {
+         en: 'en', es: 'es'
        })
       .preferredLanguage('en')
-      // .fallbackLanguage('en')
+      //.fallbackLanguage('en')
       .forceAsyncReload(true)
       .useSanitizeValueStrategy('sanitizeParameters');
   $urlRouterProvider.otherwise('/');

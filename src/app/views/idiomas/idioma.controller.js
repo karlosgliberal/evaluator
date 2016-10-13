@@ -14,6 +14,7 @@ export default class IdiomaController {
     });
 
 
+    this.logoIcon = './assets/images/logo-cabecera.png';
     var userLanguage = this.localStorageManager.getDataFor('language');
 
     if (userLanguage) {
@@ -31,6 +32,6 @@ export default class IdiomaController {
     this.$translate.use(this.selectorViewModel.selector);
     this.$translate.refresh(this.selectorViewModel.selector);
     this.localStorageManager.save('language', this.selectorViewModel.selector);
-    this.$state.go('animalSelection', null, {reload: true});
+    this.$state.go('animalSelection', {}, {reload: true});
   }
 }

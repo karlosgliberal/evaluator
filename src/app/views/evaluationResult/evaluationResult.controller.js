@@ -13,9 +13,12 @@ export default class EvaluationResultController {
     this.resultPercentage = this.$stateParams.result.resultPercentage;
     this.resultText = this.$stateParams.result.resultText;
     this.viewModel = {};
+    this.animales = this.$stateParams.animal;
     this.fields = this.formPartsBuilderService.buidInputEmailFor();
     this.logoOlmix = './assets/images/logo-olmix.png';
     this.logoMtx = './assets/images/logos-mtx.png';
+    this.logoIcon = './assets/images/logo-cabecera.png';
+    this.vaca = './assets/images/vaca-interior.png';
   }
 
   onSubmit() {

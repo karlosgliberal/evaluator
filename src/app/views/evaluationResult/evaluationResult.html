@@ -1,11 +1,23 @@
 <!-- {{evaluationResult.$stateParams.animal}} -->
-<ion-view view-title="{{'language.view-title' | translate }}">
+<ion-view>
+  <ion-nav-title>
+    <div class="row">
+      <div class="nav-titulo col col-33">
+        <h4>{{'evaluationResult.view-title' | translate}}</h4>
+      </div>
+      <div class="titulo col col-33">
+      </div>
+      <div class="nav-img col col-33">
+        <img src="{{evaluationResult.logoIcon}}">
+      </div>
+    </div>
+  </ion-nav-title>
     <ion-content>
       <div class="container-wrapper">
-        <div class="imagen-animal-container" style="background-image: url(./assets/images/vacas-interior.png)";>
-          <p class="texto-animal-imagen">VACA</p>
+        <div class="imagen-animal-container" style="background-image: url({{evaluationResult.vaca}})";>
+          <p class="texto-animal-imagen">{{evaluationResult.animales}}</p>
         </div>
-        <p class="result-intro center">Probabilidad de presencia significativa de micotoxinas en la dieta de sus vacas</p>
+        <p class="result-intro center">{{'evaluationResult.text-result' | translate}} vacas</p>
         <div class="result-container">
           <div class="result-number-container">
             <div class="result-number" style="position: relative; left: {{evaluationResult.resultPercentage}}px; padding: 0 20px 0 0;">{{evaluationResult.resultPercentage}}%</div>
@@ -18,7 +30,7 @@
             <form class="envio-email" ng-submit="evaluationResult.onSubmit()" novalidate>
               <formly-form form="evaluationResult.form" model="evaluationResult.viewModel" fields="evaluationResult.fields">
                 <div class="buttom-wrapper">
-                  <button type="submit" class="button submit-form">Enviar por email
+                  <button type="submit" class="button submit-form">{{'evaluationResult.email' | translate}}
                   </button>
                 </div>
               </formly-form>
