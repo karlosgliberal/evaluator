@@ -15,9 +15,9 @@
     <ion-content>
       <div class="container-wrapper">
         <div class="imagen-animal-container" style="background-image: url({{evaluationResult.imageAnimal}})";>
-          <p class="texto-animal-imagen">{{evaluationResult.animales | translate}}</p>
+          <p class="texto-animal-imagen">{{evaluationResult.textAnimal }}</p>
         </div>
-        <p class="result-intro center">{{'evaluationResult.text-result' | translate}} vacass - {{evaluationResult.textAnimal}}-- </p>
+        <p class="result-intro center">{{'evaluationResult.text-result' | translate}} {{evaluationResult.textAnimal}} </p>
         <div class="result-container">
           <div class="result-number-container">
             <div class="result-number" style="position: relative; left: {{evaluationResult.resultPercentage}}px; padding: 0 20px 0 0;">{{evaluationResult.resultPercentage}}%</div>
@@ -45,7 +45,7 @@
       <div class="result-footer">
             <div class="logos-footer center">
               <div class="logo"><img src="{{evaluationResult.logoOlmix}}" alt="logotipo olmix group"/></div>
-              <div class="logo"><p class="text-footer">Especialistas en micotoxinas:</p></div>
+              <div class="logo"><p class="text-footer">{{'evaluationResult.micotoxine' | translate}}:</p></div>
               <div class="logo"><img src="{{evaluationResult.logoMtx}}" alt="logotipo mtx"/></div>
             </div>
       </div>

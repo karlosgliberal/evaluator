@@ -21,7 +21,7 @@ export default class EvaluationResultController {
     this.logoIcon = './assets/images/logo-cabecera.png';
     this.textImageObj = this.languageFormService.getTextImagen(this.$stateParams, this.animales);
     this.imageAnimal = this.textImageObj.image;
-    this.textAnimal = this.textImageObj.text;
+    this.textAnimal = this.textImageObj.texto;
   }
 
   onSubmit() {
