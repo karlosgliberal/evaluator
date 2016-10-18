@@ -1,6 +1,6 @@
 {
   "main": {
-    "view-title": "Principal "
+    "view-title": "Principal"
   },
   "animalSelection": {
     "view-title": "Selecciona el Animal"
@@ -25,15 +25,12 @@
       "title": "Selección idioma"
     },
     "es": "Castellano",
-    "en": "Inglés",
-    "ch": "Chino",
-    "vi": "Vietnamita",
-    "tr": "Turco"
+    "en": "Inglés"
   },
   "animal":{
-    "swine": "verdos",
-    "cow": "vacas",
-    "poultry": "gallinas"
+    "swine": "Cerdos",
+    "cow": "Vacas",
+    "poultry": "Gallinas"
   },
   "forms": {
     "evaluate": "Evaluar",

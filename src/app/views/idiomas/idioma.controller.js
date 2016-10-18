@@ -19,7 +19,6 @@ export default class IdiomaController {
 
     if (userLanguage) {
       userLanguage = userLanguage.replace(/(^\")|("$)/gi, '');
-
       this.$translate.use(userLanguage);
       this.$translate.refresh(userLanguage);
     }

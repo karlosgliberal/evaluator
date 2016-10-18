@@ -25,14 +25,12 @@
       "title": "Language Selection"
     },
     "es": "Spanish",
-    "en": "English",
-    "ch": "Chinese",
-    "tr": "turkish"
+    "en": "English"
   },
   "animal":{
-    "swine": "Cerdos",
-    "cow": "Vacas",
-    "poultry": "Gallinas"
+    "swine": "Swine",
+    "cow": "Cow",
+    "poultry": "Poltry"
   },
   "forms": {
     "evaluate": "Evaluate",

@@ -1,8 +1,6 @@
 const languages = {
   ENGLISH: 'en',
-  SPANISH: 'es',
-  CHINESE: 'ch',
-  TURKISH: 'tr'
+  SPANISH: 'es'
 };
 
 export default languages;

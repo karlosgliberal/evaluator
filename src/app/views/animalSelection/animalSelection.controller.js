@@ -1,6 +1,6 @@
 import { assign } from 'lodash';
 import language from '../../utils/language';
-import animal from '../../utils/animal';
+import animals from '../../utils/animal';
 import './images/poultry.png';
 import './images/swine.png';
 import './images/vaca.png';
@@ -10,9 +10,8 @@ const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/
-  constructor($state, $translate, $window) {
-    assign(this, {$state, $translate, $window});
-
+  constructor($state, $translate, $window, localStorageManager) {
+    assign(this, {$state, $translate, $window, localStorageManager});
     this.animals = this.availableAnimals();
     this.dimensionHeight = this.calculateDimensionHeight();
     this.logoIcon = './assets/images/logo-cabecera.png';
@@ -23,12 +22,14 @@ export default class AnimalSelectionController {
   }
 
   availableAnimals() {
-    var availableAnimals = [{name: animal.COW, path: imagePathBase + 'vaca.png'}, {
-      name: animal.POULTRY,
+
+    var availableAnimals = [{text: 'animal.cow', name: animals.COW, path: imagePathBase + 'vaca.png'}, {
+      text: 'animal.poultry',
+      name: animals.POULTRY,
       path: imagePathBase + 'poultry.png'
     }];
     if (this.$translate.use() !== language.TURKISH) {
-      availableAnimals.push({name: animal.SWINE, path: imagePathBase + 'swine.png'});
+      availableAnimals.push({text: 'animal.swine', name: animals.SWINE, path: imagePathBase + 'swine.png'});
     }
     return availableAnimals;
   }
