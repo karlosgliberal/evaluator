@@ -4,6 +4,10 @@ import localStorageManager from '../localStorageManagerService/localStorageManag
 import resultManager from '../resultManagerService/resultManager.services';
 
 export default angular
-    .module('olmixEvaluator.formSubmit.services', [animalFieldsManager.name, localStorageManager.name, resultManager.name])
+    .module('olmixEvaluator.formSubmit.services', [
+      animalFieldsManager.name,
+      localStorageManager.name,
+      resultManager.name
+    ])
     .service('formSubmitService', formSubmitService);
 

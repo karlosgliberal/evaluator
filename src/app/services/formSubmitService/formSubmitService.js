@@ -5,8 +5,12 @@ const baseSumValue = 25;
 
 export default class formSubmitService {
   /*@ngInject*/
-  constructor(animalFieldsManager, localStorageManager, resultManager) {
-    assign(this, {animalFieldsManager, localStorageManager, resultManager});
+  constructor(animalFieldsManager, localStorageManager, resultManager, $translate) {
+    assign(this, {
+      animalFieldsManager,
+      localStorageManager,
+      resultManager,
+      $translate});
   };
 
   processData(animal, selector, fields) {
@@ -52,13 +56,29 @@ export default class formSubmitService {
   }
 
   saveData(result, animal, selector, fields) {
-    var data = {};
+    let labelBase = 'forms.';
+    let data = {};
+    let lista = [];
+    let listaTraduciones = {};
     _.assign(data, {animal: animal});
     if (selector) {
       _.assign(data, {selector: selector});
     }
     _.assign(data, {fields: fields}, {result: result});
 
+    let keys = _.keysIn(data.fields);
+    _.forEach(keys, (key) => {
+      if (!_.isEmpty(data.fields[key])) {
+        let secondKeys = _.keysIn(data.fields[key]);
+        _.forEach(secondKeys, (secondKey, i) => {
+          let animalTrans = this.$translate.instant('animal.' + data.animal);
+          let grupo = this.$translate.instant(labelBase + data.animal + '.' + key + '.title');
+          let trans = this.$translate.instant('forms.' + data.animal + '.' + key + '.fields.' + secondKey);
+          lista.push({animal: animalTrans, grupo: grupo, traduccion: trans});
+        });
+      }
+    });
+    _.assign(data, {traducciones: lista});
     this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(data));
   }
 }
