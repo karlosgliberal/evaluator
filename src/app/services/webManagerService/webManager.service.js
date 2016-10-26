@@ -8,15 +8,18 @@ export default class webManagerService {
   };
 
 
-  sendDataDrupal() {
+  sendDataDrupal(animal, result, email) {
     var config = {
       headers: {
         'Content-Type': 'application/json'
       }
     };
-    var movida = {movida: 'movida'};
-    console.log('moooddo');
-    return this.$http.post('http://test.local:8081/evaluator/process', movida, config)
+    console.log(result);
+    var jsonResult = JSON.stringify(result);
+    console.log(jsonResult);
+
+    return this.$http.post('http://dev-olmix.pantheonsite.io/evaluator/process', jsonResult, config)
+    //return this.$http.post('http://test.local:8081/evaluator/process', jsonResult, config)
       .then(
         function (response) {
           return response;

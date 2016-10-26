@@ -11,8 +11,8 @@ export default class EvaluationResultController {
       reportManagerService,
       languageFormService
     });
-    this.resultPercentage = this.$stateParams.result.resultPercentage;
-    this.resultText = this.$stateParams.result.resultText;
+    this.resultPercentage = this.$stateParams.result.porcentaje;
+    this.resultText = this.$stateParams.result.resultTexto;
     this.viewModel = {};
     this.animales = this.$stateParams.animal;
     this.fields = this.formPartsBuilderService.buidInputEmailFor();
@@ -28,11 +28,10 @@ export default class EvaluationResultController {
     if (this.form.$valid) {
       var reportSend = this.reportManagerService.sendReport(
           this.$stateParams.animal,
-          this.$stateParams.result.resultPercentage,
+          this.$stateParams.result,
           this.viewModel.email
       );
       if (reportSend.result === 'ok') {
-        console.log(reportSend.result);
         this.resultMessage = 'ok';
       } else {
         this.resultMessage = reportSend.error;

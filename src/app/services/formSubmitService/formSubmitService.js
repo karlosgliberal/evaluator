@@ -18,14 +18,24 @@ export default class formSubmitService {
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);
     var evaluationResult = this.performEvaluation(flattenedList, allFieldsList);
-    _.assign(result, {
-      resultPercentage: this.resultManager.prepareResultPercentage(evaluationResult)
-    }, {
-      resultText: this.resultManager.prepareResultText(evaluationResult)
-    });
+    var resultPercentage = this.resultManager.prepareResultPercentage(evaluationResult);
+    var resultText = this.resultManager.prepareResultText(evaluationResult);
 
-    this.saveData(result, animal, selector, fields);
+    // _.assign(result, {
+    //   resultPercentage: this.resultManager.prepareResultPercentage(evaluationResult)
+    // }, {
+    //   resultText: this.resultManager.prepareResultText(evaluationResult)
+    // });
+
+    var data = this.makeData(result, animal, selector, fields);
+    _.assign(result, {porcentaje: resultPercentage}, {resultTexto: resultText}, {datos: data});
+    //_.assign(res, {resultTraduccion: data});
+    //this.saveData(result);
     return result;
+  }
+
+  saveData(data){
+    this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(data));
   }
 
   flattenFieldList(fieldsList) {
@@ -55,7 +65,7 @@ export default class formSubmitService {
     return sum + baseSumValue;
   }
 
-  saveData(result, animal, selector, fields) {
+  makeData(result, animal, selector, fields) {
     let labelBase = 'forms.';
     let data = {};
     let lista = [];
@@ -79,6 +89,7 @@ export default class formSubmitService {
       }
     });
     _.assign(data, {traducciones: lista});
-    this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(data));
+    return lista;
+    //this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(data));
   }
 }
