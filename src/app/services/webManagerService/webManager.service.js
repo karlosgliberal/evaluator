@@ -8,15 +8,13 @@ export default class webManagerService {
   };
 
 
-  sendDataDrupal(animal, result, email) {
+  sendDataDrupal(result) {
     var config = {
       headers: {
         'Content-Type': 'application/json'
       }
     };
-    console.log(result);
     var jsonResult = JSON.stringify(result);
-    console.log(jsonResult);
 
     return this.$http.post('http://dev-olmix.pantheonsite.io/evaluator/process', jsonResult, config)
     //return this.$http.post('http://test.local:8081/evaluator/process', jsonResult, config)
