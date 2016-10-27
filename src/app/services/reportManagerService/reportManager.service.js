@@ -10,7 +10,7 @@ export default class reportManagerService {
   sendReport(animal, result, email) {
     var resultado = result;
     resultado.email = email;
-
+    var net = this.networkManagerService.startWatching();
     var network = this.networkManagerService.isOnline();
     if (network) {
       var requestResult = this.webManagerService.sendDataDrupal(resultado);

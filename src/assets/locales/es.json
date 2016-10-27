@@ -10,7 +10,9 @@
     "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta de sus",
     "email": "Send Email",
     "micotoxine": "Especialistas en micotoxinas:",
-    "send": "Informe enviado"
+    "send": "Informe enviado",
+    "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
+    "footerEmail": "Email: mycotoxin@olmix.com"
   },
   "menu": {
     "welcome": "Welcome",

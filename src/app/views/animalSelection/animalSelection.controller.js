@@ -10,8 +10,8 @@ const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/
-  constructor($state, $translate, $window, localStorageManager) {
-    assign(this, {$state, $translate, $window, localStorageManager});
+  constructor($state, $translate, $window, localStorageManager, networkManagerService) {
+    assign(this, {$state, $translate, $window, localStorageManager, networkManagerService});
     this.animals = this.availableAnimals();
     this.dimensionHeight = this.calculateDimensionHeight();
     this.logoIcon = './assets/images/logo-cabecera.png';
@@ -22,7 +22,7 @@ export default class AnimalSelectionController {
   }
 
   availableAnimals() {
-
+    var net = this.networkManagerService.startWatching();
     var availableAnimals = [{text: 'animal.cow', name: animals.COW, path: imagePathBase + 'vaca.png'}, {
       text: 'animal.poultry',
       name: animals.POULTRY,

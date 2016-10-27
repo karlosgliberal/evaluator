@@ -5,15 +5,17 @@ const baseSumValue = 25;
 
 export default class formSubmitService {
   /*@ngInject*/
-  constructor(animalFieldsManager, localStorageManager, resultManager, $translate) {
+  constructor(animalFieldsManager, localStorageManager, resultManager, networkManagerService, $translate) {
     assign(this, {
       animalFieldsManager,
       localStorageManager,
       resultManager,
+      networkManagerService,
       $translate});
   };
 
   processData(animal, selector, fields) {
+    var net = this.networkManagerService.startWatching();
     var result = {};
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);
@@ -21,16 +23,8 @@ export default class formSubmitService {
     var resultPercentage = this.resultManager.prepareResultPercentage(evaluationResult);
     var resultText = this.resultManager.prepareResultText(evaluationResult);
 
-    // _.assign(result, {
-    //   resultPercentage: this.resultManager.prepareResultPercentage(evaluationResult)
-    // }, {
-    //   resultText: this.resultManager.prepareResultText(evaluationResult)
-    // });
-
     var data = this.makeData(result, animal, selector, fields);
     _.assign(result, {porcentaje: resultPercentage}, {resultTexto: resultText}, {datos: data});
-    //_.assign(res, {resultTraduccion: data});
-    //this.saveData(result);
     return result;
   }
 
