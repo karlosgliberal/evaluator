@@ -15,7 +15,7 @@ export default class webManagerService {
       }
     };
     var jsonResult = JSON.stringify(result);
-
+    console.log(jsonResult);
     return this.$http.post('http://dev-olmix.pantheonsite.io/evaluator/process', jsonResult, config)
     //return this.$http.post('http://test.local:8081/evaluator/process', jsonResult, config)
       .then(

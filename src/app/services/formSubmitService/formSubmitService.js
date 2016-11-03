@@ -22,9 +22,20 @@ export default class formSubmitService {
     var evaluationResult = this.performEvaluation(flattenedList, allFieldsList);
     var resultPercentage = this.resultManager.prepareResultPercentage(evaluationResult);
     var resultText = this.resultManager.prepareResultText(evaluationResult);
+    var footerPdf = this.$translate.instant('evaluationResult.footerPdf');
+    var footerEmail = this.$translate.instant('evaluationResult.footerEmail');
+    var animalTrans = this.$translate.instant('animal.' + animal);
 
     var data = this.makeData(result, animal, selector, fields);
-    _.assign(result, {porcentaje: resultPercentage}, {resultTexto: resultText}, {datos: data});
+    _.assign(result, {
+      porcentaje: resultPercentage},
+      {animal: animalTrans},
+      {resultTexto: resultText},
+      {datos: data},
+      {footerPdf: footerPdf},
+      {footerEmail: footerEmail}
+    );
+    console.log(result);
     return result;
   }
 
@@ -75,10 +86,9 @@ export default class formSubmitService {
       if (!_.isEmpty(data.fields[key])) {
         let secondKeys = _.keysIn(data.fields[key]);
         _.forEach(secondKeys, (secondKey, i) => {
-          let animalTrans = this.$translate.instant('animal.' + data.animal);
           let grupo = this.$translate.instant(labelBase + data.animal + '.' + key + '.title');
           let trans = this.$translate.instant('forms.' + data.animal + '.' + key + '.fields.' + secondKey);
-          lista.push({animal: animalTrans, grupo: grupo, traduccion: trans});
+          lista.push({grupo: grupo, traduccion: trans});
         });
       }
     });

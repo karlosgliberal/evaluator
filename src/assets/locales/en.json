@@ -11,8 +11,8 @@
     "email": "Send Email",
     "micotoxine": "Especialistas en micotoxinas:",
     "send": "Informe enviado",
-    "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
-
+    "footerPdf": "EN Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
+    "footerEmail": "mycotoxin@olmix.com"
   },
   "menu": {
     "welcome": "Welcome",

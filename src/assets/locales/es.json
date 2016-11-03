@@ -12,7 +12,7 @@
     "micotoxine": "Especialistas en micotoxinas:",
     "send": "Informe enviado",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
-    "footerEmail": "Email: mycotoxin@olmix.com"
+    "footerEmail": "mycotoxin@olmix.com"
   },
   "menu": {
     "welcome": "Welcome",
@@ -65,14 +65,14 @@
           "corn-fields": "No se trabja la tierra antes de sembrar",
           "fusarium": "Se observa fusariosis en el maíz",
           "silage-harvest": "El ensilado se recolectó tarde",
-          "grass-silage": "El ensilado de hierba se hizo después del de maíz"
+          "grass-silage-cropped": "El ensilado de hierba se hizo después del de maíz"
         }
       },
       "storage": {
         "title": "Almacenamiento",
         "fields": {
           "molds": "Presencia de mohos (de cualquier color)",
-          "silage-trobules": "Problemas en el apisonamiento del ensilado (MS elevada, rapidez de recolección)",
+          "silage-troubles": "Problemas en el apisonamiento del ensilado (MS elevada, rapidez de recolección)",
           "warm-silage": "Ensilado caliente o tardó mucho en enfriarse",
           "grass-silage": "Ensilado de hierba más sucio de lo normal",
           "silage-front-consuption": "El frente del silo avanza lentamente"
