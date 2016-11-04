@@ -11,7 +11,7 @@
             </div>
         </div>
     </ion-nav-title>
-    <ion-content>
+    <ion-content class="seleccion-animal">
         <div class="row responsive-sm">
             <div class="animal-col col col-33" ng-repeat="anim in animalSelection.animals">
                     <div class="animal-temp" style="background-image: url({{ anim.path}}); height: {{animalSelection.dimensionHeight}}px;" ng-click="animalSelection.onAnimalSelection(anim.name)" >

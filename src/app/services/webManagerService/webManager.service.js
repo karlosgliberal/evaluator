@@ -3,8 +3,8 @@ import {assign} from 'lodash';
 
 export default class webManagerService {
   /*@ngInject*/
-  constructor(apiUrl, $http) {
-    assign(this, {apiUrl, $http});
+  constructor(apiUrl, $http, $window) {
+    assign(this, {apiUrl, $http, $window});
   };
 
 
@@ -28,8 +28,23 @@ export default class webManagerService {
     );
   }
 
-  movida(request){
-    console.log('adminadminadminadmin');
-    console.log(request);
+  prepareSendLocalStorage(claves){
+    for (var i = 0; i < claves.length; i++){
+      console.log(claves);
+      var data = this.$window.localStorage.getItem(claves[i]);
+      this.sendDataLocalStorage(data, claves[i]);
+    }
+  }
+
+  sendDataLocalStorage(data, key){
+    var requestResult = this.sendDataDrupal(data);
+    requestResult.then((request) => {
+      console.log('Conexion enviado');
+      this.$window.localStorage.removeItem(key);
+    }, (error) => {
+      this.saveData(resultado);
+      console.log('Error envio');
+      return {result: 'error', error: 'server'};
+    });
   }
 }
