@@ -13,7 +13,8 @@ export default class reportManagerService {
     var net = this.networkManagerService.startWatching();
     var network = this.networkManagerService.isOnline();
     if (network) {
-      var requestResult = this.webManagerService.sendDataDrupal(resultado);
+      let resultadoString = JSON.stringify(resultado);
+      let requestResult = this.webManagerService.sendDataDrupal(resultadoString);
       requestResult.then((request) => {
         console.log('Conexion enviado');
       }, (error) => {
@@ -31,6 +32,7 @@ export default class reportManagerService {
   }
 
   saveData(result) {
-    this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(result));
+    //this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(result));
+    this.localStorageManager.save('Evaluation-' + Date.now(), result);
   }
 }

@@ -15,8 +15,10 @@ export default class webManagerService {
       }
     };
     var jsonResult = JSON.stringify(result);
-    console.log(jsonResult);
-    return this.$http.post('http://dev-olmix.pantheonsite.io/evaluator/process', jsonResult, config)
+    console.log('resultados');
+    console.log(result);
+    console.log('fin resultados');
+    return this.$http.post('http://dev-olmix.pantheonsite.io/evaluator/process', result, config)
     //return this.$http.post('http://test.local:8081/evaluator/process', jsonResult, config)
       .then(
         function (response) {
@@ -30,8 +32,9 @@ export default class webManagerService {
 
   prepareSendLocalStorage(claves){
     for (var i = 0; i < claves.length; i++){
-      console.log(claves);
-      var data = this.$window.localStorage.getItem(claves[i]);
+      let data = this.$window.localStorage.getItem(claves[i]);
+      //console.log(data);
+      let dataString = JSON.parse(data);
       this.sendDataLocalStorage(data, claves[i]);
     }
   }

@@ -18,7 +18,6 @@ export default class localStorageManager {
     var claves = [];
     for (var i = 0; i < this.$window.localStorage.length; i++){
       if (this.$window.localStorage.key(i) !== 'language'){
-        console.log(this.$window.localStorage.key(i));
         claves.push(this.$window.localStorage.key(i));
       }
     }
