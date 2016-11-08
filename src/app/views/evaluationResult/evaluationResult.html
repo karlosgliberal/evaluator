@@ -29,7 +29,7 @@
           <div class="list list-inset">
             <form class="envio-email" ng-submit="evaluationResult.onSubmit()" novalidate>
               <formly-form form="evaluationResult.form" model="evaluationResult.viewModel" fields="evaluationResult.fields">
-                <div class="buttom-wrapper">
+                <div class="buttom-wrapper" ng-hide="evaluationResult.resultMessage">
                   <button type="submit" class="button submit-form">{{'evaluationResult.email' | translate}}
                   </button>
                 </div>
