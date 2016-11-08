@@ -17,7 +17,7 @@ export default class localStorageManager {
   getAllDataKeys(){
     var claves = [];
     for (var i = 0; i < this.$window.localStorage.length; i++){
-      if (this.$window.localStorage.key(i) !== 'language'){
+      if (this.$window.localStorage.key(i) !== 'language' || this.$window.localStorage.key(i) !== 'cola'){
         claves.push(this.$window.localStorage.key(i));
       }
     }

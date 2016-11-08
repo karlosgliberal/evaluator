@@ -7,11 +7,11 @@
   },
   "evaluationResult": {
     "view-title": "Result",
-    "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta de sus",
+    "text-result": "Probability of significant presence of mycotoxins in the diet of their",
     "email": "Send Email",
-    "micotoxine": "Especialistas en micotoxinas:",
-    "send": "Informe enviado",
-    "footerPdf": "EN Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
+    "micotoxine": "Mycotoxin specialists:",
+    "send": "Report submitted",
+    "footerPdf": "Contact our mycotoxin specialists for interpretation and technical support tailored to your situation.",
     "footerEmail": "mycotoxin@olmix.com"
   },
   "menu": {
@@ -19,7 +19,7 @@
     "home": "Home",
     "about": "About",
     "language": "Language",
-    "selection": "seleccion animal"
+    "selection": "Animal selection"
   },
   "language": {
     "title": "Choose your preferred language",
@@ -32,11 +32,11 @@
   "animal":{
     "swine": "Swine",
     "cow": "Cow",
-    "poultry": "Poltry"
+    "poultry": "Poultry"
   },
   "forms": {
     "evaluate": "Evaluate",
-    "view-title": "Formulario",
+    "view-title": "Form",
     "cow": {
       "herd": {
         "title": "The herd",

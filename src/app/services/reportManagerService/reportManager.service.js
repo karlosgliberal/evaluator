@@ -33,6 +33,7 @@ export default class reportManagerService {
 
   saveData(result) {
     //this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(result));
+    this.localStorageManager.save('cola', 1);
     this.localStorageManager.save('Evaluation-' + Date.now(), result);
   }
 }
