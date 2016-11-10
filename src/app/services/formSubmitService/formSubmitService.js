@@ -37,7 +37,6 @@ export default class formSubmitService {
       {footerEmail: footerEmail},
       {bodyText: bodyText}
     );
-    console.log(result);
     return result;
   }
 

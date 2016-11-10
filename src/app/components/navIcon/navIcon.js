@@ -2,7 +2,6 @@ const navIcon = {
   /*@ngInject*/
   controller: function () {
     let ctrl = this;
-    console.log(ctrl);
   },
   bindings: {
     navegacion: '='
