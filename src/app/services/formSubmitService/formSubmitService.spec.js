@@ -4,11 +4,11 @@ import poultry from './../../utils/poultry';
 import animalFieldsManager from '../animalFieldsManagerService/animalFieldsManager.services';
 import localStorageManager from '../localStorageManagerService/localStorageManager.services';
 import resultManagerServices from '../resultManagerService/resultManager.services';
+import networkManagerService from './../networkManagerService/networkManager.services';
 
+describe('form submit service', () => {
 
-describe('form service', () => {
-
-  var formSubmitService, animalFieldsManagerSpy, localStorageManagerSpy, resultMangerSpy, resultTextMangerSpy;
+  var formSubmitService, animalFieldsManagerSpy, localStorageManagerSpy, resultMangerSpy, resultTextMangerSpy, networkManagerServiceSpy, translateStub;
 
 
   var sandbox;
@@ -19,6 +19,11 @@ describe('form service', () => {
   afterEach(function () {
     sandbox.restore();
   });
+
+  beforeEach(angular.mock.module(formSubmitServices.name, ($provide) => {
+    translateStub = {instant: sinon.stub()};
+    $provide.value('$translate', translateStub);
+  }));
 
   beforeEach(angular.mock.module(localStorageManager.name, ($provide) => {
     localStorageManagerSpy = {save: sinon.spy()};
@@ -33,6 +38,11 @@ describe('form service', () => {
   beforeEach(angular.mock.module(animalFieldsManager.name, ($provide) => {
     animalFieldsManagerSpy = {getFieldsFor: sinon.stub()};
     $provide.value('animalFieldsManager', animalFieldsManagerSpy);
+  }));
+
+  beforeEach(angular.mock.module(networkManagerService.name, ($provide) => {
+    networkManagerServiceSpy = {isOnline: sinon.stub()};
+    $provide.value('networkManagerService', networkManagerServiceSpy);
   }));
 
   beforeEach(angular.mock.module(formSubmitServices.name));

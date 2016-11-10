@@ -7,14 +7,18 @@
   },
   "evaluationResult": {
     "view-title": "Result",
-    "text-result": "Probability of significant presence of mycotoxins in the diet of their",
+    "text-result": "Probability to have a significant level of mycotoxins in diet",
+    "text-result-suffix": "diet",
     "email": "Send Email",
     "micotoxine": "Mycotoxin specialists:",
     "send": "Report submitted",
     "footerPdf": "Contact our mycotoxin specialists for interpretation and technical support tailored to your situation.",
     "footerEmail": "mycotoxin@olmix.com",
     "bodyText": "This resport was sent from Olmix Myco'Evaluator App",
-    "CompartirInforme": "You can share this report"
+    "CompartirInforme": "You can share this report",
+    "riskLow": "Low risk",
+    "riskMedium": "Medium risk",
+    "riskHigh": "High risk"
   },
   "menu": {
     "welcome": "Welcome",
@@ -33,7 +37,8 @@
   },
   "animal":{
     "swine": "Swine",
-    "cow": "Cow",
+    "dairy": "Dairy",
+    "cow": "Dairy",
     "poultry": "Poultry"
   },
   "forms": {

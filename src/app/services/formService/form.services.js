@@ -5,5 +5,10 @@ import poultryFormService from '../animalFormsServices/poultry/poultryForm.servi
 import languageFormService from '../languageFormService/languageForm.services';
 
 export default angular
-    .module('olmixEvaluator.form.services', [cowFormService.name, swineFormService.name, poultryFormService.name, languageFormService.name])
+    .module('olmixEvaluator.form.services', [
+      cowFormService.name,
+      swineFormService.name,
+      poultryFormService.name,
+      languageFormService.name
+    ])
     .service('formService', formService);

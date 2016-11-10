@@ -7,14 +7,17 @@
   },
   "evaluationResult": {
     "view-title": "Resultados",
-    "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta de sus",
+    "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta",
     "email": "Send Email",
     "micotoxine": "Especialistas en micotoxinas:",
     "send": "Informe enviado",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
     "footerEmail": "mycotoxin@olmix.com",
     "bodyText": "Este informe fue mandado por Olmix Myco'Evaluator App",
-    "CompartirInforme": "Puedes compartir este informe"
+    "CompartirInforme": "Puedes compartir este informe",
+    "riskLow": "Riesgo bajo",
+    "riskMedium": "Riesgo medio",
+    "riskHigh": "Riesgo Alto"
   },
   "menu": {
     "welcome": "Welcome",
@@ -33,6 +36,7 @@
   },
   "animal":{
     "swine": "Cerdos",
+    "dairy": "Dairy",
     "cow": "Vacas",
     "poultry": "Gallinas"
   },

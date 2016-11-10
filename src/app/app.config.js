@@ -17,7 +17,7 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
        .registerAvailableLanguageKeys(['en', 'es'], {
          en: 'en', es: 'es'
        })
-      .preferredLanguage('es')
+      .preferredLanguage('en')
       //.fallbackLanguage('en')
       .forceAsyncReload(true)
       .useSanitizeValueStrategy('sanitizeParameters');

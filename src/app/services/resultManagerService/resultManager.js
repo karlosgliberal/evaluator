@@ -20,11 +20,11 @@ export default class resultManager {
     }
 
     if (evaluationResult <= 300 && evaluationResult >= 60) {
-      return 'Riesgo alto';
+      return this.$translate.instant('evaluationResult.riskHigh');
     } else if (evaluationResult <= 59 && evaluationResult >= 40) {
-      return 'Riesgo medio';
+      return this.$translate.instant('evaluationResult.riskMedium');
     } else if (evaluationResult <= 39 && evaluationResult >= 0) {
-      return 'Riesgo bajo';
+      return this.$translate.instant('evaluationResult.riskLow');
     }
 
   }
@@ -40,11 +40,11 @@ export default class resultManager {
 
   prepareResultText(evaluationResult) {
     if (evaluationResult <= 300 && evaluationResult >= 60) {
-      return 'Riesgo alto';
+      return this.$translate.instant('evaluationResult.riskHigh');
     } else if (evaluationResult <= 59 && evaluationResult >= 40) {
-      return 'Riesgo medio';
+      return this.$translate.instant('evaluationResult.riskMedium');
     } else if (evaluationResult <= 39 && evaluationResult >= 0) {
-      return 'Riesgo bajo';
+      return this.$translate.instant('evaluationResult.riskLow');
     }
   }
 }

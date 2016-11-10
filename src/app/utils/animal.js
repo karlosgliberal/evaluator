@@ -1,5 +1,5 @@
 const animal = {
-  COW: 'cow',
+  COW: 'dairy',
   SWINE: 'swine',
   POULTRY: 'poultry'
 };
