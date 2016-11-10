@@ -12,7 +12,9 @@
     "micotoxine": "Especialistas en micotoxinas:",
     "send": "Informe enviado",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
-    "footerEmail": "mycotoxin@olmix.com"
+    "footerEmail": "mycotoxin@olmix.com",
+    "bodyText": "Este informe fue mandado por Olmix Myco'Evaluator App",
+    "CompartirInforme": "Puedes compartir este informe"
   },
   "menu": {
     "welcome": "Welcome",

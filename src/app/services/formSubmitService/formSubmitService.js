@@ -25,6 +25,7 @@ export default class formSubmitService {
     var footerPdf = this.$translate.instant('evaluationResult.footerPdf');
     var footerEmail = this.$translate.instant('evaluationResult.footerEmail');
     var animalTrans = this.$translate.instant('animal.' + animal);
+    var bodyText = this.$translate.instant('evaluationResult.bodyText');
 
     var data = this.makeData(result, animal, selector, fields);
     _.assign(result, {
@@ -33,7 +34,8 @@ export default class formSubmitService {
       {resultTexto: resultText},
       {datos: data},
       {footerPdf: footerPdf},
-      {footerEmail: footerEmail}
+      {footerEmail: footerEmail},
+      {bodyText: bodyText}
     );
     console.log(result);
     return result;

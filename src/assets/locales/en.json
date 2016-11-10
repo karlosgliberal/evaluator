@@ -12,7 +12,9 @@
     "micotoxine": "Mycotoxin specialists:",
     "send": "Report submitted",
     "footerPdf": "Contact our mycotoxin specialists for interpretation and technical support tailored to your situation.",
-    "footerEmail": "mycotoxin@olmix.com"
+    "footerEmail": "mycotoxin@olmix.com",
+    "bodyText": "This resport was sent from Olmix Myco'Evaluator App",
+    "CompartirInforme": "You can share this report"
   },
   "menu": {
     "welcome": "Welcome",
