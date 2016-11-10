@@ -12,8 +12,9 @@
 }
 
 .share-text {
-  font-family: source_sans;
-  font-size: 16px;
+  position: relative;
+  top: -10px;
+  font-size: 14px;
   color: $brand-color;
   margin: 20px 0;
 }
@@ -150,4 +151,9 @@
   }
 }
 
+.result-border--wrapper {
+  height: 20px;
+  width: 100%;
+  border: 1.5px solid #cccccc;
+}
 
