@@ -15,7 +15,6 @@ export default class formSubmitService {
   };
 
   processData(animal, selector, fields) {
-    var net = this.networkManagerService.startWatching();
     var result = {};
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);

@@ -10,7 +10,7 @@
     "text-result": "Probability to have a significant level of mycotoxins in diet",
     "text-result-suffix": "diet",
     "email": "Send Email",
-    "micotoxine": "Mycotoxin specialists:",
+    "micotoxine": "Mycotoxin specialists",
     "send": "Report submitted",
     "footerPdf": "Contact our mycotoxin specialists for interpretation and technical support tailored to your situation.",
     "footerEmail": "mycotoxin@olmix.com",
@@ -44,7 +44,7 @@
   "forms": {
     "evaluate": "Evaluate",
     "view-title": "Form",
-    "cow": {
+    "dairy": {
       "herd": {
         "title": "The herd",
         "fields": {

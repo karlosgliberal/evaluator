@@ -31,7 +31,7 @@ describe('form submit service', () => {
   }));
 
   beforeEach(angular.mock.module(resultManagerServices.name, ($provide) => {
-    resultMangerSpy = {prepareResultPercentage: sinon.spy()};
+    resultMangerSpy = {prepareResultPercentage: sinon.spy(), prepareResultText:sinon.spy()};
     $provide.value('resultManager', resultMangerSpy);
   }));
 
@@ -104,8 +104,7 @@ describe('form submit service', () => {
           }
         }];
       formSubmitService.processData(animal.COW, fieldList);
-
-      expect(resultMangerSpy.prepareResultPercentage.withArgs(6).callCount).to.be.equal(1);
+      expect(resultMangerSpy.prepareResultText).to.be.calledWith(25);
     });
 
     it('should get Cow fields', () => {

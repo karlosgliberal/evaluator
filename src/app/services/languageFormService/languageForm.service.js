@@ -15,14 +15,14 @@ export default class languageFormService {
 
   getTextImagen(state){
     var textoImagenAnimal = {};
-    if (state.animal === 'cow'){
+    if (state.animal === 'dairy'){
       textoImagenAnimal.image = './assets/images/vaca-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
     } else if (state.animal === 'poultry'){
-      textoImagenAnimal.image = './assets/images/vaca-interior.png';
+      textoImagenAnimal.image = './assets/images/poultry-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
     } else {
-      textoImagenAnimal.image = './assets/images/vaca-interior.png';
+      textoImagenAnimal.image = './assets/images/swine-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
     }
     return textoImagenAnimal;

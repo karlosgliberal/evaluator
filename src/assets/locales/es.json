@@ -9,7 +9,7 @@
     "view-title": "Resultados",
     "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta",
     "email": "Send Email",
-    "micotoxine": "Especialistas en micotoxinas:",
+    "micotoxine": "Especialistas en micotoxinas",
     "send": "Informe enviado",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
     "footerEmail": "mycotoxin@olmix.com",
@@ -17,7 +17,7 @@
     "CompartirInforme": "Puedes compartir este informe",
     "riskLow": "Riesgo bajo",
     "riskMedium": "Riesgo medio",
-    "riskHigh": "Riesgo Alto"
+    "riskHigh": "Riesgo alto"
   },
   "menu": {
     "welcome": "Welcome",
@@ -43,7 +43,7 @@
   "forms": {
     "evaluate": "Evaluar",
     "view-title": "Formulario",
-    "cow": {
+    "dairy": {
       "herd": {
         "title": "Las vacas",
         "fields": {
