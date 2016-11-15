@@ -70,11 +70,13 @@ export default class formSubmitService {
     return sum + baseSumValue;
   }
 
+  //TODO Se tiene que llevar al servicio translate
   makeData(result, animal, selector, fields) {
     let labelBase = 'forms.';
     let data = {};
     let lista = [];
     let listaTraduciones = {};
+
     _.assign(data, {animal: animal});
     if (selector) {
       _.assign(data, {selector: selector});
@@ -86,6 +88,10 @@ export default class formSubmitService {
       if (!_.isEmpty(data.fields[key])) {
         let secondKeys = _.keysIn(data.fields[key]);
         _.forEach(secondKeys, (secondKey, i) => {
+          console.log(data.animal);
+          if (data.animal === 'dairy') {
+            data.animal = 'cow';
+          }
           let grupo = this.$translate.instant(labelBase + data.animal + '.' + key + '.title');
           let trans = this.$translate.instant('forms.' + data.animal + '.' + key + '.fields.' + secondKey);
           lista.push({grupo: grupo, traduccion: trans});
