@@ -11,9 +11,10 @@ export default class EvaluationResultController {
       reportManagerService,
       languageFormService
     });
+    this.viewModel = {};
+    console.log(this.resultMessage);
     this.resultPercentage = this.$stateParams.result.porcentaje;
     this.resultText = this.$stateParams.result.resultTexto;
-    this.viewModel = {};
     this.animales = this.$stateParams.animal;
     this.fields = this.formPartsBuilderService.buidInputEmailFor();
     this.logoOlmix = './assets/images/logo-olmix.png';

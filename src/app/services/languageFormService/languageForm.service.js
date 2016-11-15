@@ -15,7 +15,7 @@ export default class languageFormService {
 
   getTextImagen(state){
     var textoImagenAnimal = {};
-    if (state.animal === 'dairy'){
+    if (state.animal === 'cow'){
       textoImagenAnimal.image = './assets/images/vaca-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + state.animal);
     } else if (state.animal === 'poultry'){

@@ -38,13 +38,13 @@
   "animal":{
     "swine": "Swine",
     "dairy": "Dairy",
-    "cow": "Dairy",
+    "cow": "Cow",
     "poultry": "Poultry"
   },
   "forms": {
     "evaluate": "Evaluate",
     "view-title": "Form",
-    "dairy": {
+    "cow": {
       "herd": {
         "title": "The herd",
         "fields": {
