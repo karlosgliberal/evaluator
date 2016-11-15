@@ -38,7 +38,7 @@
   "animal":{
     "swine": "Swine",
     "dairy": "Dairy",
-    "cow": "Cow",
+    "cow": "Dairy",
     "poultry": "Poultry"
   },
   "forms": {
