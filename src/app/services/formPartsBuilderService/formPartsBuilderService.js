@@ -12,16 +12,16 @@ export default class formPartsBuilderService {
     return [
       {
         key: key,
-        type: 'select',
+        type: 'radio',
         defaultValue: 'default',
         templateOptions: {
           onChange: function () {
             state.onSelectorChange();
           },
           label: this.$translate.instant(this.labelReferenceBase + 'selector.title'),
-          options: this.buildChoiceListFor(options),
-          valueProp: 'id',
-          labelProp: 'label'
+          options: this.buildChoiceListFor(options)
+          // valueProp: 'id',
+          // labelProp: 'label'
         }
       }];
   }
@@ -72,8 +72,8 @@ export default class formPartsBuilderService {
     var selectorFields = 'selector.fields.';
     return _.map(options, (type) => {
       return {
-        label: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
-        id: type
+        text: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
+        value: type
       };
     });
   }
@@ -83,7 +83,7 @@ export default class formPartsBuilderService {
     return _.map(options, (type) => {
       return {
         text: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
-        value: type
+        value: type,
       };
     });
   }
