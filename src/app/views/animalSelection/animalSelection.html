@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view class="fondo">
     <ion-nav-title>
         <div class="row">
             <div class="nav-titulo col col-33">
@@ -12,7 +12,7 @@
         </div>
     </ion-nav-title>
     <ion-content class="seleccion-animal">
-        <div class="row responsive-sm">
+        <div class="row responsive-md">
             <div class="animal-col col col-33" ng-repeat="anim in animalSelection.animals">
                     <div class="animal-temp" style="background-image: url({{ anim.path}}); height: {{animalSelection.dimensionHeight}}px;" ng-click="animalSelection.onAnimalSelection(anim.name)" >
                         <p class="animal--titulo">{{anim.text | translate}}</p>

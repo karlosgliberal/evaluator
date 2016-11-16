@@ -17,7 +17,15 @@ export default class AnimalSelectionController {
   }
 
   calculateDimensionHeight(gesture) {
-    return this.$window.innerHeight;
+    if (ionic.Platform.isIOS()){
+      if (this.$window.screen.height > this.$window.screen.width && (this.$window.orientation !== '90' || this.$window.orientation !== '-90')){
+        return this.$window.screen.width;
+      } else {
+        return this.$window.screen.height;
+      }
+    } else {
+      return this.$window.innerHeight;
+    }
   }
 
   availableAnimals() {
