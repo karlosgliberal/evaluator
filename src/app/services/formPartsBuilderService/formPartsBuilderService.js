@@ -69,6 +69,7 @@ export default class formPartsBuilderService {
   }
 
   buildChoiceListFor(options) {
+    //var selectorFields = 'selector.fields.';
     var selectorFields = 'selector.fields.';
     return _.map(options, (type) => {
       return {

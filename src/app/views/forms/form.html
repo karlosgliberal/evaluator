@@ -13,7 +13,7 @@
     </ion-nav-title>
     <ion-content>
       <div class="container-wrapper">
-        <h4 style="text-align: center;"></h4>
+        <h4 style="text-align: center;" ng-if="form.selectorViewModel.selector == 'default'">{{'animal.' + form.$stateParams.animal | translate}}</h4>
         <form>
             <formly-form model="form.selectorViewModel" fields="form.selector" form="form.form1">
             </formly-form>
