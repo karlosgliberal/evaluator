@@ -182,7 +182,7 @@ describe('form submit service', () => {
       var clock = sinon.useFakeTimers(new Date(2016, 2, 15).getTime());
       clock.tick(60 * 60 * 2 * 1000);
 
-      formSubmitService.saveData(6, animal.COW, poultry.BREEDER);
+      formSubmitService.saveData(dataToSave);
 
       expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave)).callCount).to.be.equal(1);
     });

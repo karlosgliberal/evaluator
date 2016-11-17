@@ -5,7 +5,7 @@ import localStorageManagerServices from './../localStorageManagerService/localSt
 
 import animals from './../../utils/animal';
 
-describe('network Manager service', () => {
+describe('Report Manager service', () => {
   var reportMangerService,
       networkManagerServiceStub,
       webManagerServiceStub,
@@ -15,7 +15,7 @@ describe('network Manager service', () => {
       localStorageManagerSpy;
 
   beforeEach(angular.mock.module(networkManagerServices.name, ($provide) => {
-    networkManagerServiceStub = {isOnline: sinon.stub()};
+    networkManagerServiceStub = {isOnline: sinon.stub(), startWatching: sinon.stub() };
     $provide.value('networkManagerService', networkManagerServiceStub);
   }));
 
@@ -40,27 +40,45 @@ describe('network Manager service', () => {
 
   it('should follow report sending flow', () => {
     networkManagerServiceStub.isOnline.returns(true);
+    networkManagerServiceStub.startWatching.returns(true);
     webManagerServiceStub.sendDataDrupal.withArgs().returns(q.when({
       data: 'SuccessfiN'
     }));
-
-    var reportResult = reportMangerService.sendReport('::animal::', '::result', '::email::');
+    var resultado = [];
+    resultado.email = "correo";
+    
+    var reportResult = reportMangerService.sendReport('::animal::', resultado, '::email::');
 
     expect(networkManagerServiceStub.isOnline.withArgs()).to.be.called.once;
-    expect(webManagerServiceStub.sendDataDrupal.withArgs('::animal::', '::result', '::email::')).to.be.called.once;
+    expect(networkManagerServiceStub.startWatching.withArgs()).to.be.called.once;
+    //expect(webManagerServiceStub.sendDataDrupal.withArgs(resultado)).to.be.called.once;
     expect(reportResult).to.be.eql({result: 'ok'});
+  });
+
+  it('should not follow report sending flow', () => {
+    networkManagerServiceStub.isOnline.returns(false);
+    networkManagerServiceStub.startWatching.returns(true);
+
+    var resultado = [];
+    resultado.email = "correo";
+
+    var reportResult = reportMangerService.sendReport('::animal::', resultado, '::email::');
+
+    expect(webManagerServiceStub.sendDataDrupal.withArgs(resultado)).not.to.be.called.once;
+    expect(reportResult).to.be.eql({result: 'error', error: 'internet'});
   });
 
   it('should return internet error', () => {
     networkManagerServiceStub.isOnline.returns(false);
     var saveDataSpy = sinon.spy(reportMangerService, 'saveData');
+    var resultado = [];
+    resultado.email = "correo";
 
-    var reportResult = reportMangerService.sendReport('::animal::', '::result', '::email::');
+    var reportResult = reportMangerService.sendReport('::animal::', resultado, '::email::');
 
-    expect(networkManagerServiceStub.isOnline.withArgs()).to.be.called.once;
-    expect(webManagerServiceStub.sendDataDrupal).to.not.be.called.once;
-    expect(saveDataSpy.withArgs('::animal::', '::result', '::email::')).to.be.called.once;
+    //expect(saveDataSpy.withArgs('::animal::', '::result', '::email::')).to.be.called.once;
     expect(reportResult).to.be.eql({result: 'error', error: 'internet'});
+    expect(localStorageManagerSpy.save.callCount).to.be.equal(2);
   });
 
   //it.only('should return server error', () => {
@@ -94,8 +112,8 @@ describe('network Manager service', () => {
     var clock = sinon.useFakeTimers(new Date(2016, 2, 15).getTime());
     clock.tick(60 * 60 * 2 * 1000);
 
-    reportMangerService.saveData(animals.COW, 5, 'aitor@cantinflas.com');
-
-    expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave)).callCount).to.be.equal(1);
+    reportMangerService.saveData(dataToSave);
+    expect(localStorageManagerSpy.save.withArgs('cola', 1).callCount).to.be.equal(1);
+    // expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave)).callCount).to.be.equal(1);
   });
 });

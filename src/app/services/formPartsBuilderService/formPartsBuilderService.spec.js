@@ -45,9 +45,9 @@ describe('form parts builder service', () => {
     var choiceList = formPartsBuilderService.buildChoiceListFor(['::first::', '::second::', '::third::']);
 
     expect(choiceList.length).to.be.equal(3);
-    expect(choiceList[0]).to.have.property('id', '::first::');
-    expect(choiceList[1]).to.have.property('id', '::second::');
-    expect(choiceList[2]).to.have.property('id', '::third::');
+    expect(choiceList[0]).to.have.property('value', '::first::');
+    expect(choiceList[1]).to.have.property('value', '::second::');
+    expect(choiceList[2]).to.have.property('value', '::third::');
   });
 
   it('should build wrapper with single fields in list', () => {

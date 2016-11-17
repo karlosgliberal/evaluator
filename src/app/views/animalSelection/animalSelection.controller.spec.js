@@ -1,8 +1,10 @@
 import animalSelectionControllers from './animalSelection.controllers';
 import animal from '../../utils/animal';
+import localStorageManager from '../../services/localStorageManagerService/localStorageManager.services';
+import networkManagerService from '../../services/networkManagerService/networkManager.services';
 
 
-var controller, stateSpy, translateStub, availableAnimalsSpy;
+var controller, stateSpy, translateStub, availableAnimalsSpy, localStorageManagerStub;
 
 describe('animal controller selection', () => {
 
@@ -12,6 +14,10 @@ describe('animal controller selection', () => {
   }));
 
   beforeEach(angular.mock.module(animalSelectionControllers.name));
+
+  beforeEach(angular.mock.module(localStorageManager.name));
+
+  beforeEach(angular.mock.module(networkManagerService.name));
 
   beforeEach(inject(($controller) => {
     stateSpy = {
