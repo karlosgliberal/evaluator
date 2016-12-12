@@ -2,14 +2,16 @@ import formControllers from './form.controllers';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
 
-var controller, scope, formServiceSpy, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy;
+var controller, scope, formServiceSpy, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy, ionicHistory;
 
 describe('Form controller', () => {
 
   beforeEach(angular.mock.module(formControllers.name));
+  beforeEach(angular.mock.module(ionic));
 
-  beforeEach(inject(($controller, $rootScope, _$compile_) => {
+  beforeEach(inject(($controller, $rootScope, _$compile_, $ionicHistory) => {
     $compile = _$compile_;
+    ionicHistory = $ionicHistory;
     scope = $rootScope.$new();
     stateParamsStub = {animal: animal.SWINE};
     formServiceSpy = {getFormFields: sinon.spy(), getFormSelector: sinon.spy(), changeFormFieldsFor: sinon.spy()};
@@ -27,6 +29,7 @@ describe('Form controller', () => {
 
     controller = $controller('formController', {
       $state: stateSpy.$state,
+      ionicHistory: $ionicHistory,
       formService: formServiceSpy,
       $stateParams: stateParamsStub,
       formSubmitService: formSubmitSpy

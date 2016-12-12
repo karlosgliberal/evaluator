@@ -4,7 +4,7 @@ import localStorageManager from '../../services/localStorageManagerService/local
 import networkManagerService from '../../services/networkManagerService/networkManager.services';
 
 
-var controller, stateSpy, translateStub, availableAnimalsSpy, localStorageManagerStub;
+var controller, stateSpy, translateStub, availableAnimalsSpy, localStorageManagerStub, networkManagerServiceStub;
 
 describe('animal controller selection', () => {
 
@@ -17,7 +17,10 @@ describe('animal controller selection', () => {
 
   beforeEach(angular.mock.module(localStorageManager.name));
 
-  beforeEach(angular.mock.module(networkManagerService.name));
+  beforeEach(angular.mock.module(networkManagerService.name, ($provide) => {
+    networkManagerServiceStub = {isOnline: sinon.stub(), startWatching: sinon.stub() };
+    $provide.value('networkManagerService', networkManagerServiceStub);
+  }));
 
   beforeEach(inject(($controller) => {
     stateSpy = {
@@ -35,7 +38,8 @@ describe('animal controller selection', () => {
     controller.onAnimalSelection(animal.COW);
 
     expect(stateSpy.$state.go).to.have.been.called.once;
-    expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'cow'});
+    expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'dairy'});
+
   });
 
   it('should transition to swine form', () => {

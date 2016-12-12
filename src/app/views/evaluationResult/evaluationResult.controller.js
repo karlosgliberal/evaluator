@@ -12,7 +12,6 @@ export default class EvaluationResultController {
       languageFormService
     });
     this.viewModel = {};
-    console.log(this.resultMessage);
     this.resultPercentage = this.$stateParams.result.porcentaje;
     this.resultText = this.$stateParams.result.resultTexto;
     this.animales = this.$stateParams.animal;
