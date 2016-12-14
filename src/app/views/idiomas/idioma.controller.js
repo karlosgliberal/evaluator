@@ -3,14 +3,15 @@ import languages from '../../utils/language';
 
 export default class IdiomaController {
   /*@ngInject*/
-  constructor(formService, $translate, $state, $stateParams, localStorageManager, languageFormService) {
+  constructor(formService, $translate, $state, $stateParams, localStorageManager, languageFormService, $ionicHistory) {
     assign(this, {
       formService,
       $translate,
       $state,
       $stateParams,
       localStorageManager,
-      languageFormService
+      languageFormService,
+      $ionicHistory
     });
 
 
@@ -31,6 +32,10 @@ export default class IdiomaController {
     this.$translate.use(this.selectorViewModel.selector);
     this.$translate.refresh(this.selectorViewModel.selector);
     this.localStorageManager.save('language', this.selectorViewModel.selector);
-    this.$state.go('animalSelection', {}, {reload: true});
+    let state = this.$state;
+    this.$ionicHistory.clearHistory();
+    this.$ionicHistory.clearCache().then(function (){
+      state.go('animalSelection', {}, {reload: true});
+    });
   }
 }

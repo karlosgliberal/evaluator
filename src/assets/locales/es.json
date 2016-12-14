@@ -1,74 +1,76 @@
 {
   "main": {
-    "view-title": "Principal"
+    "view-title": "Main"
   },
   "animalSelection": {
-    "view-title": "Selecciona el Animal"
+    "view-title": "Selección de especie"
   },
   "evaluationResult": {
-    "view-title": "Resultados",
-    "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta",
-    "email": "Send Email",
+    "view-title": "Resultado",
+    "text-result": "Probabilidad de presencia significativa de micotoxinas en el alimento",
+    "text-result-suffix": "diet",
+    "email": "Enviar informe",
     "micotoxine": "Especialistas en micotoxinas",
     "send": "Informe enviado",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
-    "footerEmail": "mycotoxin@olmix.com",
-    "bodyText": "Este informe fue mandado por Olmix Myco'Evaluator App",
-    "CompartirInforme": "Puedes compartir este informe",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Informe enviado por Olmix Myco'Evaluator",
+    "CompartirInforme": "Introduzca las direcciones de email, separadas por comas",
     "riskLow": "Riesgo bajo",
     "riskMedium": "Riesgo medio",
-    "riskHigh": "Riesgo alto"
+    "riskHigh": "Riesgo importante"
   },
   "menu": {
-    "welcome": "Welcome",
-    "home": "Inicio",
-    "about": "Info",
+    "welcome": "Bienvenido",
+    "home": "Home",
+    "about": "A propósito de",
     "language": "Idioma",
-    "selection": "Selección animal"
+    "selection": "Selección de especie"
   },
   "language": {
-    "title": "Elije tu lenguaje preferido",
+    "title": "Elige el idioma",
     "selector": {
-      "title": "Selección idioma"
+      "title": "Selección de idioma"
     },
-    "es": "Castellano",
-    "en": "Inglés"
+    "es": "Español",
+    "en": "English",
+    "fr": "Français"
   },
   "animal":{
     "swine": "Cerdos",
-    "dairy": "Dairy",
+    "dairy": "Vacas",
     "cow": "Vacas",
-    "poultry": "Gallinas"
+    "poultry": "Aves"
   },
   "forms": {
     "evaluate": "Evaluar",
-    "view-title": "Formulario",
+    "view-title": "Form",
     "cow": {
       "herd": {
         "title": "Las vacas",
         "fields": {
           "feed-intake": "Falta de consumo de la ración",
           "low-milk-production": "Producción de leche por debajo del potencial genético",
-          "body-condition": "Condición corporal bajando o insatisfactoria.",
-          "coat-condition": "Mal aspecto de pelo",
+          "body-condition": "Condición corporal bajando o insatisfactoria",
+          "coat-condition": "Mal aspecto del pelo",
           "chewing-activity": "Baja actividad ruminal",
           "somatic-cells": "Aumento significativo de las mamitis o de las células somáticas",
-          "leg-troubles": "Aumento de los problemas de patas (cojeras, dermatitis...)",
-          "metabolic-troubles": "Aumento de problemas metabólicos(diarreas inespecíficas, torsión de cuajar, acidosis, cetosis...)",
+          "leg-troubles": "Aumento de los problemas de patas (cojeras, dermatitis…)",
+          "metabolic-troubles": "Aumento de problemas metabólicos (diarreas inespefícicas, torsion de cuajar, acidosis, cetosis….)",
           "turnovers": "Tasa de renovación forzosa muy alta",
           "feces": "Blandeos",
           "milk-urea": "Aumento de urea en la leche",
-          "weak-calves": "Terneras débiles(diarreas, crecimiento lento, lesiones orales...)",
+          "weak-calves": "Terneras débiles (diarreas, crecimiento lento, lesiones orales…)",
           "fertility-troubles": "Problemas de fertilidad (metritis, quistes, retención de placenta...)",
-          "reproduction-performance": "Malos resultado en reproducción (detección de celos, éxito en la primera inseminación...)",
-          "troubles-from-raw-materials": "Estos problemas empezron al abrir un silo nuevo"
+          "reproduction-performance": "Malos resultados en reproducción (detección de celos, éxito en la primera inseminación….)",
+          "troubles-from-raw-materials": "Estos problemas empezaron al abrir un silo nuevo"
         }
       },
       "on-field": {
         "title": "En el campo",
         "fields": {
           "corn-procedence": "El maíz se produce siempre en las mismas parcelas, monocultivo",
-          "corn-fields": "No se trabja la tierra antes de sembrar",
+          "corn-fields": "No se trabaja la tierra antes de sembrar",
           "fusarium": "Se observa fusariosis en el maíz",
           "silage-harvest": "El ensilado se recolectó tarde",
           "grass-silage-cropped": "El ensilado de hierba se hizo después del de maíz"
@@ -92,8 +94,8 @@
           "sows-status": "Estado general de las cerdas insatisfactorio",
           "poor-growth": "Condición corporal pobre",
           "intake": "Ingesta insuficiente",
-          "skin-color": "Mal color en las cerdas ",
-          "milk-production": "Baja producción de leche ",
+          "skin-color": "Mal color en las cerdas",
+          "milk-production": "Baja producción de leche",
           "veterinary-intervention": "Intervenciones veterinarias más frecuentes de lo deseado",
           "lactation-start": "Problemas para empezar la lactación",
           "stillborn-piglets": "Demasiados lechones muertos/momificados/pequeños",
@@ -108,20 +110,20 @@
         }
       },
       "feed": {
-        "title": "Alimentación",
+        "title": "Alimento",
         "fields": {
-          "home-grown": "Pienso hecho en la granja ",
+          "home-grown": "Pienso hecho en la granja",
           "use-of-corn": "Uso de corn cob mix (CCM)",
           "storage-facilities": "Problemas de conservación del cereal",
-          "grains-preservation-problems": "Mucho tiempo entre las limpiezas de silo "
+          "grains-preservation-problems": "Mucho tiempo entre las limpiezas de silo"
         }
       }
     },
     "poultry": {
       "selector": {
-        "title": "tipo de animal",
+        "title": "Tipo de animal",
         "fields": {
-          "hens": "Gallinas de puesta",
+          "hens": "Gallinas ponedoras",
           "breeder": "Reproductoras",
           "broiler": "Broiler"
         }
@@ -138,21 +140,21 @@
           "dermatitis": "Necrosis de la mucosa, dermatitis",
           "gizzard": "Inflamación del buche, proventrículo, molleja, intestino",
           "mortality": "Alta mortalidad",
-          "liver damage": "Daño hepático y/o renal",
+          "liver-damage": "Daño hepático y/o renal",
           "ovaries-size": "Reducido tamaño ovárico",
           "tibial": "Casos de discondroplasia tibial",
           "thymus": "Desarrollo anormal del timo y de la bolsa de Fabricio"
         },
         "broiler": {
-          "title": "Los animales",
+          "title": "Animals",
           "fields": {
             "feed-intake": "Menor ingesta de alimento",
             "body-weight": "Menor peso corporal",
             "fcr": "Mayor IC / síndrome de malabsorción / plumas en helicóptero",
             "droppings": "Camas húmedas",
             "water-consumption": "Mayor consumo de agua",
-            "infectious-diseases": "Fallo vacunal o terapéutico",
-            "vaccination": "Alta incidencia de enfermedades infecciosas",
+            "infectious-diseases": "Alta incidencia de enfermedades infecciosas",
+            "vaccination": "Fallo vacunal o terapéutico",
             "mucosal-necrosis": "Necrosis de la mucosa, dermatitis",
             "gizzard": "Inflamación del buche, proventrículo, molleja, intestino",
             "mortality": "Alta mortalidad",
@@ -168,14 +170,14 @@
         "fields": {
           "home-mixed": "El alimento se mezcla en la granja",
           "home-grown": "Alimento hecho en la granja",
-          "use-of-corn": "Uso significativo de maiz o subproductos del maiz",
-          "storage-facilities": "Instalaciones y gestión de almacenamiento deficientes (ventilación, limpieza)",
+          "use-of-corn": "Uso significativo de maíz o subproductos del maíz",
+          "storage-facilities": "Instalaciones y manejo del almacenamiento deficientes (ventilación, limpieza)",
           "feed-management": "Los problemas se producen tras un cambio en la gestión de la alimentación",
-          "preservation-problems": "Problemas durante el almacenamiento de los cereales (calor, plagas, humedad)"
+          "preservation-problems": "Problemas durante el almacenamiento del grano o alimento (calor, plagas, humedad)"
         }
       },
       "egg-production": {
-        "title": "Producción de huevos",
+        "title": "Eggs production",
         "fields": {
           "egg-production": "Baja producción de huevos",
           "egg-weight": "Huevos de peso bajo",

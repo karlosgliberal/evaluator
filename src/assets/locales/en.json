@@ -3,19 +3,19 @@
     "view-title": "Main"
   },
   "animalSelection": {
-    "view-title": "Animal selection"
+    "view-title": "Species selection"
   },
   "evaluationResult": {
     "view-title": "Result",
     "text-result": "Probability to have a significant level of mycotoxins in diet",
     "text-result-suffix": "diet",
-    "email": "Send Email",
-    "micotoxine": "Mycotoxin specialists",
+    "email": "Send Report",
+    "micotoxine": "Mycotoxin specialist",
     "send": "Report submitted",
-    "footerPdf": "Contact our mycotoxin specialists for interpretation and technical support tailored to your situation.",
-    "footerEmail": "mycotoxin@olmix.com",
-    "bodyText": "This resport was sent from Olmix Myco'Evaluator App",
-    "CompartirInforme": "You can share this report",
+    "footerPdf": "Contact our specialists in mycotoxins for customized interpretation and technical support, tailored to your situation.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "This report was sent from Olmix Myco'Evaluator App",
+    "CompartirInforme": "Enter email addresses, separated by commas",
     "riskLow": "Low risk",
     "riskMedium": "Medium risk",
     "riskHigh": "High risk"
@@ -25,15 +25,16 @@
     "home": "Home",
     "about": "About",
     "language": "Language",
-    "selection": "Animal selection"
+    "selection": "Species selection"
   },
   "language": {
     "title": "Choose your preferred language",
     "selector": {
       "title": "Language Selection"
     },
-    "es": "Spanish",
-    "en": "English"
+    "es": "Español",
+    "en": "English",
+    "fr": "Français"
   },
   "animal":{
     "swine": "Swine",
@@ -55,7 +56,7 @@
           "chewing-activity": "Low chewing activity",
           "somatic-cells": "Significant increase of somatic cells or mastitis",
           "leg-troubles": "Increase of lameness and leg troubles (swollen hooves, joints, dermatitis...)",
-          "metabolic-troubles": "Increase of lameness and leg troubles (swollen hooves, joints, dermatitis...)",
+          "metabolic-troubles": "Increase of metabolic and pathologic troubles (abomasum displacement, SARA, fatty liver,metritis, jejunal hemorrhage…)",
           "turnovers": "Increased turnover (high % of heifers)",
           "feces": "Too soft/liquid feces",
           "milk-urea": "Increase in milk urea",
@@ -109,7 +110,7 @@
         }
       },
       "feed": {
-        "title": "feed",
+        "title": "Feed",
         "fields": {
           "home-grown": "Home grown feed",
           "use-of-corn": "Significant use of corn or corn by-products",

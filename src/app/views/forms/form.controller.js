@@ -30,7 +30,6 @@ export default class formController {
     let state = this.$state;
     this.$ionicHistory.clearHistory();
     this.$ionicHistory.clearCache().then(function (){
-      console.log('histoico');
       state.go('evaluationResult', {animal: stateParams.animal, result: evaluationResult});
     });
   }

@@ -1,21 +1,23 @@
 import formControllers from './form.controllers';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
+import { assign } from 'lodash';
 
-var controller, scope, formServiceSpy, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy, ionicHistory;
+var controller, scope, formServiceSpy, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy, ionicHistorySpy;
 
 describe('Form controller', () => {
 
   beforeEach(angular.mock.module(formControllers.name));
   beforeEach(angular.mock.module(ionic));
-
-  beforeEach(inject(($controller, $rootScope, _$compile_, $ionicHistory) => {
+  
+  beforeEach(inject(($controller, $rootScope, _$compile_) => {
     $compile = _$compile_;
-    ionicHistory = $ionicHistory;
     scope = $rootScope.$new();
+    ionicHistorySpy = {clearHistory: sinon.spy()};
     stateParamsStub = {animal: animal.SWINE};
     formServiceSpy = {getFormFields: sinon.spy(), getFormSelector: sinon.spy(), changeFormFieldsFor: sinon.spy()};
     formSubmitSpy = {processData: sinon.stub()};
+
     formSubmitSpy.processData.withArgs(animal.SWINE, undefined, {
       ';;field1::': true,
       '::field2::': true
@@ -29,10 +31,10 @@ describe('Form controller', () => {
 
     controller = $controller('formController', {
       $state: stateSpy.$state,
-      ionicHistory: $ionicHistory,
       formService: formServiceSpy,
       $stateParams: stateParamsStub,
-      formSubmitService: formSubmitSpy
+      formSubmitService: formSubmitSpy,
+      $ionicHistory: ionicHistorySpy
     });
   }));
 
@@ -63,7 +65,9 @@ describe('Form controller', () => {
     it('should ask submit service to process data', () => {
       controller.viewModel = {';;field1::': true, '::field2::': true};
       controller.selectorViewModel = {};
+      this.$ionicHistory.clearHistory();
 
+      console.log(this);
       controller.onSubmit();
 
       expect(formSubmitSpy.processData.withArgs(animal.SWINE, undefined, {

@@ -1,0 +1,191 @@
+{
+  "main": {
+    "view-title": "Main"
+  },
+  "animalSelection": {
+    "view-title": "Sélectionner l'espèce"
+  },
+  "evaluationResult": {
+    "view-title": "Résultat",
+    "text-result": "Probabilité d'avoir une présence significative de mycotoxines dans l'aliment",
+    "text-result-suffix": "diet",
+    "email": "Envoyer un rapport",
+    "micotoxine": "Spécialiste en mycotoxines",
+    "send": "Rapport remis",
+    "footerPdf": "Contactez nos spécialistes en mycotoxines pour une interprétation et un accompagnement technique adapté à votre situation.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Ce rapport a été envoyé par Olmix Myco'Evaluator",
+    "CompartirInforme": "Entrer les adresses emails séparées par des virgules",
+    "riskLow": "Risque limité",
+    "riskMedium": "Risque moyen",
+    "riskHigh": "Risque important"
+  },
+  "menu": {
+    "welcome": "Bienvenue",
+    "home": "Home",
+    "about": "À propos de",
+    "language": "Langage",
+    "selection": "Sélectionner l'espèce"
+  },
+  "language": {
+    "title": "Choisissez votre langue",
+    "selector": {
+      "title": "Sélection de la langue"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français"
+  },
+  "animal":{
+    "swine": "Porcs",
+    "dairy": "Vaches",
+    "cow": "Vaches",
+    "poultry": "Volaille"
+  },
+  "forms": {
+    "evaluate": "Évaluer",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "Le troupeau",
+        "fields": {
+          "feed-intake": "Ingestion insuffisante",
+          "low-milk-production": "Production laitière en dessous du potentiel du troupeau",
+          "body-condition": "Etat des animaux en baisse ou insatisfaisant",
+          "coat-condition": "Poil insatisfaisant",
+          "chewing-activity": "Rumination insuffisante",
+          "somatic-cells": "Augmentation significative des mammites ou des cellules somatiques",
+          "leg-troubles": "Augmentation des problèmes de pattes (boiteries, pattes enflées…)",
+          "metabolic-troubles": "Augmentation des troubles métaboliques (retournement de caillette, acidose, acétonémie, dermatite, syndrome jejuno hémorragique…)",
+          "turnovers": "Augmentation du taux de renouvellement (% de génisses important)",
+          "feces": "Bouses molles/liquides, non digérées",
+          "milk-urea": "Urée du lait élevée",
+          "weak-calves": "Veau faible (diarrhée, retard de croissance, lésions orales/cutanées…)",
+          "fertility-troubles": "Problèmes de fertilité (métrite, kyste, non-délivrance...)",
+          "reproduction-performance": "Baisse des performances de reproduction (détection des chaleurs, réussite en 1ère insémination…)",
+          "troubles-from-raw-materials": "Les problèmes ci-dessus ont démarré à l'incorporation d'un nouveau fourrage ou d'une nouvelle matière première"
+        }
+      },
+      "on-field": {
+        "title": "Au champ",
+        "fields": {
+          "corn-procedence": "Le maïs est produit sur des parcelles en monoculture",
+          "corn-fields": "Vous ne labourez pas vos parcelles de maïs",
+          "fusarium": "Vous avez observé de la Fusariose sur vos parcelles",
+          "silage-harvest": "Votre ensilage a été récolté tardivement",
+          "grass-silage-cropped": "Votre ensilage d'herbe a été produit après un maïs"
+        }
+      },
+      "storage": {
+        "title": "Stockage",
+        "fields": {
+          "molds": "Présence de moisissures (rouges, bleues, blanches ou noires…)",
+          "silage-troubles": "Problème de tassement (MS élevée, rapidité d'ensilage)",
+          "warm-silage": "Votre silo chauffe ou a mis beaucoup de temps à refroidir",
+          "grass-silage": "Votre ensilage d'herbe n'est pas aussi propre que d'habitude",
+          "silage-front-consuption": "Le front d'attaque de votre silo avance doucement"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Les animaux",
+        "fields": {
+          "sows-status": "Etat général des truies insatisfaisant",
+          "poor-growth": "Mauvaise croissance des porcelets et/ou des porcs à l'engraissement",
+          "intake": "Ingestion insuffisante",
+          "skin-color": "Couleur des animaux insatisfaisante",
+          "milk-production": "Production laitière des truies insuffisante",
+          "veterinary-intervention": "Intervention fréquente du vétérinaire",
+          "lactation-start": "Problèmes de démarrage en lactation",
+          "stillborn-piglets": "Augmentation des morts-nés, momifiés (prolificité en baisse)",
+          "small-piglets-at-birth": "Augmentation des petits porcelets, problème d'hétérogénéité",
+          "splay-legs": "Augmentation de splay leg",
+          "red-vulva": "Présence de vulves rouges et enflées",
+          "neonatal-diarrea": "Problèmes de diarrhées néonatales, de démarrage de porcelets",
+          "necrosis": "Nécroses des oreilles et de la queue et/ou nervosité",
+          "reproduction-troubles": "Troubles de la fertilité (métrites, rétentions placentaires)",
+          "heat-detection": "Problèmes de détection des chaleurs, trop de retours en chaleur",
+          "weaning-insemination": "Intervalle sevrage-insémination en augmentation"
+        }
+      },
+      "feed": {
+        "title": "L'aliment",
+        "fields": {
+          "home-grown": "Aliment fabriqué à la ferme",
+          "use-of-corn": "Utilisation significative de maïs ou sous-produit de maïs",
+          "storage-facilities": "Mauvaise conditions de stockage (ventilation, propreté)",
+          "grains-preservation-problems": "Problèmes lors de la conservation des céréales (chaleurs, nuisibles, humidité)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Type d'animal",
+        "fields": {
+          "hens": "Poules pondeuses",
+          "breeder": "Reproductrices",
+          "broiler": "Broiler"
+        }
+      },
+      "animals": {
+        "title": "Les animaux",
+        "fields": {
+          "feed-intake": "Ingestion insuffisante",
+          "body-weight": "Etat général insatisfaisant",
+          "liquid-droppings": "Fiente liquide",
+          "water-consumption": "Forte consommation d'eau",
+          "vaccination": "Inefficacité des vaccins ou traitements",
+          "infectious-diseases": "Fréquence élevée de maladies infectieuses",
+          "dermatitis": "Necrose des muqueuses, dermatite",
+          "gizzard": "Inflammation du jabot, proventricule, gésier et intestin",
+          "mortality": "Forte mortalité",
+          "liver-damage": "Probléme de foie et/ou de reins",
+          "ovaries-size": "Baisse de la taille des ovaires",
+          "tibial": "Présence de enchondromatose tibial",
+          "thymus": "Développement anormal du thymus et des bourses de Fabricus"
+        },
+        "broiler": {
+          "title": "Animals",
+          "fields": {
+            "feed-intake": "Ingestion insuffisante",
+            "body-weight": "Etat général insatisfaisant",
+            "fcr": "Indice de consommation élevé/Mauvaise valorisation de l'aliment/Plumes en",
+            "droppings": "Fiente liquide",
+            "water-consumption": "Forte consommation d'eau",
+            "infectious-diseases": "Fréquence élevée de maladies infectieuses",
+            "vaccination": "Inefficacité des vaccins ou traitements",
+            "mucosal-necrosis": "Necrose des muqueuses, dermatite",
+            "gizzard": "Inflammation du jabot, proventricule, gésier et intestin",
+            "mortality": "Forte mortalité",
+            "liver-damage": "Probléme de foie et/ou de reins",
+            "tibial-dyschondroplasia": "Présence de enchondromatose tibial",
+            "thymus": "Développement anormal du thymus et des bourses de Fabricus",
+            "sphinganine": "Augmentation du ration sphinganine/sphingonisine"
+          }
+        }
+      },
+      "feed": {
+        "title": "L'aliment",
+        "fields": {
+          "home-mixed": "Aliment fabriqué à la ferme",
+          "home-grown": "Aliment fabriqué à la ferme",
+          "use-of-corn": "Utilisation significative de maïs ou sous-produit de maïs",
+          "storage-facilities": "Mauvaise conditions de stockage (ventilation, propreté)",
+          "feed-management": "Les problèmes ci-dessus ont démarré suite à un changement d'aliment",
+          "preservation-problems": "Problèmes lors de la conservation des céréales (chaleurs, nuisibles, humidité)"
+        }
+      },
+      "egg-production": {
+        "title": "Production d'œufs",
+        "fields": {
+          "egg-production": "Faible production d'œufs",
+          "egg-weight": "Faible poids des œufs",
+          "shell-quality": "Faible qualité de la coquille (augmentation des cassées, sans coquilles, œufs pales)",
+          "egg-hatchability": "Faible éclosabilité",
+          "progeny": "Poussins faibles"
+        }
+      }
+    }
+  }
+}
