@@ -14,23 +14,31 @@ export default class formSubmitService {
       $translate});
   };
 
-  processData(animal, selector, fields) {
+  processData(animal, selector, fields, subSpecie) {
     var result = {};
     var flattenedList = this.flattenFieldList(fields);
     var allFieldsList = this.getAnimalFields(animal, selector);
     var evaluationResult = this.performEvaluation(flattenedList, allFieldsList);
     var resultPercentage = this.resultManager.prepareResultPercentage(evaluationResult);
     var resultText = this.resultManager.prepareResultText(evaluationResult);
+    var subSpecieText = this.$translate.instant('forms.poultry.selector.fields.' + subSpecie);
+    var resuladoTexto = this.$translate.instant('evaluationResult.text-result');
     var footerPdf = this.$translate.instant('evaluationResult.footerPdf');
     var footerEmail = this.$translate.instant('evaluationResult.footerEmail');
     var animalTrans = this.$translate.instant('animal.' + animal);
     var bodyText = this.$translate.instant('evaluationResult.bodyText');
 
+    console.log(subSpecieText);
+    if (subSpecie !== 'noPoultry'){
+      var subSpecieTextoBarra = '| ' + subSpecieText;
+    }
     var data = this.makeData(result, animal, selector, fields);
     _.assign(result, {
       porcentaje: resultPercentage},
       {animal: animalTrans},
       {resultTexto: resultText},
+      {resultadoTexto: resuladoTexto},
+      {subSpecie: subSpecieTextoBarra},
       {datos: data},
       {footerPdf: footerPdf},
       {footerEmail: footerEmail},

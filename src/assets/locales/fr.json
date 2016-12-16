@@ -18,7 +18,8 @@
     "CompartirInforme": "Entrer les adresses emails séparées par des virgules",
     "riskLow": "Risque limité",
     "riskMedium": "Risque moyen",
-    "riskHigh": "Risque important"
+    "riskHigh": "Risque important",
+    "riskExtreme": "Risque extrême"
   },
   "menu": {
     "welcome": "Bienvenue",
@@ -125,7 +126,8 @@
         "fields": {
           "hens": "Poules pondeuses",
           "breeder": "Reproductrices",
-          "broiler": "Broiler"
+          "broiler": "Broiler",
+          "noPoultry": " "
         }
       },
       "animals": {

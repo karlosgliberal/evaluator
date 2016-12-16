@@ -13,6 +13,7 @@ export default class formController {
     this.logoIcon = './assets/images/logo-cabecera.png';
     this.selectorViewModel = {};
     this.selector = this.formService.getFormSelector(this.$stateParams.animal, this);
+    this.movida = '';
 
 
     this.viewModel = {};
@@ -22,10 +23,14 @@ export default class formController {
   onSelectorChange() {
     this.viewModel = {};
     this.fields = this.formService.changeFormFieldsFor(this.selectorViewModel.selector);
+    this.subSpecie = this.selectorViewModel.selector;
   }
 
   onSubmit() {
-    let evaluationResult = this.formSubmitService.processData(this.$stateParams.animal, this.selectorViewModel.selector, this.viewModel);
+    if (this.subSpecie === undefined){
+      this.subSpecie = 'noPoultry';
+    }
+    let evaluationResult = this.formSubmitService.processData(this.$stateParams.animal, this.selectorViewModel.selector, this.viewModel, this.subSpecie);
     let stateParams = this.$stateParams;
     let state = this.$state;
     this.$ionicHistory.clearHistory();

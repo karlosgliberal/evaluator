@@ -18,7 +18,8 @@
     "CompartirInforme": "Enter email addresses, separated by commas",
     "riskLow": "Low risk",
     "riskMedium": "Medium risk",
-    "riskHigh": "High risk"
+    "riskHigh": "High risk",
+    "riskExtreme": "Extreme risk"
   },
   "menu": {
     "welcome": "Welcome",
@@ -125,7 +126,8 @@
         "fields": {
           "hens": "Laying hens",
           "breeder": "Breeder",
-          "broiler": "Broiler"
+          "broiler": "Broiler",
+          "noPoultry": " "
         }
       },
       "animals": {

@@ -50,7 +50,7 @@ export default class formPartsBuilderService {
         key: 'email',
         type: 'stacked-input',
         templateOptions: {
-          type: 'email',
+          type: 'text',
           placeholder: 'Email',
           required: true,
           className: 'movida'

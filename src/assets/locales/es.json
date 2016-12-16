@@ -18,7 +18,8 @@
     "CompartirInforme": "Introduzca las direcciones de email, separadas por comas",
     "riskLow": "Riesgo bajo",
     "riskMedium": "Riesgo medio",
-    "riskHigh": "Riesgo importante"
+    "riskHigh": "Riesgo importante",
+    "riskExtreme": "Riesgo extremo"
   },
   "menu": {
     "welcome": "Bienvenido",
@@ -125,7 +126,8 @@
         "fields": {
           "hens": "Gallinas ponedoras",
           "breeder": "Reproductoras",
-          "broiler": "Broiler"
+          "broiler": "Broiler",
+          "noPoultry": " "
         }
       },
       "animals": {

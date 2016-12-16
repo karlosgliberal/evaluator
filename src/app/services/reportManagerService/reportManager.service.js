@@ -18,6 +18,7 @@ export default class reportManagerService {
       requestResult.then((request) => {
         console.log('Conexion enviado');
       }, (error) => {
+        console.log(error);
         this.saveData(resultado);
         console.log('Error envio');
         return {result: 'error', error: 'server'};

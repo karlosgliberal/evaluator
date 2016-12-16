@@ -27,11 +27,13 @@
           </div>
           <p class="result-text center">{{evaluationResult.resultText}}</p>
         </div>
+        <br/>
+        <br/>
         <div class="result-send">
           <div class="list list-inset">
             <form class="envio-email" ng-submit="evaluationResult.onSubmit()" novalidate>
               <formly-form form="evaluationResult.form" model="evaluationResult.viewModel" fields="evaluationResult.fields">
-                <p class="share-text">{{'evaluationResult.CompartirInforme' | translate}}</p>
+                <p class="share-text" ng-hide="evaluationResult.resultMessage">{{'evaluationResult.CompartirInforme' | translate}}</p>
                 <div class="buttom-wrapper" ng-hide="evaluationResult.resultMessage">
                   <button type="submit" class="button submit-form">{{'evaluationResult.email' | translate}}
                   </button>
