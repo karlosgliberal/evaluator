@@ -14,6 +14,7 @@ export default class EvaluationResultController {
     this.viewModel = {};
     this.resultPercentage = this.$stateParams.result.porcentaje;
     this.resultText = this.$stateParams.result.resultTexto;
+    this.resultSubspecie = this.$stateParams.result.subSpecie;
     this.animales = this.$stateParams.animal;
     this.fields = this.formPartsBuilderService.buidInputEmailFor();
     this.logoOlmix = './assets/images/logo-olmix.png';
