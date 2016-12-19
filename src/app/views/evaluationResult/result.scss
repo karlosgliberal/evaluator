@@ -104,13 +104,17 @@
 }
 
 .result-container {
+
   padding: 0 220px;
+  @media (max-width : 768px) {
+    padding: 0 0px;
+  }
 }
 
 
 .result-send {
   padding: 0 220px;
-  @media (max-width : 500px)  {
+  @media (max-width : 768px)  {
     padding: 0;
   }
 }
