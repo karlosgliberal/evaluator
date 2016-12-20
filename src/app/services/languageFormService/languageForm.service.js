@@ -25,7 +25,7 @@ export default class languageFormService {
       textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.POULTRY);
     } else {
       textoImagenAnimal.image = './assets/images/swine-interior.png';
-      textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.POULTRY);
+      textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.SWINE);
     }
     return textoImagenAnimal;
   };
