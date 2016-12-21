@@ -41,7 +41,6 @@ export default class resultManager {
 
   prepareResultText(evaluationResult) {
     evaluationResult = _.round(evaluationResult);
-    console.log(evaluationResult);
     if (evaluationResult <= 300 && evaluationResult >= 76) {
       return this.$translate.instant('evaluationResult.riskExtreme');
     } else if (evaluationResult <= 75 && evaluationResult >= 56){
