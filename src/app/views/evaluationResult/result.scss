@@ -1,4 +1,8 @@
 
+button:hover, button:active {
+  color: white !important;
+}
+
 .result-number-container {
   width: 100%;
   position: relative;
@@ -143,7 +147,8 @@
     padding: 0 20px;
   }
   .texto-animal-imagen {
-    padding: 37px;
+    padding: 21px;
+    line-height: 26px;
   }
 }
 
