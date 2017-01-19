@@ -1,0 +1,218 @@
+{
+  "main": {
+    "view-title": "主页"
+  },
+  "animalSelection": {
+    "view-title": "选择动物"
+  },
+  "extra": {
+    "descriptionForm": "请点击以下符合您的饲养情况",
+    "resultEmpty": "根据联合国粮食及农业组织的调查，霉菌毒素污染全世界25%的饲料原料"
+  },
+  "evaluationResult": {
+    "view-title": "结果",
+    "text-result": "饲料中霉菌毒素含量",
+    "text-result-suffix": "饲料",
+    "email": "提交报告",
+    "micotoxine": "霉菌毒素专家",
+    "send": "报告提交成功",
+    "footerPdf": "联系我们的专家",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "报告已被欧密斯霉菌毒素评估软件发送",
+    "CompartirInforme": "请输入电子邮件地址",
+    "riskLow": "低风险",
+    "riskMedium": "中等风险",
+    "riskHigh": "高风险",
+    "riskExtreme": "极高风险",
+    "personalReport": "个人化毒素评估",
+    "selected": "选择"
+  },
+  "menu": {
+    "welcome": "欢迎",
+    "home": "主菜单",
+    "about": "关于",
+    "language": "语言",
+    "selection": "选择动物"
+  },
+  "language": {
+    "title": "选择语言",
+    "selector": {
+      "title": "选择语言"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "猪",
+    "dairy": "奶牛",
+    "cow": "奶牛",
+    "poultry": "家禽"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "牛群",
+        "fields": {
+          "feed-intake": "采食量不足",
+          "low-milk-production": "泌乳量达不到该品种的料奶比",
+          "body-condition": "体状下降",
+          "coat-condition": "毛色不佳",
+          "chewing-activity": "异常咀嚼动作",
+          "somatic-cells": "体细胞和乳腺炎病症明显增多",
+          "leg-troubles": "蹄病增加（蹄跛、肿蹄、皮炎...)",
+          "metabolic-troubles": "代谢问题或内科病症增多（皱胃位移、酸中毒、脂肪肝，子宫炎，皮炎…）",
+          "turnovers": "牛场淘汰率过高（后备牛占全牛群的百分比高）",
+          "feces": "流体粪便",
+          "milk-urea": "牛奶中尿素增加",
+          "weak-calves": "牛犊微弱（腹泻、生长迟缓、口腔或皮肤病变…）",
+          "fertility-troubles": "生育问题（子宫炎、子宫囊肿、胎盘滞留…）",
+          "reproduction-performance": "繁殖指数低（发情数、第一次配种成功指数…）",
+          "troubles-from-raw-materials": "以上问题是在打开新的青贮窖后出现"
+        }
+      },
+      "feed": {
+        "title": "饲料处理",
+        "fields": {
+          "corn-silages": "饲料主要是玉米青贮、高粱青贮、种子或副产品",
+          "storage-facilities": "仓库温度高、不经常清洗",
+          "storage-period": "饲料储藏时间较长",
+          "moulds": "饲料原料中有霉斑（红斑、蓝斑、白斑或黑斑)"
+        }
+      },
+      "on-field": {
+        "title": "On field",
+        "fields": {
+          "corn-procedence": "Corn is produced on single-crop farming field",
+          "corn-fields": "Corn fields are not ploughed",
+          "fusarium": "Fusarium molds/diseases were observed on field",
+          "silage-harvest": "Silage was harvested late",
+          "grass-silage-cropped": "Grass silage was cropped after corn"
+        }
+      },
+      "storage": {
+        "title": "Storage",
+        "fields": {
+          "molds": "Molds are present (red, blue, white or black...)",
+          "silage-troubles": "Troubles to press silage (high DM, speed of harvesting)",
+          "warm-silage": "Silage is warm or took a long time to cool down",
+          "grass-silage": "Grass silage is not as clean as usual",
+          "silage-front-consuption": "Silage front is consumed too slowly"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "猪群",
+        "fields": {
+          "sows-status": "母猪总体生产表现不佳",
+          "poor-growth": "母猪体状评分低",
+          "intake": "采食量不足",
+          "skin-color": "母猪毛色不佳",
+          "milk-production": "产后泌乳不足",
+          "veterinary-intervention": "猪场需要频繁的兽医介入",
+          "lactation-start": "母猪产后泌乳问题多",
+          "stillborn-piglets": "仔猪木乃伊，夭折，微弱症状增加",
+          "small-piglets-at-birth": "仔猪微弱，出生仔猪体重非常不均匀",
+          "splay-legs": "八字腿症状增加",
+          "red-vulva": "外阴红肿",
+          "neonatal-diarrea": "新生仔猪腹泻，生长不良",
+          "necrosis": "耳朵与尾巴坏死",
+          "reproduction-troubles": "生育问题（子宫炎，胎盘滞留...）",
+          "heat-detection": "不发情、返情次数过多",
+          "weaning-insemination": "母猪断奶到配种间隔过长"
+        }
+      },
+      "feed": {
+        "title": "饲料",
+        "fields": {
+          "home-grown": "猪场自产饲料",
+          "use-of-corn": "使用玉米芯混合料（CCM）",
+          "storage-facilities": "谷物饲料储藏时有问题",
+          "grains-preservation-problems": "饲料塔清洁间隔长"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "家禽类型",
+        "fields": {
+          "hens": "蛋鸡",
+          "breeder": "种鸡",
+          "broiler": "种鸡",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "家禽",
+        "fields": {
+          "feed-intake": "采食量不足",
+          "body-weight": "重量不足",
+          "liquid-droppings": "水便",
+          "water-consumption": "饮水量过高",
+          "vaccination": "疫苗或其他药品效果差",
+          "infectious-diseases": "高传染病发生率",
+          "dermatitis": "肠道粘膜坏死",
+          "gizzard": "嗉囊、腺胃、肌胃、肠有发炎情况",
+          "mortality": "高死亡率",
+          "liver-damage": "肝与肾损伤",
+          "ovaries-size": "卵巢过小",
+          "tibial": "胫骨发育不良",
+          "thymus": "胸腺与法式囊发育不良"
+        },
+        "broiler": {
+          "title": "鸡群管理",
+          "fields": {
+            "feed-intake": "采食量减少",
+            "body-weight": "体重降低",
+            "fcr": "料肉比增加/生长障碍/营养吸收障碍",
+            "droppings": "湿粪",
+            "water-consumption": "饮水量增加",
+            "vaccination": "疫苗或治疗无效",
+            "infectious-diseases": "传染病发病增多",
+            "mucosal-necrosis": "坏死性肠炎，皮炎",
+            "gizzard": "腺、胃、肠等多种器官产生炎症",
+            "mortality": "死亡率增加",
+            "liver-damage": "肝和肾损伤",
+            "tibial-dyschondroplasia": "胫骨软骨发育不良",
+            "thymus": "鸡胚胸腺、法氏囊发育不良",
+            "sphinganine": "血液中鞘氨醇含量增多"
+          }
+        }
+      },
+      "feed": {
+        "title": "饲料",
+        "fields": {
+          "home-mixed": "非饲料厂家生产的饲料",
+          "home-grown": "自制饲料",
+          "use-of-corn": "玉米及玉米副产品含量高",
+          "storage-facilities": "饲料储存条件差（通风差、卫生差）",
+          "feed-management": "以上情况外加饲料管理方式有改变",
+          "preservation-problems": "谷物原料储存有问题（高热、害虫、潮湿"
+        }
+      },
+      "egg-production": {
+        "title": "产蛋",
+        "fields": {
+          "egg-production": "低产蛋量",
+          "egg-weight": "蛋重低",
+          "shell-quality": "蛋壳质量地下（破裂、不厚、蛋壳发白）",
+          "egg-hatchability": "孵化率低",
+          "progeny": "后代存活率低"
+        }
+      }
+    }
+  }
+}

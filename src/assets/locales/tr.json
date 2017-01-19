@@ -1,0 +1,207 @@
+{
+  "main": {
+    "view-title": "Başlangıç"
+  },
+  "animalSelection": {
+    "view-title": "Tür Seçimi"
+  },
+  "extra": {
+    "descriptionForm": "Beslemede hedeflenen performans için durumunuza uygun ifadeyi seçiniz",
+    "resultEmpty": "GTÖ’ye göre , dünya üzerindeki hammadelerin %25’i kontaminedir."
+  },
+  "evaluationResult": {
+    "view-title": "Sonuç",
+    "text-result": "Yemde belirgin mikotoksin değeri olasılığı",
+    "text-result-suffix": "Yem",
+    "email": "Rapor Gönder",
+    "micotoxine": "Mikotoksin Uzmanları",
+    "send": "Rapor gönderildi",
+    "footerPdf": "Size özel teknik destek ve değerlendirme için mikotoksin uzmanlarımızla görüşün.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Bu rapor Olmix Myco’Evaluator tarafından gönderildi",
+    "CompartirInforme": "E-mail adresinizi giriniz , birden çok ise virgülle ayırınız",
+    "riskLow": "Düşük risk",
+    "riskMedium": "Orta risk",
+    "riskHigh": "Yüksek risk",
+    "riskExtreme": "Aşırı risk",
+    "personalReport": "Myco’Evaluator Kişisel Rapor",
+    "selected": "İşaretli durumlar"
+  },
+  "menu": {
+    "welcome": "Hoşgeldiniz",
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "language": "Dil",
+    "selection": "Tür Seçimi"
+  },
+  "language": {
+    "title": "Dilinizi seçiniz",
+    "selector": {
+      "title": "Dil Seçimi"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "dairy": "Sağmal",
+    "cow": "Sağmal",
+    "poultry": "Kanatlı"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "değerlendirin",
+        "fields": {
+          "feed-intake": "Yetersiz yem tüketimi",
+          "low-milk-production": "Beslemeye göre düşük süt üretimi",
+          "body-condition": "Azalan ya da yetersiz vücut kondüsyonu",
+          "coat-condition": "Tüy görünümünde farklılık",
+          "chewing-activity": "Geviş getirme",
+          "somatic-cells": "Somatik hücre sayısında ve mastitiste belirgin bir artış",
+          "leg-troubles": "Topallık ve ayak problemlerinde artış (şiş tırnaklar, bağlar, dermamtitis…)",
+          "metabolic-troubles": "Metabolik ve patolojik problemlerin artışı (abomasum deplasmanı, SARA, yağlı karaciğer,metritis,dermatitis…)",
+          "turnovers": "Çok yüksek yatırım (düvelerin yüksek %'si)",
+          "feces": "Çok yumuşak ya da sıvı dışkı",
+          "milk-urea": "Sütte üre artışı",
+          "weak-calves": "Zayıf buzağılar(diyare, gecikmeli büyüme, oral ve dermal lezyonlar…)",
+          "fertility-troubles": "Fertilite sorunları (metritis, kist, plasenta retensiyonu...)",
+          "reproduction-performance": "Düşük reprodüksiyon parametreleri (kızgınlığı saptama, ilk tohumlamada başarı…)",
+          "troubles-from-raw-materials": "Yukarıdaki problemlerin yeni silajın açılmasıyla başlaması"
+        }
+      },
+      "on-field": {
+        "title": "Ekim alanı",
+        "fields": {
+          "corn-procedence": "Mısır tek ekin ekilen tarlada üretildi",
+          "corn-fields": "Mısır tarlası sürülmemişti",
+          "fusarium": "Sahada Fusarium küfleri/hastalıkları gözlendi",
+          "silage-harvest": "Silaj geç biçildi",
+          "grass-silage-cropped": "Ot silajı mısırdan sonra biçildi"
+        }
+      },
+      "storage": {
+        "title": "Depolama",
+        "fields": {
+          "molds": "Gözle görülen küfler var (kırmızı, mavi, beyaz veya siyah…)",
+          "silage-troubles": "Silajın basılmasında problemler yaşanıyor(yüksek KM, biçim hızı...)",
+          "warm-silage": "Silaj sıcak veya soğuması uzun zaman alıyor",
+          "grass-silage": "Ot silajı herzamanki gibi temiz değil",
+          "silage-front-consuption": "Silajın ilk kısmı çok yavaş tüketiliyor"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "The animal",
+        "fields": {
+          "sows-status": "Unsatisfying general status of the sows",
+          "poor-growth": "Poor growth of piglets or fattening pigs ",
+          "intake": "Insufficient feed intake",
+          "skin-color": "Unsatisfying skin color",
+          "milk-production": "Low sow's milk production",
+          "veterinary-intervention": "High frequency of veterinary intervention",
+          "lactation-start": "Problems to start lactation",
+          "stillborn-piglets": "Increase in mummified or stillborn piglets (low prolificity)",
+          "small-piglets-at-birth": "Increase in heterogeneous or small piglets at birth",
+          "splay-legs": "Increase in splay legs",
+          "red-vulva": "Swollen red vulva",
+          "neonatal-diarrea": "Neonatal diarrhea/troubles to start piglets",
+          "necrosis": "Ear and tail necrosis and/or nervosity",
+          "reproduction-troubles": "Increase in reproduction troubles (metritis, placenta retention…)",
+          "heat-detection": "Problems in heat detection or high returns rate",
+          "weaning-insemination": "Long interval weaning-insemination"
+        }
+      },
+      "feed": {
+        "title": "feed",
+        "fields": {
+          "home-grown": "Home grown feed",
+          "use-of-corn": "Significant use of corn or corn by-products",
+          "storage-facilities": "Poor storage facilities and management (ventilation, cleaning)",
+          "grains-preservation-problems": "Troubles during grains or feed preservation (heat, pests, moisture)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Hayvan Türleri",
+        "fields": {
+          "hens": "Yumurta Tavukçuluğu",
+          "breeder": "Damızlık",
+          "broiler": "Broyler"
+        }
+      },
+      "animals": {
+        "title": "Hayvanlardaki gözlemler",
+        "fields": {
+          "feed-intake": "Yetersiz yem tüketimi",
+          "body-weight": "Yetersiz vücut ağırlığı",
+          "liquid-droppings": "İshal",
+          "water-consumption": "Aşırı su tüketimi",
+          "vaccination": "Aşılama veya tedavi sorunları",
+          "infectious-diseases": "Enfeksiyon hastalıklarında artış",
+          "dermatitis": "Mukozal Nekroz, dermatit",
+          "gizzard": "Börkenek, mide ,bağırsak iltihapları",
+          "mortality": "Yüksek ölüm oranı",
+          "liver-damage": "Karaciğer / Böbrek hasarı",
+          "ovaries-size": "Düşük yumurtalık gelişimi",
+          "tibial": "Kemik ve kıkırdak gelişimini engelleyen metabolik rahatsızlıklar",
+          "thymus": "Fabricius kesesi ve Timusun aşırı büyümesi"
+        },
+        "broiler": {
+          "title": "Hayvanlardaki gözlemler",
+          "fields": {
+            "feed-intake": "Yem tüketiminde azalma",
+            "body-weight": "Kilo kaybı",
+            "fcr": "Yüksek FCR/ malabsorpsiyon sendromu/zayıf tüylenme",
+            "droppings": "Islak altık",
+            "water-consumption": "Aşırı su tüketimi",
+            "infectious-diseases": "Aşılama veya tedavi sorunları",
+            "vaccination": "Enfeksiyon hastalıklarında artış",
+            "mucosal-necrosis": "Mukosal nekroz, dermatit",
+            "gizzard": "Yem kaynaklı taşlık,ön kursak,barsakta gözlemlenen enflamasyonlar",
+            "mortality": "Ölüm oranlarında artış",
+            "liver-damage": "Karaciğer ve/veya böbreklerde hasar",
+            "tibial-dyschondroplasia": "Tibial dyschondroplasia vakalarında artış",
+            "thymus": "Fabricius kesesi ve Timusun aşırı büyümesi",
+            "sphinganine": "Sfingosin kan oranı"
+          }
+        }
+      },
+      "feed": {
+        "title": "Feed",
+        "fields": {
+          "home-mixed": "Kendi yeminizimi üretiyorsunuz",
+          "home-grown": "Home Mix",
+          "use-of-corn": "Mısır ya da mısır yan ürünleri kullanımı",
+          "storage-facilities": "Kötü depolama ve stok yönetimi (havalandırma, temizlik sorunları)",
+          "feed-management": "Yukarıdaki sorunların neden olduğu değişiklikler",
+          "preservation-problems": "Hammadde ya da yemin depolanması esnasında karşılaşılan sorunlar (ısı, zararlılar, nem)"
+        }
+      },
+      "egg-production": {
+        "title": "Yumurta Üretimi",
+        "fields": {
+          "egg-production": "Düşük yumurta üretimi",
+          "egg-weight": "Düşük yumurta ağırlığı",
+          "shell-quality": "Düşük yumurta kabuğu kalitesi (Kırık yumurta artışı, ince kabuk , soluk yumurta prob.)",
+          "egg-hatchability": "Düşük kuluçka randımanı",
+          "progeny": "Düşük döl canlılığı"
+        }
+      }
+    }
+  }
+}

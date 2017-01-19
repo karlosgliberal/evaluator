@@ -1,0 +1,218 @@
+{
+  "main": {
+    "view-title": "Phần chính"
+  },
+  "animalSelection": {
+    "view-title": "Chọn loài vật nuôi"
+  },
+  "extra": {
+    "descriptionForm": "Chọn câu phù hợp với tình huống của bạn với loại thức ăn phù hợp cho năng suất mục tiêu:",
+    "resultEmpty": "Theo dữ liệu từ Tổ chức lương thực thế giới FAO, 25% nguyên liệu trên toàn thế giới đang bị ô nhiễm."
+  },
+  "evaluationResult": {
+    "view-title": "Kết quả",
+    "text-result": "Khả năng nhiễm hàm lượng độc tố nấm mốc cao trong thức ăn",
+    "text-result-suffix": "Thức ăn",
+    "email": "Gửi báo cáo",
+    "micotoxine": "Chuyên gia Mycotoxin",
+    "send": "Báo cáo được chấp nhận",
+    "footerPdf": "Liên hệ với chuyên gia về độc tố nấm mốc của chúng tôi để làm rõ chi tiết và hỗ trợ kỹ thuật phù hợp với điều kiện chăn nuôi của bạn.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Báo cáo này được gửi đến từ Olmix Myco'Evaluator App",
+    "CompartirInforme": "Nhập vào địa chỉ email, các địa chỉ khác nhau tách biệt bằng dấu phẩy",
+    "riskLow": "Nguy cơ thấp",
+    "riskMedium": "Nguy cơ trung bình",
+    "riskHigh": "Nguy cơ cao",
+    "riskExtreme": "Nguy cơ cực cao",
+    "personalReport": "Báo cáo Myco’Evaluator Cá nhân",
+    "selected": "Lựa chọn câu"
+  },
+  "menu": {
+    "welcome": "Xin chào",
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "language": "Ngôn ngữ",
+    "selection": "Chọn loài vật nuôi"
+  },
+  "language": {
+    "title": "Chọn ngôn ngữ",
+    "selector": {
+      "title": "Ngôn ngữ được chọn"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Heo",
+    "dairy": "Trâu bò",
+    "cow": "Trâu bò",
+    "poultry": "Gia cầm"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "Đàn bò",
+        "fields": {
+          "feed-intake": "Không đủ thức ăn tiêu thụ",
+          "low-milk-production": "Sản lượng sữa thấp hơn tiềm năng",
+          "body-condition": "Tình trạng cơ thể suy giảm hoặc không đảm bảo",
+          "coat-condition": "Điều kiện che chắn không đảm bảo",
+          "chewing-activity": "Hoạt động nhai kém",
+          "somatic-cells": "Tăng đáng kể các tế bào Soma hoặc viêm vú",
+          "leg-troubles": "Tăng số lượng què và các vấn đề về chân (bị sưng móng guốc, khớp, viêm da ...)",
+          "metabolic-troubles": "Tăng các vấn đề về chuyển hóa và bệnh lý (chuyển dạ múi khế, SARA, gan nhiễm mỡ, viêm tử cung, viêm da ...)",
+          "turnovers": "Doanh thu tăng ( % bê cái cao)",
+          "feces": "Phân quá mềm/lỏng",
+          "milk-urea": "Tăng u-rê trong sữa",
+          "weak-calves": "Bê con yếu (tiêu chảy, tăng trưởng chậm, tổn thương miệng và da…)",
+          "fertility-troubles": "Các vấn đề về sinh sản ( viêm tử cung, u nang, lưu nhau thai,..)",
+          "reproduction-performance": "Hiệu suất sinh sản thấp ( phát nhiệt, thành công ở lần đầu thụ tinh…)",
+          "troubles-from-raw-materials": "Các vấn đề trên xuất hiện khi sử dụng kho mới hoặc nguyên liệu mới"
+        }
+      },
+      "feed": {
+        "title": "Thức ăn",
+        "fields": {
+          "corn-silages": "Sử dụng nhiều bắp, thức ăn ủ chua, ngũ cốc hoặc phụ phẩm",
+          "storage-facilities": "Kho bảo quản và quản lý kém ( nhiệt độ cao, vệ sinh kém)",
+          "storage-period": "Bảo quản thời gian lâu",
+          "moulds": "Xuất hiện nấm trong nguyên liệu …(đỏ, xanh, trắng hoặc đen…)"
+        }
+      },
+      "on-field": {
+        "title": "Thức ăn",
+        "fields": {
+          "corn-procedence": "Sử dụng nhiều bắp, thức ăn ủ chua, ngũ cốc hoặc phụ phẩm",
+          "corn-fields": "Kho bảo quản và quản lý kém ( nhiệt độ cao, vệ sinh kém)",
+          "fusarium": "Fusarium molds/diseases were observed on field",
+          "silage-harvest": "Silage was harvested late",
+          "grass-silage-cropped": "Grass silage was cropped after corn"
+        }
+      },
+      "storage": {
+        "title": "Storage",
+        "fields": {
+          "molds": "Xuất hiện nấm trong nguyên liệu …(đỏ, xanh, trắng hoặc đen…)",
+          "silage-troubles": "Kho bảo quản và quản lý kém ( nhiệt độ cao, vệ sinh kém)",
+          "warm-silage": "Silage is warm or took a long time to cool down",
+          "grass-silage": "Grass silage is not as clean as usual",
+          "silage-front-consuption": "Silage front is consumed too slowly"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Heo",
+        "fields": {
+          "sows-status": "Tình trạng chung của lợn nái không đảm bảo",
+          "poor-growth": "Chỉ số điều kiện cơ thể không đảm bảo",
+          "intake": "Không đủ thức ăn ăn vào",
+          "skin-color": "Màu của lợn nái không tốt",
+          "milk-production": "Sản lương sữa thấp",
+          "veterinary-intervention": "Cần có sự can thiệp thường xuyên của thú y",
+          "lactation-start": "Có vấn đề ở giai đoạn đầu của quá trình tiết sữa",
+          "stillborn-piglets": "Thai chết lưu / heochết non /heo con nhỏ tăng",
+          "small-piglets-at-birth": "Heo con không đồng nhất/nhỏ tăng lên",
+          "splay-legs": "Heo chân yếu tăng",
+          "red-vulva": "Sưng đỏ âm hộ",
+          "neonatal-diarrea": "Tiêu chảy sơ sinh, heo con không phát triển tốt",
+          "necrosis": "Tai và đuôi hoại tử",
+          "reproduction-troubles": "Khó sinh sản (viêm tử cung, lưu nhau thai…)",
+          "heat-detection": "Có vấn đề về lên giống, heo di chuyển lòng vòng nhiều",
+          "weaning-insemination": "Thời gian giữa quá trình cai sữa và thụ tinh kéo dài"
+        }
+      },
+      "feed": {
+        "title": "Thức ăn",
+        "fields": {
+          "home-grown": "Thức ăn tự trộn",
+          "use-of-corn": "Sử dụng ngô trộn (CCM)",
+          "storage-facilities": "Sử dụng DDGS",
+          "grains-preservation-problems": "Khoảng cách giữa các lần vệ sinh silo dài"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Loại vật nuôi",
+        "fields": {
+          "hens": "Gà đẻ",
+          "breeder": "Gà giống",
+          "broiler": "Gà thịt",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Vật nuôi",
+        "fields": {
+          "feed-intake": "Không đủ thức ăn tiêu thụ",
+          "body-weight": "Không đủ trọng lượng cơ thể",
+          "liquid-droppings": "Phân lỏng",
+          "water-consumption": "Tiêu thụ nước nhiều",
+          "vaccination": "Vaccine hoặc điều trị không thành công",
+          "infectious-diseases": "Xác xuất cao với các bệnh truyền nhiễm",
+          "dermatitis": "Hoại tử niêm mạc, viêm da",
+          "gizzard": "Viêm diều, dạ dày tuyến, mề, ruột",
+          "mortality": "Tỷ lệ chết cao",
+          "liver-damage": "Tổn thương gan và /hoặc thận",
+          "ovaries-size": "Kích thước buồng trứng nhỏ",
+          "tibial": "Xương chày có vấn đề",
+          "thymus": "Phát triển bất thường của tuyến ức và tuyến Fabricius"
+        },
+        "broiler": {
+          "title": "Vật nuôi",
+          "fields": {
+            "feed-intake": "Giảm tiêu thụ thức ăn",
+            "body-weight": "Giảm trọng lượng cơ thể",
+            "fcr": "FCR cao / hội chứng kém hấp thu",
+            "droppings": "Phân lỏng",
+            "water-consumption": "Tăng lượng nước tiêu thụ",
+            "vaccination": "Vaccin không có tác dụng",
+            "infectious-diseases": "Tăng tầng suất bệnh lây nhiễm",
+            "mucosal-necrosis": "Hoại tử niêm mạc, viêm da",
+            "gizzard": "Viên diều, dạ dày tuyến, mề, ruột non",
+            "mortality": "Tăng tỉ lệ chết",
+            "liver-damage": "Tổn thương gan và thận",
+            "tibial-dyschondroplasia": "Có vấn đề về xương chày",
+            "thymus": "Phát triển bất thường của tuyến ức và túi Fabricius",
+            "sphinganine": "Tăng axit béo sphinganine: tỷ lệ sphingonisine trong máu"
+          }
+        }
+      },
+      "feed": {
+        "title": "Feed",
+        "fields": {
+          "home-mixed": "Thức ăn tự trộn",
+          "home-grown": "Thức ăn tự trộn",
+          "use-of-corn": "Sử dụng nhiều bắp và các sản phẩm phụ từ bắp",
+          "storage-facilities": "Kho bảo quản và quản lý kém ( quạt gió, vệ sinh)",
+          "feed-management": "Tất cả các vấn đề nêu tren theo một thay đổi trong quản lý thức ăn",
+          "preservation-problems": "Vấn đề trong các hạt ngũ cốc hoặc bảo quản thức ăn ( nhiệt độ, côn trùng, độ ẩm)"
+        }
+      },
+      "egg-production": {
+        "title": "Sản lượng trứng",
+        "fields": {
+          "egg-production": "Lượng trứng thấp",
+          "egg-weight": "Trọng lượng trứng nhỏ",
+          "shell-quality": "Chất lượng vỏ trứng kém (dễ vỡ, vỏ mỏng, màu trứng nhạt)",
+          "egg-hatchability": "Tỷ lệ nở trứng thấp",
+          "progeny": "Khả năng di truyền kém"
+        }
+      }
+    }
+  }
+}

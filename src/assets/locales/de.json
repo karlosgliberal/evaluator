@@ -1,0 +1,209 @@
+{
+  "main": {
+    "view-title": "Haupt"
+  },
+  "animalSelection": {
+    "view-title": "Auswahl Tierart"
+  },
+  "extra": {
+    "descriptionForm": "Wählen Sie bitte die Einstellung die am besten mit Ihrer Situation übereinstimmt. Damit das Futter mit Ihrer angestrebten Leistung übereinstimmt.",
+    "resultEmpty": "Laut der FAO sind 25% der Weltweiten landwirtschaftlichen Rohstoffe belastet."
+  },
+  "evaluationResult": {
+    "view-title": "Ergebnis",
+    "text-result": "Hohe Wahrscheinlichkeit eine signifikante Konzentration am Mycotoxine zu haben",
+    "text-result-suffix": "Futter",
+    "email": "Bericht zusenden",
+    "micotoxine": "Mykotoxin Spezialisten",
+    "send": "Bericht gesendet",
+    "footerPdf": "Kontaktieren Sie unsere Spezialisten, um eine auf Ihre Bedürfnisse angepaste und abgestimmte technische Beratung zu bekommen.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Dieser Beriecht wurde Ihnen von der Myco Evaluator App geschickt.",
+    "CompartirInforme": "Geben Sie Ihre Mail Adressen ein, getrennt durch ein Komma",
+    "riskLow": "Geringes Risiko",
+    "riskMedium": "Mittleres Risiko",
+    "riskHigh": "Hohes Risiko",
+    "riskExtreme": "Extrem hohes Risiko",
+    "personalReport": "Myco’Evaluator persönlicher Bericht",
+    "selected": "Ausgewählte Aussagen."
+  },
+  "menu": {
+    "welcome": "Willkommen",
+    "home": "Home",
+    "about": "Über",
+    "language": "Sprache",
+    "selection": "Auswahl Tierart"
+  },
+  "language": {
+    "title": "Wählen Sie Ihre bevorzugte Sprache",
+    "selector": {
+      "title": "Sprach Auswahl"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Schweine",
+    "dairy": "Kühe",
+    "cow": "Kühe",
+    "poultry": "Geflügel"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "Die Herde",
+        "fields": {
+          "feed-intake": "Nicht ausreichende Futteraufnahme",
+          "low-milk-production": "Zu geringe Milchleistung gemessen an dem Potential der Futterusammensetzung",
+          "body-condition": "Abnehmender oder unbefriedingender körperlicher Zustand",
+          "coat-condition": "Unbefriedigender Zustand des Felles",
+          "chewing-activity": "Geringe Kauaktivität",
+          "somatic-cells": "Deutlicher Anstieg der somatischen Zellen oder der Mastitis",
+          "leg-troubles": "Erhöhung der Lahmheit und Bein Probleme (geschwollene Hufe, Gelenke, Dermatitis, etc.)",
+          "metabolic-troubles": "Erhöhung der metabolischen und pathologischen Störungen (Labmagen Verschiebung, SARA, Fettleber, Metritis, Dermatitis, etc.)",
+          "turnovers": "Zu hohe Fluktation (u.a. bei dem Färsen)",
+          "feces": "Der Kot ist zu weich / flüssig",
+          "milk-urea": "Erhöhung von Harnstoff",
+          "weak-calves": "Schwache Kälber (diarhea, verzögertes Wachstum, orale und dermale Läsionen, etc.)",
+          "fertility-troubles": "Fruchtbarkeitsprobleme (Metritis, Zysten, Plazenta Retention, etc.)",
+          "reproduction-performance": "Reproduktionsparameter (Brunst Erkennung, Erfolg der Erstbesamung, etc.)",
+          "troubles-from-raw-materials": "Die oben genannten Probleme begannen mit der Eröffnung eines neuen Silos"
+        }
+      },
+      "on-field": {
+        "title": "Auf dem Feld",
+        "fields": {
+          "corn-procedence": "Mais wird in Monokultur angebaut",
+          "corn-fields": "Maisfelder werden nicht gepflügt",
+          "fusarium": "Die Felder sind von Fusarien befallen",
+          "silage-harvest": "Die Silage wurde spät geerntet",
+          "grass-silage-cropped": "Die Grassilage wurde nach dem Mais geerntet"
+        }
+      },
+      "storage": {
+        "title": "Lagerung",
+        "fields": {
+          "molds": "Verfärbungen im Silo (rot, blau, weiß oder Schwarz, etc.)",
+          "silage-troubles": "Schwierigkeiten die Silage fest zu fahren",
+          "warm-silage": "Silage ist warm oder dauerte es eine lange Zeit bis sie abgekühlt war",
+          "grass-silage": "Die Grassilage ist nicht so sauber wie gewohnt",
+          "silage-front-consuption": "Die Front der Silage wird nur langsam verbraucht"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Schweine",
+        "fields": {
+          "sows-status": "UnsatUnbefriedigender allgemein Zusatnd der Sauen",
+          "poor-growth": "Körper-Konditionsindex wird nicht erfüllt",
+          "intake": "Nicht zufriedenstellende Futteraufnahme",
+          "skin-color": "Die Hautfarbe der Sau ist nicht gut",
+          "milk-production": "Keine ausreichende Milchproduktion",
+          "veterinary-intervention": "Hohe Frequenz von tierärztlichen Einfriffe notwendig",
+          "lactation-start": "Probleme die Laktation zu starten",
+          "stillborn-piglets": "Zu viel mumifizierte / Totgeborene / kleine Ferkel",
+          "small-piglets-at-birth": "Zu kleine / heterogene Ferkel",
+          "splay-legs": "Mehr gespreitzte Beine als sonst",
+          "red-vulva": "Geschwollene rote Vagina",
+          "neonatal-diarrea": "Neonatal Durchfall / Ferkel wachsen nicht gut",
+          "necrosis": "Ohr und Schwanz Nekrose",
+          "reproduction-troubles": "Fruchtbarkeits Probleme (Metritis, Plazenta Retention, etc.)",
+          "heat-detection": "Probleme in der Brunsterkennung / Zuviele Sauen kommen zurück",
+          "weaning-insemination": "Langer Intervall vom Absetzen zur Besamung"
+        }
+      },
+      "feed": {
+        "title": "Futter",
+        "fields": {
+          "home-grown": "Eigener Futteranbau",
+          "use-of-corn": "Verwendung von Corn Cob Mix (CCM)",
+          "storage-facilities": "Verwendung von Trockenschlempe (DDGS)",
+          "grains-preservation-problems": "Langer Zeitintervall zwischen dem Silo-Reinigen"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Tierar",
+        "fields": {
+          "hens": "Legehennen",
+          "breeder": "Brüter",
+          "broiler": "Broiler",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Tiere",
+        "fields": {
+          "feed-intake": "Unzureichender Nahrungsaufnahme",
+          "body-weight": "Unzureichendem Körpergewicht",
+          "liquid-droppings": "Flüssigkeitsverlust",
+          "water-consumption": "Hoher Wasserverbrauch",
+          "vaccination": "Impf- oder Behandlungsversagen",
+          "infectious-diseases": "Erhöhte Infektionsrate",
+          "dermatitis": "Schleimhaut-/Hautkrankheiten",
+          "gizzard": "Entzündung von Kropf, Vormagen, Kaumagen, Darm",
+          "mortality": "Hohe Sterblichkeit",
+          "liver-damage": "Leber- und/oder Nierenschäden",
+          "ovaries-size": "Geringe Eiergröße",
+          "tibial": "Fälle von Knochenmissbildungen",
+          "thymus": "Abnormale Entwicklung des Thymus und der Bursa Fabricii"
+        },
+        "broiler": {
+          "title": "Animals",
+          "fields": {
+            "feed-intake": "Verringerte Futteraufnahme",
+            "body-weight": "Zu leichtes Körpergewicht",
+            "fcr": "Hoher FCR /Niedrige Futterverdaulichkeit/ Missbildungen der Federn",
+            "droppings": "Feuchter Kot",
+            "water-consumption": "Erhöhte Wasseraufnahme",
+            "vaccination": "Erfolglose Impfungen oder Therapeutische Maßnahmen",
+            "infectious-diseases": "Erhöhtes Auftreten von ansteckenden Krankheiten",
+            "mucosal-necrosis": "Läsionen der Darmschleimhaut",
+            "gizzard": "Entzündungen im Kropf, Vormagen, Muskelmagen, Darm",
+            "mortality": "Erhöhte Sterblichkeit",
+            "liver-damage": "Leber oder Nierenschäden",
+            "tibial-dyschondroplasia": "Cases of tibial dyschondroplasia",
+            "thymus": "Abnormales Wachstum von Thymus und Bursa Fabricii ( Bursa cloacalis)",
+            "sphinganine": "Erhöhtes Verhältnis von Sphinganinen zu Sphingonisinen im Blut"
+          }
+        }
+      },
+      "feed": {
+        "title": "Futter",
+        "fields": {
+          "home-mixed": "Eigenes Futter auf dem Betrieb gemischt",
+          "home-grown": "Eigenproduziertes Futter",
+          "use-of-corn": "Wesentliche Nutzung von Mais oder Mais-Nebenprodukten",
+          "storage-facilities": "Schlechte Lagerbedingungen (Lüftung, Reinigung)",
+          "feed-management": "Alle oben beschriebenen Probleme traten nach einer Änderung im Futtermanagement auf",
+          "preservation-problems": "Probleme während der Konservierung von Getreide oder Futter (Wärme, Krankheiten, Feuchtigkeit)"
+        }
+      },
+      "egg-production": {
+        "title": "Eierproduktion",
+        "fields": {
+          "egg-production": "Geringe Legeleistung",
+          "egg-weight": "Geringes Eiergewicht",
+          "shell-quality": "Qualitätsmängel an der Eierschale (Bruch, keine Schale, Blässe)",
+          "egg-hatchability": "Geringe Schlüpfquote",
+          "progeny": "Geringe Fruchtbarkeit"
+        }
+      }
+    }
+  }
+}

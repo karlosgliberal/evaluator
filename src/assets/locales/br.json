@@ -1,0 +1,209 @@
+{
+  "main": {
+    "view-title": "Main"
+  },
+  "animalSelection": {
+    "view-title": "Selecione a espécie"
+  },
+  "extra": {
+    "descriptionForm": "Escolha as alternativas que correspondem à sua situação, considerando que a ração está correspondendo ao desempenho desejado:",
+    "resultEmpty": "La FAO señala que el 25% de las materias primas están contaminadas por micotoxinas."
+  },
+  "evaluationResult": {
+    "view-title": "Resultado",
+    "text-result": "Probabilidade de ter um nível significativo de micotoxinas na dieta",
+    "text-result-suffix": "Dieta",
+    "email": "Enviar Relatório",
+    "micotoxine": "Especialistas em Micotoxinas",
+    "send": "Relatório Enviado",
+    "footerPdf": "Contate nossos especialistas em micotoxinas para ter a interpretação personalizada e receber a visita do suporte técnico.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Este relatório foi enviado pelo aplicativo Myco'Evaluator",
+    "CompartirInforme": "Insira os endereços de e-mails separados por vírgula",
+    "riskLow": "Risco baixo",
+    "riskMedium": "Risco médio",
+    "riskHigh": "Risco alto",
+    "riskExtreme": "Risco Extremo",
+    "personalReport": "Relatório Personalizado Myco’Evaluator",
+    "selected": "Alternativas Selecionadas:"
+  },
+  "menu": {
+    "welcome": "Bem vindo",
+    "home": "Página inicial",
+    "about": "Sobre",
+    "language": "Idioma",
+    "selection": "Selecione a espécie"
+  },
+  "language": {
+    "title": "Escolha o idioma de preferência",
+    "selector": {
+      "title": "Selecione o idioma"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Suínos",
+    "dairy": "Gado de Leite",
+    "cow": "Gado de Leite",
+    "poultry": "Aves"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "O rebanho",
+        "fields": {
+          "feed-intake": "Redução do consumo de ração ",
+          "low-milk-production": "Produção de leite menor do que o potencial da dieta",
+          "body-condition": "Piora da condição corporal",
+          "coat-condition": "Condições de pelagem insatisfatórias",
+          "chewing-activity": "Baixa atividade ruminal",
+          "somatic-cells": "Aumento significante na Contagem de Células Somáticas (CCS) ou mastite",
+          "leg-troubles": "Aumento da ocorrência de laminites e problemas de pernas (claudicação, juntas/articulação, dermatites etc.)",
+          "metabolic-troubles": "Aumento de problemas metabólicos e patológicos (torção de abomaso, diarreias inespecíficas, fígado graxo, metrite, hemorragia jejunal etc.)",
+          "turnovers": "Aumento da taxa de retorno ao cio (aumento da % de novilhas)",
+          "feces": "Fezes líquidas/moles",
+          "milk-urea": "Aumento da ureia no leite",
+          "weak-calves": "Bezerras fracas (diarreias, redução do crescimento, lesões orais e dérmicas etc.)",
+          "fertility-troubles": "Problemas de fertilidade (metrites, cistos ovarianos, retenção de placenta etc.)",
+          "reproduction-performance": "Redução da performance reprodutiva (detecção de cios, sucesso à 1a inseminação)",
+          "troubles-from-raw-materials": "Os problemas citados acima se iniciaram com o uso de novas forragens ou matérias-primas"
+        }
+      },
+      "on-field": {
+        "title": "No campo",
+        "fields": {
+          "corn-procedence": "O milho é produzido em campos de monocultura",
+          "corn-fields": "Os campos de milho não são lavrados",
+          "fusarium": "São observados fungos do tipo Fusarium no campo",
+          "silage-harvest": "A silagem é colhida tardiamente",
+          "grass-silage-cropped": "A silagem de capim foi produzida depois da silagem de milho"
+        }
+      },
+      "storage": {
+        "title": "Armazenagem",
+        "fields": {
+          "molds": "Fungos presentes (vermelho, azul, branco, preto etc.)",
+          "silage-troubles": "Ocorreram problemas para fechar a silagem (elevada MS, rapidez na coleta)",
+          "warm-silage": "Silagem está quente ou com esfriamento tardio",
+          "grass-silage": "Silagem de capim não está tão limpa quanto o normal",
+          "silage-front-consuption": "A frente da silagem é consumida muito lentamente"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Os animais",
+        "fields": {
+          "sows-status": "Estado geral das porcas não é satisfatório",
+          "poor-growth": "Baixo crescimento dos leitõezinhos ou dos leitões de engorda",
+          "intake": "Ingestão de ração insuficiente",
+          "skin-color": "Cor da pele insatisfatória",
+          "milk-production": "Porcas com baixa produção de leite",
+          "veterinary-intervention": "Alta frequência de intervenções terapêuticas",
+          "lactation-start": "Problemas para iniciar a lactação",
+          "stillborn-piglets": "Aumento de fetos mumificados ou natimortos (baixa prolificidade)",
+          "small-piglets-at-birth": "Aumento na heterogeneidade ou leitões pequenos ao nascimento",
+          "splay-legs": "Aumento de splay legs",
+          "red-vulva": "Vulva edemaciada e avermelhada, em cereja",
+          "neonatal-diarrea": "Diarreia neonatal/problemas iniciais nos leitões",
+          "necrosis": "Necrose de orelha e cauda e/ou nervosismo",
+          "reproduction-troubles": "Aumento dos problemas reprodutivos (metrites, retenção de placenta etc.)",
+          "heat-detection": "Problemas de detecção de cio ou elevadas taxas de retorno",
+          "weaning-insemination": "Aumento do intervalo desmame-inseminação"
+        }
+      },
+      "feed": {
+        "title": "Alimentação",
+        "fields": {
+          "home-grown": "A ração é produzida na própria granja",
+          "use-of-corn": "Uso significante de milho ou de seus subprodutos",
+          "storage-facilities": "Condições de instalações e manejo da armazenagem ruins (ventilação, limpeza)",
+          "grains-preservation-problems": "Problemas durante a preservação dos grãos ou ração (calor, pragas, umidade)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Tipo de animais",
+        "fields": {
+          "hens": "Galinhas poedeiras",
+          "breeder": "Reprodutoras",
+          "broiler": "Frango",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Animais",
+        "fields": {
+          "feed-intake": "Consumo de ração insuficiente",
+          "body-weight": "Redução do peso corpóreo",
+          "liquid-droppings": "Fezes líquidas",
+          "water-consumption": "Aumento do consumo de água",
+          "vaccination": "Falha em tratamentos ou na vacinação",
+          "infectious-diseases": "Aumento da ocorrência de doenças infecciosas",
+          "dermatitis": "Necrose de mucosa, dermatite",
+          "gizzard": "Inflamação de papo, proventrículo, moela e intestinos",
+          "mortality": "Alta mortalidade",
+          "liver-damage": "Dano hepático e/ou renal",
+          "ovaries-size": "Redução do tamanho do ovário",
+          "tibial": "Casos de discondroplasia tibial",
+          "thymus": "Desenvolvimento anormal de timo e bursa de Fabricius"
+        },
+        "broiler": {
+          "title": "Animals",
+          "fields": {
+            "feed-intake": "Redução do consumo de ração",
+            "body-weight": "Redução do peso corpóreo",
+            "fcr": "Elevada conversão alimentar (CA), síndrome da má-absorção, pena em helicóptero",
+            "droppings": "Fezes úmidas",
+            "water-consumption": "Aumento do consumo de água",
+            "vaccination": "Falha em tratamentos ou na vacinação",
+            "infectious-diseases": "Aumento da ocorrência de doenças infecciosas",
+            "mucosal-necrosis": "Necrose de mucosas, dermatites",
+            "gizzard": "Inflamações no papo, proventrículo, moela e intestinos",
+            "mortality": "Aumento da mortalidade",
+            "liver-damage": "Dano hepático e/ou renal",
+            "tibial-dyschondroplasia": "Casos de discondroplasia tibial",
+            "thymus": "Desenvolvimento anormal do timo e bursa de Fabricius",
+            "sphinganine": "Aumento da esfinganina: taxa de esfingosina na corrente sanguínea"
+          }
+        }
+      },
+      "feed": {
+        "title": "Alimentação",
+        "fields": {
+          "home-mixed": "Ração misturada na granja",
+          "home-grown": "Ração é produzida na granja",
+          "use-of-corn": "Uso significativo de milho ou de seus subprodutos",
+          "storage-facilities": "Condições das instalações e manejo de armazenagem ruins (ventilação, limpeza)",
+          "feed-management": "Todos os problemas descritos acima ocorreram após mudança na ração",
+          "preservation-problems": "Problemas durante preservação dos grãos ou da ração (calor, pragas, umidade)"
+        }
+      },
+      "egg-production": {
+        "title": "Eggs production",
+        "fields": {
+          "egg-production": "Queda na produção de ovos",
+          "egg-weight": "Baixo peso dos ovos",
+          "shell-quality": "Baixa qualidade da casca do ovo (aumento de ovos trincados, defeituosos e pálidos)",
+          "egg-hatchability": "Redução da eclodibilidade",
+          "progeny": "Baixa viabilidade da progênie"
+        }
+      }
+    }
+  }
+}

@@ -3,39 +3,55 @@
     "view-title": "Main"
   },
   "animalSelection": {
-    "view-title": "Selección de especie"
+    "view-title": "Species selection"
+  },
+  "extra": {
+    "descriptionForm": "Escoja las premisas que correspondan a su experiencia sabiendo que la alimentación es adecuada a los resultados esperados",
+    "resultEmpty": "La FAO señala que el 25% de las materias primas están contaminadas por micotoxinas."
   },
   "evaluationResult": {
-    "view-title": "Resultado",
-    "text-result": "Probabilidad de presencia significativa de micotoxinas en el alimento",
+    "view-title": "Result",
+    "text-result": "Probability to have a significant level of mycotoxins in diet",
     "text-result-suffix": "diet",
-    "email": "Enviar informe",
-    "micotoxine": "Especialistas en micotoxinas",
-    "send": "Informe enviado",
-    "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación.",
+    "email": "Send Report",
+    "micotoxine": "Mycotoxin specialist",
+    "send": "Report submitted",
+    "footerPdf": "Contact our specialists in mycotoxins for customized interpretation and technical support, tailored to your situation.",
     "footerEmail": "animalcare.ts@olmix.com",
-    "bodyText": "Informe enviado por Olmix Myco'Evaluator",
-    "CompartirInforme": "Introduzca las direcciones de email, separadas por comas",
-    "riskLow": "Riesgo bajo",
-    "riskMedium": "Riesgo medio",
-    "riskHigh": "Riesgo importante",
-    "riskExtreme": "Riesgo extremo"
+    "bodyText": "This report was sent from Olmix Myco'Evaluator App",
+    "CompartirInforme": "Enter email addresses, separated by commas",
+    "riskLow": "Low risk",
+    "riskMedium": "Medium risk",
+    "riskHigh": "High risk",
+    "riskExtreme": "Extreme risk",
+    "personalReport": "Informe Personalizado Myco'Evaluator",
+    "selected": "Premisas seleccionadas:"
   },
   "menu": {
-    "welcome": "Bienvenido",
+    "welcome": "Welcome",
     "home": "Home",
-    "about": "A propósito de",
-    "language": "Idioma",
-    "selection": "Selección de especie"
+    "about": "About",
+    "language": "Language",
+    "selection": "Species selection"
   },
   "language": {
-    "title": "Elige el idioma",
+    "title": "Choose your preferred language",
     "selector": {
-      "title": "Selección de idioma"
+      "title": "Language Selection"
     },
     "es": "Español",
     "en": "English",
-    "fr": "Français"
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
   },
   "animal":{
     "swine": "Cerdos",
@@ -44,7 +60,7 @@
     "poultry": "Aves"
   },
   "forms": {
-    "evaluate": "Evaluar",
+    "evaluate": "Evaluate",
     "view-title": "Form",
     "cow": {
       "herd": {
@@ -111,7 +127,7 @@
         }
       },
       "feed": {
-        "title": "Alimento",
+        "title": "Feed",
         "fields": {
           "home-grown": "Pienso hecho en la granja",
           "use-of-corn": "Uso de corn cob mix (CCM)",
@@ -124,7 +140,7 @@
       "selector": {
         "title": "Tipo de animal",
         "fields": {
-          "hens": "Gallinas ponedoras",
+          "hens": "Gallinas de puesta",
           "breeder": "Reproductoras",
           "broiler": "Broiler",
           "noPoultry": " "
@@ -155,8 +171,8 @@
             "fcr": "Mayor IC / síndrome de malabsorción / plumas en helicóptero",
             "droppings": "Camas húmedas",
             "water-consumption": "Mayor consumo de agua",
-            "infectious-diseases": "Alta incidencia de enfermedades infecciosas",
             "vaccination": "Fallo vacunal o terapéutico",
+            "infectious-diseases": "Alta incidencia de enfermedades infecciosas",
             "mucosal-necrosis": "Necrosis de la mucosa, dermatitis",
             "gizzard": "Inflamación del buche, proventrículo, molleja, intestino",
             "mortality": "Alta mortalidad",
@@ -168,14 +184,14 @@
         }
       },
       "feed": {
-        "title": "Alimento",
+        "title": "Feed",
         "fields": {
           "home-mixed": "El alimento se mezcla en la granja",
           "home-grown": "Alimento hecho en la granja",
-          "use-of-corn": "Uso significativo de maíz o subproductos del maíz",
-          "storage-facilities": "Instalaciones y manejo del almacenamiento deficientes (ventilación, limpieza)",
+          "use-of-corn": "Uso significativo de maiz o subproductos del maiz",
+          "storage-facilities": "Instalaciones y gestión de almacenamiento deficientes (ventilación, limpieza)",
           "feed-management": "Los problemas se producen tras un cambio en la gestión de la alimentación",
-          "preservation-problems": "Problemas durante el almacenamiento del grano o alimento (calor, plagas, humedad)"
+          "preservation-problems": "Problemas durante el almacenamiento de los cereales (calor, plagas, humedad)"
         }
       },
       "egg-production": {

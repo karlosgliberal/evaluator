@@ -1,0 +1,209 @@
+{
+  "main": {
+    "view-title": "Algemeen"
+  },
+  "animalSelection": {
+    "view-title": "Selecteer diersoort"
+  },
+  "extra": {
+    "descriptionForm": "Kies de stellingen die van toepassing zijn op uw situatie, wetende dat het voer in overeenstemming is met de ten doel gestelde prestaties:",
+    "resultEmpty": "Volgens de FAO is wereldwijd 25% van de grondstoffen besmet."
+  },
+  "evaluationResult": {
+    "view-title": "Uitslag",
+    "text-result": "Kans op een significant niveau aan mycotoxinen in het rantsoen",
+    "text-result-suffix": "Rantsoen",
+    "email": "Verzend rapport",
+    "micotoxine": "Mycotoxine specialist",
+    "send": "Ingediende rapport",
+    "footerPdf": "Contacteer uw mycotoxinespecialist voor een juiste interpretatie van de uitslag en technische support, die past bij uw situatie.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Dit rapport is verzonden vanuit de Olmix Myco’Evaluator App",
+    "CompartirInforme": "Voer uw emailadres in",
+    "riskLow": "Laag risico",
+    "riskMedium": "Gemiddeld risico",
+    "riskHigh": "Hoog risico",
+    "riskExtreme": "Extreem hoog risico",
+    "personalReport": "Myco’Evaluator Persoonlijk Rapport",
+    "selected": "Geselecteerde stellingen"
+  },
+  "menu": {
+    "welcome": "Welkom",
+    "home": "Hoofdmenu",
+    "about": "Over",
+    "language": "Taal",
+    "selection": "Selecteer diersoort"
+  },
+  "language": {
+    "title": "Kies uw voorkeurstaal",
+    "selector": {
+      "title": "Selecteer taal"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Varkens",
+    "dairy": "Melkvee",
+    "cow": "Melkvee",
+    "poultry": "Pluimvee"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "De veestapel",
+        "fields": {
+          "feed-intake": "Te lage voeropname",
+          "low-milk-production": "Lagere melkproductie dan het rantsoenpotentieel",
+          "body-condition": "Achteruitgang of ontevredenheid over de conditiescore",
+          "coat-condition": "Slechte vachtconditie",
+          "chewing-activity": "Lage herkauwactiviteit",
+          "somatic-cells": "Significante toename van het celgetal of uierontstekingen",
+          "leg-troubles": "Toename van het aantal kreupele koeien en klauwaandoeningen (gezwollen hoeven, dermatitis,…)",
+          "metabolic-troubles": "Toename van inwendige aandoeningen en ziektes (lebmaagverplaatsingen, SARA, leverproblemen, baarmoederontstekingen, dermatitis,…)",
+          "turnovers": "Te hoog vervangingspercentage (hoog % vaarzen)",
+          "feces": "Te dunne, platte mest",
+          "milk-urea": "Stijging van het melkureum gehalte",
+          "weak-calves": "Zwakke kalveren (diarree, onderontwikkeld, afwijkingen aan huid of muil,...)",
+          "fertility-troubles": "Meer vruchtbaarheidsproblemen (baarmoederontsteking, cysten, opblijvende nageboorte,….)",
+          "reproduction-performance": "Slechte reproductie parameters (bronstdetectie, dracht na 1e inseminatie,...)",
+          "troubles-from-raw-materials": "De bovenvermelde problemen zijn gestart na het openen van een nieuwe silo"
+        }
+      },
+      "on-field": {
+        "title": "Het veld",
+        "fields": {
+          "corn-procedence": "Mais wordt geteeld in monocultuur (mais op mais)",
+          "corn-fields": "Er wordt niet geploegd voor zaai",
+          "fusarium": "Fusarium schimmels/aantasting zijn vastgesteld in het veld",
+          "silage-harvest": "Late oogst",
+          "grass-silage-cropped": "Gras geoogst na mais"
+        }
+      },
+      "storage": {
+        "title": "Opslag / Inkuilen",
+        "fields": {
+          "molds": "Aanwezigheid van schimmels (rood, blauw, wit of zwart,…)",
+          "silage-troubles": "Problemen om de silo vast te rijden (hoog DS gehalte, te snel inkuilen)",
+          "warm-silage": "Kuil is warm of nam veel tijd in beslag om af te koelen",
+          "grass-silage": "Voordroog is niet zo zuiver als gewoonlijk (bevuiling)",
+          "silage-front-consuption": "Te traag uitkuilen"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Varkens",
+        "fields": {
+          "sows-status": "Ontevredenheid over de algemene status van de zeugen",
+          "poor-growth": "Ontevredenheid over de conditiescore",
+          "intake": "Te lage voeropname",
+          "skin-color": "Huidskleur van de zeugen is niet goed",
+          "milk-production": "Lage melkproductie",
+          "veterinary-intervention": "Het aantal veeartsbezoeken ligt boven het gemiddelde",
+          "lactation-start": "Problemen in de start van de lactatie",
+          "stillborn-piglets": "Toename van het aantal gemummificeerde/doodgeboren/kleine biggen",
+          "small-piglets-at-birth": "Toename van het aantal te kleine en heterogene biggen",
+          "splay-legs": "Toename van aantal Spreidzit gevallen",
+          "red-vulva": "Rode gezwollen vulva",
+          "neonatal-diarrea": "Diarree in eerste weken na de geboorte en slechte groei van de biggen",
+          "necrosis": "Oor en staartnecrose",
+          "reproduction-troubles": "Vruchtbaarheidsproblemen (baarmoederontsteking, opblijven nageboorte…)",
+          "heat-detection": "Problemen met bronst, teveel herlopers",
+          "weaning-insemination": "Te lang speen-dek/inseminatie interval"
+        }
+      },
+      "feed": {
+        "title": "Voer",
+        "fields": {
+          "home-grown": "Bedrijfseigen voer",
+          "use-of-corn": "Gebruik van CCM",
+          "storage-facilities": "Gebruik van DDGS",
+          "grains-preservation-problems": "Lange tijd tussen reinigingsbeurten van de silo"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Diersoort",
+        "fields": {
+          "hens": "Legkippen",
+          "breeder": "Broedkippen",
+          "broiler": "Vleeskuikens",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Dieren",
+        "fields": {
+          "feed-intake": "Ontoereikend gewicht van het dier",
+          "body-weight": "Ontoereikend diergewicht",
+          "liquid-droppings": "Vloeibare uitwerpselen",
+          "water-consumption": "Hoge water consumptie",
+          "vaccination": "Vaccinatie of therapeutisch falen",
+          "infectious-diseases": "Hoge aanwezigheid van infectieziektes",
+          "dermatitis": "Vaccintherapie necrose, dermatitis",
+          "gizzard": "Ontsteking in oogst, proventriculus, spiermaag, darmen",
+          "mortality": "Hoog sterftecijfer",
+          "liver-damage": "Lever en/of nierschade",
+          "ovaries-size": "Kleine eierstokken",
+          "tibial": "Gevallen van tibia dyschondroplasia",
+          "thymus": "Abnormale ontwikkeling van zwezerik en bursa van Fabricius"
+        },
+        "broiler": {
+          "title": "Dieren",
+          "fields": {
+            "feed-intake": "Verminderde voeropname",
+            "body-weight": "Verlaagd lichaamsgewicht",
+            "fcr": "Lage voederconversie/Malabsorti syndroom",
+            "droppings": "Natte mest",
+            "water-consumption": "Hoge water consumptie",
+            "vaccination": "Slecht aanslaan van vaccinaties",
+            "infectious-diseases": "Verminderde ontwikkeling van de voortplantingsorganen",
+            "mucosal-necrosis": "Afsterven van slijmvliezen en huidontstekingen",
+            "gizzard": "Ontsteking in de crop, spiermaag, kliermaag en darmen",
+            "mortality": "Verhoogde sterfte",
+            "liver-damage": "Lever en/of nierschade",
+            "tibial-dyschondroplasia": "Gevallen van tibiale dyschondroplasie (groeischijf problemen)",
+            "thymus": "Abnormale ontwikkeling van zwezerik en bursa van Fabricius",
+            "sphinganine": "Verhoogd sphinganine : sphingonisine verhouding in het bloed"
+          }
+        }
+      },
+      "feed": {
+        "title": "Voer",
+        "fields": {
+          "home-mixed": "Zelf gemengd voer",
+          "home-grown": "Zelf geteelde voeding",
+          "use-of-corn": "Significant gebruik van graan of bijproducten van graan",
+          "storage-facilities": "Matige opslagmogelijkheden en management (ventilatie, schoonmaken)",
+          "feed-management": "Alle hierboven beschreven problemen hadden een verandering in voedingsmanagement tot gevolg",
+          "preservation-problems": "Problemen bij opslag van korrels of voer (hitte, plagen, vocht)"
+        }
+      },
+      "egg-production": {
+        "title": "Ei productie",
+        "fields": {
+          "egg-production": "Lage productie van eieren",
+          "egg-weight": "Laag eiergewicht",
+          "shell-quality": "Lage kwaliteit eierschaal (verhoogd aantal barsten, zonder schaal, bleke eieren)",
+          "egg-hatchability": "Lage uitbroeding eieren",
+          "progeny": "Lage levensvatbaarheid kuikens"
+        }
+      }
+    }
+  }
+}

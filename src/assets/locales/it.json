@@ -1,0 +1,209 @@
+{
+  "main": {
+    "view-title": "Principale"
+  },
+  "animalSelection": {
+    "view-title": "Selezionare la specie"
+  },
+  "extra": {
+    "descriptionForm": "Scegliere le dichiarazioni che corrispondono alla vostra situazione reale sapendo che l'alimentazione è proporzionata alle performances programmate:",
+    "resultEmpty": "In accordo con dati FAO, il 25% delle materie prime a livello mondiale risultano contaminate."
+  },
+  "evaluationResult": {
+    "view-title": "Risultato",
+    "text-result": "Probabilità di  avere unlivello significativo di micotossinenella dieta",
+    "text-result-suffix": "Dieta",
+    "email": "Mandare il report",
+    "micotoxine": "Specialisti in micotossine",
+    "send": "Report trasmesso",
+    "footerPdf": "Contattare i nostri specialisti in micotossine per un’interpretazione personalizzata e per supporto tecnico, specifico per la vostra situazione",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Questo report è stato inviato da App valutatore di tossine di Olmix",
+    "CompartirInforme": "Inserire le email, separate da una virgola",
+    "riskLow": "Basso rischio",
+    "riskMedium": "Rischio medio",
+    "riskHigh": "Alto rischio",
+    "riskExtreme": "Rischio estremo",
+    "personalReport": "Report personale dal valutatore di tossine",
+    "selected": "Dichiarazioni selezionate"
+  },
+  "menu": {
+    "welcome": "Benvenuto",
+    "home": "Home",
+    "about": "A proposito di",
+    "language": "Linguaggio",
+    "selection": "Selezionare la specie"
+  },
+  "language": {
+    "title": "Scegliere il linguaggio preferito",
+    "selector": {
+      "title": "Selezione linguaggio"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Suini",
+    "dairy": "Vacche",
+    "cow": "Vacche",
+    "poultry": "Acicolo"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "La mandria",
+        "fields": {
+          "feed-intake": "Insufficiente assunzione di alimento",
+          "low-milk-production": "Ridotta produzione di latte rispetto al potenziale dato dalla dieta",
+          "body-condition": "Ridotte o insoddisfacenti condizioni corporee",
+          "coat-condition": "Insoddisfacenti condizioni del mantello",
+          "chewing-activity": "Scarsa attività di ruminazione",
+          "somatic-cells": "Significativo incremento delle cellule somatiche o delle mastiti",
+          "leg-troubles": "Incremento delle laminiti o dei problemi podali (zoccoli e articolazioni gonfi, dermatite..)",
+          "metabolic-troubles": "Incremento dei disturbi metabolici e della presenza di patogeni (dislocazione dell'abomaso, , fegato grasso,metriti, emorragie intestinali…)",
+          "turnovers": "Incremento di turnover (alta % di primipare)",
+          "feces": "Feci troppo soffici e/o liquide",
+          "milk-urea": "Incremento di urea nel latte",
+          "weak-calves": "Vitelli deboli ed in difficoltà (diarrea, crescita stentata, lesioni orali o cutanee …)",
+          "fertility-troubles": "Disordini nella fertilità (metriti, cistiti, ritenzione di placenta ...)",
+          "reproduction-performance": "Basse performance in riproduzione (rilevamento del calore, successo della prima inseminazione…)",
+          "troubles-from-raw-materials": "I problemi sopra elencati sono iniziati con l'apertura di nuovi silos o con l'arrivo di nuove materie prime"
+        }
+      },
+      "on-field": {
+        "title": "Nel campo",
+        "fields": {
+          "corn-procedence": "Mais prodotto in monocoltura in azienda",
+          "corn-fields": "Mais seminato su campi non arati",
+          "fusarium": "Muffe di Fusarium sono presenti in campo",
+          "silage-harvest": "L'insilato è stato raccolto in ritardo",
+          "grass-silage-cropped": "Siloerba è stata prodotta dopo coltura di mais"
+        }
+      },
+      "storage": {
+        "title": "Stoccaggio",
+        "fields": {
+          "molds": "Presenza di muffe (rosse blue, bianche o nere)",
+          "silage-troubles": "Problemi durante la pressatura dell'insilato (alta sostanza secca , velocità di raccolta...)",
+          "warm-silage": "Insilato è caldo o ha impiegato molto tempo per raffreddarsi",
+          "grass-silage": "Foraggi insilati non sono puliti come al solito",
+          "silage-front-consuption": "Il fronte dell'insilato viene utilizzato troppo lentamente"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Suini",
+        "fields": {
+          "sows-status": "Insoddisfacente stato generale delle scrofe",
+          "poor-growth": "Scarsa crescita dei suinetti o dei suini all'ingrasso",
+          "intake": "Insufficiente assunzione di alimenti",
+          "skin-color": "Insoddisfacente colore del mantello",
+          "milk-production": "Scarsa produzione di latte da parte delle scrofe",
+          "veterinary-intervention": "Alta frequenza di interventi veterinari",
+          "lactation-start": "Problemi alla partenza della lattazione",
+          "stillborn-piglets": "Incremento dei feti mummificati o dei suinetti nati morti( scrasa prolifictà)",
+          "small-piglets-at-birth": "Incremento dell'eterogeneità e dei sottopeso alla nascita",
+          "splay-legs": "Incremento delle divaricazioni delle zampe",
+          "red-vulva": "Gonfiore ed arrossamento della vulva",
+          "neonatal-diarrea": "Diarrea neonatale e/o problemi alla partenza dei suinetti",
+          "necrosis": "Necrosi alla coda o all'orecchio e / o nervosismo",
+          "reproduction-troubles": "Aumento problemi della riproduzione (metriti, ritenzione di placenta ...)",
+          "heat-detection": "Aumento dei problemi nella rivelazione dei calori o alto tasso di ritorno",
+          "weaning-insemination": "Lungo intervallo tra svezzamento ed inseminazione"
+        }
+      },
+      "feed": {
+        "title": "Alimenti",
+        "fields": {
+          "home-grown": "Alimeni prodotti in azienda",
+          "use-of-corn": "Uso abbondante di mais e dei suoi sottoprodotti",
+          "storage-facilities": "Scarse strutture per lo stoccaggio e scarsa gestione (ventilazine, pulizia)",
+          "grains-preservation-problems": "Problemi durante la conservazione dei cereali o del mangime( alta temperatura, insetti umidità)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Tipo di animale",
+        "fields": {
+          "hens": "Galline ovaiole",
+          "breeder": "Breeders",
+          "broiler": "Broiler",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Gli Animali",
+        "fields": {
+          "feed-intake": "Insufficiente assunzione di alimento",
+          "body-weight": "Riduzione del peso corporeo",
+          "liquid-droppings": "Escrementi liquidi",
+          "water-consumption": "Alto consumo di acqua",
+          "vaccination": "Vaccinazione o trattamento terapeutico fallimentare",
+          "infectious-diseases": "Aumento della presenza di fenomeni infettivi",
+          "dermatitis": "Necrosi della mucosa, dermatiti",
+          "gizzard": "Inflammazioni del gozzo, proventricolo, ventriglio, intestino",
+          "mortality": "Alta mortalità",
+          "liver-damage": "Danni al fegato e/o ai reni",
+          "ovaries-size": "Riduzione delle dimensioni ovariche",
+          "tibial": "Casi di discondropatia tibiale",
+          "thymus": "Anormale sviluppo del Timo e della Borsa di Fabrizio"
+        },
+        "broiler": {
+          "title": "Gli Animali",
+          "fields": {
+            "feed-intake": "Riduzione dell’assunzione di alimenti",
+            "body-weight": "Riduzione del peso corporeo",
+            "fcr": "Alto FCR/sindrome di malassorbimento/arruffamento delle piume",
+            "droppings": "Escrementi bagnati",
+            "water-consumption": "Increment del consume di acqua",
+            "vaccination": "Vaccinazione o trarttamento terapeutico fallimentare",
+            "infectious-diseases": "Alta incidenza di malattie infettive",
+            "mucosal-necrosis": "Necrosi delle mucose, dermatiti",
+            "gizzard": "Infiammazione in gozzo, proventricolo, ventriglio, intestino",
+            "mortality": "Incremento della mortalità",
+            "liver-damage": "Danni renali e/o al fegato",
+            "tibial-dyschondroplasia": "Casi di discondropatia tibiale",
+            "thymus": "Anormale sviluppo del timo e della borsa di Fabrizio",
+            "sphinganine": "Aumento rapporto tra sfinganina: sfingonisina nel sangue"
+          }
+        }
+      },
+      "feed": {
+        "title": "Feed",
+        "fields": {
+          "home-mixed": "Alimenti preparati in azienda",
+          "home-grown": "Alimenti prodotti in azienda",
+          "use-of-corn": "Significativo utilizzo di mais e suoi sottoprodotti",
+          "storage-facilities": "Problemi durante la conservazione e la gestione dei cerali ( ventilazione, pulizia...)",
+          "feed-management": "Tutti i problemi sopra descritti si sono manifestati dopo un cambiamento nella gestione diell'alimentazione",
+          "preservation-problems": "Problemi durante la conservazione dei cereali o dei mangimi (calore, parassiti, umidità)"
+        }
+      },
+      "egg-production": {
+        "title": "Eggs production",
+        "fields": {
+          "egg-production": "Iduzione della produzione di uova",
+          "egg-weight": "Riduzione del peso dell'uovo",
+          "shell-quality": "Riduzione della qualità del guscio (incremento delle rotture guscio fragile, uova scolorite)",
+          "egg-hatchability": "Bassa sciudibilità delle uova",
+          "progeny": "Ridotta vitalità dei pulcini"
+        }
+      }
+    }
+  }
+}

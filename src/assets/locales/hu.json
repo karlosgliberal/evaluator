@@ -1,0 +1,209 @@
+{
+  "main": {
+    "view-title": "Főoldal"
+  },
+  "animalSelection": {
+    "view-title": "Állatfaj kiválasztása"
+  },
+  "extra": {
+    "descriptionForm": "Válassza ki az állítások közül azokat, amelyekről úgy gondolja, hogy a takarmány minősége miatt vannak jelen",
+    "resultEmpty": "A FAO vizsgálatai szerint, az alapanyagok 25%-a mikotoxinnal szennyezett."
+  },
+  "evaluationResult": {
+    "view-title": "Eredmény",
+    "text-result": "A takarmány jelentős mennyiségben tartalmaz mikotoxint",
+    "text-result-suffix": "Takarmány",
+    "email": "Jelentés elküldése",
+    "micotoxine": "Mikotoxin szakértők",
+    "send": "A jelentést benyújtotta",
+    "footerPdf": "Lépjen kapcsolatba mikotoxin szakértőinkkel, hogy személyre szabott tanácsadást kaphasson.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Ez a jelentés az Olmix Myco'Evaluator App-on keresztül érkezett",
+    "CompartirInforme": "Írja be az e-mail címe(ke)t, vesszővel elválasztva",
+    "riskLow": "Alacsony kockázat",
+    "riskMedium": "Közepes kockázat",
+    "riskHigh": "Magas kockázat",
+    "riskExtreme": "Extrém kockázat"
+    "personalReport": "Myco’Evaluator Személyes Jelentés",
+    "selected": "Kiválasztott állítások:"
+  },
+  "menu": {
+    "welcome": "Üdvözöljük",
+    "home": "Kezdőlap",
+    "about": "Rólunk",
+    "language": "Nyelv",
+    "selection": "Válassza ki az állatfajt"
+  },
+  "language": {
+    "title": "Válassza ki a kívánt nyelvet",
+    "selector": {
+      "title": "Nyelv kiválasztása"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Sertés",
+    "dairy": "Szarvasmarha",
+    "cow": "Szarvasmarha",
+    "poultry": "Szarvasmarha"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "Az állatok",
+        "fields": {
+          "feed-intake": "Nem megfelelő mennyiségű a napi tömegtakarmány-felvétel",
+          "low-milk-production": "Alacsonyabb tejtermelés, mint ami elvárható lenne a napi adag alapján",
+          "body-condition": "Romló testkondíciós indexek",
+          "coat-condition": "Fénytelen szőrzet",
+          "chewing-activity": "Alacsonyabb kérődzési aktivitás",
+          "somatic-cells": "Jelentősen megnövekedett szomatikus sejtszám és tőgygyulladás",
+          "leg-troubles": "Növekvő számú lábvég problémák, sántaság, gyulladt paták, bőrbetegségek",
+          "metabolic-troubles": "Növekvő százalékban jelentkező metabolikus és patológiás esetek (oltógyomor áthelyeződés, szub-akut acidózis, zsírmáj, méhgyulladás, bőrbetegségek)",
+          "turnovers": "Emelkedik az első laktációs tehenek száma az állományban",
+          "feces": "Túl lágy/folyékony bélsár",
+          "milk-urea": "Megnövekedett karbamidszint a tejben",
+          "weak-calves": "Növekedésben visszamaradt, hasmenéses borjak gyakran bőrléziókkal társulva",
+          "fertility-troubles": "Termékenyítési problémák (méhgyulladás, policisztás petefészkek, visszamaradó magzatburok...)",
+          "reproduction-performance": "Gyenge reprodukciós paraméterek, ivarzók megtalálásának problémája",
+          "troubles-from-raw-materials": "A felsorolt problémák valamelyikének észlelése, amikor új silót vagy nyersanyagot nyitnak meg"
+        }
+      },
+      "on-field": {
+        "title": "A termőföldön",
+        "fields": {
+          "corn-procedence": "A kukoricatermesztés monokultúrás rendszerben történik",
+          "corn-fields": "A kukoricatáblák nincsenek szántva",
+          "fusarium": "Fuzárium fertőzésre utaló jelek a kukoricacsöveken",
+          "silage-harvest": "Későn elkészített szilázs",
+          "grass-silage-cropped": "A kukorica szilázs után rakták be a fűszilázst (szenázst)"
+        }
+      },
+      "storage": {
+        "title": "Tároláskor",
+        "fields": {
+          "molds": "Szemmel látható penésztelepek (vörös, kék, fehér vagy fekete penésztelepek)",
+          "silage-troubles": "Nem megfelelő tömörségű szilázs (pl: túlzottan magas szárazanyag-tartalom)",
+          "warm-silage": "Túlzottan meleg vagy hideg siló",
+          "grass-silage": "Nem egységesen tiszta a fűszilázs",
+          "silage-front-consuption": "A megkezdett szilázst az állatok lassabban fogyasztják el"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Az állatok",
+        "fields": {
+          "sows-status": "A kocák elmaradnak az általánosan elvárható kondicionális állapottól",
+          "poor-growth": "A malacok vagy a hízok vártnál alacsonyabb növekedése",
+          "intake": "Nem elegendő napi takarmányfelvétel",
+          "skin-color": "Nem egészséges szín a kocáknál",
+          "milk-production": "A kocák nem megfelelő mennyiségű tejtermelése",
+          "veterinary-intervention": "Nagyon sok állatorvosi beavatkozást igénylő probléma",
+          "lactation-start": "Problémák a szoptatási időszak kezdetekor",
+          "stillborn-piglets": "Növekvő mumifikálódott, koraszülött, alacsony testtömegű malacok száma az ellés során",
+          "small-piglets-at-birth": "Almon belül növekvő, kis testtömegű és szétnőtt malacszám arány",
+          "splay-legs": "Megnövekedett lábszétcsúszási problémák",
+          "red-vulva": "Duzzadt, vörös péra napos korban",
+          "neonatal-diarrea": "Gyakoribb napos kori hasmenés, kiszáradt malacok, elmaradt napi testtömeg-gyarapodás",
+          "necrosis": "Gyakoribb fül- és faroknekrózis, csecsbimbóelhalás napos korban",
+          "reproduction-troubles": "Szaporodásbiológiai problémák (méhgyulladás, placenta-visszamaradás…)",
+          "heat-detection": "Túl magas a visszaivarzók aránya, nem egyértelmű ivarzási jelek",
+          "weaning-insemination": "Túl sok nap a választás és a sikeres inszeminálás között"
+        }
+      },
+      "feed": {
+        "title": "Takarmány",
+        "fields": {
+          "home-grown": "Rendszeresen vásárol gabonát, amelynek termesztési technológiája nem ismert Ön előtt?",
+          "use-of-corn": "Kukorica- vagy kukorica alapú termékek szignifikáns használata",
+          "storage-facilities": "Gyenge tárolási körülmények (ventilláció, takarítás)",
+          "grains-preservation-problems": "Problémák a gabona vagy a takarmány tárolása során (magas hő és/vagy páratartalom)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Állomány típusa",
+        "fields": {
+          "hens": "Tojótyúk",
+          "breeder": "Szülőpár",
+          "broiler": "Brojler",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Az állatok",
+        "fields": {
+          "feed-intake": "Nem megfelelő mennyiségű a napi takarmányfelvétel",
+          "body-weight": "Alacsonyabb testtömeg-gyarapodás, mint ami elvárható lenne a napi adag alapján",
+          "liquid-droppings": "Folyékony bélsár",
+          "water-consumption": "Megnövekedett vízfelvétel",
+          "vaccination": "Csökkent fogékonyság a vakcinázásra és egyéb gyógykezelésekre",
+          "infectious-diseases": "Fertőző betegségek egyre gyakoribb előfordulása",
+          "dermatitis": "Bél-nyálkahártya elhalás, bőrgyulladás (dermatitis)",
+          "gizzard": "Bélrendszeri gyulladások egyre gyakoribb előfordulása",
+          "mortality": "Növekvő elhullás",
+          "liver-damage": "Máj és/vagy vesekárosodás",
+          "ovaries-size": "A petefészek mérete nem megfelelő",
+          "tibial": "Lábproblémák megnövekedett előfordulása (dyschondroplasia)",
+          "thymus": "A csecsemőmirigy és a fabricii szerv rendellenes fejlődése"
+        },
+        "broiler": {
+          "title": "Animals",
+          "fields": {
+            "feed-intake": "Nem megfelelő mennyiségű napi takarmányfelvétel",
+            "body-weight": "Alacsonyabb növekedés, mint ami elvárható lenne a napi adag alapján",
+            "fcr": "Magas fajlag/tápanyag-felszívódási problémák/helikopter betegség (fertőző satnyaság)",
+            "droppings": "Híg bélsár",
+            "water-consumption": "Megnövekedett vízfogyasztás",
+            "vaccination": "Csökkent fogékonyság a vakcinázásra és egyéb gyógykezelésekre",
+            "infectious-diseases": "Fertőző betegségek megnövekedett előfordulása",
+            "mucosal-necrosis": "Bél-nyálkahártya elhalás, bőrgyulladás (dermatitis)",
+            "gizzard": "Bélrendszeri gyulladások egyre gyakoribb előfordulása",
+            "mortality": "Megnövekedett elhullás",
+            "liver-damage": "Máj és/vagy vesekárosodás",
+            "tibial-dyschondroplasia": "Lábproblémák megnövekedett előfordulása (dyschondroplasia)",
+            "thymus": "A csecsemőmirigy és a fabricii szerv rendellenes fejlődése",
+            "sphinganine": "Megnövekedett szfingozin szint a vérben"
+          }
+        }
+      },
+      "feed": {
+        "title": "Takarmány",
+        "fields": {
+          "home-mixed": "Rendszeresen vásárol gabonát, amelynek termesztési technológiája nem ismert Ön előtt?",
+          "home-grown": "Rendszeresen vásárol gabonát, amelynek termesztési technológiája nem ismert Ön előtt?",
+          "use-of-corn": "Kukorica vagy kukorica alapú termékek szignifikáns használata",
+          "storage-facilities": "Gyenge tárolási körülmények (ventilláció, takarítás)",
+          "feed-management": "A felsorolt problémák valamelyikének észlelése takarmányváltáskor",
+          "preservation-problems": "Nem megfelelő a gabona és a takarmány tárolása (magas hő és/vagy páratartalom)"
+        }
+      },
+      "egg-production": {
+        "title": "Tojás termelés",
+        "fields": {
+          "egg-production": "Csökkent tojástermelés",
+          "egg-weight": "Csökkent tojástömeg",
+          "shell-quality": "Gyengülő tojáshéj minőség (egyre több törött, puha héjú tojás)",
+          "egg-hatchability": "Gyenge tojás keltethetőség",
+          "progeny": "Gyenge, életképtelen utódok"
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,10 @@
   "animalSelection": {
     "view-title": "Sélectionner l'espèce"
   },
+  "extra": {
+    "descriptionForm": "Choisissez les critères qui correspondent à votre situation, sachant que l’alimentation est en accord avec les performances ciblées :",
+    "resultEmpty": "Selon la FAO, 25 % des matières premières dans le monde sont contaminés."
+  },
   "evaluationResult": {
     "view-title": "Résultat",
     "text-result": "Probabilité d'avoir une présence significative de mycotoxines dans l'aliment",
@@ -19,7 +23,9 @@
     "riskLow": "Risque limité",
     "riskMedium": "Risque moyen",
     "riskHigh": "Risque important",
-    "riskExtreme": "Risque extrême"
+    "riskExtreme": "Risque extrême",
+    "personalReport": "Rapport personnel Myco’Evaluator",
+    "selected": "Déclarations choisies:"
   },
   "menu": {
     "welcome": "Bienvenue",
@@ -35,7 +41,17 @@
     },
     "es": "Español",
     "en": "English",
-    "fr": "Français"
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
   },
   "animal":{
     "swine": "Porcs",

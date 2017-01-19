@@ -5,6 +5,10 @@
   "animalSelection": {
     "view-title": "Species selection"
   },
+  "extra": {
+    "descriptionForm": "Choose the statements that match your situation knowing that the feed is in accordance with targeted performance:",
+    "resultEmpty": "According to FAO, 25% of raw materials worldwide are contaminated."
+  },
   "evaluationResult": {
     "view-title": "Result",
     "text-result": "Probability to have a significant level of mycotoxins in diet",
@@ -19,7 +23,9 @@
     "riskLow": "Low risk",
     "riskMedium": "Medium risk",
     "riskHigh": "High risk",
-    "riskExtreme": "Extreme risk"
+    "riskExtreme": "Extreme risk",
+    "personalReport": "Myco’Evaluatvior Personal Report",
+    "selected": "Selected statements:"
   },
   "menu": {
     "welcome": "Welcome",
@@ -35,7 +41,17 @@
     },
     "es": "Español",
     "en": "English",
-    "fr": "Français"
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
   },
   "animal":{
     "swine": "Swine",
@@ -93,7 +109,7 @@
         "title": "The animal",
         "fields": {
           "sows-status": "Unsatisfying general status of the sows",
-          "poor-growth": "Poor growth of piglets or fattening pigs ",
+          "poor-growth": "Poor growth of piglets or fattening pigs",
           "intake": "Insufficient feed intake",
           "skin-color": "Unsatisfying skin color",
           "milk-production": "Low sow's milk production",
@@ -155,8 +171,8 @@
             "fcr": "Higher FCR/Maladsortion symdrom/Feather in helicopter",
             "droppings": "Wet droppings",
             "water-consumption": "Increased water consumption",
-            "infectious-diseases": "Increased occurrence of infectious diseases",
             "vaccination": "Vaccination or therapeutic failure",
+            "infectious-diseases": "Increased occurrence of infectious diseases",
             "mucosal-necrosis": "Mucosal necrosis, dermatitis",
             "gizzard": "Inflammation in crop, proventriculus, gizzard, intestine",
             "mortality": "Increased mortality",

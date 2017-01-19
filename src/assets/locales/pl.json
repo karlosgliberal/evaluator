@@ -1,0 +1,209 @@
+{
+  "main": {
+    "view-title": "Główny"
+  },
+  "animalSelection": {
+    "view-title": "Wybór gatunku"
+  },
+  "extra": {
+    "descriptionForm": "Zaznacz twierdzenia, które odpowiadają twojej sytuacji wiedząc, że pasza jest dostosowana do zakładanych wyników produkcyjnych:",
+    "resultEmpty": "Według FAO 25% surowców na całym świecie jest zanieczyszczonych mikotoksynami"
+  },
+  "evaluationResult": {
+    "view-title": "Wynik",
+    "text-result": "Prawdopodobieństwo posiadania znaczącego poziomu mikotoksyn w dawce pokarmowej",
+    "text-result-suffix": "Dawka pokarmowa",
+    "email": "Wyślij raport",
+    "micotoxine": "Specjalista od mikotoksyn",
+    "send": "Raport wysłany",
+    "footerPdf": "Skontaktuj się z naszym specjalistą od mikotoksyn w celu indywidualnej interpretacji i wsparcia technicznego, dostosowanego do twojej sytuacji.",
+    "footerEmail": "animalcare.ts@olmix.com",
+    "bodyText": "Ten raport był wysłany z aplikacji Olmix Myco’Evaluator",
+    "CompartirInforme": "Wpisz adresy email rozdzielając je przecinkami",
+    "riskLow": "Niskie ryzyko",
+    "riskMedium": "Średnie ryzyko",
+    "riskHigh": "Wysokie ryzyko",
+    "riskExtreme": "Ekstremalnie wysokie ryzyko",
+    "personalReport": "Osobisty raport Myco’Evaluator",
+    "selected": "Wybrane twierdzenia:"
+  },
+  "menu": {
+    "welcome": "Witamy",
+    "home": "Strona główna",
+    "about": "About",
+    "language": "Język",
+    "selection": "Wybór gatunku"
+  },
+  "language": {
+    "title": "Wybierz preferowany język",
+    "selector": {
+      "title": "Wybór języka"
+    },
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "hu": "Magyar",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "rs": "Русский",
+    "tk": "Türkçe",
+    "vn": "Tiếng Việt",
+    "zh": "简体中文"
+  },
+  "animal":{
+    "swine": "Świnie",
+    "dairy": "Krowy mleczne",
+    "cow": "Krowy mleczne",
+    "poultry": "Drób"
+  },
+  "forms": {
+    "evaluate": "Evaluate",
+    "view-title": "Form",
+    "cow": {
+      "herd": {
+        "title": "Stado",
+        "fields": {
+          "feed-intake": "Niedostateczne pobranie paszy",
+          "low-milk-production": "Niższa, niż wynikałoby z potencjału dawki pokarmowej, produkcja mleka",
+          "body-condition": "Pogarszająca się, lub niesatysfakcjonująca kondycja ciała",
+          "coat-condition": "Niesatysfakcjąnująca kondycja okrywy włosowej",
+          "chewing-activity": "Niższa aktywność przeżuwania",
+          "somatic-cells": "Znaczny wzrost komórek somatycznych i mastitis",
+          "leg-troubles": "Wzrost przypadków kulawizn i problemów z nogami (opuchnięte racice, stawy, dermatitis…)",
+          "metabolic-troubles": "Wzrost schorzeń metabolicznych i patologii (przemieszczenie trawieńca, SARA, stłuszczona wątroba, krwotok jelita czczego…)",
+          "turnovers": "Wzrost brakowania (wysoki % jałowic w stadzie)",
+          "feces": "Zbyt miękkie/luźne odchody",
+          "milk-urea": "Wzrost mocznika w mleku",
+          "weak-calves": "Słabe cielęta (biegunka, skarłowaciały wzrost, doustne zmiany patologiczne i w obrębie skóry…)",
+          "fertility-troubles": "Problemy płodnościowe (metritis, cysty, zatrzymanie łożyska...)",
+          "reproduction-performance": "Niższa reprodukcja (wykrywanie ruji, skuteczność pierwszej inseminacji…)",
+          "troubles-from-raw-materials": "Powyższe problemy zaczęły się wraz z zastosowaniem nowej paszy objętościowej lub materiału paszowego"
+        }
+      },
+      "on-field": {
+        "title": "Na polu",
+        "fields": {
+          "corn-procedence": "Kukurydza jest produkowana cały czs na tym samym polu",
+          "corn-fields": "Pole po kukurydzy nie jest zaorane",
+          "fusarium": "Choroby grzybicze/ Fusariozy były zauważone na polu",
+          "silage-harvest": "Kiszonka była sporządzona późno",
+          "grass-silage-cropped": "Kiszonka z traw była sporządzana po kukurydzy"
+        }
+      },
+      "storage": {
+        "title": "Przechowywanie",
+        "fields": {
+          "molds": "Obecne są grzyby (czerwone, niebieskie, białe lub czarne…)",
+          "silage-troubles": "Problemy z ubiciem kiszonki (wysoka SM, szybkość zbierania)",
+          "warm-silage": "Kiszonka jest ciepła, lub dużo czasu potrzebowała na obiżenie temperatury",
+          "grass-silage": "Kiszonka z traw nie jest tak czysta jak zazwyczaj",
+          "silage-front-consuption": "Wybieranie kiszonki jest zbyt wolne"
+        }
+      }
+    },
+    "swine": {
+      "animal": {
+        "title": "Zwięrzę",
+        "fields": {
+          "sows-status": "Niesatysfakcjonujący ogólny status loch",
+          "poor-growth": "Kiepski wzrost prosiąt lub tuczników",
+          "intake": "Niedostateczne pobranie paszy",
+          "skin-color": "Niesatysfakcjonujący kolor skóry",
+          "milk-production": "Niską produkcję mleka u loch",
+          "veterinary-intervention": "Wysoką częstotliwość interwencji weterynaryjnych",
+          "lactation-start": "Problemy w rozpoczęciu latkacji",
+          "stillborn-piglets": "Zwiększoną liczbę mumfikacji i poronień (niska proliferacja)",
+          "small-piglets-at-birth": "Większe niewyrównanie i liczbę małych prosiąt w miocie przy urodzeniu",
+          "splay-legs": "Wzrost liczby rozkroczności",
+          "red-vulva": "Opóchnięty czerwony srom",
+          "neonatal-diarrea": "Biegunkę noworodkową/problemy na samym początku rozwoju prosiąt",
+          "necrosis": "Martiwce uszu i ogona i/lub nerwowość",
+          "reproduction-troubles": "Zwiększone problemy reprodukcyjne (metritis, zatrzymanie łożyska...)",
+          "heat-detection": "Problemy w wykryciu ruji lub dużą liczbę powtórek",
+          "weaning-insemination": "Długi okres od odsadzenia do inseminacji"
+        }
+      },
+      "feed": {
+        "title": "Pasza",
+        "fields": {
+          "home-grown": "Pasze robione we własnym zakresie",
+          "use-of-corn": "Znaczne użycie kukurydzy lub produktów ubocznych z jej przetworenia",
+          "storage-facilities": "Kiepskie magazyny lub sposoby przechowywania (wentylacja, czyszczenie)",
+          "grains-preservation-problems": "Problemy podczas przechowywania ziarna lub paszy (ciepło, szkodniki, wilgotność)"
+        }
+      }
+    },
+    "poultry": {
+      "selector": {
+        "title": "Rodzaj zwierząt",
+        "fields": {
+          "hens": "Kury nioski",
+          "breeder": "Kury stada rodzicielskiego/hodowlane",
+          "broiler": "Brojler",
+          "noPoultry": " "
+        }
+      },
+      "animals": {
+        "title": "Zwierzęta",
+        "fields": {
+          "feed-intake": "Niedostateczne pobranie paszy",
+          "body-weight": "Niedostateczną masę ciała",
+          "liquid-droppings": "Mokre odchody",
+          "water-consumption": "Wysokie spożycie wody",
+          "vaccination": "Niepowodzenia szczepień lub leczenia",
+          "infectious-diseases": "Wysoki wskaźnik chorób zakaźnych",
+          "dermatitis": "Martwice śluzówki, zapalenie skóry (dermatitis)",
+          "gizzard": "Stan zapalny wola, żołądka gruczołowego, mięśniowego, jelita",
+          "mortality": "Wysoką śmiertelność",
+          "liver-damage": "Uszkodzenia wątroby i/lub nerek",
+          "ovaries-size": "Małe jajniki",
+          "tibial": "Przypadki dyschondroplazjii kości piszczelowej",
+          "thymus": "Nienormalny rozój grasicy i bursy Fabrycjusza"
+        },
+        "broiler": {
+          "title": "Zwierzęta",
+          "fields": {
+            "feed-intake": "Niższe pobranie paszy",
+            "body-weight": "Niższą masę ciała",
+            "fcr": "Wyższy FCR/syndrom niedożywienia/pióra w powietrzu",
+            "droppings": "Mokre odchody",
+            "water-consumption": "Zwiększone pobranie wody",
+            "vaccination": "Niepowodzenia szczepień lub leczenia",
+            "infectious-diseases": "Zwiększone występowanie chorób zakaźnych",
+            "mucosal-necrosis": "Martwice śluzówki, zapalenie skóry (dermatitis)",
+            "gizzard": "Stan zapalny wola, żołądka gruczołowego, żołądka mięśniowego, jelita",
+            "mortality": "Zwiększoną śmiertelność",
+            "liver-damage": "Uszkodzenia wątroby i/lub nerek",
+            "tibial-dyschondroplasia": "Nienormalny rozwój grasicy i bursy Fabrycjusza",
+            "thymus": "Abnormal development of thymus and bursa of Fabricius",
+            "sphinganine": "Wyższy poziom sfingozyny: stosunek krwi do sfingozyny"
+          }
+        }
+      },
+      "feed": {
+        "title": "Pasza",
+        "fields": {
+          "home-mixed": "Pasze robione we własnym zakresie",
+          "home-grown": "Pasze robione we własnym zakresie",
+          "use-of-corn": "Znaczne użycie kukurydzy lub produktów ubocznych z jej przetworzenia",
+          "storage-facilities": "Kiepskie magazyny lub sposoby przechowywania (wentylacja, czyszczenie)",
+          "feed-management": "Wszystko powyżej opisuje problemy wynikające ze zmiany w sposobie żywienia",
+          "preservation-problems": "Problemy w trakcie przechowywania ziarna lub paszy (ciepło, szkodniki, wilgotność)"
+        }
+      },
+      "egg-production": {
+        "title": "Produkcja jaj",
+        "fields": {
+          "egg-production": "Niska produkcja jaj",
+          "egg-weight": "Niska masa jaj",
+          "shell-quality": "Niska jakość skorupy jaj (zwiększone stłuczki, jaja bez skorópki, blade jaj)",
+          "egg-hatchability": "Niska wylęgowość jaj",
+          "progeny": "Niska żywotność potomstwa"
+        }
+      }
+    }
+  }
+}
