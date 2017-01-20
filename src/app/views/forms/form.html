@@ -12,6 +12,11 @@
         </div>
     </ion-nav-title>
     <ion-content>
+        <div class="container-wrapper intro-form">
+            <p>
+                {{'extra.descriptionForm' | translate}}
+            </p>
+        </div>
       <div class="container-wrapper">
         <h4 style="text-align: center;" ng-if="form.selectorViewModel.selector == 'default'">{{'animal.' + form.$stateParams.animal | translate}}</h4>
         <form>
