@@ -13,6 +13,9 @@ export default class EvaluationResultController {
     });
     this.viewModel = {};
     this.resultPercentage = this.$stateParams.result.porcentaje;
+    if (this.resultPercentage === 25) {
+      this.resultEmpty = true;
+    }
     this.resultText = this.$stateParams.result.resultTexto;
     this.resultSubspecie = this.$stateParams.result.subSpecie;
     this.animales = this.$stateParams.animal;

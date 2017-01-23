@@ -26,6 +26,11 @@
             <div class="result-border" style="width: {{evaluationResult.resultPercentage}}%; background-color: #76405D;"></div>
           </div>
           <p class="result-text center">{{evaluationResult.resultText}}</p>
+          <div ng-if="evaluationResult.resultEmpty" class="container-wrapper intro-form">
+            <p>
+              {{'extra.resultEmpty' | translate}}
+            </p>
+          </div>
         </div>
         <br/>
         <br/>
