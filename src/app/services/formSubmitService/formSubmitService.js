@@ -27,6 +27,8 @@ export default class formSubmitService {
     var footerEmail = this.$translate.instant('evaluationResult.footerEmail');
     var animalTrans = this.$translate.instant('animal.' + animal);
     var bodyText = this.$translate.instant('evaluationResult.bodyText');
+    var personalReport = this.$translate.instant('evaluationResult.personalReport');
+    var selected = this.$translate.instant('evaluationResult.selected');
 
     console.log(subSpecieText);
     if (subSpecie !== 'noPoultry'){
@@ -42,7 +44,9 @@ export default class formSubmitService {
       {datos: data},
       {footerPdf: footerPdf},
       {footerEmail: footerEmail},
-      {bodyText: bodyText}
+      {bodyText: bodyText},
+      {personalReport: personalReport},
+      {selected: selected}
     );
     return result;
   }
