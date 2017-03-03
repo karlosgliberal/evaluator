@@ -50,6 +50,14 @@ $dark: #263238;
 $positive: #2196F3;
 $brand-color:#76405D;
 
+
+.white {
+  color: #fff !important;
+}
+h4 {
+  margin-top: 8px !important;
+}
+
 //genericos
 .row{
   padding: 0!important;
@@ -71,16 +79,16 @@ $brand-color:#76405D;
 
   &.bar-solid{
     border-bottom:3px solid $brand-color;
-    background: white;
-
+    background: #76405d;
   }
 
   .title{
-    color: $brand-color!important;
+    color: #ffffff!important;
+    //color: $brand-color!important;
   }
 
   .button{
-    color: black!important;
+    color: white!important;
   }
 
   // &.bar-gradient {
