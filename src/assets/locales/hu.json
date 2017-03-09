@@ -23,7 +23,7 @@
     "riskLow": "Alacsony kockázat",
     "riskMedium": "Közepes kockázat",
     "riskHigh": "Magas kockázat",
-    "riskExtreme": "Extrém kockázat"
+    "riskExtreme": "Extrém kockázat",
     "personalReport": "Myco’Evaluator Személyes Jelentés",
     "selected": "Kiválasztott állítások:"
   },
@@ -55,9 +55,9 @@
   },
   "animal":{
     "swine": "Sertés",
-    "dairy": "Szarvasmarha",
-    "cow": "Szarvasmarha",
-    "poultry": "Szarvasmarha"
+    "dairy": "Tejelő tehén",
+    "cow": "Tejelő tehén",
+    "poultry": "Baromfi"
   },
   "forms": {
     "evaluate": "Evaluate",

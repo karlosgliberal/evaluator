@@ -15,7 +15,19 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
         suffix: '.json'
       })
        .registerAvailableLanguageKeys(['br', 'de', 'en', 'es', 'fr', 'hu', 'it', 'nl', 'pl', 'ru', 'tr', 'vn', 'zh'], {
-         br: 'br', de: 'de', en: 'en', es: 'es', fr: 'fr', hu: 'hu', it: 'it', nl: 'nl', pl: 'pl', ru: 'ru', tr: 'tr', vn: 'vn', zh: 'zh'
+         br: 'br',
+         de: 'de',
+         en: 'en',
+         es: 'es',
+         fr: 'fr',
+         hu: 'hu',
+         it: 'it',
+         nl: 'nl',
+         pl: 'pl',
+         ru: 'ru',
+         tr: 'tr',
+         vn: 'vn',
+         zh: 'zh'
        })
       .preferredLanguage('en')
       .fallbackLanguage('en')
