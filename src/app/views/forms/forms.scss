@@ -36,6 +36,15 @@ button.submit-form {
     }
 }
 
+@media (max-width : 768px) {
+  .item{
+    .item-content {
+      font-size: 14px;
+      white-space: normal;
+    }
+  }
+}
+
 .intro-form  p {
   font-size: 16px;
   padding-top: 20px;

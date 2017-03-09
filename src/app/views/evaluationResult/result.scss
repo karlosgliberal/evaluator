@@ -110,7 +110,7 @@ button:hover, button:active {
 .result-container {
 
   padding: 0 220px;
-  @media (max-width : 768px) {
+  @media (max-width : 943px) {
     padding: 0 0px;
   }
 }
@@ -118,7 +118,7 @@ button:hover, button:active {
 
 .result-send {
   padding: 0 220px;
-  @media (max-width : 768px)  {
+  @media (max-width : 943px)  {
     padding: 0;
   }
 }
@@ -165,4 +165,3 @@ button:hover, button:active {
   width: 100%;
   border: 1.5px solid #cccccc;
 }
-

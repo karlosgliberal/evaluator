@@ -18,7 +18,7 @@ export default class AppController {
     if (language) {
       this.goToAnimalSelection();
     } else {
-      this.goToLanguageSelection();
+      this.goToLanguageSelection(language);
     }
   }
 

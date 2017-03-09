@@ -14,6 +14,15 @@ export default class AnimalSelectionController {
     this.animals = this.availableAnimals();
     this.dimensionHeight = this.calculateDimensionHeight() + 5;
     this.logoIcon = './assets/images/logo-cabecera.png';
+
+    var userLanguage = this.localStorageManager.getDataFor('language');
+
+    if (userLanguage) {
+      userLanguage = userLanguage.replace(/(^\")|("$)/gi, '');
+      this.$translate.use(userLanguage);
+      this.$translate.refresh(userLanguage);
+    }
+
   }
 
   calculateDimensionHeight(gesture) {
