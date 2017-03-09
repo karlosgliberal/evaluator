@@ -22,6 +22,7 @@ export default class formController {
 
   onSelectorChange() {
     this.viewModel = {};
+    console.log(this.selectorViewModel.selector);
     this.fields = this.formService.changeFormFieldsFor(this.selectorViewModel.selector);
     this.subSpecie = this.selectorViewModel.selector;
   }

@@ -11,7 +11,7 @@
         </div>
     </ion-nav-title>
     <ion-content>
-        <div class="container-wrapper intro-form">
+        <div class="container-wrapper intro-form" ng-if="form.selectorViewModel.selector !== 'default'">
             <p>
                 {{'extra.descriptionForm' | translate}}
             </p>
@@ -24,7 +24,7 @@
         </form>
         <form ng-submit="form.onSubmit()" novalidate>
             <formly-form form="form.form2" model="form.viewModel" fields="form.fields">
-                <div ng-if="form.selectorViewModel.selector != 'default'">
+                <div ng-if="form.selectorViewModel.selector !== 'default'">
                   <div class="buttom-wrapper">
                     <button type="submit" ng-disabled="form.form1.$invalid" class="button submit-form">{{'forms.evaluate' | translate}}
                     </button>
