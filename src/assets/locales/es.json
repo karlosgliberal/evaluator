@@ -10,34 +10,34 @@
     "resultEmpty": "La FAO señala que el 25% de las materias primas están contaminadas por micotoxinas."
   },
   "evaluationResult": {
-    "view-title": "Result",
-    "text-result": "Probability to have a significant level of mycotoxins in diet",
-    "text-result-suffix": "diet",
-    "email": "Send Report",
-    "micotoxine": "Mycotoxin specialist",
-    "send": "Report submitted",
-    "footerPdf": "Contact our specialists in mycotoxins for customized interpretation and technical support, tailored to your situation.",
+    "view-title": "Resultado",
+    "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta",
+    "text-result-suffix": "dieta",
+    "email": "Enviar informe",
+    "micotoxine": "Especialistas en Mycotoxin",
+    "send": "Informe enviado",
+    "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación",
     "footerEmail": "animalcare.ts@olmix.com",
-    "bodyText": "This report was sent from Olmix Myco'Evaluator App",
-    "CompartirInforme": "Enter email addresses, separated by commas",
-    "riskLow": "Low risk",
-    "riskMedium": "Medium risk",
-    "riskHigh": "High risk",
-    "riskExtreme": "Extreme risk",
-    "personalReport": "Informe Personalizado Myco'Evaluator",
+    "bodyText": "Este informe ha sido enviado por Olmix Myco'Evaluator App",
+    "CompartirInforme": "Introduce email separados, por coma",
+    "riskLow": "Riesgo bajo",
+    "riskMedium": "Riesgo medio",
+    "riskHigh": "Riesgo alto",
+    "riskExtreme": "Riesgo extremo",
+    "personalReport": "Informe personalizado Myco'Evaluator",
     "selected": "Premisas seleccionadas:"
   },
   "menu": {
-    "welcome": "Welcome",
+    "welcome": "Bienvenido",
     "home": "Home",
     "about": "About",
-    "language": "Language",
-    "selection": "Species selection"
+    "language": "Idioma",
+    "selection": "Seleciona especies"
   },
   "language": {
-    "title": "Choose your preferred language",
+    "title": "Elige tu idioma preferido",
     "selector": {
-      "title": "Language Selection"
+      "title": "Idioma elegido"
     },
     "es": "Español",
     "en": "English",
@@ -60,7 +60,7 @@
     "poultry": "Aves"
   },
   "forms": {
-    "evaluate": "Evaluate",
+    "evaluate": "Evaluar",
     "view-title": "Form",
     "cow": {
       "herd": {
