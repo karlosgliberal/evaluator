@@ -1,47 +1,48 @@
-
-button:hover, button:active {
+button:active,
+button:hover {
   color: white !important;
 }
 
 .result-number-container {
-  width: 100%;
+  width   : 100%;
   position: relative;
 }
 
 .result-intro {
   font-family: source_sans_probold;
-  font-size: 20px;
-  color: $brand-color;
-  margin: 20px 0;
+  font-size  : 20px;
+  color      : $brand-color;
+  margin     : 20px 0;
 }
 
 .share-text {
-  position: relative;
-  top: -10px;
+  position : relative;
+  top      : -10px;
   font-size: 14px;
-  color: $brand-color;
-  margin: 20px 0;
+  color    : $brand-color;
+  margin   : 20px 0;
 }
 
 .result-border {
   height: 18px;
 }
 
-.result-number  {
-  color: $brand-color;
-  font-family: source_sans_probold_italic;
-  font-size: 150px;
-  letter-spacing: 0px;
-  line-height: 150px;
-  position: relative;
+.result-number {
+  color         : $brand-color;
+  font-family   : source_sans_probold_italic;
+  font-size     : 150px;
+  letter-spacing: 0;
+  line-height   : 150px;
+  position      : relative;
 
   .low {
     position: absolute;
-    left: 20%;
+    left    : 20%;
   }
+
   .high {
     position: absolute;
-    left: 90%;
+    left    : 90%;
   }
 }
 
@@ -51,55 +52,57 @@ button:hover, button:active {
 
 .result-text {
   font-family: source_sans_probold;
-  font-size: 36px;
-  color: rgba(117,64,93,0.55);
-  margin-top: 30px;
+  font-size  : 36px;
+  color      : rgba(117,64,93,0.55);
+  margin-top : 30px;
 }
-
 @media (max-width : 500px) {
-    .result-number {
-      font-size: 90px;
-      line-height: 100px;
-    }
-    .result-border {
-      height: 18px;
-    }
+  .result-number {
+    font-size  : 90px;
+    line-height: 100px;
+  }
+
+  .result-border {
+    height: 18px;
+  }
 }
 
 .text-footer {
   font-family: source_sans_probold_italic;
-  font-size: 20px;
-  color: #096454;
-  position: relative;
-  top: -29px;
-  padding: 0 15px 0 35px;
+  font-size  : 20px;
+  color      : #096454;
+  position   : relative;
+  top        : -29px;
+  padding    : 0 15px 0 35px;
 }
 
 .logos-footer {
   height: 100px;
   margin: 0 auto;
+
   .logo {
     display: inline-block;
   }
 }
 
-.result-footer{
+.result-footer {
   height: 100px !important;
 }
-
-
 @media (max-width : 500px) {
   .result-footer {
     height: 150px !important;
   }
+
   .logos-footer {
     .text-footer {
       font-size: 14px;
-      top: 0;
-      padding: 0;
+      top      : 0;
+      padding  : 0;
     }
+
     .logo {
       display: block;
+
       img {
         width: 30%;
       }
@@ -108,46 +111,44 @@ button:hover, button:active {
 }
 
 .result-container {
-
   padding: 0 220px;
   @media (max-width : 943px) {
-    padding: 0 0px;
-  }
-}
-
-
-.result-send {
-  padding: 0 220px;
-  @media (max-width : 943px)  {
     padding: 0;
   }
 }
 
+.result-send {
+  padding: 0 220px;
+  @media (max-width : 943px) {
+    padding: 0;
+  }
+}
 // ANIMAL COMPONENT
 
 .imagen-animal-container {
   background-position: center;
-  background-size: cover;
-  height: 150px;
-  margin-top: 25px;
+  background-size    : cover;
+  height             : 150px;
+  margin-top         : 25px;
 }
 
 .texto-animal-imagen {
-  font-size: 24px;
-  color: #FFFFFF;
-  padding: 63px;
+  font-size : 24px;
+  color     : #FFFFFF;
+  padding   : 63px;
   text-align: center;
 }
-
 @media (max-width : 500px) {
   .imagen-animal-container {
     height: 90px;
   }
+
   .result-container {
     padding: 0 20px;
   }
+
   .texto-animal-imagen {
-    padding: 21px;
+    padding    : 21px;
     line-height: 26px;
   }
 }
@@ -162,6 +163,12 @@ button:hover, button:active {
 
 .result-border--wrapper {
   height: 20px;
-  width: 100%;
+  width : 100%;
   border: 1.5px solid #cccccc;
+}
+
+.fao {
+  @media (max-width : 1025px) {
+    padding: 0 !important;
+  }
 }

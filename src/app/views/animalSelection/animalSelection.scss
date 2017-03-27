@@ -1,97 +1,101 @@
 .fondo {
-  background-color: black !important;
+  background-color: #76405d !important;
 }
-.animal{
+
+.animal {
   position: relative;
+
   img {
     width: 100%;
   }
 }
-.animal--titulo{
-  position: absolute;
-  bottom: 80px;
-  left: 30px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
+
+.animal--titulo {
+  position      : absolute;
+  bottom        : 80px;
+  left          : 30px;
+  color         : white;
+  font-weight   : bold;
+  font-size     : 16px;
   text-transform: uppercase;
 }
 
 .texto-seleccion {
-  background: black;
-  color:white;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 10px 0;
-  font-size: 16px;
+  background : black;
+  color      : white;
+  width      : 100%;
+  text-align : center;
+  margin     : 0;
+  padding    : 10px 0;
+  font-size  : 16px;
   font-weight: bold;
-  position: absolute;
-  bottom: 0;
+  position   : absolute;
+  bottom     : 0;
 }
 
-  .animal-col {
-    &.col {
-      background-color: black;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
+.animal-col {
+  &.col {
+    background-color: #76405d;
+    padding         : 0 !important;
+    margin          : 0 !important;
   }
+}
 
 .animal-temp {
   background-position: center;
-  background-color: black;
-  background-size: cover;
-  width: 100%;
-  position: relative;
+  background-color   : #76405d;
+  background-size    : cover;
+  width              : 100%;
+  position           : relative;
 }
-
 @media (max-width : 500px) {
-    .animal-temp {
-      height: 200px !important;
-    }
+  .animal-temp {
+    height: 200px !important;
+  }
 }
 
 .select-footer {
-  background-color: #000 !important;
+  background-color: #76405d !important;
 }
 
-.bar-menu{
-  h1{
-    img{
-      width: auto;
-      height: 40px;
+.bar-menu {
+  h1 {
+    img {
+      width   : auto;
+      height  : 40px;
       position: relative;
-      top: 4px;
+      top     : 4px;
     }
   }
-  .icon{
-    color:$brand-color;
+
+  .icon {
+    color: $brand-color;
   }
 }
 
 .nav-titulo {
   text-align: left;
-  img{
-    width: auto;
-    height:40px;
+
+  img {
+    width   : auto;
+    height  : 40px;
     position: relative;
-    top: 4px;
+    top     : 4px;
   }
 }
 
 .nav-img {
-  img{
-    width: auto;
-    height:30px;
+  img {
+    width   : auto;
+    height  : 30px;
     position: relative;
-    top: 2px;
-    float: right;
+    top     : 2px;
+    float   : right;
   }
 }
 
-.seleccion-animal{
-  .scroll{
-    background-color: black;
+.seleccion-animal {
+  .scroll {
+    background-color: #76405d;
   }
 }
