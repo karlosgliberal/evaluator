@@ -38,6 +38,8 @@ export default class AnimalSelectionController {
   }
 
   availableAnimals() {
+    var userLanguage = this.localStorageManager.getDataFor('language');
+    console.log(userLanguage);
     var claves = this.localStorageManager.getAllDataKeys();
     if (claves.length !== 0 && this.networkManagerService.isOnline()){
       this.webManagerService.prepareSendLocalStorage(claves);
@@ -48,7 +50,8 @@ export default class AnimalSelectionController {
       name: animals.POULTRY,
       path: imagePathBase + 'poultry.png'
     }];
-    if (this.$translate.use() !== language.TURKISH) {
+    if (userLanguage !== '"tr"') {
+      console.log('tr tr');
       availableAnimals.push({text: 'animal.swine', name: animals.SWINE, path: imagePathBase + 'swine.png'});
     }
     return availableAnimals;
