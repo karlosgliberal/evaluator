@@ -31,7 +31,6 @@ export default class formSubmitService {
     var selected = this.$translate.instant('evaluationResult.selected');
     var fao = this.$translate.instant('extra.resultEmpty');
 
-    console.log(subSpecieText);
     if (subSpecie !== 'noPoultry'){
       var subSpecieTextoBarra = '| ' + subSpecieText;
     }
