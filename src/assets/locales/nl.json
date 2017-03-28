@@ -68,7 +68,7 @@
         "fields": {
           "feed-intake": "Te lage voeropname",
           "low-milk-production": "Lagere melkproductie dan het rantsoenpotentieel",
-          "body-condition": "Achteruitgang of ontevredenheid over de conditiescore",
+          "body-condition": "Achteruitgang van of ontevredenheid over de conditiescore",
           "coat-condition": "Slechte vachtconditie",
           "chewing-activity": "Lage herkauwactiviteit",
           "somatic-cells": "Significante toename van het celgetal of uierontstekingen",
@@ -76,8 +76,8 @@
           "metabolic-troubles": "Toename van inwendige aandoeningen en ziektes (lebmaagverplaatsingen, SARA, leverproblemen, baarmoederontstekingen, dermatitis,…)",
           "turnovers": "Te hoog vervangingspercentage (hoog % vaarzen)",
           "feces": "Te dunne, platte mest",
-          "milk-urea": "Stijging van het melkureum gehalte",
-          "weak-calves": "Zwakke kalveren (diarree, onderontwikkeld, afwijkingen aan huid of muil,...)",
+          "milk-urea": "Stijging van het melkureumgehalte",
+          "weak-calves": "Zwakke kalveren (diarree, onderontwikkeld, afwijkingen aan huid of bek,...)",
           "fertility-troubles": "Meer vruchtbaarheidsproblemen (baarmoederontsteking, cysten, opblijvende nageboorte,….)",
           "reproduction-performance": "Slechte reproductie parameters (bronstdetectie, dracht na 1e inseminatie,...)",
           "troubles-from-raw-materials": "De bovenvermelde problemen zijn gestart na het openen van een nieuwe silo"
@@ -96,7 +96,7 @@
       "storage": {
         "title": "Opslag / Inkuilen",
         "fields": {
-          "molds": "Aanwezigheid van schimmels (rood, blauw, wit of zwart,…)",
+          "molds": "Aanwezigheid van schimmels (rood, blauw, wit, zwart,…)",
           "silage-troubles": "Problemen om de silo vast te rijden (hoog DS gehalte, te snel inkuilen)",
           "warm-silage": "Kuil is warm of nam veel tijd in beslag om af te koelen",
           "grass-silage": "Voordroog is niet zo zuiver als gewoonlijk (bevuiling)",
@@ -141,7 +141,7 @@
         "title": "Diersoort",
         "fields": {
           "hens": "Legkippen",
-          "breeder": "Broedkippen",
+          "breeder": "Moederdieren",
           "broiler": "Vleeskuikens",
           "noPoultry": " "
         }
@@ -149,16 +149,16 @@
       "animals": {
         "title": "Dieren",
         "fields": {
-          "feed-intake": "Ontoereikend gewicht van het dier",
+          "feed-intake": "Verminderde voeropname",
           "body-weight": "Ontoereikend diergewicht",
           "liquid-droppings": "Vloeibare uitwerpselen",
-          "water-consumption": "Hoge water consumptie",
+          "water-consumption": "Hoge waterconsumptie",
           "vaccination": "Vaccinatie of therapeutisch falen",
           "infectious-diseases": "Hoge aanwezigheid van infectieziektes",
           "dermatitis": "Vaccintherapie necrose, dermatitis",
           "gizzard": "Ontsteking in oogst, proventriculus, spiermaag, darmen",
           "mortality": "Hoog sterftecijfer",
-          "liver-damage": "Lever en/of nierschade",
+          "liver-damage": "Lever- en/of nierschade",
           "ovaries-size": "Kleine eierstokken",
           "tibial": "Gevallen van tibia dyschondroplasia",
           "thymus": "Abnormale ontwikkeling van zwezerik en bursa van Fabricius"
@@ -170,13 +170,13 @@
             "body-weight": "Verlaagd lichaamsgewicht",
             "fcr": "Lage voederconversie/Malabsorti syndroom",
             "droppings": "Natte mest",
-            "water-consumption": "Hoge water consumptie",
+            "water-consumption": "Hoge waterconsumptie",
             "vaccination": "Slecht aanslaan van vaccinaties",
             "infectious-diseases": "Verminderde ontwikkeling van de voortplantingsorganen",
             "mucosal-necrosis": "Afsterven van slijmvliezen en huidontstekingen",
-            "gizzard": "Ontsteking in de crop, spiermaag, kliermaag en darmen",
+            "gizzard": "Ontsteking in de krop, spiermaag, kliermaag en darmen",
             "mortality": "Verhoogde sterfte",
-            "liver-damage": "Lever en/of nierschade",
+            "liver-damage": "Lever- en/of nierschade",
             "tibial-dyschondroplasia": "Gevallen van tibiale dyschondroplasie (groeischijf problemen)",
             "thymus": "Abnormale ontwikkeling van zwezerik en bursa van Fabricius",
             "sphinganine": "Verhoogd sphinganine : sphingonisine verhouding in het bloed"

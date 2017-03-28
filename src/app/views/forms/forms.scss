@@ -1,52 +1,58 @@
 .form-label-wrapper {
   border-bottom: 1px solid $brand-color;
   margin-bottom: 15px;
-  margin-top: 25px;
-  color: $brand-color;
+  margin-top   : 25px;
+  color        : $brand-color;
 }
 
 .item {
   color: $brand-color;
 }
 
-.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
-    background: $brand-color;
-    border-color: $brand-color;
+.checkbox input:checked + .checkbox-icon:before,
+.checkbox input:checked:before {
+  background  : $brand-color;
+  border-color: $brand-color;
 }
 
 .buttom-wrapper {
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
 button.submit-form {
   background-color: $brand-color;
-  width: 100%;
-  border-radius: 0;
-  border: 1px solid $brand-color;
-  color: white;
-  font-weight: bold;
+  width           : 100%;
+  border-radius   : 0;
+  border          : 1px solid $brand-color;
+  color           : white;
+  font-weight     : bold;
 }
 
+.item {
+  .item-content {
+    overflow   : visible;
+    white-space: normal !important;
+  }
+}
 @media (max-width : 500px) {
-    .item{
-      .item-content {
-        font-size: 14px;
-        white-space: normal;
-      }
-    }
-}
-
-@media (max-width : 768px) {
-  .item{
+  .item {
     .item-content {
-      font-size: 14px;
+      font-size  : 14px;
+      white-space: normal;
+    }
+  }
+}
+@media (max-width : 768px) {
+  .item {
+    .item-content {
+      font-size  : 14px;
       white-space: normal;
     }
   }
 }
 
-.intro-form  p {
-  font-size: 16px;
+.intro-form p {
+  font-size  : 16px;
   padding-top: 20px;
-  color: #76405D;
+  color      : #76405D;
 }
