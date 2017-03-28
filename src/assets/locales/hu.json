@@ -6,7 +6,7 @@
     "view-title": "Állatfaj kiválasztása"
   },
   "extra": {
-    "descriptionForm": "Válassza ki az állítások közül azokat, amelyekről úgy gondolja, hogy a takarmány minősége miatt vannak jelen",
+    "descriptionForm": "Válassza ki az állítások közül azokat, amelyekről úgy gondolja, hogy a takarmány minősége miatt vannak jelen:",
     "resultEmpty": "A FAO vizsgálatai szerint, az alapanyagok 25%-a mikotoxinnal szennyezett."
   },
   "evaluationResult": {

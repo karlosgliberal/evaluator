@@ -60,7 +60,7 @@
     "poultry": "Drób"
   },
   "forms": {
-    "evaluate": "Avalie",
+    "evaluate": "Oceń ryzyko",
     "view-title": "Form",
     "cow": {
       "herd": {
@@ -86,7 +86,7 @@
       "on-field": {
         "title": "Na polu",
         "fields": {
-          "corn-procedence": "Kukurydza jest produkowana cały czs na tym samym polu",
+          "corn-procedence": "Kukurydza jest produkowana cały czas na tym samym polu",
           "corn-fields": "Pole po kukurydzy nie jest zaorane",
           "fusarium": "Choroby grzybicze/ Fusariozy były zauważone na polu",
           "silage-harvest": "Kiszonka była sporządzona późno",
@@ -98,7 +98,7 @@
         "fields": {
           "molds": "Obecne są grzyby (czerwone, niebieskie, białe lub czarne…)",
           "silage-troubles": "Problemy z ubiciem kiszonki (wysoka SM, szybkość zbierania)",
-          "warm-silage": "Kiszonka jest ciepła, lub dużo czasu potrzebowała na obiżenie temperatury",
+          "warm-silage": "Kiszonka jest ciepła, lub potrzebowała dużo czasu na obniżenie temperatury",
           "grass-silage": "Kiszonka z traw nie jest tak czysta jak zazwyczaj",
           "silage-front-consuption": "Wybieranie kiszonki jest zbyt wolne"
         }
@@ -106,23 +106,23 @@
     },
     "swine": {
       "animal": {
-        "title": "Zwięrzę",
+        "title": "Zwięrzęta",
         "fields": {
           "sows-status": "Niesatysfakcjonujący ogólny status loch",
           "poor-growth": "Kiepski wzrost prosiąt lub tuczników",
           "intake": "Niedostateczne pobranie paszy",
           "skin-color": "Niesatysfakcjonujący kolor skóry",
-          "milk-production": "Niską produkcję mleka u loch",
-          "veterinary-intervention": "Wysoką częstotliwość interwencji weterynaryjnych",
+          "milk-production": "Niska produkcja mleka",
+          "veterinary-intervention": "Wysoka częstotliwość interwencji weterynaryjnych",
           "lactation-start": "Problemy w rozpoczęciu latkacji",
-          "stillborn-piglets": "Zwiększoną liczbę mumfikacji i poronień (niska proliferacja)",
-          "small-piglets-at-birth": "Większe niewyrównanie i liczbę małych prosiąt w miocie przy urodzeniu",
+          "stillborn-piglets": "Zwiększona liczba mumifikacji i poronień (niska proliferacja)",
+          "small-piglets-at-birth": "Zwiększone niewyrównanie i liczba małych prosiąt w miocie przy urodzeniu",
           "splay-legs": "Wzrost liczby rozkroczności",
           "red-vulva": "Opóchnięty czerwony srom",
-          "neonatal-diarrea": "Biegunkę noworodkową/problemy na samym początku rozwoju prosiąt",
+          "neonatal-diarrea": "Biegunka neonatalna/ problemy na samym początku rozwoju prosiąt",
           "necrosis": "Martiwce uszu i ogona i/lub nerwowość",
           "reproduction-troubles": "Zwiększone problemy reprodukcyjne (metritis, zatrzymanie łożyska...)",
-          "heat-detection": "Problemy w wykryciu ruji lub dużą liczbę powtórek",
+          "heat-detection": "Problemy w wykrywaniu rui lub duża liczba powtórek",
           "weaning-insemination": "Długi okres od odsadzenia do inseminacji"
         }
       },
@@ -130,7 +130,7 @@
         "title": "Pasza",
         "fields": {
           "home-grown": "Pasze robione we własnym zakresie",
-          "use-of-corn": "Znaczne użycie kukurydzy lub produktów ubocznych z jej przetworenia",
+          "use-of-corn": "Znaczne użycie kukurydzy lub produktów ubocznych z jej przetworzenia",
           "storage-facilities": "Kiepskie magazyny lub sposoby przechowywania (wentylacja, czyszczenie)",
           "grains-preservation-problems": "Problemy podczas przechowywania ziarna lub paszy (ciepło, szkodniki, wilgotność)"
         }
@@ -150,18 +150,18 @@
         "title": "Zwierzęta",
         "fields": {
           "feed-intake": "Niedostateczne pobranie paszy",
-          "body-weight": "Niedostateczną masę ciała",
-          "liquid-droppings": "Mokre odchody",
+          "body-weight": "Niedostateczna masa ciała",
+          "liquid-droppings": "Mokra ściółka",
           "water-consumption": "Wysokie spożycie wody",
           "vaccination": "Niepowodzenia szczepień lub leczenia",
           "infectious-diseases": "Wysoki wskaźnik chorób zakaźnych",
           "dermatitis": "Martwice śluzówki, zapalenie skóry (dermatitis)",
           "gizzard": "Stan zapalny wola, żołądka gruczołowego, mięśniowego, jelita",
-          "mortality": "Wysoką śmiertelność",
+          "mortality": "Wysoka śmiertelność",
           "liver-damage": "Uszkodzenia wątroby i/lub nerek",
           "ovaries-size": "Małe jajniki",
           "tibial": "Przypadki dyschondroplazjii kości piszczelowej",
-          "thymus": "Nienormalny rozój grasicy i bursy Fabrycjusza"
+          "thymus": "Nienormalny rozwój grasicy i bursy Fabrycjusza"
         },
         "broiler": {
           "title": "Zwierzęta",
@@ -178,8 +178,8 @@
             "mortality": "Zwiększoną śmiertelność",
             "liver-damage": "Uszkodzenia wątroby i/lub nerek",
             "tibial-dyschondroplasia": "Nienormalny rozwój grasicy i bursy Fabrycjusza",
-            "thymus": "Abnormal development of thymus and bursa of Fabricius",
-            "sphinganine": "Wyższy poziom sfingozyny: stosunek krwi do sfingozyny"
+            "thymus": "Nienormalny rozwój grasicy i bursy Fabrycjusza",
+            "sphinganine": "Wyższy stosunek sfinganiny : sfingozyny we krwi"
           }
         }
       },
@@ -199,7 +199,7 @@
         "fields": {
           "egg-production": "Niska produkcja jaj",
           "egg-weight": "Niska masa jaj",
-          "shell-quality": "Niska jakość skorupy jaj (zwiększone stłuczki, jaja bez skorópki, blade jaj)",
+          "shell-quality": "Niska jakość skorupy jaj (zwiększona liczba: stłuczek, jaj bez skorupki, bladych jaj)",
           "egg-hatchability": "Niska wylęgowość jaj",
           "progeny": "Niska żywotność potomstwa"
         }

@@ -79,7 +79,7 @@
           "milk-urea": "Increase in milk urea",
           "weak-calves": "Weak calves (diarrhea, stunted growth, oral and dermal lesions...)",
           "fertility-troubles": "Fertility troubles (metritis, cyst, placenta retention...)",
-          "reproduction-performance": "Low reproduction performance (heat detection, success at 1st AI…)",
+          "reproduction-performance": "Low reproductive performance (heat detection, success at 1st AI…)",
           "troubles-from-raw-materials": "The above troubles started with the use of new forages or raw materials"
         }
       },
@@ -97,7 +97,7 @@
         "title": "Storage",
         "fields": {
           "molds": "Molds are present (red, blue, white or black...)",
-          "silage-troubles": "Troubles to press silage (high DM, speed of harvesting)",
+          "silage-troubles": "Poor compaction (high DM, speed of harvesting)",
           "warm-silage": "Silage is warm or took a long time to cool down",
           "grass-silage": "Grass silage is not as clean as usual",
           "silage-front-consuption": "Silage front is consumed too slowly"
@@ -112,11 +112,11 @@
           "poor-growth": "Poor growth of piglets or fattening pigs",
           "intake": "Insufficient feed intake",
           "skin-color": "Unsatisfying skin color",
-          "milk-production": "Low sow's milk production",
+          "milk-production": "Low milk production from Sows",
           "veterinary-intervention": "High frequency of veterinary intervention",
           "lactation-start": "Problems to start lactation",
           "stillborn-piglets": "Increase in mummified or stillborn piglets (low prolificity)",
-          "small-piglets-at-birth": "Increase in heterogeneous or small piglets at birth",
+          "small-piglets-at-birth": "Uneven size or small piglets at birth",
           "splay-legs": "Increase in splay legs",
           "red-vulva": "Swollen red vulva",
           "neonatal-diarrea": "Neonatal diarrhea/troubles to start piglets",
@@ -132,7 +132,7 @@
           "home-grown": "Home grown feed",
           "use-of-corn": "Significant use of corn or corn by-products",
           "storage-facilities": "Poor storage facilities and management (ventilation, cleaning)",
-          "grains-preservation-problems": "Troubles during grains or feed preservation (heat, pests, moisture)"
+          "grains-preservation-problems": "Problems during grain or feed transport or preservation (heat, pests, moisture)"
         }
       }
     },
@@ -159,7 +159,7 @@
           "gizzard": "Inflammation in crop, proventriculus, gizzard, intestine",
           "mortality": "High mortality",
           "liver-damage": "Liver and/or kidney damage",
-          "ovaries-size": "Low ovaries size",
+          "ovaries-size": "Low ovarian size",
           "tibial": "Cases of tibial dyschondroplasia",
           "thymus": "Abnormal development of thymus and bursa of Fabricius"
         },
@@ -168,7 +168,7 @@
           "fields": {
             "feed-intake": "Decreased feed intake",
             "body-weight": "Decreased body weight",
-            "fcr": "Higher FCR/Maladsortion symdrom/Feather in helicopter",
+            "fcr": "Higher FCR/Malabsorption syndrome/Helicopter feather",
             "droppings": "Wet droppings",
             "water-consumption": "Increased water consumption",
             "vaccination": "Vaccination or therapeutic failure",
@@ -191,17 +191,17 @@
           "use-of-corn": "Significant use of corn or corn by-product",
           "storage-facilities": "Poor storage facilities and management (ventilation, cleaning)",
           "feed-management": "All above described troubles followed a change in feed management",
-          "preservation-problems": "Troubles during grains or feed preservation (heat, pests, moisture)"
+          "preservation-problems": "Problems during grain or feed transport or preservation (heat, pests, moisture)"
         }
       },
       "egg-production": {
-        "title": "Eggs production",
+        "title": "Egg production",
         "fields": {
           "egg-production": "Low egg production",
           "egg-weight": "Low egg weight",
           "shell-quality": "Low egg shell quality (increased cracked, shell-less, pale eggs)",
           "egg-hatchability": "Low egg hatchability",
-          "progeny": "Low progeny viability"
+          "progeny": "Low chick viability"
         }
       }
     }

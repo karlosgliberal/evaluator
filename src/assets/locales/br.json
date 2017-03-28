@@ -6,8 +6,8 @@
     "view-title": "Selecione a espécie"
   },
   "extra": {
-    "descriptionForm": "Escolha as alternativas que correspondem à sua situação, considerando que a ração está correspondendo ao desempenho desejado:",
-    "resultEmpty": "La FAO señala que el 25% de las materias primas están contaminadas por micotoxinas."
+    "descriptionForm": "Assumindo que a dieta é balanceada, marque os sintomas que você observa em sua granja:",
+    "resultEmpty": "A FAO afirma que 25% das matérias primas estão contaminadas por micotoxinas."
   },
   "evaluationResult": {
     "view-title": "Resultado",
@@ -60,14 +60,14 @@
     "poultry": "Aves"
   },
   "forms": {
-    "evaluate": "Avalie",
+    "evaluate": "Avaliar",
     "view-title": "Form",
     "cow": {
       "herd": {
         "title": "O rebanho",
         "fields": {
           "feed-intake": "Redução do consumo de ração ",
-          "low-milk-production": "Produção de leite menor do que o potencial da dieta",
+          "low-milk-production": "Produção de leite abaixo do que o potencial da dieta",
           "body-condition": "Piora da condição corporal",
           "coat-condition": "Condições de pelagem insatisfatórias",
           "chewing-activity": "Baixa atividade ruminal",
@@ -117,7 +117,7 @@
           "lactation-start": "Problemas para iniciar a lactação",
           "stillborn-piglets": "Aumento de fetos mumificados ou natimortos (baixa prolificidade)",
           "small-piglets-at-birth": "Aumento na heterogeneidade ou leitões pequenos ao nascimento",
-          "splay-legs": "Aumento de splay legs",
+          "splay-legs": "Aumento de Splay legs",
           "red-vulva": "Vulva edemaciada e avermelhada, em cereja",
           "neonatal-diarrea": "Diarreia neonatal/problemas iniciais nos leitões",
           "necrosis": "Necrose de orelha e cauda e/ou nervosismo",
@@ -195,7 +195,7 @@
         }
       },
       "egg-production": {
-        "title": "Eggs production",
+        "title": "Produção de Ovos",
         "fields": {
           "egg-production": "Queda na produção de ovos",
           "egg-weight": "Baixo peso dos ovos",

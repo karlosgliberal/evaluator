@@ -29,6 +29,7 @@ export default class formSubmitService {
     var bodyText = this.$translate.instant('evaluationResult.bodyText');
     var personalReport = this.$translate.instant('evaluationResult.personalReport');
     var selected = this.$translate.instant('evaluationResult.selected');
+    var fao = this.$translate.instant('extra.resultEmpty');
 
     console.log(subSpecieText);
     if (subSpecie !== 'noPoultry'){
@@ -46,8 +47,10 @@ export default class formSubmitService {
       {footerEmail: footerEmail},
       {bodyText: bodyText},
       {personalReport: personalReport},
-      {selected: selected}
+      {selected: selected},
+      {fao: fao}
     );
+    console.log(result);
     return result;
   }
 
@@ -100,7 +103,6 @@ export default class formSubmitService {
       if (!_.isEmpty(data.fields[key])) {
         let secondKeys = _.keysIn(data.fields[key]);
         _.forEach(secondKeys, (secondKey, i) => {
-          console.log(data.animal);
           if (data.animal === 'dairy') {
             data.animal = 'cow';
           }
@@ -111,6 +113,7 @@ export default class formSubmitService {
       }
     });
     _.assign(data, {traducciones: lista});
+    console.log(lista);
     return lista;
     //this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(data));
   }

@@ -14,11 +14,11 @@
     "text-result": "Probabilité d'avoir une présence significative de mycotoxines dans l'aliment",
     "text-result-suffix": "diet",
     "email": "Envoyer un rapport",
-    "micotoxine": "Spécialiste en mycotoxines",
+    "micotoxine": "Spécialiste des mycotoxines",
     "send": "Rapport remis",
-    "footerPdf": "Contactez nos spécialistes en mycotoxines pour une interprétation et un accompagnement technique adapté à votre situation.",
+    "footerPdf": "Contactez nos spécialistes des mycotoxines pour une interprétation et un accompagnement technique adapté à votre situation.",
     "footerEmail": "animalcare.ts@olmix.com",
-    "bodyText": "Ce rapport a été envoyé par Olmix Myco´Evaluator",
+    "bodyText": "Ce rapport a été envoyé par Olmix Myco’Evaluator",
     "CompartirInforme": "Entrer les adresses emails séparées par des virgules",
     "riskLow": "Risque limité",
     "riskMedium": "Risque moyen",
@@ -57,7 +57,7 @@
     "swine": "Porcs",
     "dairy": "Vaches",
     "cow": "Vaches",
-    "poultry": "Volaille"
+    "poultry": "Volailles"
   },
   "forms": {
     "evaluate": "Évaluer",
@@ -142,7 +142,7 @@
         "fields": {
           "hens": "Poules pondeuses",
           "breeder": "Reproductrices",
-          "broiler": "Volaille de chair",
+          "broiler": "Volailles de chair",
           "noPoultry": " "
         }
       },
@@ -158,7 +158,7 @@
           "dermatitis": "Necrose des muqueuses, dermatite",
           "gizzard": "Inflammation du jabot, proventricule, gésier et intestin",
           "mortality": "Forte mortalité",
-          "liver-damage": "Probléme de foie et/ou de reins",
+          "liver-damage": "Problème de foie et/ou de reins",
           "ovaries-size": "Baisse de la taille des ovaires",
           "tibial": "Présence de enchondromatose tibial",
           "thymus": "Développement anormal du thymus et des bourses de Fabricus"
@@ -168,7 +168,7 @@
           "fields": {
             "feed-intake": "Ingestion insuffisante",
             "body-weight": "Etat général insatisfaisant",
-            "fcr": "Indice de consommation élevé/Mauvaise valorisation de l'aliment/Plumes en",
+            "fcr": "Indice de consommation élevé/Mauvaise valorisation de l'aliment/Plumes en hélicoptère",
             "droppings": "Fiente liquide",
             "water-consumption": "Forte consommation d'eau",
             "infectious-diseases": "Fréquence élevée de maladies infectieuses",
@@ -176,7 +176,7 @@
             "mucosal-necrosis": "Necrose des muqueuses, dermatite",
             "gizzard": "Inflammation du jabot, proventricule, gésier et intestin",
             "mortality": "Forte mortalité",
-            "liver-damage": "Probléme de foie et/ou de reins",
+            "liver-damage": "Problème de foie et/ou de reins",
             "tibial-dyschondroplasia": "Présence de enchondromatose tibial",
             "thymus": "Développement anormal du thymus et des bourses de Fabricus",
             "sphinganine": "Augmentation du ration sphinganine/sphingonisine"

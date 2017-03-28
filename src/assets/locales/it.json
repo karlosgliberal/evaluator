@@ -11,7 +11,7 @@
   },
   "evaluationResult": {
     "view-title": "Risultato",
-    "text-result": "Probabilità di  avere unlivello significativo di micotossinenella dieta",
+    "text-result": "Probabilità di  avere un livello significativo di micotossine nella dieta",
     "text-result-suffix": "Dieta",
     "email": "Mandare il report",
     "micotoxine": "Specialisti in micotossine",
@@ -57,7 +57,7 @@
     "swine": "Suini",
     "dairy": "Vacche",
     "cow": "Vacche",
-    "poultry": "Acicolo"
+    "poultry": "Avicolo"
   },
   "forms": {
     "evaluate": "Valutare",
@@ -170,7 +170,7 @@
             "body-weight": "Riduzione del peso corporeo",
             "fcr": "Alto FCR/sindrome di malassorbimento/arruffamento delle piume",
             "droppings": "Escrementi bagnati",
-            "water-consumption": "Increment del consume di acqua",
+            "water-consumption": "Incremento del consumo di acqua",
             "vaccination": "Vaccinazione o trarttamento terapeutico fallimentare",
             "infectious-diseases": "Alta incidenza di malattie infettive",
             "mucosal-necrosis": "Necrosi delle mucose, dermatiti",
@@ -184,20 +184,20 @@
         }
       },
       "feed": {
-        "title": "Feed",
+        "title": "Alimenti",
         "fields": {
           "home-mixed": "Alimenti preparati in azienda",
           "home-grown": "Alimenti prodotti in azienda",
           "use-of-corn": "Significativo utilizzo di mais e suoi sottoprodotti",
           "storage-facilities": "Problemi durante la conservazione e la gestione dei cerali ( ventilazione, pulizia...)",
-          "feed-management": "Tutti i problemi sopra descritti si sono manifestati dopo un cambiamento nella gestione diell'alimentazione",
+          "feed-management": "Tutti i problemi sopra descritti si sono manifestati dopo un cambiamento nella gestione dell'alimentazione",
           "preservation-problems": "Problemi durante la conservazione dei cereali o dei mangimi (calore, parassiti, umidità)"
         }
       },
       "egg-production": {
-        "title": "Eggs production",
+        "title": "Produzione di uova",
         "fields": {
-          "egg-production": "Iduzione della produzione di uova",
+          "egg-production": "Riduzione della produzione di uova",
           "egg-weight": "Riduzione del peso dell'uovo",
           "shell-quality": "Riduzione della qualità del guscio (incremento delle rotture guscio fragile, uova scolorite)",
           "egg-hatchability": "Bassa sciudibilità delle uova",

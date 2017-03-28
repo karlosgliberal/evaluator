@@ -6,7 +6,7 @@
     "view-title": "Chọn loài vật nuôi"
   },
   "extra": {
-    "descriptionForm": "Chọn câu phù hợp với tình huống của bạn với loại thức ăn phù hợp cho năng suất mục tiêu:",
+    "descriptionForm": "Chọn câu phù hợp với tình huống của bạn CŨNG NHƯ loại thức ăn phù hợp cho năng suất mục tiêu.",
     "resultEmpty": "Theo dữ liệu từ Tổ chức lương thực thế giới FAO, 25% nguyên liệu trên toàn thế giới đang bị ô nhiễm."
   },
   "evaluationResult": {
@@ -117,16 +117,16 @@
       "animal": {
         "title": "Heo",
         "fields": {
-          "sows-status": "Tình trạng chung của lợn nái không đảm bảo",
-          "poor-growth": "Chỉ số điều kiện cơ thể không đảm bảo",
+          "sows-status": "Tình trạng chung của heo nái không đảm bảo",
+          "poor-growth": "Heo con và heo thịt chậm phát triển.",
           "intake": "Không đủ thức ăn ăn vào",
-          "skin-color": "Màu của lợn nái không tốt",
-          "milk-production": "Sản lương sữa thấp",
+          "skin-color": "Màu của heo nái không tốt",
+          "milk-production": "Sản lượng sữa thấp",
           "veterinary-intervention": "Cần có sự can thiệp thường xuyên của thú y",
           "lactation-start": "Có vấn đề ở giai đoạn đầu của quá trình tiết sữa",
-          "stillborn-piglets": "Thai chết lưu / heochết non /heo con nhỏ tăng",
-          "small-piglets-at-birth": "Heo con không đồng nhất/nhỏ tăng lên",
-          "splay-legs": "Heo chân yếu tăng",
+          "stillborn-piglets": "Thai chết lưu / heo chết non /heo con nhỏ tăng",
+          "small-piglets-at-birth": "Heo con không đồng nhất/ Tỷ lệ heo nhỏ tăng lên",
+          "splay-legs": "Tỷ lệ heo chân yếu tăng lên.",
           "red-vulva": "Sưng đỏ âm hộ",
           "neonatal-diarrea": "Tiêu chảy sơ sinh, heo con không phát triển tốt",
           "necrosis": "Tai và đuôi hoại tử",
@@ -139,7 +139,7 @@
         "title": "Thức ăn",
         "fields": {
           "home-grown": "Thức ăn tự trộn",
-          "use-of-corn": "Sử dụng ngô trộn (CCM)",
+          "use-of-corn": "Sử dụng bắp trộn (CCM)",
           "storage-facilities": "Sử dụng DDGS",
           "grains-preservation-problems": "Khoảng cách giữa các lần vệ sinh silo dài"
         }
@@ -188,7 +188,7 @@
             "liver-damage": "Tổn thương gan và thận",
             "tibial-dyschondroplasia": "Có vấn đề về xương chày",
             "thymus": "Phát triển bất thường của tuyến ức và túi Fabricius",
-            "sphinganine": "Tăng axit béo sphinganine: tỷ lệ sphingonisine trong máu"
+            "sphinganine": "Tăng tỷ lệ Sphinganine/Sphingosine (Sa/So) trong máu."
           }
         }
       },
@@ -198,8 +198,8 @@
           "home-mixed": "Thức ăn tự trộn",
           "home-grown": "Thức ăn tự trộn",
           "use-of-corn": "Sử dụng nhiều bắp và các sản phẩm phụ từ bắp",
-          "storage-facilities": "Kho bảo quản và quản lý kém ( quạt gió, vệ sinh)",
-          "feed-management": "Tất cả các vấn đề nêu tren theo một thay đổi trong quản lý thức ăn",
+          "storage-facilities": "Kho bảo quản và quản lý kém (quạt gió, vệ sinh)",
+          "feed-management": "Tất cả các vấn đề nêu trên theo một thay đổi trong quản lý thức ăn",
           "preservation-problems": "Vấn đề trong các hạt ngũ cốc hoặc bảo quản thức ăn ( nhiệt độ, côn trùng, độ ẩm)"
         }
       },

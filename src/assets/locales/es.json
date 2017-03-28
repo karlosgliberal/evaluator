@@ -14,12 +14,12 @@
     "text-result": "Probabilidad de presencia significativa de micotoxinas en la dieta",
     "text-result-suffix": "dieta",
     "email": "Enviar informe",
-    "micotoxine": "Especialistas en Mycotoxin",
+    "micotoxine": "Especialistas en Micotoxinas",
     "send": "Informe enviado",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación",
     "footerEmail": "animalcare.ts@olmix.com",
     "bodyText": "Este informe ha sido enviado por Olmix Myco'Evaluator App",
-    "CompartirInforme": "Introduce email separados, por coma",
+    "CompartirInforme": "Introduzca emails separados por comas",
     "riskLow": "Riesgo bajo",
     "riskMedium": "Riesgo medio",
     "riskHigh": "Riesgo alto",
@@ -32,10 +32,10 @@
     "home": "Home",
     "about": "About",
     "language": "Idioma",
-    "selection": "Seleciona especies"
+    "selection": "Seleccione especie"
   },
   "language": {
-    "title": "Elige tu idioma preferido",
+    "title": "Elija su idioma preferido",
     "selector": {
       "title": "Idioma elegido"
     },
@@ -73,7 +73,7 @@
           "chewing-activity": "Baja actividad ruminal",
           "somatic-cells": "Aumento significativo de las mamitis o de las células somáticas",
           "leg-troubles": "Aumento de los problemas de patas (cojeras, dermatitis…)",
-          "metabolic-troubles": "Aumento de problemas metabólicos (diarreas inespefícicas, torsion de cuajar, acidosis, cetosis….)",
+          "metabolic-troubles": "Aumento de problemas metabólicos (diarreas inespefícicas, torsión de cuajar, acidosis, cetosis….)",
           "turnovers": "Tasa de renovación forzosa muy alta",
           "feces": "Blandeos",
           "milk-urea": "Aumento de urea en la leche",
@@ -121,7 +121,7 @@
           "red-vulva": "Vulvas en cereza",
           "neonatal-diarrea": "Diarreas neonatales, lechones que no crecen bien",
           "necrosis": "Necrosis en orejas y cola y/o nerviosismo",
-          "reproduction-troubles": "Problemas de fertilidad (metiritis, retención de placenta)",
+          "reproduction-troubles": "Problemas de fertilidad (metritis, retención de placenta)",
           "heat-detection": "Problemas en la detección de celos, demasiadas repeticiones",
           "weaning-insemination": "Intervalo destete-inseminación demasiado largo"
         }
@@ -164,7 +164,7 @@
           "thymus": "Desarrollo anormal del timo y de la bolsa de Fabricio"
         },
         "broiler": {
-          "title": "Animals",
+          "title": "Los animales",
           "fields": {
             "feed-intake": "Menor ingesta de alimento",
             "body-weight": "Menor peso corporal",
@@ -184,22 +184,22 @@
         }
       },
       "feed": {
-        "title": "Feed",
+        "title": "Alimento",
         "fields": {
           "home-mixed": "El alimento se mezcla en la granja",
           "home-grown": "Alimento hecho en la granja",
-          "use-of-corn": "Uso significativo de maiz o subproductos del maiz",
+          "use-of-corn": "Uso significativo de maíz o subproductos del maíz",
           "storage-facilities": "Instalaciones y gestión de almacenamiento deficientes (ventilación, limpieza)",
           "feed-management": "Los problemas se producen tras un cambio en la gestión de la alimentación",
           "preservation-problems": "Problemas durante el almacenamiento de los cereales (calor, plagas, humedad)"
         }
       },
       "egg-production": {
-        "title": "Eggs production",
+        "title": "Producción de huevos",
         "fields": {
           "egg-production": "Baja producción de huevos",
           "egg-weight": "Huevos de peso bajo",
-          "shell-quality": "Cáscara de baja calidad ( aumento de grietas, huevos sin cáscara, huevos claros)",
+          "shell-quality": "Cáscara de mala calidad (aumento de grietas, huevos sin cáscara, huevos claros)",
           "egg-hatchability": "Reducida eclosión de huevos",
           "progeny": "Viabilidad baja de las crías"
         }

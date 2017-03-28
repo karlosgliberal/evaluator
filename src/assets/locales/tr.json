@@ -7,11 +7,11 @@
   },
   "extra": {
     "descriptionForm": "Beslemede hedeflenen performans için durumunuza uygun ifadeyi seçiniz",
-    "resultEmpty": "GTÖ’ye göre , dünya üzerindeki hammadelerin %25’i kontaminedir."
+    "resultEmpty": "FAO’ya göre, dünya üzerindeki hammadelerin %25’i kontaminedir."
   },
   "evaluationResult": {
     "view-title": "Sonuç",
-    "text-result": "Yemde belirgin mikotoksin değeri olasılığı",
+    "text-result": "Yemde anlamlı oranda mikotoksin olma olasılığı",
     "text-result-suffix": "Yem",
     "email": "Rapor Gönder",
     "micotoxine": "Mikotoksin Uzmanları",
@@ -54,8 +54,8 @@
     "zh": "简体中文"
   },
   "animal":{
-    "dairy": "Sağmal",
-    "cow": "Sağmal",
+    "dairy": "Süt ineği",
+    "cow": "Süt ineği",
     "poultry": "Kanatlı"
   },
   "forms": {
@@ -65,27 +65,27 @@
       "herd": {
         "title": "değerlendirin",
         "fields": {
-          "feed-intake": "Yetersiz yem tüketimi",
+          "feed-intake": "Yem tüketiminde azalma",
           "low-milk-production": "Beslemeye göre düşük süt üretimi",
           "body-condition": "Azalan ya da yetersiz vücut kondüsyonu",
-          "coat-condition": "Tüy görünümünde farklılık",
-          "chewing-activity": "Geviş getirme",
+          "coat-condition": "Tüy görünümünde bozulma",
+          "chewing-activity": "Yetersiz geviş getirme",
           "somatic-cells": "Somatik hücre sayısında ve mastitiste belirgin bir artış",
           "leg-troubles": "Topallık ve ayak problemlerinde artış (şiş tırnaklar, bağlar, dermamtitis…)",
-          "metabolic-troubles": "Metabolik ve patolojik problemlerin artışı (abomasum deplasmanı, SARA, yağlı karaciğer,metritis,dermatitis…)",
-          "turnovers": "Çok yüksek yatırım (düvelerin yüksek %'si)",
+          "metabolic-troubles": "Metabolik ve patolojik problemlerin artışı (abomasum deplasmanı, SARA, yağlı karaciğer,metritis,ince bağırsaklarda hemoraji…)",
+          "turnovers": "Iskataya ayrılan hayvan sayısında artış (düvelerin yüksek %'si)",
           "feces": "Çok yumuşak ya da sıvı dışkı",
-          "milk-urea": "Sütte üre artışı",
+          "milk-urea": "Süt üre miktarında artış",
           "weak-calves": "Zayıf buzağılar(diyare, gecikmeli büyüme, oral ve dermal lezyonlar…)",
           "fertility-troubles": "Fertilite sorunları (metritis, kist, plasenta retensiyonu...)",
-          "reproduction-performance": "Düşük reprodüksiyon parametreleri (kızgınlığı saptama, ilk tohumlamada başarı…)",
-          "troubles-from-raw-materials": "Yukarıdaki problemlerin yeni silajın açılmasıyla başlaması"
+          "reproduction-performance": "Üreme performansında azalma (kızgınlığı saptama, ilk tohumlamada başarı…)",
+          "troubles-from-raw-materials": "Yukarıdaki problemlerin yeni hammadde kullanımı ile birlikte başlaması"
         }
       },
       "on-field": {
         "title": "Ekim alanı",
         "fields": {
-          "corn-procedence": "Mısır tek ekin ekilen tarlada üretildi",
+          "corn-procedence": "Mısır, sadece mısır ekilen tarlada üretildi",
           "corn-fields": "Mısır tarlası sürülmemişti",
           "fusarium": "Sahada Fusarium küfleri/hastalıkları gözlendi",
           "silage-harvest": "Silaj geç biçildi",
@@ -96,7 +96,7 @@
         "title": "Depolama",
         "fields": {
           "molds": "Gözle görülen küfler var (kırmızı, mavi, beyaz veya siyah…)",
-          "silage-troubles": "Silajın basılmasında problemler yaşanıyor(yüksek KM, biçim hızı...)",
+          "silage-troubles": "Silajın ezilmesinde problemler yaşandı (yüksek KM, biçim hızı...)",
           "warm-silage": "Silaj sıcak veya soğuması uzun zaman alıyor",
           "grass-silage": "Ot silajı herzamanki gibi temiz değil",
           "silage-front-consuption": "Silajın ilk kısmı çok yavaş tüketiliyor"
@@ -139,7 +139,7 @@
       "selector": {
         "title": "Hayvan Türleri",
         "fields": {
-          "hens": "Yumurta Tavukçuluğu",
+          "hens": "Yumurtacı",
           "breeder": "Damızlık",
           "broiler": "Broyler"
         }
@@ -147,14 +147,14 @@
       "animals": {
         "title": "Hayvanlardaki gözlemler",
         "fields": {
-          "feed-intake": "Yetersiz yem tüketimi",
+          "feed-intake": "Yem tüketiminde azalma",
           "body-weight": "Yetersiz vücut ağırlığı",
           "liquid-droppings": "İshal",
           "water-consumption": "Aşırı su tüketimi",
           "vaccination": "Aşılama veya tedavi sorunları",
           "infectious-diseases": "Enfeksiyon hastalıklarında artış",
           "dermatitis": "Mukozal Nekroz, dermatit",
-          "gizzard": "Börkenek, mide ,bağırsak iltihapları",
+          "gizzard": "Kursak, mide ,bağırsak iltihapları",
           "mortality": "Yüksek ölüm oranı",
           "liver-damage": "Karaciğer / Böbrek hasarı",
           "ovaries-size": "Düşük yumurtalık gelişimi",
@@ -184,11 +184,11 @@
       "feed": {
         "title": "Feed",
         "fields": {
-          "home-mixed": "Kendi yeminizimi üretiyorsunuz",
-          "home-grown": "Home Mix",
+          "home-mixed": "Kendi yemini yapıyor",
+          "home-grown": "Kendi yemini yapıyor",
           "use-of-corn": "Mısır ya da mısır yan ürünleri kullanımı",
           "storage-facilities": "Kötü depolama ve stok yönetimi (havalandırma, temizlik sorunları)",
-          "feed-management": "Yukarıdaki sorunların neden olduğu değişiklikler",
+          "feed-management": "Yukarıdaki sorunların neden olduğu yem ile ilgili değişiklikler",
           "preservation-problems": "Hammadde ya da yemin depolanması esnasında karşılaşılan sorunlar (ısı, zararlılar, nem)"
         }
       },
@@ -199,7 +199,7 @@
           "egg-weight": "Düşük yumurta ağırlığı",
           "shell-quality": "Düşük yumurta kabuğu kalitesi (Kırık yumurta artışı, ince kabuk , soluk yumurta prob.)",
           "egg-hatchability": "Düşük kuluçka randımanı",
-          "progeny": "Düşük döl canlılığı"
+          "progeny": "Yavruların yaşayabilirliğinde azalma"
         }
       }
     }

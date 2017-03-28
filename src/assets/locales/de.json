@@ -6,19 +6,19 @@
     "view-title": "Auswahl Tierart"
   },
   "extra": {
-    "descriptionForm": "Wählen Sie bitte die Einstellung die am besten mit Ihrer Situation übereinstimmt. Damit das Futter mit Ihrer angestrebten Leistung übereinstimmt.",
-    "resultEmpty": "Laut der FAO sind 25% der Weltweiten landwirtschaftlichen Rohstoffe belastet."
+    "descriptionForm": "Wählen Sie bitte die Aussagen, die am besten mit Ihrer Situation übereinstimmen, wobei angenommen wird, dass das Futter mit der angestrebten Leistung abgestimmt ist.",
+    "resultEmpty": "Laut der FAO sind weltweit 25% der landwirtschaftlichen Rohstoffe belastet."
   },
   "evaluationResult": {
     "view-title": "Ergebnis",
-    "text-result": "Hohe Wahrscheinlichkeit eine signifikante Konzentration am Mycotoxine zu haben",
+    "text-result": "Hohe Wahrscheinlichkeit, eine signifikante Konzentration an Mycotoxinen zu haben",
     "text-result-suffix": "Futter",
     "email": "Bericht zusenden",
     "micotoxine": "Mykotoxin Spezialisten",
     "send": "Bericht gesendet",
     "footerPdf": "Kontaktieren Sie unsere Spezialisten, um eine auf Ihre Bedürfnisse angepaste und abgestimmte technische Beratung zu bekommen.",
     "footerEmail": "animalcare.ts@olmix.com",
-    "bodyText": "Dieser Beriecht wurde Ihnen von der Myco Evaluator App geschickt.",
+    "bodyText": "Dieser Bericht wurde Ihnen von der Myco’Evaluator App geschickt.",
     "CompartirInforme": "Geben Sie Ihre Mail Adressen ein, getrennt durch ein Komma",
     "riskLow": "Geringes Risiko",
     "riskMedium": "Mittleres Risiko",
@@ -66,21 +66,21 @@
       "herd": {
         "title": "Die Herde",
         "fields": {
-          "feed-intake": "Nicht ausreichende Futteraufnahme",
-          "low-milk-production": "Zu geringe Milchleistung gemessen an dem Potential der Futterusammensetzung",
-          "body-condition": "Abnehmender oder unbefriedingender körperlicher Zustand",
+          "feed-intake": "Unzureichende Nahrungsaufnahme",
+          "low-milk-production": "Zu geringe Milchleistung, gemessen an dem Potential der Futterzusammensetzung",
+          "body-condition": "Abnehmender oder unbefriedigender körperlicher Zustand",
           "coat-condition": "Unbefriedigender Zustand des Felles",
           "chewing-activity": "Geringe Kauaktivität",
           "somatic-cells": "Deutlicher Anstieg der somatischen Zellen oder der Mastitis",
-          "leg-troubles": "Erhöhung der Lahmheit und Bein Probleme (geschwollene Hufe, Gelenke, Dermatitis, etc.)",
-          "metabolic-troubles": "Erhöhung der metabolischen und pathologischen Störungen (Labmagen Verschiebung, SARA, Fettleber, Metritis, Dermatitis, etc.)",
-          "turnovers": "Zu hohe Fluktation (u.a. bei dem Färsen)",
+          "leg-troubles": "Erhöhung der Lahmheit und Bein-Probleme (geschwollene Hufe, Gelenke, Dermatitis, etc.)",
+          "metabolic-troubles": "Erhöhung der metabolischen und pathologischen Störungen (Labmagen-Verschiebung, SARA, Fettleber, Metritis, Dermatitis, etc.)",
+          "turnovers": "Zu hohe Fluktuation (vor allem bei Färsen)",
           "feces": "Der Kot ist zu weich / flüssig",
-          "milk-urea": "Erhöhung von Harnstoff",
-          "weak-calves": "Schwache Kälber (diarhea, verzögertes Wachstum, orale und dermale Läsionen, etc.)",
+          "milk-urea": "Erhöhung von Harnstoff in der Milch",
+          "weak-calves": "Schwache Kälber (Durchfall, verzögertes Wachstum, orale und dermale Läsionen, etc.)",
           "fertility-troubles": "Fruchtbarkeitsprobleme (Metritis, Zysten, Plazenta Retention, etc.)",
-          "reproduction-performance": "Reproduktionsparameter (Brunst Erkennung, Erfolg der Erstbesamung, etc.)",
-          "troubles-from-raw-materials": "Die oben genannten Probleme begannen mit der Eröffnung eines neuen Silos"
+          "reproduction-performance": "Schwache Fortpflanzungsleistung (Brunst-Erkennung, Erfolg der Erstbesamung, etc.)",
+          "troubles-from-raw-materials": "Die oben genannten Probleme begannen mit der Nutzung eines neuen Silos oder neuer Futtermaterialien."
         }
       },
       "on-field": {
@@ -96,10 +96,10 @@
       "storage": {
         "title": "Lagerung",
         "fields": {
-          "molds": "Verfärbungen im Silo (rot, blau, weiß oder Schwarz, etc.)",
+          "molds": "Verfärbungen im Silo (rot, blau, weiß oder schwarz, etc.)",
           "silage-troubles": "Schwierigkeiten die Silage fest zu fahren",
           "warm-silage": "Silage ist warm oder dauerte es eine lange Zeit bis sie abgekühlt war",
-          "grass-silage": "Die Grassilage ist nicht so sauber wie gewohnt",
+          "grass-silage": "Die Grassilage ist nicht so sauber, wie gewohnt",
           "silage-front-consuption": "Die Front der Silage wird nur langsam verbraucht"
         }
       }
@@ -108,22 +108,22 @@
       "animal": {
         "title": "Schweine",
         "fields": {
-          "sows-status": "UnsatUnbefriedigender allgemein Zusatnd der Sauen",
+          "sows-status": "Unbefriedigender Allgemeinzusatnd der Sauen",
           "poor-growth": "Körper-Konditionsindex wird nicht erfüllt",
           "intake": "Nicht zufriedenstellende Futteraufnahme",
           "skin-color": "Die Hautfarbe der Sau ist nicht gut",
-          "milk-production": "Keine ausreichende Milchproduktion",
+          "milk-production": "Geringe Milchproduktion",
           "veterinary-intervention": "Hohe Frequenz von tierärztlichen Einfriffe notwendig",
           "lactation-start": "Probleme die Laktation zu starten",
-          "stillborn-piglets": "Zu viel mumifizierte / Totgeborene / kleine Ferkel",
+          "stillborn-piglets": "Zu viel mumifizierte / totgeborene / kleine Ferkel",
           "small-piglets-at-birth": "Zu kleine / heterogene Ferkel",
           "splay-legs": "Mehr gespreitzte Beine als sonst",
           "red-vulva": "Geschwollene rote Vagina",
-          "neonatal-diarrea": "Neonatal Durchfall / Ferkel wachsen nicht gut",
-          "necrosis": "Ohr und Schwanz Nekrose",
-          "reproduction-troubles": "Fruchtbarkeits Probleme (Metritis, Plazenta Retention, etc.)",
+          "neonatal-diarrea": "Neonataler Durchfall / Ferkel wachsen nicht gut",
+          "necrosis": "Ohr- und Schwanz-Nekrose",
+          "reproduction-troubles": "Fruchtbarkeitsprobleme (Metritis, Plazenta Retention, etc.)",
           "heat-detection": "Probleme in der Brunsterkennung / Zuviele Sauen kommen zurück",
-          "weaning-insemination": "Langer Intervall vom Absetzen zur Besamung"
+          "weaning-insemination": "Langes Intervall vom Absetzen zur Besamung"
         }
       },
       "feed": {
@@ -132,7 +132,7 @@
           "home-grown": "Eigener Futteranbau",
           "use-of-corn": "Verwendung von Corn Cob Mix (CCM)",
           "storage-facilities": "Verwendung von Trockenschlempe (DDGS)",
-          "grains-preservation-problems": "Langer Zeitintervall zwischen dem Silo-Reinigen"
+          "grains-preservation-problems": "Langes Zeitintervall zwischen dem Silo-Reinigen"
         }
       }
     },
@@ -149,8 +149,8 @@
       "animals": {
         "title": "Tiere",
         "fields": {
-          "feed-intake": "Unzureichender Nahrungsaufnahme",
-          "body-weight": "Unzureichendem Körpergewicht",
+          "feed-intake": "Unzureichende Nahrungsaufnahme",
+          "body-weight": "Unzureichendes Körpergewicht",
           "liquid-droppings": "Flüssigkeitsverlust",
           "water-consumption": "Hoher Wasserverbrauch",
           "vaccination": "Impf- oder Behandlungsversagen",
