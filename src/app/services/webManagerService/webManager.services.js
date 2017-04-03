@@ -3,5 +3,5 @@ import webManagerService from './webManager.service';
 
 export default angular
     .module('olmixEvaluator.webkManager.services', [])
-    .constant('apiUrl', 'http://dev-olmix.pantheon.io')
+    .constant('apiUrl', 'https://www.olmix.com')
     .service('webManagerService', webManagerService);
