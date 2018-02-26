@@ -7,7 +7,6 @@ const navIcon = {
     navegacion: '='
   },
   template: `
-    <p>movida</p>
     <ion-nav-title>
         <div class="row">
             <div class="nav-titulo col col-33">

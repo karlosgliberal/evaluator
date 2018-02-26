@@ -1,6 +1,6 @@
 import formPartsBuilderServices from './formPartsBuilder.services';
 
-describe('form parts builder service', () => {
+describe('Form parts builder service', () => {
 
   var formPartsBuilderService, translateStub;
 
@@ -23,7 +23,7 @@ describe('form parts builder service', () => {
     var spy = sinon.spy(formPartsBuilderService, 'buildCheckboxFor');
     var fieldGroup = formPartsBuilderService.buildFieldGroupFor({'::fieldName1::': 1}, '::fieldGroup::');
 
-    expect(spy.withArgs('::fieldName1::', '::fieldGroup::').callCount).to.be.equal(1);
+    expect(spy.withArgs('::fieldName1::', '::fieldGroup::')).to.be.calledOnce;
     expect(fieldGroup[0]).to.be.eql(checboxField('::fieldName1::'));
   });
 
@@ -35,8 +35,8 @@ describe('form parts builder service', () => {
     }, '::fieldGroup::');
 
     expect(spy.callCount).to.be.equal(2);
-    expect(spy.withArgs('::fieldName1::', '::fieldGroup::').callCount).to.be.equal(1);
-    expect(spy.withArgs('::fieldName2::', '::fieldGroup::').callCount).to.be.equal(1);
+    expect(spy.withArgs('::fieldName1::', '::fieldGroup::')).to.be.calledOnce;
+    expect(spy.withArgs('::fieldName2::', '::fieldGroup::')).to.be.calledOnce;
     expect(fieldGroup[0]).to.be.eql(checboxField('::fieldName1::'));
     expect(fieldGroup[1]).to.be.eql(checboxField('::fieldName2::'));
   });
@@ -55,7 +55,7 @@ describe('form parts builder service', () => {
 
     formPartsBuilderService.buildWrapperFor('::labelReference::', '::key::', ['::field::']);
 
-    expect(spy.withArgs(['::field::'], '::key::.fields.').callCount).to.be.equal(1);
+    expect(spy.withArgs(['::field::'], '::key::.fields.')).to.be.calledOnce;
   });
 
   it('should build wrapper with multiple fields in list', () => {
@@ -63,21 +63,21 @@ describe('form parts builder service', () => {
 
     formPartsBuilderService.buildWrapperFor('::labelReference::', '::key::', ['::field1::', '::field2::']);
 
-    expect(spy.withArgs(['::field1::', '::field2::'], '::key::.fields.').callCount).to.be.equal(1);
+    expect(spy.withArgs(['::field1::', '::field2::'], '::key::.fields.')).to.be.calledOnce;
   });
 
   it('should build wrapper for selector', () => {
     var stub = sinon.stub(formPartsBuilderService, 'buildChoiceListFor');
     formPartsBuilderService.buildSelectorFor('::labelReference::', '::key::', ['::first::', '::second::'], undefined);
 
-    expect(stub.withArgs(['::first::', '::second::']).callCount).to.be.equal(1);
+    expect(stub.withArgs(['::first::', '::second::'])).to.be.calledOnce;
   });
 
   it('should build wrapper for radio button', () => {
     var stub = sinon.stub(formPartsBuilderService, 'buildRadioChoiceListFor');
     formPartsBuilderService.buildRadioFor('::labelReference::', '::key::', ['::first::', '::second::'], undefined);
 
-    expect(stub.withArgs(['::first::', '::second::']).callCount).to.be.equal(1);
+    expect(stub.withArgs(['::first::', '::second::'])).to.be.calledOnce;
   });
 });
 

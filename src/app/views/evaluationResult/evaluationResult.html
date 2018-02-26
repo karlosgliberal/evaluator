@@ -1,67 +1,81 @@
 <!-- {{evaluationResult.$stateParams.animal}} -->
 <ion-view>
-  <ion-nav-title>
-    <div class="row">
-      <div class="titulo col col-50">
-        <!--<h4>{{'evaluationResult.view-title' | translate}}</h4>-->
-        <h4 class="white mt-8">Olmix Myco'Evaluator</h4>
-      </div>
-      <div class="nav-img col col-50">
-        <img src="{{evaluationResult.logoIcon}}">
-      </div>
-    </div>
-  </ion-nav-title>
+    <ion-nav-title>
+        <div class="row">
+            <div class="titulo col col-50">
+                <!--<h4>{{'evaluationResult.view-title' | translate}}</h4>-->
+                <h4 class="white mt-8">Olmix Myco'Evaluator</h4>
+            </div>
+            <div class="nav-img col col-50">
+                <img ng-src="{{evaluationResult.logoIcon}}">
+            </div>
+        </div>
+    </ion-nav-title>
     <ion-content>
-      <div class="container-wrapper">
-        <div class="imagen-animal-container" style="background-image: url({{evaluationResult.imageAnimal}})";>
-          <p class="texto-animal-imagen">{{evaluationResult.textAnimal }} {{evaluationResult.resultSubspecie}}</p>
-        </div>
-        <p class="result-intro center">{{'evaluationResult.text-result' | translate}}</p>
-        <div class="result-container">
-          <div class="result-number-container">
-            <div class="result-number" style="position: relative; left: {{evaluationResult.resultPercentage}}px; padding: 0 20px 0 0;">{{evaluationResult.resultPercentage}}%</div>
-          </div>
-          <div class="result-border--wrapper">
-            <div class="result-border" style="width: {{evaluationResult.resultPercentage}}%; background-color: #76405D;"></div>
-          </div>
-          <p class="result-text center">{{evaluationResult.resultText}}</p>
-          <div ng-if="evaluationResult.resultEmpty" class="container-wrapper intro-form fao">
-            <p>
-              {{'extra.resultEmpty' | translate}}
-            </p>
-          </div>
-        </div>
-        <br/>
-        <br/>
-        <div class="result-send">
-          <div class="list list-inset">
-            <form class="envio-email" ng-submit="evaluationResult.onSubmit()">
-              <formly-form form="evaluationResult.form" model="evaluationResult.viewModel" fields="evaluationResult.fields">
-                <p class="share-text" ng-hide="evaluationResult.resultMessage">{{'evaluationResult.CompartirInforme' | translate}}</p>
-                <div class="buttom-wrapper" ng-hide="evaluationResult.resultMessage">
-                  <button type="submit" class="button submit-form">{{'evaluationResult.email' | translate}}
-                  </button>
+        <div class="container-wrapper">
+            <div class="imagen-animal-container" style="background-image: url({{evaluationResult.textImageObj.image}})"
+                 ;>
+                <p class="texto-animal-imagen">{{evaluationResult.textImageObj.texto }}
+                    {{evaluationResult.resultSubspecie}}</p>
+            </div>
+            <p class="result-intro center">{{'evaluationResult.text-result' | translate}}</p>
+            <div class="result-container">
+                <div class="result-number-container">
+                    <div class="result-number"
+                         style="position: relative; left: {{evaluationResult.resultPercentage}}px; padding: 0 20px 0 0;">
+                        {{evaluationResult.resultPercentage}}%
+                    </div>
                 </div>
-              </formly-form>
-            </form>
-            <div ng-if="evaluationResult.resultMessage">
-              <p class="result-intro center">{{'evaluationResult.send' |translate}}</p>
-              <div class="buttom-wrapper">
-                <button class="button submit-form icon ion-ios-paw" ui-sref="animalSelection"> {{'menu.selection' | translate}}
-                </button>
-              </div>
+                <div class="result-border--wrapper">
+                    <div class="result-border"
+                         style="width: {{evaluationResult.resultPercentage}}%; background-color: #76405d;"></div>
+                </div>
+                <p class="result-text center">{{evaluationResult.resultText}}</p>
+                <div ng-if="evaluationResult.resultEmpty" class="container-wrapper intro-form fao">
+                    <p>
+                        {{'extra.resultEmpty' | translate}}
+                    </p>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <br/>
+            <br/>
+            <div class="result-send">
+                <div class="list list-inset">
+                    <form class="envio-email" name="evaluationResult.form" ng-submit="evaluationResult.onSubmit()"
+                          novalidate>
+                      <input class="form-control input-field" name="email" type="input" autocomplete="off"
+                             placeholder="Email" ng-model="evaluationResult.email"
+                             ng-change="evaluationResult.emailChanged()" ng-pattern="evaluationResult.emailPattern"
+                             ng-required="true">
+                        <span class="red-text"
+                              ng-if="evaluationResult.form.email.$error.pattern || (evaluationResult.form.email.$error.required && evaluationResult.form.email.$dirty) || !evaluationResult.validForm">{{'evaluationResult.invalidEmail' |translate}}</span>
+                        <p class="share-text">
+                            {{'evaluationResult.CompartirInforme' | translate}}</p>
+                        <div class="buttom-wrapper" ng-hide="evaluationResult.form.resultMessage">
+                            <button type="submit" class="button submit-form">{{'evaluationResult.email' | translate}}
+                            </button>
+                        </div>
+                    </form>
 
-      <div class="result-footer">
-            <div class="logos-footer center">
-              <div class="logo"><img src="{{evaluationResult.logoOlmix}}" alt="logotipo olmix group"/></div>
-              <div class="logo"><p class="text-footer">{{'evaluationResult.micotoxine' | translate}}:</p></div>
-              <div class="logo"><img src="{{evaluationResult.logoMtx}}" alt="logotipo mtx"/></div>
+                    <div ng-if="evaluationResult.resultMessage && !evaluationResult.form.email.$dirty">
+                        <p class="result-intro center">{{'evaluationResult.send' |translate}}</p>
+                    </div>
+                    <div class="buttom-wrapper">
+                        <button class="button submit-form icon ion-ios-paw" ui-sref="animalSelection">
+                            {{'menu.selection' | translate}}
+                        </button>
+                    </div>
+                </div>
             </div>
-      </div>
+        </div>
+
+        <div class="result-footer">
+            <div class="logos-footer center">
+                <div class="logo"><img src="{{evaluationResult.logoOlmix}}" alt="logotipo olmix group"/></div>
+                <div class="logo"><p class="text-footer">{{'evaluationResult.micotoxine' | translate}}:</p></div>
+                <div class="logo"><img src="{{evaluationResult.logoMtx}}" alt="logotipo mtx"/></div>
+            </div>
+        </div>
 
     </ion-content>
 

@@ -1,4 +1,3 @@
-import poultry from '../../utils/poultry';
 import {assign} from 'lodash';
 
 export default class formPartsBuilderService {
@@ -43,21 +42,6 @@ export default class formPartsBuilderService {
       }];
   }
 
-  buidInputEmailFor(labelReferenceBase, key, options, state) {
-    this.labelReferenceBase = '';
-    return [
-      {
-        key: 'email',
-        type: 'stacked-input',
-        templateOptions: {
-          type: 'text',
-          placeholder: 'Email',
-          required: true,
-          className: 'movida'
-        }
-      }];
-  }
-
   buildWrapperFor(labelReferenceBase, key, fieldList) {
     this.labelReferenceBase = labelReferenceBase;
     return {
@@ -69,8 +53,7 @@ export default class formPartsBuilderService {
   }
 
   buildChoiceListFor(options) {
-    //var selectorFields = 'selector.fields.';
-    var selectorFields = 'selector.fields.';
+    let selectorFields = 'selector.fields.';
     return _.map(options, (type) => {
       return {
         text: this.$translate.instant(this.labelReferenceBase + selectorFields + type),
@@ -80,7 +63,7 @@ export default class formPartsBuilderService {
   }
 
   buildRadioChoiceListFor(options) {
-    var selectorFields = '';
+    let selectorFields = '';
     return _.map(options, (type) => {
       return {
         text: this.$translate.instant(this.labelReferenceBase + selectorFields + type),

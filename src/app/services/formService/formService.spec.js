@@ -7,7 +7,7 @@ import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
 import language from '../../utils/language.js';
 
-describe('form service', () => {
+describe('Form service', () => {
 
   var formService, cowFormServiceSpy, swineFormServiceSpy, poultryFormServiceSpy, languageFormServiceSpy;
 
@@ -39,27 +39,27 @@ describe('form service', () => {
 
   it('should fetch cow form initial fields', () => {
     formService.getFormFields(animal.COW);
-    expect(formService.cowFormService.generateForm).to.be.called.once;
+    expect(formService.cowFormService.generateForm).to.be.calledOnce;
   });
 
   it('should fetch swine form initial fields', () => {
     formService.getFormFields(animal.SWINE);
-    expect(formService.swineFormService.generateForm).to.be.called.once;
+    expect(formService.swineFormService.generateForm).to.be.calledOnce;
   });
 
   it('should fetch poultry form initial fields', () => {
     formService.getFormFields(animal.POULTRY);
-    expect(formService.poultryFormService.generateForm).to.be.called.once;
+    expect(formService.poultryFormService.generateForm).to.be.calledOnce;
   });
 
   it('should fetch poultry form selector for poultry', () => {
     formService.getFormSelector(animal.POULTRY);
-    expect(formService.poultryFormService.generateFormSelector).to.be.called.once;
+    expect(formService.poultryFormService.generateFormSelector).to.be.calledOnce;
   });
 
   it('should fetch language radio form list', () => {
     formService.getFormRadio(language);
-    expect(formService.languageFormService.generateFormRadio).to.be.called.once;
+    expect(formService.languageFormService.generateFormRadio).to.be.calledOnce;
   });
 
   it('should not return selector fields for animals that are not poultry', () => {

@@ -35,18 +35,18 @@ describe('Application Tests', () => {
 
     it('should transition to language selection component', () => {
       controller.goToLanguageSelection();
-      expect(stateStub.$state.go).to.have.been.called.once;
+      expect(stateStub.$state.go).to.be.calledOnce;
       expect(stateStub.$state.go).to.have.been.calledWith('idioma');
     });
 
     it('should transition to animal selection component', () => {
       controller.goToAnimalSelection();
-      expect(stateStub.$state.go).to.have.been.called.once;
+      expect(stateStub.$state.go).to.be.calledOnce;
       expect(stateStub.$state.go).to.have.been.calledWith('animalSelection');
     });
 
     it('should call localStorage', () => {
-      expect(localStorageManagerStub.getDataFor.withArgs('language').callCount).to.be.equal(1);
+      expect(localStorageManagerStub.getDataFor.withArgs('language')).to.be.calledOnce;
     });
 
     it('should decide to go to animal selection', () => {

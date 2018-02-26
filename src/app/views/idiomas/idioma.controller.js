@@ -3,7 +3,16 @@ import languages from '../../utils/language';
 
 export default class IdiomaController {
   /*@ngInject*/
-  constructor(formService, $translate, $state, $stateParams, localStorageManager, languageFormService, $ionicHistory) {
+  constructor(
+    formService,
+    $translate,
+    $state,
+    $stateParams,
+    localStorageManager,
+    languageFormService,
+    $ionicHistory,
+    logoIcon
+  ) {
     assign(this, {
       formService,
       $translate,
@@ -11,11 +20,10 @@ export default class IdiomaController {
       $stateParams,
       localStorageManager,
       languageFormService,
-      $ionicHistory
+      $ionicHistory,
+      logoIcon
     });
 
-
-    this.logoIcon = './assets/images/logo-cabecera.png';
     var userLanguage = this.localStorageManager.getDataFor('language');
 
     if (userLanguage) {

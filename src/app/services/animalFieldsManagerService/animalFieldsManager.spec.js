@@ -5,7 +5,7 @@ import cowFields from './../../utils/fields/cowFields';
 import swineFields from './../../utils/fields/swineFields';
 import poultryFields from './../../utils/fields/poultryFields';
 
-describe('animal fields manager', () => {
+describe('Animal fields manager', () => {
   var animalFieldsManager, sandbox, spy, translateStub;
 
   before(() => {
@@ -27,7 +27,7 @@ describe('animal fields manager', () => {
   it('should get cow fields', () => {
     spy = sinon.spy(cowFields, 'getAllFieldsFor');
     animalFieldsManager.getFieldsFor(animals.COW, 'es');
-    expect(spy.withArgs().callCount).to.be.equal(1);
+    expect(spy.withArgs()).to.be.calledOnce;
   });
 
   it('should get swine fields', () => {
@@ -35,7 +35,7 @@ describe('animal fields manager', () => {
 
     animalFieldsManager.getFieldsFor(animals.SWINE);
 
-    expect(spy.withArgs().callCount).to.be.equal(1);
+    expect(spy.withArgs()).to.be.calledOnce;
   });
 
   describe('poultry species', () => {
@@ -48,19 +48,19 @@ describe('animal fields manager', () => {
     it('should get poultry breeder fields', () => {
       animalFieldsManager.getFieldsFor(animals.POULTRY, poultry.BREEDER);
 
-      expect(spy.withArgs(poultry.BREEDER).callCount).to.be.equal(1);
+      expect(spy.withArgs(poultry.BREEDER)).to.be.calledOnce;
     });
 
     it('should get poultry hens fields', () => {
       animalFieldsManager.getFieldsFor(animals.POULTRY, poultry.HENS);
 
-      expect(spy.withArgs(poultry.HENS).callCount).to.be.equal(1);
+      expect(spy.withArgs(poultry.HENS)).to.be.calledOnce;
     });
 
     it('should get poultry broiler fields', () => {
       animalFieldsManager.getFieldsFor(animals.POULTRY, poultry.BROILER);
 
-      expect(spy.withArgs(poultry.BROILER).callCount).to.be.equal(1);
+      expect(spy.withArgs(poultry.BROILER)).to.be.calledOnce;
     });
   });
 });

@@ -5,12 +5,13 @@ const labelReferenceBase = 'forms.swine.';
 
 export default class swineFormService {
   /*@ngInject*/
-  constructor($translate, formPartsBuilderService) {
-    assign(this, {$translate, formPartsBuilderService});
+  constructor(formPartsBuilderService) {
+    assign(this, {formPartsBuilderService});
   };
 
   generateForm() {
-    return [this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animal', swineFields.swineOnAnimalFieldsList()),
+    return [
+      this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animal', swineFields.swineOnAnimalFieldsList()),
       this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'feed', swineFields.swineOnFeedFieldsList()),
     ];
   }

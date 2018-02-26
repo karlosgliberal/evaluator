@@ -1,95 +1,92 @@
 import evaluationResultControllers from './evaluationResult.controllers';
-import formPartsControllers from './../../services/formPartsBuilderService/formPartsBuilder.services';
 import reportManagerService from './../../services/reportManagerService/reportManager.services';
-import languageFormServices from './../../services/languageFormService/languageForm.services';
-
 import animals from './../../utils/animal';
+import languageFormServices from './../../services/languageFormService/languageForm.services';
+import constantsService from '../../services/constants/constants.service';
 
-var controller, scope, formPartBuildServiceSpy, reportManagerServiceStub, form, stateParams, $compile, directiveHTML, languageFormServiceSpy;
+var controller, scope, translateStub, reportManagerServiceStub, stateParams, $compile, languageFormServiceSpy;
 
-describe('Evaluation Result controller', () => {
-
-  beforeEach(angular.mock.module(formPartsControllers.name));
-
-  beforeEach(angular.mock.module(reportManagerService.name));
-
-  beforeEach(angular.mock.module(evaluationResultControllers.name));
-
+describe('Evaluation result controller', () => {
   beforeEach(angular.mock.module(languageFormServices.name, ($provide) => {
     languageFormServiceSpy = {generateFormRadio: sinon.spy(), getTextImagen: sinon.spy()};
     $provide.value('languageFormService', languageFormServiceSpy);
   }));
 
+  beforeEach(angular.mock.module(constantsService.name));
+
+  beforeEach(angular.mock.module(reportManagerService.name));
+
+  beforeEach(angular.mock.module(evaluationResultControllers.name));
+
   beforeEach(inject(($controller, $rootScope, _$compile_) => {
     $compile = _$compile_;
     scope = $rootScope.$new();
     stateParams = {animal: animals.COW, result: 5};
-    formPartBuildServiceSpy = {buidInputEmailFor: sinon.stub()};
     reportManagerServiceStub = {sendReport: sinon.stub()};
-
-    prepareFormly();
-
     controller = $controller('evaluationResultController', {
       $stateParams: stateParams,
-      formPartsBuilderService: formPartBuildServiceSpy,
-      reportManagerService: reportManagerServiceStub
+      reportManagerService: reportManagerServiceStub,
+      $translate: translateStub
     });
+
+    controller.form = { $valid: true, $setPristine: sinon.stub(), $setUntouched: sinon.stub() };
   }));
 
-  describe('form tests', () => {
-    // it('should call email input form', () => {
-    //   scope.viewModel = {email: '::email::'};
-    //
-    //
-    //   expect(formPartBuildServiceSpy.buidInputEmailFor).to.be.called.once;
-    // });
+  it('email pattern should not accept an invalid email', () => {
+    const email = 'email@';
+    const emailRegex = new RegExp(controller.emailPattern);
 
-    //it('should have compiled input text', function () {
-    //  console.log($compile);
-    //  expect($compile.find('input').length).to.equal(1);
-    //});
+    const isValid = emailRegex.test(email);
 
-    //it.only('should verify email', () => {
-    //  scope.viewModel = {email: '::email::'};
-    //
-    //  controller.onSubmit();
-    //
-    //  expect(reportManagerServiceSpy.sendReport).to.not.be.called.once;
-    //});
-
-    //it.only('should verify email and send report', () => {
-    //  scope.viewModel = {email: 'email@email.com'};
-    //
-    //  controller.onSubmit();
-    //
-    //  expect(reportManagerServiceSpy.sendReport.withArgs(animals.COW, 5, 'email@email.com')).to.be.called.once;
-    //});
+    expect(isValid).to.be.false;
   });
 
-  //describe('report send response', () => {
-  //  it('should show success message', () => {
-  //    reportManagerServiceStub.returns({result: 'ok'})
-  //  });
-  //});
+  it('email pattern should not accept empty email', () => {
+    const email = '';
+    const emailRegex = new RegExp(controller.emailPattern);
+
+    const isValid = emailRegex.test(email);
+
+    expect(isValid).to.be.false;
+  });
+
+  it('email pattern should accept a valid email', () => {
+    const email = 'email@email.com';
+    const emailRegex = new RegExp(controller.emailPattern);
+
+    const isValid = emailRegex.test(email);
+
+    expect(isValid).to.be.true;
+  });
+
+  it('email pattern should accept some valid emails', () => {
+    const email = 'email@email.com,email2@other.es';
+    const emailRegex = new RegExp(controller.emailPattern);
+
+    const isValid = emailRegex.test(email);
+
+    expect(isValid).to.be.true;
+  });
+
+  it('should not send report when form is not valid', () => {
+    controller.form = { $valid: false };
+
+    controller.onSubmit();
+
+    expect(reportManagerServiceStub.sendReport).to.not.be.called;
+    expect(controller.validForm).to.be.false;
+  });
+
+  it('should send report and reset form when form is valid', () => {
+    controller.email = 'email@email.com';
+    reportManagerServiceStub.sendReport.returns({result: 'ok'});
+
+    controller.onSubmit();
+
+    expect(reportManagerServiceStub.sendReport.withArgs(animals.COW, 5, 'email@email.com')).to.be.calledOnce;
+    expect(controller.form.$setPristine).to.be.calledOnce;
+    expect(controller.form.$setUntouched).to.be.calledOnce;
+    expect(controller.validForm).to.be.true;
+  });
 });
 
-function prepareFormly() {
-  scope.viewModel = {};
-  scope.fields = [{
-    key: 'email',
-    type: 'stacked-input',
-    templateOptions: {
-      type: 'email',
-      label: 'Email',
-      placeholder: 'Email'
-    }
-  }];
-
-  directiveHTML =
-      '<form novalidate>' +
-      '<formly-form form="form" model="scope.viewModel" fields="scope.fields">' +
-      '</form>';
-
-  $compile = $compile(directiveHTML)(scope);
-  scope.$digest();
-}
