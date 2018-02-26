@@ -1,4 +1,3 @@
-import poultry from '../../utils/poultry';
 import {assign} from 'lodash';
 
 export default class formPartsBuilderService {
@@ -50,11 +49,10 @@ export default class formPartsBuilderService {
         key: 'email',
         type: 'stacked-input',
         templateOptions: {
-          type: 'text',
           placeholder: 'Email',
           required: true,
-          className: 'movida'
-        }
+          pattern: '([0-9A-F]{2}[:-]){5}([0-9A-F]{2})',
+        },
       }];
   }
 

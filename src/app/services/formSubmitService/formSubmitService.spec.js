@@ -6,10 +6,8 @@ import localStorageManager from '../localStorageManagerService/localStorageManag
 import resultManagerServices from '../resultManagerService/resultManager.services';
 import networkManagerService from './../networkManagerService/networkManager.services';
 
-describe('form submit service', () => {
-
+describe('Form submit service', () => {
   var formSubmitService, animalFieldsManagerSpy, localStorageManagerSpy, resultMangerSpy, resultTextMangerSpy, networkManagerServiceSpy, translateStub;
-
 
   var sandbox;
   beforeEach(() => {
@@ -110,19 +108,19 @@ describe('form submit service', () => {
     it('should get Cow fields', () => {
       formSubmitService.getAnimalFields(animal.COW);
 
-      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.COW).callCount).to.be.equal(1);
+      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.COW)).to.be.calledOnce;
     });
 
     it('should get Swine fields', () => {
       formSubmitService.getAnimalFields(animal.SWINE);
 
-      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.SWINE).callCount).to.be.equal(1);
+      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.SWINE)).to.be.calledOnce;
     });
 
     it('should get Poultry breeder fields', () => {
       formSubmitService.getAnimalFields(animal.POULTRY, poultry.BREEDER);
 
-      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.POULTRY, poultry.BREEDER).callCount).to.be.equal(1);
+      expect(animalFieldsManagerSpy.getFieldsFor.withArgs(animal.POULTRY, poultry.BREEDER)).to.be.calledOnce;
     });
 
     it('should perform evaluation with matching elements', () => {
@@ -184,7 +182,7 @@ describe('form submit service', () => {
 
       formSubmitService.saveData(dataToSave);
 
-      expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave)).callCount).to.be.equal(1);
+      expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave))).to.be.calledOnce;
     });
   });
 });

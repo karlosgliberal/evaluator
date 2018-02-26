@@ -1,6 +1,6 @@
 import localStorageManagerServices from './localStorageManager.services';
 
-describe('animal fields manager', () => {
+describe('Local storage manager service', () => {
   var localStorageManager, sandbox;
 
   before(() => {
@@ -13,7 +13,7 @@ describe('animal fields manager', () => {
 
   beforeEach(angular.mock.module(localStorageManagerServices.name));
 
-  beforeEach(inject((_localStorageManager_)=> {
+  beforeEach(inject((_localStorageManager_) => {
     Object.defineProperty(sessionStorage, 'setItem', {writable: true});
     Object.defineProperty(sessionStorage, 'getItem', {writable: true});
 
@@ -22,8 +22,7 @@ describe('animal fields manager', () => {
 
   it('should save data', () => {
     var store = {}, localStorageKey, dataToSave = {data: '::data::'}, expected = JSON.stringify(dataToSave);
-
-    sandbox.stub(window.localStorage, 'setItem', (key, value) => {
+    sandbox.stub(window.localStorage, 'setItem').callsFake((key, value) => {
       store[key] = value;
       localStorageKey = key;
     });
@@ -34,9 +33,7 @@ describe('animal fields manager', () => {
   });
 
   it('should get data', () => {
-    sandbox.stub(window.localStorage, 'getItem', (key) => {
-      return 'result';
-    });
+    sandbox.stub(window.localStorage, 'getItem').returns('result');
 
     var retrievedData = localStorageManager.getDataFor('::key::');
 

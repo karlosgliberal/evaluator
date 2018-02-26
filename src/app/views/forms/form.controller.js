@@ -13,16 +13,12 @@ export default class formController {
     this.logoIcon = './assets/images/logo-cabecera.png';
     this.selectorViewModel = {};
     this.selector = this.formService.getFormSelector(this.$stateParams.animal, this);
-    this.movida = '';
-
-
     this.viewModel = {};
     this.fields = this.formService.getFormFields(this.$stateParams.animal);
   }
 
   onSelectorChange() {
     this.viewModel = {};
-    console.log(this.selectorViewModel.selector);
     this.fields = this.formService.changeFormFieldsFor(this.selectorViewModel.selector);
     this.subSpecie = this.selectorViewModel.selector;
   }
@@ -35,7 +31,8 @@ export default class formController {
     let stateParams = this.$stateParams;
     let state = this.$state;
     this.$ionicHistory.clearHistory();
-    this.$ionicHistory.clearCache().then(function (){
+
+    return this.$ionicHistory.clearCache().then(function (){
       state.go('evaluationResult', {animal: stateParams.animal, result: evaluationResult});
     });
   }

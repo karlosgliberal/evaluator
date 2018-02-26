@@ -4,16 +4,13 @@ import localStorageManager from '../../services/localStorageManagerService/local
 import networkManagerService from '../../services/networkManagerService/networkManager.services';
 
 
-var controller, stateSpy, translateStub, availableAnimalsSpy, localStorageManagerStub, networkManagerServiceStub;
+var controller, stateSpy, translateStub, networkManagerServiceStub;
 
-describe('animal controller selection', () => {
-
+describe('Animal selection controller', () => {
   beforeEach(angular.mock.module(animalSelectionControllers.name, ($provide) => {
     translateStub = {use: sinon.stub()};
     $provide.value('$translate', translateStub);
   }));
-
-  beforeEach(angular.mock.module(animalSelectionControllers.name));
 
   beforeEach(angular.mock.module(localStorageManager.name));
 
@@ -37,7 +34,7 @@ describe('animal controller selection', () => {
   it('should transition to cow form', () => {
     controller.onAnimalSelection(animal.COW);
 
-    expect(stateSpy.$state.go).to.have.been.called.once;
+    expect(stateSpy.$state.go).to.be.calledOnce;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'dairy'});
 
   });
@@ -45,14 +42,14 @@ describe('animal controller selection', () => {
   it('should transition to swine form', () => {
     controller.onAnimalSelection(animal.SWINE);
 
-    expect(stateSpy.$state.go).to.have.been.called.once;
+    expect(stateSpy.$state.go).to.be.calledOnce;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'swine'});
   });
 
   it('should transition to cow form', () => {
     controller.onAnimalSelection(animal.POULTRY);
 
-    expect(stateSpy.$state.go).to.have.been.called.once;
+    expect(stateSpy.$state.go).to.be.calledOnce;
     expect(stateSpy.$state.go).to.have.been.calledWith('form', {animal: 'poultry'});
   });
 });

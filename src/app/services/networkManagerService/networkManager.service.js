@@ -1,56 +1,54 @@
 import {assign} from 'lodash';
-import languages from '../../utils/language';
 
 
 export default class networkManagerService {
   /*@ngInject*/
-  constructor($cordovaNetwork, $rootScope, localStorageManager, webManagerService) {
-    assign(this, {$cordovaNetwork, $rootScope, localStorageManager, webManagerService});
-
+  constructor($cordovaNetwork, $rootScope, $window, localStorageManager, webManagerService) {
+    assign(this, {$cordovaNetwork, $rootScope, $window, localStorageManager, webManagerService});
   };
 
-  isOnline(){
+  isOnline() {
     if (ionic.Platform.isWebView()) {
       return this.$cordovaNetwork.isOnline();
     } else {
-      return navigator.onLine;
+      return this.$window.navigator.onLine;
     }
   }
 
-  isOffline(){
+  isOffline() {
     if (ionic.Platform.isWebView()) {
       return !this.$cordovaNetwork.isOnline();
     } else {
-      return !navigator.onLine;
+      return !this.$window.navigator.onLine;
     }
   }
 
-  startWatching(){
-    var webManagerService = this.webManagerService;
-    var localStorage = this.localStorageManager;
-    var $cordovaNetwork = this.$cordovaNetwork;
+  startWatching() {
+    const webManagerService = this.webManagerService;
+    const localStorage = this.localStorageManager;
+
     if (ionic.Platform.isWebView()) {
-      this.$rootScope.$on('$cordovaNetwork:online', function (event, networkState) {
+      this.$rootScope.$on('$cordovaNetwork:online', (event, networkState) => {
         console.log('Estas online');
-        var claves = localStorage.getAllDataKeys();
-        if (claves.length !== 0){
-          webManagerService.prepareSendLocalStorage(claves);
+        const storageKeys = localStorage.getAllDataKeys();
+        if (storageKeys.length !== 0) {
+          webManagerService.prepareSendLocalStorage(storageKeys);
         }
       });
-      this.$rootScope.$on('$cordovaNetwork:offline', function (event, networkState){
+      this.$rootScope.$on('$cordovaNetwork:offline', (event, networkState) => {
         console.log('Estas offline cordova');
       });
 
     } else {
-      window.addEventListener('online', function (e) {
+      this.$window.addEventListener('online', e => {
         console.log('Estas online');
-        var claves = localStorage.getAllDataKeys();
-        if (claves.length !== 0 && this.$cordovaNetwork.isOnline()){
-          webManagerService.prepareSendLocalStorage(claves);
+        const storageKeys = localStorage.getAllDataKeys();
+        if (storageKeys.length !== 0 && this.$cordovaNetwork.isOnline()) {
+          webManagerService.prepareSendLocalStorage(storageKeys);
         }
       }, false);
 
-      window.addEventListener('offline', function (e) {
+      this.$window.addEventListener('offline', e => {
         console.log('estas offline');
       }, false);
     }

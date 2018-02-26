@@ -17,6 +17,7 @@ module.exports = function (config) {
 
     // load our single entry point for our tests
     files: [
+      'node_modules/babel-polyfill/dist/polyfill.min.js',
       'test/index.js'
     ],
 

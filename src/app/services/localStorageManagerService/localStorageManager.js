@@ -15,12 +15,12 @@ export default class localStorageManager {
   }
 
   getAllDataKeys(){
-    var claves = [];
-    for (var i = 0; i < this.$window.localStorage.length; i++){
+    let keys = [];
+    for (let i = 0; i < this.$window.localStorage.length; i++){
       if (this.$window.localStorage.key(i) !== 'language' || this.$window.localStorage.key(i) !== 'cola'){
-        claves.push(this.$window.localStorage.key(i));
+        keys.push(this.$window.localStorage.key(i));
       }
     }
-    return claves;
+    return keys;
   }
 }

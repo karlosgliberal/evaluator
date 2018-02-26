@@ -8,27 +8,31 @@ export default class reportManagerService {
   };
 
   sendReport(animal, result, email) {
-    var resultado = result;
-    resultado.email = email;
-    var net = this.networkManagerService.startWatching();
-    var network = this.networkManagerService.isOnline();
+    let report = result;
+    report.email = email;
+    this.networkManagerService.startWatching();
+    let network = this.networkManagerService.isOnline();
     if (network) {
-      let resultadoString = JSON.stringify(resultado);
-      let requestResult = this.webManagerService.sendDataDrupal(resultadoString);
-      requestResult.then((request) => {
-        console.log('Conexion enviado');
-      }, (error) => {
-        console.log(error);
-        this.saveData(resultado);
-        console.log('Error envio');
-        return {result: 'error', error: 'server'};
-      });
+      let resultadoString = JSON.stringify(report);
+      console.log('Drupal');
+      console.log(resultadoString);
+      this.webManagerService
+        .sendDataDrupal(resultadoString)
+        .then(request => {
+          console.log('Conexion enviado');
+        })
+        .catch(error => {
+          this.saveData(report);
+
+          return {result: 'error', error: 'server'};
+        });
     } else {
       console.log('Sin conexion');
-      this.saveData(resultado);
+      this.saveData(report);
 
       return {result: 'error', error: 'internet'};
     }
+
     return {result: 'ok'};
   }
 

@@ -26,22 +26,24 @@ export default class poultryFormService {
   }
 
   generateLayingHensForm() {
-    return [this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animals', poultryFields.poultryLayingHensAnimalFieldsList()),
+    return [
+      this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animals', poultryFields.poultryLayingHensAnimalFieldsList()),
       this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'egg-production', poultryFields.poultryLayingHensEggsProductionFieldList()),
       this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'feed', poultryFields.poultryLayingHensFeedFieldList())
     ];
   }
 
   generateBreederForm() {
-    return [this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animals', poultryFields.poultryBreederAnimalFieldsList()),
+    return [
+      this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animals', poultryFields.poultryBreederAnimalFieldsList()),
       this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'egg-production', poultryFields.poultryBreederEggsProductionFieldsList()),
       this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'feed', poultryFields.poultryBreederFeedFieldsList())
     ];
-
   }
 
   generateBroilerForm() {
-    return [this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animals.broiler', poultryFields.poultryBroilerAnimalFieldsList()),
+    return [
+      this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'animals.broiler', poultryFields.poultryBroilerAnimalFieldsList()),
       this.formPartsBuilderService.buildWrapperFor(labelReferenceBase, 'feed', poultryFields.poultryBroilerFeedFieldsList())
     ];
   }

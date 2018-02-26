@@ -4,7 +4,7 @@ import poultryFields from '../../../utils/fields/poultryFields';
 import poultry from '../../../utils/poultry';
 import App from '../../../app';
 
-describe('poultry form service', () => {
+describe('Poultry form service', () => {
 
   var poultryFormService, translateStub, formPartsBuilderServiceSpy;
 
@@ -29,7 +29,7 @@ describe('poultry form service', () => {
 
     poultryFormService.generateForm(poultry.HENS);
 
-    expect(spy.callCount).to.be.equal(1);
+    expect(spy).to.be.calledOnce;
   });
 
   it('should call broilers form generation', () => {
@@ -37,7 +37,7 @@ describe('poultry form service', () => {
 
     poultryFormService.generateForm(poultry.BROILER);
 
-    expect(spy.callCount).to.be.equal(1);
+    expect(spy).to.be.calledOnce;
   });
 
   it('should call breeder form generation', () => {
@@ -45,7 +45,7 @@ describe('poultry form service', () => {
 
     poultryFormService.generateForm(poultry.BREEDER);
 
-    expect(spy.callCount).to.be.equal(1);
+    expect(spy).to.be.calledOnce;
   });
 
   it('should return empty if no specie is defined', () => {

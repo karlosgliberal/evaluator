@@ -12,6 +12,8 @@ export default class formService {
     if (selectedAnimal === animal.POULTRY) {
       return this.poultryFormService.generateFormSelector(state);
     }
+
+    return [];
   };
 
   getFormRadio(selectedAnimal, state) {
