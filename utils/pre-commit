@@ -14,7 +14,7 @@ fi;
 
 
 #gulp test
-/usr/local/bin/karma start karma.cmd.conf.js
+./node_modules/karma/bin/karma start karma.cmd.conf.js
 # reject the commit in case of failures
 if [[ $? != 0 ]]; then
     echo "Unit tests have failures. Commit rejected."

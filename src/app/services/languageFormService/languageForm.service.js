@@ -2,7 +2,6 @@ import {assign} from 'lodash';
 import languages from '../../utils/language';
 import animals from './../../utils/animal';
 
-
 const labelReferenceBase = 'language.';
 
 export default class languageFormService {
@@ -12,7 +11,7 @@ export default class languageFormService {
   };
 
   generateFormRadio(state, userLanguage) {
-    return this.formPartsBuilderService.buildRadioFor('language.', 'selector', languages, state, userLanguage);
+    return this.formPartsBuilderService.buildRadioFor(labelReferenceBase, 'selector', languages, state, userLanguage);
   };
 
   getTextImagen(state){
@@ -27,6 +26,7 @@ export default class languageFormService {
       textoImagenAnimal.image = './assets/images/swine-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.SWINE);
     }
+
     return textoImagenAnimal;
   };
 }

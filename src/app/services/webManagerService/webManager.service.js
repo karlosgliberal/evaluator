@@ -1,6 +1,5 @@
 import {assign} from 'lodash';
 
-
 export default class webManagerService {
   /*@ngInject*/
   constructor(apiUrl, $http, $window) {

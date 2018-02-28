@@ -5,18 +5,13 @@ import formPartsBuilderServices from '../../formPartsBuilderService/formPartsBui
 
 const labelReferenceBase = 'forms.swine.';
 
-describe('swine form service', () => {
+describe('Swine form service', () => {
 
-  var swineFormService, translateStub, formPartsBuilderServiceSpy;
+  var swineFormService, formPartsBuilderServiceSpy;
 
   beforeEach(angular.mock.module(formPartsBuilderServices.name, ($provide) => {
     formPartsBuilderServiceSpy = {buildWrapperFor: sinon.spy()};
-    $provide.value("formPartsBuilderService", formPartsBuilderServiceSpy);
-  }));
-
-  beforeEach(angular.mock.module(swineFormServices.name, ($provide) => {
-    translateStub = {instant: sinon.stub()};
-    $provide.value("$translate", translateStub);
+    $provide.value('formPartsBuilderService', formPartsBuilderServiceSpy);
   }));
 
   beforeEach(angular.mock.module(swineFormServices.name));
@@ -34,7 +29,7 @@ describe('swine form service', () => {
   });
 });
 
-function checboxField() {
+function checkboxField() {
   return {
     type: 'checkbox',
     key: '::fieldName::',
@@ -44,16 +39,17 @@ function checboxField() {
   };
 }
 
-function checkBoxFieldList() {
-  return [{
-    type: 'checkbox',
-    key: '::field1::',
-    templateOptions: {}
-  },
+function checkboxFieldList() {
+  return [
+    {
+      type: 'checkbox',
+      key: '::field1::',
+      templateOptions: {}
+    },
     {
       type: 'checkbox',
       key: '::field2::',
       templateOptions: {}
     }
-  ]
+  ];
 }

@@ -9,14 +9,21 @@ const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/
-  constructor($state, $translate, $window, localStorageManager, networkManagerService, webManagerService) {
-    assign(this, {$state, $translate, $window, localStorageManager, networkManagerService, webManagerService});
+  constructor($state, $translate, $window, localStorageManager, networkManagerService, webManagerService, logoIcon) {
+    assign(this, {
+      $state,
+      $translate,
+      $window,
+      localStorageManager,
+      networkManagerService,
+      webManagerService,
+      logoIcon
+    });
+
     this.animals = this.availableAnimals();
     this.dimensionHeight = this.calculateDimensionHeight() + 5;
-    this.logoIcon = './assets/images/logo-cabecera.png';
 
     var userLanguage = this.localStorageManager.getDataFor('language');
-
     if (userLanguage) {
       userLanguage = userLanguage.replace(/(^\")|("$)/gi, '');
       this.$translate.use(userLanguage);
