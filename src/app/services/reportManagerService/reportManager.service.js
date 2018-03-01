@@ -10,34 +10,30 @@ export default class reportManagerService {
   sendReport(animal, result, email) {
     let report = result;
     report.email = email;
+
     this.networkManagerService.startWatching();
-    let network = this.networkManagerService.isOnline();
-    if (network) {
-      let resultadoString = JSON.stringify(report);
-      console.log('Drupal');
-      console.log(resultadoString);
-      this.webManagerService
-        .sendDataDrupal(resultadoString)
-        .then(request => {
-          console.log('Conexion enviado');
-        })
-        .catch(error => {
-          this.saveData(report);
-
-          return {result: 'error', error: 'server'};
-        });
-    } else {
-      console.log('Sin conexion');
+    if (!this.networkManagerService.isOnline()) {
       this.saveData(report);
-
-      return {result: 'error', error: 'internet'};
+      return Promise.reject(new Error('internet'));
     }
 
-    return {result: 'ok'};
+    this.addOlmixContactDataToReportIfAvailable(report);
+    return this.webManagerService
+      .sendDataDrupal(JSON.stringify(report))
+      .catch(error => {
+        this.saveData(report);
+      });
+  }
+
+  addOlmixContactDataToReportIfAvailable(report) {
+    const contactData = JSON.parse(this.localStorageManager.getDataFor('contact_data'));
+    if (contactData) {
+      report.contactData = contactData;
+      report.email = report.email + ',' + contactData.email;
+    }
   }
 
   saveData(result) {
-    //this.localStorageManager.save('Evaluation-' + Date.now(), JSON.stringify(result));
     this.localStorageManager.save('cola', 1);
     this.localStorageManager.save('Evaluation-' + Date.now(), result);
   }

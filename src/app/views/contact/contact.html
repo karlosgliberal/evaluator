@@ -1,0 +1,77 @@
+<ion-view>
+  <ion-nav-title>
+    <div class="row">
+      <div class="titulo col col-50">
+        <h4 class="white mt-8">Olmix Myco'Evaluator</h4>
+      </div>
+      <div class="nav-img col col-50">
+        <img ng-src="{{contact.logoIcon}}">
+      </div>
+    </div>
+  </ion-nav-title>
+  <ion-content>
+    <div class="container-wrapper">
+      <form class="contact__form" ng-submit="contact.onSubmit()" name="contact.form" novalidate>
+        <div>
+          <label>{{'contact.name.title' | translate}}</label>
+          <span class="item item-input">
+            <input type="text" placeholder="{{'contact.name.placeholder' |translate}}" ng-model="contact.fields.name"
+                   name="name" ng-required="true"/>
+          </span>
+          <span class="red-text" ng-if="contact.form.name.$error.required && contact.form.name.$dirty">
+            {{'contact.name.error' | translate}}
+          </span>
+        </div>
+        <div>
+          <label>{{'contact.post.title' | translate}}</label>
+          <span class="item item-input">
+            <input type="text" placeholder="{{'contact.post.placeholder' |translate}}" ng-model="contact.fields.post"
+                   name="post" ng-required="true"/>
+          </span>
+          <span class="red-text" ng-if="contact.form.post.$error.required && contact.form.post.$dirty">
+            {{'contact.post.error' | translate}}
+          </span>
+        </div>
+        <div>
+          <label>{{'contact.company.title' | translate}}</label>
+          <span class="item item-input">
+            <input type="text" placeholder="{{'contact.company.placeholder' |translate}}" ng-model="contact.fields.company"
+                   name="company" ng-required="true"/>
+          </span>
+          <span class="red-text" ng-if="contact.form.company.$error.required && contact.form.company.$dirty">
+            {{'contact.company.error' | translate}}
+          </span>
+        </div>
+        <div>
+          <label>{{'contact.email.title' | translate}}</label>
+          <span class="item item-input">
+            <input type="email" placeholder="{{'contact.email.placeholder' |translate}}" ng-model="contact.fields.email"
+                   name="email" ng-required="true"/>
+          </span>
+          <span class="red-text"
+                ng-if="(contact.form.email.$error.required || contact.form.email.$error.email) && contact.form.email.$dirty">
+            {{'contact.email.error' | translate}}
+          </span>
+        </div>
+        <div>
+          <label>{{'contact.phone.title' | translate}}</label>
+          <span class="item item-input">
+            <input type="tel" placeholder="{{'contact.phone.placeholder' |translate}}" ng-model="contact.fields.phone"
+                   name="phone" ng-required="true"/>
+          </span>
+          <span class="red-text" ng-if="contact.form.phone.$error.required && contact.form.phone.$dirty">
+            {{'contact.phone.error' | translate}}
+          </span>
+        </div>
+        <button type="submit" class="button submit-form">{{'contact.save' | translate}}</button>
+        <button ng-click="contact.clear()" class="button submit-form">{{'contact.clear' | translate}}</button>
+        <div ng-if="contact.validForm">
+          <p class="info-text center">{{'contact.saved' | translate}}</p>
+        </div>
+        <div ng-if="contact.clearedForm">
+          <p class="info-text center">{{'contact.cleared' | translate}}</p>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

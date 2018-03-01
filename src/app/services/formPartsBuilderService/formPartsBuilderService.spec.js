@@ -16,7 +16,7 @@ describe('Form parts builder service', () => {
   }));
 
   it('should build checkbox', () => {
-    expect(formPartsBuilderService.buildCheckboxFor('::fieldName::', '::fieldGroup::')).to.be.eql(checboxField('::fieldName::'));
+    expect(formPartsBuilderService.buildCheckboxFor('::fieldName::', '::fieldGroup::')).to.be.eql(checkboxField('::fieldName::'));
   });
 
   it('should build field group with single element in list', () => {
@@ -24,7 +24,7 @@ describe('Form parts builder service', () => {
     var fieldGroup = formPartsBuilderService.buildFieldGroupFor({'::fieldName1::': 1}, '::fieldGroup::');
 
     expect(spy.withArgs('::fieldName1::', '::fieldGroup::')).to.be.calledOnce;
-    expect(fieldGroup[0]).to.be.eql(checboxField('::fieldName1::'));
+    expect(fieldGroup[0]).to.be.eql(checkboxField('::fieldName1::'));
   });
 
   it('should build field group with multiple elements in list', () => {
@@ -37,8 +37,8 @@ describe('Form parts builder service', () => {
     expect(spy.callCount).to.be.equal(2);
     expect(spy.withArgs('::fieldName1::', '::fieldGroup::')).to.be.calledOnce;
     expect(spy.withArgs('::fieldName2::', '::fieldGroup::')).to.be.calledOnce;
-    expect(fieldGroup[0]).to.be.eql(checboxField('::fieldName1::'));
-    expect(fieldGroup[1]).to.be.eql(checboxField('::fieldName2::'));
+    expect(fieldGroup[0]).to.be.eql(checkboxField('::fieldName1::'));
+    expect(fieldGroup[1]).to.be.eql(checkboxField('::fieldName2::'));
   });
 
   it('should build choice list', () => {
@@ -81,7 +81,7 @@ describe('Form parts builder service', () => {
   });
 });
 
-function checboxField(fieldName) {
+function checkboxField(fieldName) {
   return {
     type: 'checkbox',
     key: fieldName,

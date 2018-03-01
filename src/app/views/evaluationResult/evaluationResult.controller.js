@@ -31,19 +31,18 @@ export default class EvaluationResultController {
   onSubmit() {
     if (this.form.$valid) {
       this.email = this.email.toLowerCase();
-      const reportSend = this.reportManagerService.sendReport(
-        this.$stateParams.animal,
-        this.$stateParams.result,
-        this.email
-      );
 
-      if (reportSend.result === 'ok') {
-        this.form.$setPristine();
-        this.form.$setUntouched();
-        this.email = '';
-        this.validForm = true;
-        this.resultMessage = 'ok';
-      }
+      this.sendingReport = true;
+      return this.reportManagerService
+        .sendReport(this.$stateParams.animal, this.$stateParams.result, this.email)
+        .then(response => {
+          this.form.$setPristine();
+          this.form.$setUntouched();
+          this.email = '';
+          this.validForm = true;
+          this.sendingReport = false;
+          this.resultMessage = 'ok';
+        });
     } else {
       this.validForm = false;
     }

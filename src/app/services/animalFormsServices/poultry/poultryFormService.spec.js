@@ -51,7 +51,7 @@ describe('Poultry form service', () => {
   it('should return empty if no specie is defined', () => {
     var result = poultryFormService.generateForm();
 
-    expect(result).to.be.eql('')
+    expect(result).to.be.eql('');
   });
 
   it('shoulw call poultry selector', () => {

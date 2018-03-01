@@ -43,7 +43,7 @@ describe('Animal fields manager', () => {
       spy = sandbox.spy(poultryFields, 'getAllFieldsFor');
     });
     afterEach(() => {
-      sandbox.reset();
+      sandbox.resetHistory();
     });
     it('should get poultry breeder fields', () => {
       animalFieldsManager.getFieldsFor(animals.POULTRY, poultry.BREEDER);

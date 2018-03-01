@@ -60,6 +60,9 @@
                     <div ng-if="evaluationResult.resultMessage && !evaluationResult.form.email.$dirty">
                         <p class="result-intro center">{{'evaluationResult.send' |translate}}</p>
                     </div>
+                    <div ng-if="evaluationResult.sendingReport">
+                        <p class="result-intro center">{{'evaluationResult.sending' |translate}}</p>
+                    </div>
                     <div class="buttom-wrapper">
                         <button class="button submit-form icon ion-ios-paw" ui-sref="animalSelection">
                             {{'menu.selection' | translate}}

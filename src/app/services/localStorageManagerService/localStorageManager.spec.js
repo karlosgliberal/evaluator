@@ -39,4 +39,16 @@ describe('Local storage manager service', () => {
 
     expect(retrievedData).to.be.equal('result');
   });
+
+  it('should remove data', () => {
+    let localStorageKey = '::key::';
+    let store = {localStorageKey: {}};
+    sandbox.stub(window.localStorage, 'removeItem').callsFake(key => {
+      delete store[key];
+    });
+
+    localStorageManager.remove();
+
+    expect(store[localStorageKey]).to.be.undefined;
+  });
 });

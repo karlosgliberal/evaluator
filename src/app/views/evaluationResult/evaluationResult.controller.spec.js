@@ -77,16 +77,19 @@ describe('Evaluation result controller', () => {
     expect(controller.validForm).to.be.false;
   });
 
-  it('should send report and reset form when form is valid', () => {
+  it('should send report and reset form when form is valid', done => {
     controller.email = 'email@email.com';
-    reportManagerServiceStub.sendReport.returns({result: 'ok'});
+    reportManagerServiceStub.sendReport.returns(Promise.resolve());
 
-    controller.onSubmit();
+    const onSubmitPromise = controller.onSubmit();
 
-    expect(reportManagerServiceStub.sendReport.withArgs(animals.COW, 5, 'email@email.com')).to.be.calledOnce;
-    expect(controller.form.$setPristine).to.be.calledOnce;
-    expect(controller.form.$setUntouched).to.be.calledOnce;
-    expect(controller.validForm).to.be.true;
+    onSubmitPromise.then(() => {
+      expect(reportManagerServiceStub.sendReport.withArgs(animals.COW, 5, 'email@email.com')).to.be.calledOnce;
+      expect(controller.form.$setPristine).to.be.calledOnce;
+      expect(controller.form.$setUntouched).to.be.calledOnce;
+      expect(controller.validForm).to.be.true;
+      done();
+    });
   });
 });
 

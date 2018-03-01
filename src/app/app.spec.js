@@ -24,7 +24,7 @@ describe('Application Tests', () => {
   }));
 
   afterEach(() => {
-    sandbox.reset();
+    sandbox.resetHistory();
   });
 
   describe('App Controller', () => {
