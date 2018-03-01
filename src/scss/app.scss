@@ -67,12 +67,22 @@ h4 {
   text-align: center;
 }
 
+.red-text{
+  color: red;
+}
+
+.info-text {
+  font-size: 20px;
+  color: $brand-color;
+}
+
 // include all of Ionic
 @import "../../node_modules/ionic-sdk/scss/ionic";
 
 // include your custom component SCSS modules
 @import '../app/views/animalSelection/animalSelection.scss';
 @import '../app/views/forms/forms.scss';
+@import '../app/views/contact/contact.scss';
 @import '../app/views/evaluationResult/result.scss';
 
 .bar {

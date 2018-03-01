@@ -4,7 +4,7 @@ import webManagerService from './../webManagerService/webManager.services';
 import localStorageManagerServices from './../localStorageManagerService/localStorageManager.services';
 
 describe('Report Manager service', () => {
-  var reportMangerService,
+  let reportMangerService,
     networkManagerServiceStub,
     webManagerServiceStub,
     q,
@@ -23,7 +23,7 @@ describe('Report Manager service', () => {
   }));
 
   beforeEach(angular.mock.module(localStorageManagerServices.name, ($provide) => {
-    localStorageManagerSpy = {save: sinon.spy()};
+    localStorageManagerSpy = {save: sinon.spy(), getDataFor: sinon.stub()};
     $provide.value('localStorageManager', localStorageManagerSpy);
   }));
 
@@ -36,65 +36,73 @@ describe('Report Manager service', () => {
     reportMangerService = _reportManagerService_;
   }));
 
-  it('should follow report sending flow', () => {
+  it('should follow report sending flow without adding contact data when doesnt exist', done => {
     let expectedResult = JSON.stringify({percentage: 25, email: '::email::'});
     let evaluationResult = {percentage: 25};
+    localStorageManagerSpy.getDataFor.returns(null);
     networkManagerServiceStub.isOnline.returns(true);
-    networkManagerServiceStub.startWatching.returns(true);
-    webManagerServiceStub.sendDataDrupal.withArgs().returns(Promise.resolve());
+    webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
 
-    const reportResult = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
+    const reportPromise = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
 
     expect(webManagerServiceStub.sendDataDrupal.withArgs(expectedResult)).to.be.calledOnce;
-    expect(reportResult).to.be.eql({result: 'ok'});
+    reportPromise.then(() => {
+      expect(localStorageManagerSpy.getDataFor).to.be.calledOnce;
+      done();
+    });
   });
 
-  it('should not follow report sending flow', () => {
-    networkManagerServiceStub.isOnline.returns(false);
-    networkManagerServiceStub.startWatching.returns(true);
-    let evaluationResult = {email: 'correo'};
+  it('should follow report sending flow adding contact data when exists', () => {
+    let expectedResult = JSON.stringify({
+      percentage: 25,
+      email: '::email::,::contactEmail::',
+      contactData: {
+        name: '::name::',
+        email: '::contactEmail::'
+      }
+    });
+    let evaluationResult = {percentage: 25};
+    localStorageManagerSpy.getDataFor.returns('{"name": "::name::","email": "::contactEmail::"}');
+    networkManagerServiceStub.isOnline.returns(true);
+    webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
 
-    const reportResult = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
+    reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
+
+    expect(webManagerServiceStub.sendDataDrupal.withArgs(expectedResult)).to.be.calledOnce;
+    expect(localStorageManagerSpy.getDataFor).to.be.calledOnce;
+  });
+
+  it('should not follow report sending flow when not online', () => {
+    networkManagerServiceStub.isOnline.returns(false);
+    let evaluationResult = {percentage: 25};
+
+    reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
 
     expect(webManagerServiceStub.sendDataDrupal.withArgs(evaluationResult)).to.be.not.called;
-    expect(reportResult).to.be.eql({result: 'error', error: 'internet'});
+    expect(localStorageManagerSpy.save).to.be.calledTwice;
   });
 
-  it('should return internet error', () => {
-    networkManagerServiceStub.isOnline.returns(false);
-    let saveDataSpy = sinon.spy(reportMangerService, 'saveData');
-    let evaluationResult = {email: 'correo'};
+  it('should not follow report sending flow when an error happens', done => {
+    let expectedResult = JSON.stringify({
+      percentage: 25,
+      email: '::email::'
+    });
+    let evaluationResult = {percentage: 25};
+    localStorageManagerSpy.getDataFor.returns(null);
+    networkManagerServiceStub.isOnline.returns(true);
+    webManagerServiceStub.sendDataDrupal.returns(Promise.reject());
 
-    var reportResult = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
+    const reportPromise = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
 
-    //expect(saveDataSpy.withArgs('::animal::', '::result', '::email::')).to.be.called.once;
-    expect(reportResult).to.be.eql({result: 'error', error: 'internet'});
-    expect(localStorageManagerSpy.save.callCount).to.be.equal(2);
+    expect(webManagerServiceStub.sendDataDrupal.withArgs(expectedResult)).to.be.calledOnce;
+    reportPromise.then(() => {
+      expect(localStorageManagerSpy.save).to.be.calledTwice;
+      done();
+    });
   });
-
-  //it.only('should return server error', () => {
-  //  var _mockPromise = {
-  //    then: (successFn, errorFn) => {
-  //      errorFn();
-  //    },
-  //    error: (fn) {
-  //      fn();
-  //    }
-  //  };
-  //  networkManagerServiceStub.isOnline.returns(true);
-  //  webManagerServiceStub.sendDataDrupal.withArgs('::animal::', '::result', '::email::').returns(() => {
-  //    return _mockPromise;
-  //  });
-  //
-  //  var reportResult = reportMangerService.sendReport('::animal::', '::result', '::email::');
-  //
-  //  expect(networkManagerServiceStub.isOnline.withArgs()).to.be.called.once;
-  //  expect(webManagerServiceStub.sendDataDrupal.withArgs('::animal::', '::result', '::email::')).to.be.called.once;
-  //  expect(reportResult).to.be.eql({error: 'server'});
-  //});
 
   it('should save data', () => {
-    let dataToSave = {
+    let report = {
       animal: 'cow',
       result: 5,
       email: 'aitor@cantinflas.com'
@@ -103,8 +111,8 @@ describe('Report Manager service', () => {
     let clock = sinon.useFakeTimers(new Date(2016, 2, 15).getTime());
     clock.tick(60 * 60 * 2 * 1000);
 
-    reportMangerService.saveData(dataToSave);
+    reportMangerService.saveData(report);
     expect(localStorageManagerSpy.save.withArgs('cola', 1)).to.be.calledOnce;
-    // expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), JSON.stringify(dataToSave))).to.be.calledOnce;
+    expect(localStorageManagerSpy.save.withArgs('Evaluation-' + Date.now(), report)).to.be.calledOnce;
   });
 });

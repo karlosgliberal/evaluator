@@ -22,7 +22,7 @@ export default class EvaluationResultController {
     this.resultText = this.$stateParams.result.resultTexto;
     this.resultSubspecie = this.$stateParams.result.subSpecie;
     this.animales = this.$stateParams.animal;
-    this.validForm = true;
+    this.showSavedFormLabel = true;
     this.logoOlmix = './assets/images/logo-olmix.png';
     this.logoMtx = './assets/images/logos-mtx.png';
     this.textImageObj = this.languageFormService.getTextImagen(this.$stateParams, this.animales);
@@ -31,25 +31,24 @@ export default class EvaluationResultController {
   onSubmit() {
     if (this.form.$valid) {
       this.email = this.email.toLowerCase();
-      const reportSend = this.reportManagerService.sendReport(
-        this.$stateParams.animal,
-        this.$stateParams.result,
-        this.email
-      );
 
-      if (reportSend.result === 'ok') {
-        this.form.$setPristine();
-        this.form.$setUntouched();
-        this.email = '';
-        this.validForm = true;
-        this.resultMessage = 'ok';
-      }
+      this.sendingReport = true;
+      return this.reportManagerService
+        .sendReport(this.$stateParams.animal, this.$stateParams.result, this.email)
+        .then(response => {
+          this.form.$setPristine();
+          this.form.$setUntouched();
+          this.email = '';
+          this.showSavedFormLabel = true;
+          this.sendingReport = false;
+          this.resultMessage = 'ok';
+        });
     } else {
-      this.validForm = false;
+      this.showSavedFormLabel = false;
     }
   }
 
   emailChanged() {
-    this.validForm = true;
+    this.showSavedFormLabel = true;
   }
 }

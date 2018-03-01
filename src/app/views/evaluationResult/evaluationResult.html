@@ -47,8 +47,10 @@
                              placeholder="Email" ng-model="evaluationResult.email"
                              ng-change="evaluationResult.emailChanged()" ng-pattern="evaluationResult.emailPattern"
                              ng-required="true">
-                        <span class="red-text"
-                              ng-if="evaluationResult.form.email.$error.pattern || (evaluationResult.form.email.$error.required && evaluationResult.form.email.$dirty) || !evaluationResult.validForm">{{'evaluationResult.invalidEmail' |translate}}</span>
+                        <error-label
+                          error-translate-key="evaluationResult.invalidEmail"
+                          condition="evaluationResult.form.email.$error.pattern || (evaluationResult.form.email.$error.required && evaluationResult.form.email.$dirty) || !evaluationResult.showSavedFormLabel">
+                        </error-label>
                         <p class="share-text">
                             {{'evaluationResult.CompartirInforme' | translate}}</p>
                         <div class="buttom-wrapper" ng-hide="evaluationResult.form.resultMessage">
@@ -59,6 +61,9 @@
 
                     <div ng-if="evaluationResult.resultMessage && !evaluationResult.form.email.$dirty">
                         <p class="result-intro center">{{'evaluationResult.send' |translate}}</p>
+                    </div>
+                    <div ng-if="evaluationResult.sendingReport">
+                        <p class="result-intro center">{{'evaluationResult.sending' |translate}}</p>
                     </div>
                     <div class="buttom-wrapper">
                         <button class="button submit-form icon ion-ios-paw" ui-sref="animalSelection">

@@ -1,0 +1,16 @@
+.contact__form {
+  margin: 20px 220px;
+
+  > div {
+    margin-bottom: 20px;
+  }
+
+  .submit-form {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width : 943px) {
+    margin: 20px 0;
+  }
+}

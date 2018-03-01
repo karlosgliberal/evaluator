@@ -14,6 +14,7 @@ import appConfig from './app.config';
 import appController from './app.controller';
 import appDirectives from './app.directives';
 import idiomaModule from './views/idiomas/idioma.module';
+import contactModule from './views/contact/contact.module';
 import formModule from './views/forms/form.module';
 import animalSelectionModule from './views/animalSelection/animalSelection.module';
 import evaluationResultModule from './views/evaluationResult/evaluationResult.module';
@@ -29,6 +30,7 @@ const appModule = angular
       idiomaModule.name,
       formModule.name,
       animalSelectionModule.name,
+      contactModule.name,
       evaluationResultModule.name,
       localStorageManagerService.name,
       constantsService.name

@@ -14,6 +14,10 @@ export default class localStorageManager {
     return this.$window.localStorage.getItem(key);
   }
 
+  remove(key) {
+    this.$window.localStorage.removeItem(key);
+  }
+
   getAllDataKeys(){
     let keys = [];
     for (let i = 0; i < this.$window.localStorage.length; i++){
