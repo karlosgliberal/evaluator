@@ -16,6 +16,7 @@
     "email": "Send Report",
     "micotoxine": "Mycotoxin specialist",
     "send": "Report submitted",
+    "sending": "Submitting form...",
     "footerPdf": "Contact our specialists in mycotoxins for customized interpretation and technical support, tailored to your situation.",
     "footerEmail": "animalcare.ts@olmix.com",
     "bodyText": "This report was sent from Olmix Myco'Evaluator App",
@@ -33,7 +34,8 @@
     "home": "Home",
     "about": "About",
     "language": "Language",
-    "selection": "Species selection"
+    "selection": "Species selection",
+    "contact": "Contact"
   },
   "language": {
     "title": "Choose your preferred language",
@@ -205,6 +207,36 @@
           "progeny": "Low chick viability"
         }
       }
+    }
+  },
+  "contact": {
+    "save": "Save information",
+    "saved": "Information saved",
+    "clear": "Clear information",
+    "name": {
+      "title": "Name",
+      "placeholder": "Name",
+      "error": "Name is required"
+    },
+    "post": {
+      "title": "Post",
+      "placeholder": "Post",
+      "error": "Post is required"
+    },
+    "company": {
+      "title": "Company",
+      "placeholder": "Company",
+      "error": "Company is required"
+    },
+    "email": {
+      "title": "Email",
+      "placeholder": "Email",
+      "error": "A valid email is required"
+    },
+    "phone": {
+      "title": "Phone",
+      "placeholder": "Phone",
+      "error": "A valid phone is required"
     }
   }
 }

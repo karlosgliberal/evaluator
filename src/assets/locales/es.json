@@ -16,6 +16,7 @@
     "email": "Enviar informe",
     "micotoxine": "Especialistas en Micotoxinas",
     "send": "Informe enviado",
+    "sending": "Enviando informe...",
     "footerPdf": "Contacte con nuestros especialistas en micotoxinas para una interpretación y apoyo técnico personalizado, adaptado a su situación",
     "footerEmail": "animalcare.ts@olmix.com",
     "bodyText": "Este informe ha sido enviado por Olmix Myco'Evaluator App",
@@ -33,7 +34,8 @@
     "home": "Home",
     "about": "About",
     "language": "Idioma",
-    "selection": "Seleccione especie"
+    "selection": "Seleccione especie",
+    "contact": "Contacto"
   },
   "language": {
     "title": "Elija su idioma preferido",
@@ -205,6 +207,36 @@
           "progeny": "Viabilidad baja de las crías"
         }
       }
+    }
+  },
+  "contact": {
+    "save": "Guardar información",
+    "saved": "Información guardada",
+    "clear": "Borrar información",
+    "name": {
+      "title": "Nombre",
+      "placeholder": "Nombre",
+      "error": "Debe introducir un nombre"
+    },
+    "post": {
+      "title": "Cargo",
+      "placeholder": "Cargo",
+      "error": "Debe introducir un cargo"
+    },
+    "company": {
+      "title": "Empresa",
+      "placeholder": "Empresa",
+      "error": "Debe introducir una empresa"
+    },
+    "email": {
+      "title": "Email",
+      "placeholder": "Email",
+      "error": "Debe introducir un email válido"
+    },
+    "phone": {
+      "title": "Teléfono",
+      "placeholder": "Teléfono",
+      "error": "Debe introducir un télefono válido"
     }
   }
 }
