@@ -12,7 +12,7 @@ export default class reportManagerService {
     report.email = email;
 
     this.networkManagerService.startWatching();
-    if (!this.networkManagerService.isOnline()) {
+    if (this.networkManagerService.isOffline()) {
       this.saveData(report);
       return Promise.reject(new Error('internet'));
     }

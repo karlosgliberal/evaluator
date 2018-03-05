@@ -239,5 +239,18 @@
       "placeholder": "Phone",
       "error": "A valid phone is required"
     }
-  }
+  },
+  "login": {
+    "submit": "Login",
+    "email": {
+      "placeholder": "Email",
+      "error": "A valid email is required"
+    },
+    "password": {
+      "placeholder": "Password",
+      "error": "A valid password is required"
+    },
+    "error": "Your email or password is incorrect"
+  },
+  "internet_error": "Network is not available"
 }

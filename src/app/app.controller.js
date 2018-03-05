@@ -2,11 +2,10 @@ import { assign } from 'lodash';
 
 export default class AppController {
   /*@ngInject*/
-  constructor($state, localStorageManager, $timeout) {
-    assign(this, {$state, localStorageManager, $timeout});
+  constructor($state, $timeout, localStorageManager) {
+    assign(this, {$state, $timeout, localStorageManager});
 
-    var language = this.localStorageManager.getDataFor('language');
-
+    const language = this.localStorageManager.getDataFor('language');
     this.$timeout(() => {
       this.goToNextScreen(language);
     }, 500);
@@ -14,17 +13,9 @@ export default class AppController {
 
   goToNextScreen(language) {
     if (language) {
-      this.goToAnimalSelection();
+      this.$state.go('login');
     } else {
-      this.goToLanguageSelection(language);
+      this.$state.go('idioma');
     }
-  }
-
-  goToLanguageSelection() {
-    this.$state.go('idioma');
-  }
-
-  goToAnimalSelection() {
-    this.$state.go('animalSelection');
   }
 }

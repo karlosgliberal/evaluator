@@ -1,14 +1,15 @@
 <ion-view>
-    <ion-nav-title>
-        <div class="row">
-            <div class="titulo col col-50">
-                <h4 class="white mt-8">Olmix Myco'Evaluator</h4>
-            </div>
-            <div class="nav-img col col-50">
-                <img ng-src="./assets/images/logo-cabecera.png">
-            </div>
-        </div>
-    </ion-nav-title>
+  <ion-nav-buttons ng-show="idioma.previousStateHome"></ion-nav-buttons>
+  <ion-nav-title>
+      <div class="row">
+          <div class="titulo col col-50">
+              <h4 class="white mt-8">Olmix Myco'Evaluator</h4>
+          </div>
+          <div class="nav-img col col-50">
+            <img ng-src="./assets/images/logo-cabecera.png">
+          </div>
+      </div>
+  </ion-nav-title>
   <ion-content>
       <h4 style="text-align: center;">{{'language.title' | translate}}</h4><br/>
       <form>
