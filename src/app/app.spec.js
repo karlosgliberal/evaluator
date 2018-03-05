@@ -1,9 +1,10 @@
 // all of our Jasmine and Sinon utilities (describe, it, sinon) are globally
 // injected by Karma. no need to import them manually for each test.
 import App from './app';
+import localStorageManager from './services/localStorageManagerService/localStorageManager.services';
 
 describe('Application Tests', () => {
-  let sandbox, stateStub, controller, scope, localStorageManagerStub, $timeout;
+  let sandbox, stateStub, $timeout, localStorageManagerStub, controller;
 
   before(() => {
     sandbox = sinon.sandbox.create();
@@ -11,52 +12,54 @@ describe('Application Tests', () => {
 
   beforeEach(angular.mock.module(App.name));
 
-  beforeEach(inject(($controller, $q, $rootScope, _$timeout_) => {
-    scope = $rootScope.$new();
-    localStorageManagerStub = {getDataFor: sinon.stub()};
+  beforeEach(angular.mock.module(localStorageManager.name));
+
+  beforeEach(() => {
     stateStub = {$state: {go: sandbox.stub()}};
+    localStorageManagerStub = {getDataFor: sinon.stub()};
+  });
+
+  afterEach(() => {
+    sandbox.reset();
+  });
+
+  const createAppController = inject(($controller, _$timeout_, $httpBackend) => {
+    $httpBackend.whenGET('assets/locales/en.json').respond({});
+    $timeout = _$timeout_;
 
     controller = $controller('AppController', {
       $state: stateStub.$state,
       localStorageManager: localStorageManagerStub
     });
-    $timeout = _$timeout_;
-  }));
+  });
 
   afterEach(() => {
     sandbox.resetHistory();
   });
 
   describe('App Controller', () => {
-
     it('should be defined', () => {
+      createAppController();
+
       expect(controller).to.be.ok;
     });
 
-    it('should transition to language selection component', () => {
-      controller.goToLanguageSelection();
-      expect(stateStub.$state.go).to.be.calledOnce;
-      expect(stateStub.$state.go).to.have.been.calledWith('idioma');
+    it('should decide to go to language when no language found', () => {
+      localStorageManagerStub.getDataFor.returns(null);
+      createAppController();
+
+      $timeout.flush();
+
+      expect(stateStub.$state.go).to.be.calledWith('idioma');
     });
 
-    it('should transition to animal selection component', () => {
-      controller.goToAnimalSelection();
-      expect(stateStub.$state.go).to.be.calledOnce;
-      expect(stateStub.$state.go).to.have.been.calledWith('animalSelection');
-    });
+    it('should decide to go to login when language found', () => {
+      localStorageManagerStub.getDataFor.returns('en');
+      createAppController();
 
-    it('should call localStorage', () => {
-      expect(localStorageManagerStub.getDataFor.withArgs('language')).to.be.calledOnce;
-    });
+      $timeout.flush();
 
-    it('should decide to go to animal selection', () => {
-      controller.goToNextScreen('::language::');
-      //$timeout.flush();
-      // expect(stateStub.$state.go).to.have.been.calledWith('animalSelection');
-    });
-    it('should decide to go to language selection', () => {
-      controller.goToNextScreen(null);
-      expect(stateStub.$state.go).to.have.been.calledWith('idioma');
+      expect(stateStub.$state.go).to.be.calledWith('login');
     });
   });
 });

@@ -27,7 +27,9 @@ const AppRun = ($ionicPlatform, $cordovaStatusbar, $cordovaKeyboard, $rootScope,
     $rootScope.$broadcast('loading:show');
   });
 
-  $rootScope.$on('$stateChangeSuccess', function () {
+  $rootScope.previousState = '';
+  $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+    $rootScope.previousState = from.name;
     console.log('done');
     $rootScope.$broadcast('loading:hide');
   });

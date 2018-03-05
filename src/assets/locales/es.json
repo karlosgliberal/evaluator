@@ -239,5 +239,18 @@
       "placeholder": "Teléfono",
       "error": "Debe introducir un télefono válido"
     }
-  }
+  },
+  "login": {
+    "submit": "Iniciar sesión",
+    "email": {
+      "placeholder": "Correo electrónico",
+      "error": "Debe introducir un correo electrónico válido"
+    },
+    "password": {
+      "placeholder": "Contraseña",
+      "error": "Debe introducir una contraseña válida"
+    },
+    "error": "El correo eléctronico o contraseña no es correcta"
+  },
+  "internet_error": "La red no está disponible"
 }
