@@ -2,15 +2,9 @@ import { assign } from 'lodash';
 
 export default class formController {
   /*@ngInject*/
-  constructor($state, formService, $stateParams, formSubmitService, $ionicHistory, logoIcon) {
-    assign(this, {
-      $state,
-      formService,
-      $stateParams,
-      formSubmitService,
-      $ionicHistory,
-      logoIcon
-    });
+  constructor($state, formService, $stateParams, formSubmitService, $ionicHistory) {
+    assign(this, {$state, formService, $stateParams, formSubmitService, $ionicHistory});
+
     this.selectorViewModel = {};
     this.selector = this.formService.getFormSelector(this.$stateParams.animal, this);
     this.viewModel = {};
