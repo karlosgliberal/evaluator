@@ -2,7 +2,6 @@ import animalSelectionControllers from './animalSelection.controllers';
 import animal from '../../utils/animal';
 import localStorageManager from '../../services/localStorageManagerService/localStorageManager.services';
 import networkManagerService from '../../services/networkManagerService/networkManager.services';
-import constantsService from '../../services/constants/constants.service';
 
 let controller, stateSpy, translateStub, networkManagerServiceStub;
 
@@ -13,8 +12,6 @@ describe('Animal selection controller', () => {
   }));
 
   beforeEach(angular.mock.module(localStorageManager.name));
-
-  beforeEach(angular.mock.module(constantsService.name));
 
   beforeEach(angular.mock.module(networkManagerService.name, ($provide) => {
     networkManagerServiceStub = {isOnline: sinon.stub(), startWatching: sinon.stub() };

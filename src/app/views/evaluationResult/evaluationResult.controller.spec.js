@@ -2,7 +2,6 @@ import evaluationResultControllers from './evaluationResult.controllers';
 import reportManagerService from './../../services/reportManagerService/reportManager.services';
 import animals from './../../utils/animal';
 import languageFormServices from './../../services/languageFormService/languageForm.services';
-import constantsService from '../../services/constants/constants.service';
 
 var controller, scope, translateStub, reportManagerServiceStub, stateParams, $compile, languageFormServiceSpy;
 
@@ -11,8 +10,6 @@ describe('Evaluation result controller', () => {
     languageFormServiceSpy = {generateFormRadio: sinon.spy(), getTextImagen: sinon.spy()};
     $provide.value('languageFormService', languageFormServiceSpy);
   }));
-
-  beforeEach(angular.mock.module(constantsService.name));
 
   beforeEach(angular.mock.module(reportManagerService.name));
 

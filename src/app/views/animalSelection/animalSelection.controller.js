@@ -9,15 +9,14 @@ const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/
-  constructor($state, $translate, $window, localStorageManager, networkManagerService, webManagerService, logoIcon) {
+  constructor($state, $translate, $window, localStorageManager, networkManagerService, webManagerService) {
     assign(this, {
       $state,
       $translate,
       $window,
       localStorageManager,
       networkManagerService,
-      webManagerService,
-      logoIcon
+      webManagerService
     });
 
     this.animals = this.availableAnimals();

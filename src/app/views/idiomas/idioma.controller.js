@@ -10,8 +10,7 @@ export default class IdiomaController {
     $stateParams,
     localStorageManager,
     languageFormService,
-    $ionicHistory,
-    logoIcon
+    $ionicHistory
   ) {
     assign(this, {
       formService,
@@ -20,8 +19,7 @@ export default class IdiomaController {
       $stateParams,
       localStorageManager,
       languageFormService,
-      $ionicHistory,
-      logoIcon
+      $ionicHistory
     });
 
     var userLanguage = this.localStorageManager.getDataFor('language');

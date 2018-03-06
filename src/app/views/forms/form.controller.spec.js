@@ -1,15 +1,11 @@
 import formControllers from './form.controllers';
 import animal from '../../utils/animal.js';
 import poultry from '../../utils/poultry.js';
-import constantsService from '../../services/constants/constants.service';
 
 var controller, scope, formServiceSpy, $compile, directiveHTML, stateParamsStub, formSubmitSpy, stateSpy, ionicHistorySpy;
 
 describe('Form controller', () => {
-
   beforeEach(angular.mock.module(formControllers.name));
-  beforeEach(angular.mock.module(ionic));
-  beforeEach(angular.mock.module(constantsService.name));
 
   beforeEach(inject(($controller, $rootScope, _$compile_) => {
     $compile = _$compile_;

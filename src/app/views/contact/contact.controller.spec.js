@@ -1,11 +1,8 @@
 import contactControllers from './contact.controllers';
 import localStorageManagerService from './../../services/localStorageManagerService/localStorageManager.services';
-import constantsService from './../../services/constants/constants.service';
 
 describe('Contact controller', () => {
   let localStorageManagerServiceSpy, timeout, controller;
-
-  beforeEach(angular.mock.module(constantsService.name));
 
   beforeEach(angular.mock.module(localStorageManagerService.name));
 

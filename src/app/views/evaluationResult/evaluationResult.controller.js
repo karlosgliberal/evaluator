@@ -1,18 +1,12 @@
 import {assign} from 'lodash';
-import './images/logo-olmix.png';
-import './images/logos-mtx.png';
 
 const emailPattern = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+(\s*[,.]\s*(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+)*$/;
 
 export default class EvaluationResultController {
   /*@ngInject*/
-  constructor($stateParams, reportManagerService, languageFormService, logoIcon) {
-    assign(this, {
-      $stateParams,
-      reportManagerService,
-      languageFormService,
-      logoIcon
-    });
+  constructor($stateParams, reportManagerService, languageFormService) {
+    assign(this, {$stateParams, reportManagerService, languageFormService});
+
     this.resultPercentage = this.$stateParams.result.porcentaje;
     if (this.resultPercentage === 25) {
       this.resultEmpty = true;
@@ -23,8 +17,6 @@ export default class EvaluationResultController {
     this.resultSubspecie = this.$stateParams.result.subSpecie;
     this.animales = this.$stateParams.animal;
     this.showSavedFormLabel = true;
-    this.logoOlmix = './assets/images/logo-olmix.png';
-    this.logoMtx = './assets/images/logos-mtx.png';
     this.textImageObj = this.languageFormService.getTextImagen(this.$stateParams, this.animales);
   }
 

@@ -3,12 +3,8 @@ import { assign } from 'lodash';
 const contactStorageKey = 'contact_data';
 
 export default class ContactController {
-  constructor($timeout, localStorageManager, logoIcon) {
-    assign(this, {
-      $timeout,
-      localStorageManager,
-      logoIcon
-    });
+  constructor($timeout, localStorageManager) {
+    assign(this, {$timeout, localStorageManager});
 
     this.fields = this.getDataFromLocalStorage() || this.getEmptyFields();
     this.showSavedFormLabel = false;
