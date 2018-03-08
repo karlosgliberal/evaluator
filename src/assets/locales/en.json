@@ -210,6 +210,7 @@
     }
   },
   "contact": {
+    "served": "You've been served by",
     "save": "Save information",
     "saved": "Information saved",
     "clear": "Clear information",
