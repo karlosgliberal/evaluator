@@ -210,6 +210,7 @@
     }
   },
   "contact": {
+    "served": "Le atendió",
     "save": "Guardar información",
     "saved": "Información guardada",
     "clear": "Borrar información",

@@ -2,7 +2,7 @@ import contactControllers from './contact.controllers';
 import localStorageManagerService from './../../services/localStorageManagerService/localStorageManager.services';
 
 describe('Contact controller', () => {
-  let localStorageManagerServiceSpy, timeout, controller;
+  let $translate, localStorageManagerServiceSpy, timeout, controller;
 
   beforeEach(angular.mock.module(localStorageManagerService.name));
 
@@ -11,11 +11,13 @@ describe('Contact controller', () => {
   beforeEach(inject(($controller, $timeout) => {
     localStorageManagerServiceSpy = {getDataFor: sinon.stub(), save: sinon.spy(), remove: sinon.spy()};
     localStorageManagerServiceSpy.getDataFor.returns(null);
+    $translate = {instant: sinon.stub()};
     timeout = $timeout;
 
     controller = $controller('ContactController', {
       localStorageManager: localStorageManagerServiceSpy,
-      $timeout: timeout
+      $timeout: timeout,
+      $translate: $translate
     });
   }));
 
@@ -75,18 +77,28 @@ describe('Contact controller', () => {
 
   it('should save data in local storage on valid form submit', () => {
     controller.form = {$valid: true};
-    const expectedFields = {
+    $translate.instant.withArgs('contact.served').returns('::text::');
+    const fields = {
       name: '::name::',
       post: '::post::',
       company: '::company::',
       email: '::email::',
       phone: '::phone::'
     };
-    controller.fields = expectedFields;
+    const expectedFields = {
+      name: '::name::',
+      post: '::post::',
+      company: '::company::',
+      email: '::email::',
+      phone: '::phone::',
+      text: '::text::'
+    };
+    controller.fields = fields;
 
     controller.onSubmit();
 
     expect(controller.showSavedFormLabel).to.be.true;
+    expect($translate.instant).to.be.calledOnce;
     expect(localStorageManagerServiceSpy.save.withArgs('contact_data', expectedFields)).to.be.calledOnce;
     timeout.flush();
     expect(controller.showSavedFormLabel).to.be.false;
