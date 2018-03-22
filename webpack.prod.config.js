@@ -8,6 +8,7 @@ module.exports = {
   watch: true,
 
   entry: [
+    'babel-polyfill',
     './src/app/app.js',
   ],
 

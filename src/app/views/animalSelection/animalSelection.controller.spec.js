@@ -24,9 +24,16 @@ describe('Animal selection controller', () => {
         go: sinon.spy()
       }
     };
+    const $document = {
+      find: () => {
+        return [{clientHeight: 0}];
+      }
+    };
+
     controller = $controller('animalSelectionController', {
       $state: stateSpy.$state,
-      $translate: translateStub
+      $translate: translateStub,
+      $document: $document
     });
   }));
 

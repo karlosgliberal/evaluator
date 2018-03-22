@@ -9,10 +9,11 @@ const imagePathBase = './assets/images/';
 
 export default class AnimalSelectionController {
   /*@ngInject*/
-  constructor($state, $translate, $window, localStorageManager, networkManagerService, webManagerService) {
+  constructor($state, $translate, $document, $window, localStorageManager, networkManagerService, webManagerService) {
     assign(this, {
       $state,
       $translate,
+      $document,
       $window,
       localStorageManager,
       networkManagerService,
@@ -20,7 +21,7 @@ export default class AnimalSelectionController {
     });
 
     this.animals = this.availableAnimals();
-    this.dimensionHeight = this.calculateDimensionHeight() + 5;
+    this.dimensionHeight = this.calculateDimensionHeight();
 
     var userLanguage = this.localStorageManager.getDataFor('language');
     if (userLanguage) {
@@ -31,15 +32,19 @@ export default class AnimalSelectionController {
 
   }
 
-  calculateDimensionHeight(gesture) {
+  calculateDimensionHeight() {
+    const headerHeight = this.$document.find('ion-header-bar')[0].clientHeight;
+    const footerHeight = this.$document.find('ion-footer-bar')[0].clientHeight;
+    const heightDifference = headerHeight + footerHeight;
+
     if (ionic.Platform.isIOS()){
       if (this.$window.screen.height > this.$window.screen.width && (this.$window.orientation !== '90' || this.$window.orientation !== '-90')){
-        return this.$window.screen.width;
+        return this.$window.screen.width - heightDifference;
       } else {
-        return this.$window.screen.height;
+        return this.$window.screen.height - heightDifference;
       }
     } else {
-      return this.$window.innerHeight;
+      return this.$window.innerHeight - heightDifference;
     }
   }
 
