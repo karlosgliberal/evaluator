@@ -8,6 +8,7 @@ export default class ContactController {
 
     this.fields = this.getDataFromLocalStorage() || this.getEmptyFields();
     this.showSavedFormLabel = false;
+    this.showErrorFormLabel = false;
   }
 
   getEmptyFields() {
@@ -21,23 +22,30 @@ export default class ContactController {
   }
 
   onSubmit() {
-    this.showSavedFormLabel = this.form.$valid;
+    this.handleNotifications();
+
     if (this.form.$valid) {
       this.fields.text = this.$translate.instant('contact.served');
       this.saveDataInLocalStorage();
-
-      this.$timeout(() => {
-        this.showSavedFormLabel = false;
-      }, 3000);
     }
   }
 
+  handleNotifications() {
+    this.showSavedFormLabel = this.form.$valid;
+    this.showErrorFormLabel = !this.form.$valid;
+    this.$timeout(() => {
+      this.showSavedFormLabel = false;
+      this.showErrorFormLabel = false;
+    }, 3000);
+  }
+
   clear() {
+    this.fields = this.getEmptyFields();
+    this.form.$setPristine();
+    this.form.$setUntouched();
+
     if (this.getDataFromLocalStorage(contactStorageKey)) {
       this.removeDataFromLocalStorage();
-      this.fields = this.getEmptyFields();
-      this.form.$setPristine();
-      this.form.$setUntouched();
     }
   }
 

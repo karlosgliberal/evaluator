@@ -214,6 +214,7 @@
     "save": "Save information",
     "saved": "Information saved",
     "clear": "Clear information",
+    "error": "The data is not valid",
     "name": {
       "title": "Name",
       "placeholder": "Name",

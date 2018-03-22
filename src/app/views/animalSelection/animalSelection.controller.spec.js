@@ -24,6 +24,7 @@ describe('Animal selection controller', () => {
         go: sinon.spy()
       }
     };
+
     controller = $controller('animalSelectionController', {
       $state: stateSpy.$state,
       $translate: translateStub
