@@ -214,6 +214,7 @@
     "save": "Guardar información",
     "saved": "Información guardada",
     "clear": "Borrar información",
+    "error": "Los datos no son válidos",
     "name": {
       "title": "Nombre",
       "placeholder": "Nombre",

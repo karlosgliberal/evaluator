@@ -95,7 +95,15 @@
 }
 
 .seleccion-animal {
-  .scroll {
-    background-color: #76405d;
+  .row {
+    height: 100%;
+
+    .animal-col {
+      height: 100%;
+
+      .animal-temp {
+        height: 100%;
+      }
+    }
   }
 }

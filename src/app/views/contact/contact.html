@@ -59,11 +59,14 @@
           <error-label error-translate-key="contact.phone.error"
                        condition="contact.form.phone.$error.required && contact.form.phone.$dirty"></error-label>
         </div>
-        <button type="submit" class="button submit-form">{{'contact.save' | translate}}</button>
-        <button ng-click="contact.clear()" class="button submit-form">{{'contact.clear' | translate}}</button>
+        <div>
+          <error-label error-translate-key="contact.error" condition="contact.showErrorFormLabel"></error-label>
+        </div>
         <div ng-if="contact.showSavedFormLabel">
           <p class="info-text center">{{'contact.saved' | translate}}</p>
         </div>
+        <button type="submit" class="button submit-form">{{'contact.save' | translate}}</button>
+        <button type="button" ng-click="contact.clear()" class="button submit-form">{{'contact.clear' | translate}}</button>
       </form>
     </div>
   </ion-content>
