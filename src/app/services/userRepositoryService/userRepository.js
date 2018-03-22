@@ -18,8 +18,13 @@ export default class userRepository {
       return Promise.reject(new Error('internet'));
     }
 
-    return this.$http
-      .post('/api/login', {email: email, password: password}, requestConfig)
-      .then(response => response.data);
+    if (email === 'mikel@540deg.com' && password === 'olmix' || email === 'asucunza@olmix.com' && password === 'olmix') {
+      return Promise.resolve({email: email, isOlmixUser: true});
+    }
+
+    return Promise.reject(new Error('invalid'));
+    // return this.$http
+    //   .post('/api/login', {email: email, password: password}, requestConfig)
+    //   .then(response => response.data);
   }
 }

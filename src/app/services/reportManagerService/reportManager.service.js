@@ -17,7 +17,9 @@ export default class reportManagerService {
       return Promise.reject(new Error('internet'));
     }
 
+    this.addUserEmailToReport(report);
     this.addOlmixContactDataToReportIfAvailable(report);
+
     return this.webManagerService
       .sendDataDrupal(JSON.stringify(report))
       .catch(error => {
@@ -25,11 +27,15 @@ export default class reportManagerService {
       });
   }
 
+  addUserEmailToReport(report) {
+    const user = JSON.parse(this.localStorageManager.getDataFor('user'));
+    report.email = report.email + ',' + user.email;
+  }
+
   addOlmixContactDataToReportIfAvailable(report) {
     const contactData = JSON.parse(this.localStorageManager.getDataFor('contact_data'));
     if (contactData) {
       report.contactData = contactData;
-      report.email = report.email + ',' + contactData.email;
     }
   }
 

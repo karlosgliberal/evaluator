@@ -18,17 +18,17 @@ describe('User repository', () => {
     userRepository = _userRepository_;
   }));
 
-  it('should request login for email and password when online', done => {
-    networkManagerService.isOffline.returns(false);
-    $http.post.returns(Promise.resolve({data: {email: '::email::'}}));
-
-    const loginPromise = userRepository.login('::email::', '::password::');
-
-    loginPromise.then(user => {
-      expect(user).to.eql({email: '::email::'});
-      done();
-    });
-  });
+  // it('should request login for email and password when online', done => {
+  //   networkManagerService.isOffline.returns(false);
+  //   $http.post.returns(Promise.resolve({data: {email: '::email::'}}));
+  //
+  //   const loginPromise = userRepository.login('::email::', '::password::');
+  //
+  //   loginPromise.then(user => {
+  //     expect(user).to.eql({email: '::email::'});
+  //     done();
+  //   });
+  // });
 
   it('should throw error on invalid login', done => {
     networkManagerService.isOffline.returns(false);

@@ -37,9 +37,10 @@ describe('Report Manager service', () => {
   }));
 
   it('should follow report sending flow without adding contact data when doesnt exist', done => {
-    let expectedResult = JSON.stringify({percentage: 25, email: '::email::'});
+    let expectedResult = JSON.stringify({percentage: 25, email: '::email::,::user_email::'});
     let evaluationResult = {percentage: 25};
-    localStorageManagerSpy.getDataFor.returns(null);
+    localStorageManagerSpy.getDataFor.withArgs('user').returns('{"email": "::user_email::"}');
+    localStorageManagerSpy.getDataFor.withArgs('contact_data').returns(null);
     networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
 
@@ -47,7 +48,7 @@ describe('Report Manager service', () => {
 
     expect(webManagerServiceStub.sendDataDrupal.withArgs(expectedResult)).to.be.calledOnce;
     reportPromise.then(() => {
-      expect(localStorageManagerSpy.getDataFor).to.be.calledOnce;
+      expect(localStorageManagerSpy.getDataFor).to.be.calledTwice;
       done();
     });
   });
@@ -55,21 +56,22 @@ describe('Report Manager service', () => {
   it('should follow report sending flow adding contact data when exists', () => {
     let expectedResult = JSON.stringify({
       percentage: 25,
-      email: '::email::,::contactEmail::',
+      email: '::email::,::user_email::',
       contactData: {
         name: '::name::',
         email: '::contactEmail::'
       }
     });
     let evaluationResult = {percentage: 25};
-    localStorageManagerSpy.getDataFor.returns('{"name": "::name::","email": "::contactEmail::"}');
+    localStorageManagerSpy.getDataFor.withArgs('user').returns('{"email": "::user_email::"}');
+    localStorageManagerSpy.getDataFor.withArgs('contact_data').returns('{"name": "::name::","email": "::contactEmail::"}');
     networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
 
     reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
 
     expect(webManagerServiceStub.sendDataDrupal.withArgs(expectedResult)).to.be.calledOnce;
-    expect(localStorageManagerSpy.getDataFor).to.be.calledOnce;
+    expect(localStorageManagerSpy.getDataFor).to.be.calledTwice;
   });
 
   it('should not follow report sending flow when not online', () => {
@@ -85,10 +87,11 @@ describe('Report Manager service', () => {
   it('should not follow report sending flow when an error happens', done => {
     let expectedResult = JSON.stringify({
       percentage: 25,
-      email: '::email::'
+      email: '::email::,::user_email::',
     });
     let evaluationResult = {percentage: 25};
-    localStorageManagerSpy.getDataFor.returns(null);
+    localStorageManagerSpy.getDataFor.withArgs('user').returns('{"email": "::user_email::"}');
+    localStorageManagerSpy.getDataFor.withArgs('contact_data').returns(null);
     networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.reject());
 

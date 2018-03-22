@@ -4,11 +4,5 @@
     "webpack",
     "scss",
     "copy-assets"
-  ],
-  "proxies": [
-      {
-        "path": "/api",
-        "proxyUrl": "http://10.0.0.145/index.php/api"
-      }
-    ]
+  ]
 }
