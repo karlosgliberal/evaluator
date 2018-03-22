@@ -84,6 +84,7 @@ h4 {
 @import '../app/views/forms/forms.scss';
 @import '../app/views/contact/contact.scss';
 @import '../app/views/evaluationResult/result.scss';
+@import '../app/views/login/login.scss';
 
 .bar {
 
@@ -139,3 +140,6 @@ h4 {
     }
 }
 
+.popup-buttons > button {
+  background-color: $brand-color !important;
+}

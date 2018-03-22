@@ -13,7 +13,7 @@ describe('Report Manager service', () => {
     localStorageManagerSpy;
 
   beforeEach(angular.mock.module(networkManagerServices.name, ($provide) => {
-    networkManagerServiceStub = {isOnline: sinon.stub(), startWatching: sinon.stub()};
+    networkManagerServiceStub = {isOffline: sinon.stub(), startWatching: sinon.stub()};
     $provide.value('networkManagerService', networkManagerServiceStub);
   }));
 
@@ -40,7 +40,7 @@ describe('Report Manager service', () => {
     let expectedResult = JSON.stringify({percentage: 25, email: '::email::'});
     let evaluationResult = {percentage: 25};
     localStorageManagerSpy.getDataFor.returns(null);
-    networkManagerServiceStub.isOnline.returns(true);
+    networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
 
     const reportPromise = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
@@ -63,7 +63,7 @@ describe('Report Manager service', () => {
     });
     let evaluationResult = {percentage: 25};
     localStorageManagerSpy.getDataFor.returns('{"name": "::name::","email": "::contactEmail::"}');
-    networkManagerServiceStub.isOnline.returns(true);
+    networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
 
     reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
@@ -73,7 +73,7 @@ describe('Report Manager service', () => {
   });
 
   it('should not follow report sending flow when not online', () => {
-    networkManagerServiceStub.isOnline.returns(false);
+    networkManagerServiceStub.isOffline.returns(true);
     let evaluationResult = {percentage: 25};
 
     reportMangerService.sendReport('::animal::', evaluationResult, '::email::');
@@ -89,7 +89,7 @@ describe('Report Manager service', () => {
     });
     let evaluationResult = {percentage: 25};
     localStorageManagerSpy.getDataFor.returns(null);
-    networkManagerServiceStub.isOnline.returns(true);
+    networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.reject());
 
     const reportPromise = reportMangerService.sendReport('::animal::', evaluationResult, '::email::');

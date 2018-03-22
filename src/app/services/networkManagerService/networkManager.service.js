@@ -16,11 +16,7 @@ export default class networkManagerService {
   }
 
   isOffline() {
-    if (ionic.Platform.isWebView()) {
-      return !this.$cordovaNetwork.isOnline();
-    } else {
-      return !this.$window.navigator.onLine;
-    }
+    return !this.isOnline();
   }
 
   startWatching() {

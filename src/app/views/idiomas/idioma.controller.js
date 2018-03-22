@@ -1,47 +1,77 @@
 import { assign } from 'lodash';
-import languages from '../../utils/language';
 
 export default class IdiomaController {
   /*@ngInject*/
   constructor(
-    formService,
+    $rootScope,
+    $scope,
+    $ionicSideMenuDelegate,
     $translate,
     $state,
-    $stateParams,
+    $ionicHistory,
     localStorageManager,
     languageFormService,
-    $ionicHistory
   ) {
     assign(this, {
-      formService,
+      $scope,
+      $ionicSideMenuDelegate,
       $translate,
       $state,
-      $stateParams,
+      $ionicHistory,
       localStorageManager,
       languageFormService,
-      $ionicHistory
     });
 
-    var userLanguage = this.localStorageManager.getDataFor('language');
+    this.previousStateHome = $rootScope.previousState === 'home';
+    this.setUpSideMenu();
 
+    const userLanguage = this.setUpUserLanguage();
+    this.selectorViewModel = {};
+    this.selector = this.languageFormService.generateFormRadio(this, userLanguage);
+  }
+
+  setUpUserLanguage() {
+    let userLanguage = this.localStorageManager.getDataFor('language');
     if (userLanguage) {
       userLanguage = userLanguage.replace(/(^\")|("$)/gi, '');
       this.$translate.use(userLanguage);
       this.$translate.refresh(userLanguage);
     }
 
-    this.selectorViewModel = {};
-    this.selector = this.languageFormService.generateFormRadio(this, userLanguage);
+    return userLanguage;
+  }
+
+  setUpSideMenu() {
+    if (this.previousStateHome) {
+      this.$scope.$on('$ionicView.beforeEnter', () => {
+        if (this.$ionicSideMenuDelegate.isOpenLeft()) {
+          this.$ionicSideMenuDelegate.toggleLeft();
+        }
+        this.$ionicSideMenuDelegate.canDragContent(false);
+      });
+      this.$scope.$on('$ionicView.afterLeave', () => {
+        this.$ionicSideMenuDelegate.canDragContent(true);
+      });
+    }
   }
 
   onSelectorChange() {
     this.$translate.use(this.selectorViewModel.selector);
     this.$translate.refresh(this.selectorViewModel.selector);
     this.localStorageManager.save('language', this.selectorViewModel.selector);
-    let state = this.$state;
     this.$ionicHistory.clearHistory();
-    this.$ionicHistory.clearCache().then(function (){
-      state.go('animalSelection', {}, {reload: true});
-    });
+
+    return this.$ionicHistory.clearCache()
+      .then(() => {
+        this.goToNextScreen();
+      });
+  }
+
+  goToNextScreen() {
+    if (this.previousStateHome) {
+      this.$state.go('login');
+    } else {
+      this.$state.go('animalSelection', {}, {reload: true});
+    }
   }
 }

@@ -18,7 +18,9 @@ import contactModule from './views/contact/contact.module';
 import formModule from './views/forms/form.module';
 import animalSelectionModule from './views/animalSelection/animalSelection.module';
 import evaluationResultModule from './views/evaluationResult/evaluationResult.module';
+import loginModule from './views/login/login.module';
 import localStorageManagerService from './services/localStorageManagerService/localStorageManager.services';
+import userRepositoryService from './services/userRepositoryService/userRepository.services';
 
 const appModule = angular
     .module('olmixEvaluator', [
@@ -31,7 +33,9 @@ const appModule = angular
       animalSelectionModule.name,
       contactModule.name,
       evaluationResultModule.name,
-      localStorageManagerService.name
+      localStorageManagerService.name,
+      loginModule.name,
+      userRepositoryService.name
     ])
     .config(appConfig)
     .controller('AppController', appController)
