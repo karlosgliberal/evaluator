@@ -38,7 +38,7 @@ describe('Idioma controller', () => {
     controller.previousStateHome = false;
 
     controller.setUpSideMenu();
-    $scope.$emit('$ionicView.beforeEnter');
+    $scope.$emit('$ionicView.afterEnter');
 
     expect(ionicSideMenuDelegateStub.canDragContent).to.not.be.called;
   });
@@ -48,9 +48,9 @@ describe('Idioma controller', () => {
 
     controller.setUpSideMenu();
 
-    $scope.$emit('$ionicView.beforeEnter');
+    $scope.$emit('$ionicView.afterEnter');
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(false)).to.be.calledOnce;
-    $scope.$emit('$ionicView.afterLeave');
+    $scope.$emit('$ionicView.beforeLeave');
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(true)).to.be.calledOnce;
   });
 

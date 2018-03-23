@@ -251,7 +251,36 @@
       "placeholder": "Contraseña",
       "error": "Debe introducir una contraseña válida"
     },
-    "error": "El correo eléctronico o contraseña no es correcta"
+    "error": "El correo eléctronico o contraseña no es correcta",
+    "create_account": "¿No tienes una cuenta?",
+    "register": "Regístrate",
+    "email_confirmation": "Se le ha enviado un correo electrónico. Contiene un enlace de activación al que debe acceder para activar su cuenta."
+  },
+  "register": {
+    "name": {
+      "placeholder": "Nombre",
+      "error": "Debe introducir un nombre"
+    },
+    "surname": {
+      "placeholder": "Apellidos",
+      "error": "Debe introducir un apellido"
+    },
+    "company": {
+      "placeholder": "Empresa",
+      "error": "Debe introducir una empresa"
+    },
+    "email": {
+      "placeholder": "Correo electrónico",
+      "error": "Debe introducir un correo electrónico válido"
+    },
+    "password": {
+      "placeholder": "Contraseña",
+      "error": "Debe introducir una contraseña válida"
+    },
+    "submit": "Enviar",
+    "have_account": "¿Ya tienes una cuenta?",
+    "login": "Inicia sesión",
+    "error": "Ha ocurrido un problema durante el proceso de registro"
   },
   "internet_error": "La red no está disponible"
 }
