@@ -241,7 +241,7 @@
     }
   },
   "login": {
-    "submit": "Login",
+    "submit": "Log in",
     "email": {
       "placeholder": "Email",
       "error": "A valid email is required"
@@ -250,7 +250,37 @@
       "placeholder": "Password",
       "error": "A valid password is required"
     },
-    "error": "Your email or password is incorrect"
+    "error": "Your email or password is incorrect",
+    "create_account": "Don't have an account?",
+    "register": "Sign up",
+    "email_confirmation": "An email has been sent to you. It contains an activation link you must click to activate your account"
+  },
+
+  "register": {
+    "name": {
+      "placeholder": "Name",
+      "error": "Name is required"
+    },
+    "surname": {
+      "placeholder": "Surname",
+      "error": "Surname is required"
+    },
+    "company": {
+      "placeholder": "Company",
+      "error": "Company is required"
+    },
+    "email": {
+      "placeholder": "Email",
+      "error": "A valid email is required"
+    },
+    "password": {
+      "placeholder": "Password",
+      "error": "A valid password is required"
+    },
+    "submit": "Submit",
+    "have_account": "Already have an account?",
+    "login": "Log in",
+    "error": "A problem has happened during your registration"
   },
   "internet_error": "Network is not available"
 }

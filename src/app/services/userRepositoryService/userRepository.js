@@ -18,13 +18,19 @@ export default class userRepository {
       return Promise.reject(new Error('internet'));
     }
 
-    if (email === 'mikel@540deg.com' && password === 'olmix' || email === 'asucunza@olmix.com' && password === 'olmix') {
-      return Promise.resolve({email: email, isOlmixUser: true});
+    return this.$http
+      .post('/api/login', {email: email, password: password}, requestConfig)
+      .then(response => response.data);
+  }
+
+  register(registerFields) {
+    this.networkManagerService.startWatching();
+    if (this.networkManagerService.isOffline()) {
+      return Promise.reject(new Error('internet'));
     }
 
-    return Promise.reject(new Error('invalid'));
-    // return this.$http
-    //   .post('/api/login', {email: email, password: password}, requestConfig)
-    //   .then(response => response.data);
+    return this.$http
+      .post('/api/register', registerFields, requestConfig)
+      .then(response => response.data);
   }
 }

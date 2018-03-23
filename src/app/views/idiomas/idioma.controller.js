@@ -43,13 +43,13 @@ export default class IdiomaController {
 
   setUpSideMenu() {
     if (this.previousStateHome) {
-      this.$scope.$on('$ionicView.beforeEnter', () => {
+      this.$scope.$on('$ionicView.afterEnter', () => {
         if (this.$ionicSideMenuDelegate.isOpenLeft()) {
           this.$ionicSideMenuDelegate.toggleLeft();
         }
         this.$ionicSideMenuDelegate.canDragContent(false);
       });
-      this.$scope.$on('$ionicView.afterLeave', () => {
+      this.$scope.$on('$ionicView.beforeLeave', () => {
         this.$ionicSideMenuDelegate.canDragContent(true);
       });
     }
