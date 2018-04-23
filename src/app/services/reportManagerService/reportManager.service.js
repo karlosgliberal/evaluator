@@ -17,8 +17,9 @@ export default class reportManagerService {
       return Promise.reject(new Error('internet'));
     }
 
-    this.addUserEmailToReport(report);
-    this.addOlmixContactDataToReportIfAvailable(report);
+    const user = JSON.parse(this.localStorageManager.getDataFor('user'));
+    report = this.addUserEmailToReport(report, user);
+    report = this.addOlmixContactDataToReportIfAvailable(report, user);
 
     return this.webManagerService
       .sendDataDrupal(JSON.stringify(report))
@@ -27,16 +28,19 @@ export default class reportManagerService {
       });
   }
 
-  addUserEmailToReport(report) {
-    const user = JSON.parse(this.localStorageManager.getDataFor('user'));
+  addUserEmailToReport(report, user) {
     report.email = report.email + ',' + user.email;
+
+    return report;
   }
 
-  addOlmixContactDataToReportIfAvailable(report) {
+  addOlmixContactDataToReportIfAvailable(report, user) {
     const contactData = JSON.parse(this.localStorageManager.getDataFor('contact_data'));
-    if (contactData) {
+    if (contactData && user && user.isOlmixUser) {
       report.contactData = contactData;
     }
+
+    return report;
   }
 
   saveData(result) {

@@ -25,7 +25,7 @@
                 <ion-item class="item-icon-left" ui-sref="animalSelection" menu-close>
                     <i class="icon ion-ios-paw"></i> {{'menu.selection' | translate}}
                 </ion-item>
-                <ion-item class="item-icon-left" ui-sref="contact" menu-close>
+                <ion-item ng-controller="ContactController as contact" ng-show="contact.userIsOlmixUser()" class="item-icon-left" ui-sref="contact" menu-close>
                   <i class="icon ion-ios-person"></i> {{'menu.contact' | translate}}
                 </ion-item>
             </ion-list>

@@ -53,7 +53,7 @@ describe('Report Manager service', () => {
     });
   });
 
-  it('should follow report sending flow adding contact data when exists', () => {
+  it('should follow report sending flow adding contact data when exists and user is olmix user', () => {
     let expectedResult = JSON.stringify({
       percentage: 25,
       email: '::email::,::user_email::',
@@ -63,7 +63,7 @@ describe('Report Manager service', () => {
       }
     });
     let evaluationResult = {percentage: 25};
-    localStorageManagerSpy.getDataFor.withArgs('user').returns('{"email": "::user_email::"}');
+    localStorageManagerSpy.getDataFor.withArgs('user').returns('{"email": "::user_email::","isOlmixUser": "true"}');
     localStorageManagerSpy.getDataFor.withArgs('contact_data').returns('{"name": "::name::","email": "::contactEmail::"}');
     networkManagerServiceStub.isOffline.returns(false);
     webManagerServiceStub.sendDataDrupal.returns(Promise.resolve());
