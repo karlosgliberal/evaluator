@@ -3,7 +3,7 @@ import localStorageManager from './../../services/localStorageManagerService/loc
 import userRepositoryService from './../../services/userRepositoryService/userRepository.services';
 
 describe('Login controller', () => {
-  let $scope, ionicSideMenuDelegateStub, $state, $ionicPopup, $translate, userRepository, localStorageManagerStub, timeout, controller;
+  let $scope, ionicSideMenuDelegateStub, $state, popupManager, $translate, userRepository, localStorageManagerStub, timeout, controller;
 
   beforeEach(angular.mock.module(loginControllers.name));
 
@@ -18,7 +18,7 @@ describe('Login controller', () => {
     localStorageManagerStub = {getDataFor: sinon.stub(), save: sinon.stub()};
     userRepository = {login: sinon.stub()};
     timeout = $timeout;
-    $ionicPopup = {alert: sinon.spy()};
+    popupManager = {alert: sinon.spy()};
     $translate = {instant: sinon.spy()};
 
     controller = $controller('LoginController', {
@@ -26,7 +26,7 @@ describe('Login controller', () => {
       $ionicSideMenuDelegate: ionicSideMenuDelegateStub,
       $state: $state,
       $timeout: timeout,
-      $ionicPopup: $ionicPopup,
+      popupManager: popupManager,
       $translate: $translate,
       userRepository: userRepository,
       localStorageManager: localStorageManagerStub
@@ -56,7 +56,7 @@ describe('Login controller', () => {
     const onSubmitPromise = controller.onSubmit();
 
     onSubmitPromise.then(() => {
-      expect($ionicPopup.alert).to.be.calledOnce;
+      expect(popupManager.alert).to.be.calledOnce;
       done();
     });
   });

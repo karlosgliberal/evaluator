@@ -28,6 +28,9 @@
                 <ion-item class="item-icon-left" ui-sref="contact" menu-close>
                   <i class="icon ion-ios-person"></i> {{'menu.contact' | translate}}
                 </ion-item>
+                <ion-item class="item-icon-left" ng-controller="LogoutController as logout" ng-click="logout.prompt()" menu-close>
+                  <i class="icon ion-log-out"></i> {{'menu.logout' | translate}}
+                </ion-item>
             </ion-list>
         </ion-content>
     </ion-side-menu>

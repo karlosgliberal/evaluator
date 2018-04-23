@@ -42,13 +42,26 @@ describe('Local storage manager service', () => {
 
   it('should remove data', () => {
     let localStorageKey = '::key::';
-    let store = {localStorageKey: {}};
+    let store = {[localStorageKey]: {}};
     sandbox.stub(window.localStorage, 'removeItem').callsFake(key => {
       delete store[key];
     });
 
-    localStorageManager.remove();
+    localStorageManager.remove(localStorageKey);
 
     expect(store[localStorageKey]).to.be.undefined;
+  });
+
+  it('should remove all data', () => {
+    let localStorageKey = '::key::';
+    let otherLocalStorageKey = '::another-key::';
+    let store = {[localStorageKey]: {}, [otherLocalStorageKey]: []};
+    sandbox.stub(window.localStorage, 'clear').callsFake(() => {
+      store = {};
+    });
+
+    localStorageManager.removeAll();
+
+    expect(store).to.be.eql({});
   });
 });

@@ -4,8 +4,8 @@ const userStorageKey = 'user';
 
 export default class LoginController {
   /*@ngInject*/
-  constructor($scope, $ionicSideMenuDelegate, $timeout, $state, $ionicPopup, $translate, localStorageManager, userRepository) {
-    assign(this, {$scope, $ionicSideMenuDelegate, $timeout, $state, $ionicPopup, $translate, localStorageManager, userRepository});
+  constructor($scope, $ionicSideMenuDelegate, $timeout, $state, $translate, localStorageManager, userRepository, popupManager) {
+    assign(this, {$scope, $ionicSideMenuDelegate, $timeout, $state, $translate, localStorageManager, userRepository, popupManager});
 
     if (this.getUserFromLocalStorage()) {
       this.goToAnimalSelection();
@@ -39,25 +39,24 @@ export default class LoginController {
       return this.userRepository
         .login(this.fields.email, this.fields.password)
         .then(user => {
-          this.showLoadingIcon = false;
           this.saveUserInLocalStorage(user);
           this.goToAnimalSelection();
         })
         .catch(error => {
-          this.showLoadingIcon = false;
           if (error.message === 'internet') {
             this.showInternetError();
           } else {
             this.showErrorAndResetForm();
           }
+        })
+        .finally(() => {
+          this.showLoadingIcon = false;
         });
     }
   }
 
   showInternetError() {
-    this.$ionicPopup.alert({
-      title: this.$translate.instant('internet_error')
-    });
+    this.popupManager.alert('internet_error');
   }
 
   showErrorAndResetForm() {
