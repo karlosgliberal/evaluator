@@ -35,7 +35,8 @@
     "about": "About",
     "language": "Idioma",
     "selection": "Seleccione especie",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "logout": "Cerrar sesión"
   },
   "language": {
     "title": "Elija su idioma preferido",
@@ -252,5 +253,10 @@
     },
     "error": "El correo eléctronico o contraseña no es correcta"
   },
-  "internet_error": "La red no está disponible"
+  "internet_error": "La red no está disponible",
+  "logout": {
+    "question": "Va a cerrar sesión. ¿Desea continuar?",
+    "ok": "Continuar",
+    "cancel": "Cancelar"
+  }
 }

@@ -35,7 +35,8 @@
     "about": "About",
     "language": "Language",
     "selection": "Species selection",
-    "contact": "Contact"
+    "contact": "Contact",
+    "logout": "Log out"
   },
   "language": {
     "title": "Choose your preferred language",
@@ -252,5 +253,10 @@
     },
     "error": "Your email or password is incorrect"
   },
-  "internet_error": "Network is not available"
+  "internet_error": "Network is not available",
+  "logout": {
+    "question": "You are logging out. Are you sure?",
+    "ok": "OK",
+    "cancel": "Cancel"
+  }
 }
