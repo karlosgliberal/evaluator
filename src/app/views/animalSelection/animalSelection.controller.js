@@ -20,7 +20,6 @@ export default class AnimalSelectionController {
     });
 
     this.animals = this.availableAnimals();
-    this.dimensionHeight = this.calculateDimensionHeight() + 5;
 
     var userLanguage = this.localStorageManager.getDataFor('language');
     if (userLanguage) {
@@ -29,18 +28,6 @@ export default class AnimalSelectionController {
       this.$translate.refresh(userLanguage);
     }
 
-  }
-
-  calculateDimensionHeight(gesture) {
-    if (ionic.Platform.isIOS()){
-      if (this.$window.screen.height > this.$window.screen.width && (this.$window.orientation !== '90' || this.$window.orientation !== '-90')){
-        return this.$window.screen.width;
-      } else {
-        return this.$window.screen.height;
-      }
-    } else {
-      return this.$window.innerHeight;
-    }
   }
 
   availableAnimals() {
