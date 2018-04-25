@@ -1,6 +1,7 @@
 import { assign } from 'lodash';
 
 const contactStorageKey = 'contact_data';
+const userStorageKey = 'user';
 
 export default class ContactController {
   constructor($timeout, $translate, localStorageManager) {
@@ -59,5 +60,11 @@ export default class ContactController {
 
   removeDataFromLocalStorage() {
     this.localStorageManager.remove(contactStorageKey);
+  }
+
+  userIsOlmixUser() {
+    const user = JSON.parse(this.localStorageManager.getDataFor(userStorageKey));
+
+    return user.isOlmixUser;
   }
 }
