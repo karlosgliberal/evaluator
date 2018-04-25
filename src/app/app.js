@@ -20,8 +20,10 @@ import animalSelectionModule from './views/animalSelection/animalSelection.modul
 import evaluationResultModule from './views/evaluationResult/evaluationResult.module';
 import loginModule from './views/login/login.module';
 import registerModule from './views/register/register.module';
+import logoutModule from './views/logout/logout.module';
 import localStorageManagerService from './services/localStorageManagerService/localStorageManager.services';
 import userRepositoryService from './services/userRepositoryService/userRepository.services';
+import poupManagerService from './services/popupManagerService/popupManager.services';
 
 const appModule = angular
     .module('olmixEvaluator', [
@@ -37,7 +39,9 @@ const appModule = angular
       localStorageManagerService.name,
       loginModule.name,
       registerModule.name,
-      userRepositoryService.name
+      logoutModule.name,
+      userRepositoryService.name,
+      poupManagerService.name
     ])
     .config(appConfig)
     .controller('AppController', appController)

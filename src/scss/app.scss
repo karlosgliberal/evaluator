@@ -145,6 +145,21 @@ h4 {
     }
 }
 
-.popup-buttons > button {
-  background-color: $brand-color !important;
+.popup-buttons {
+  .button-positive {
+    background-color: $brand-color !important;
+
+    &:hover {
+      color: darken(white, 10%) !important;
+    }
+  }
+
+  .button-default {
+    background-color: white !important;
+    color: $brand-color;
+
+    &:hover {
+      color: darken($brand-color, 10%) !important;
+    }
+  }
 }

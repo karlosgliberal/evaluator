@@ -2,7 +2,7 @@ import registerControllers from './register.controllers';
 import userRepositoryService from './../../services/userRepositoryService/userRepository.services';
 
 describe('Register controller', () => {
-  let $scope, ionicSideMenuDelegateStub, $state, $ionicPopup, $translate, timeout, userRepository, controller;
+  let $scope, ionicSideMenuDelegateStub, $state, $translate, timeout, popupManager, userRepository, controller;
 
   beforeEach(angular.mock.module(registerControllers.name));
 
@@ -14,14 +14,14 @@ describe('Register controller', () => {
     $state = {go: sinon.spy()};
     userRepository = {register: sinon.stub()};
     timeout = $timeout;
-    $ionicPopup = {alert: sinon.stub()};
+    popupManager = {alert: sinon.stub()};
     $translate = {instant: sinon.spy()};
 
     controller = $controller('RegisterController', {
       $scope: $scope,
       $ionicSideMenuDelegate: ionicSideMenuDelegateStub,
       $timeout: timeout,
-      $ionicPopup: $ionicPopup,
+      popupManager: popupManager,
       $translate: $translate,
       $state: $state,
       userRepository: userRepository
@@ -51,7 +51,7 @@ describe('Register controller', () => {
     const onSubmitPromise = controller.onSubmit();
 
     onSubmitPromise.then(() => {
-      expect($ionicPopup.alert).to.be.calledOnce;
+      expect(popupManager.alert).to.be.calledOnce;
       done();
     });
   });
@@ -76,14 +76,14 @@ describe('Register controller', () => {
     const onSubmitPromise = controller.onSubmit();
 
     onSubmitPromise.then(() => {
-      expect($ionicPopup.alert).to.be.calledOnce;
+      expect(popupManager.alert).to.be.calledOnce;
       done();
     });
   });
 
   it('should go to login when successful submit and pressed ok on popup', done => {
     userRepository.register.returns(Promise.resolve({isOlmixUser: true}));
-    $ionicPopup.alert.returns(Promise.resolve());
+    popupManager.alert.returns(Promise.resolve());
 
     const onSubmitPromise = controller.onSubmit();
 

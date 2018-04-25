@@ -2,8 +2,8 @@ import { assign } from 'lodash';
 
 export default class RegisterController {
   /*@ngInject*/
-  constructor($scope, $ionicSideMenuDelegate, $timeout, $ionicPopup, $translate, $state, userRepository) {
-    assign(this, {$scope, $ionicSideMenuDelegate, $timeout, $ionicPopup, $translate, $state, userRepository});
+  constructor($scope, $ionicSideMenuDelegate, $timeout, $translate, $state, userRepository, popupManager) {
+    assign(this, {$scope, $ionicSideMenuDelegate, $timeout, $translate, $state, userRepository, popupManager});
 
     this.setUpSideMenu();
 
@@ -36,7 +36,6 @@ export default class RegisterController {
       return this.userRepository
         .register(this.fields)
         .then(() => {
-          this.showLoadingIcon = false;
           this.showEmailPopup();
         })
         .catch(error => {
@@ -45,21 +44,20 @@ export default class RegisterController {
           } else {
             this.showErrorAndResetForm();
           }
+        })
+        .finally(() => {
+          this.showLoadingIcon = false;
         });
     }
   }
 
   showInternetError() {
-    this.$ionicPopup.alert({
-      title: this.$translate.instant('internet_error')
-    });
+    this.popupManager.alert('internet_error');
   }
 
   showEmailPopup() {
-    this.$ionicPopup
-      .alert({
-        title: this.$translate.instant('login.email_confirmation')
-      })
+    this.popupManager
+      .alert('login.email_confirmation')
       .then(() => {
         this.goToLogin();
       });
