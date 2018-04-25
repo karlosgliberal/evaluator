@@ -76,6 +76,10 @@ h4 {
   color: $brand-color;
 }
 
+.text-brand {
+  color: $brand-color;
+}
+
 // include all of Ionic
 @import "../../node_modules/ionic-sdk/scss/ionic";
 
@@ -85,6 +89,7 @@ h4 {
 @import '../app/views/contact/contact.scss';
 @import '../app/views/evaluationResult/result.scss';
 @import '../app/views/login/login.scss';
+@import '../app/views/register/register.scss';
 
 .bar {
 

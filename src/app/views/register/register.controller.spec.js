@@ -1,38 +1,33 @@
-import loginControllers from './login.controllers';
-import localStorageManager from './../../services/localStorageManagerService/localStorageManager.services';
+import registerControllers from './register.controllers';
 import userRepositoryService from './../../services/userRepositoryService/userRepository.services';
 
-describe('Login controller', () => {
-  let $scope, ionicSideMenuDelegateStub, $state, $ionicPopup, $translate, userRepository, localStorageManagerStub, timeout, controller;
+describe('Register controller', () => {
+  let $scope, ionicSideMenuDelegateStub, $state, $ionicPopup, $translate, timeout, userRepository, controller;
 
-  beforeEach(angular.mock.module(loginControllers.name));
-
-  beforeEach(angular.mock.module(localStorageManager.name));
+  beforeEach(angular.mock.module(registerControllers.name));
 
   beforeEach(angular.mock.module(userRepositoryService.name));
 
   beforeEach(inject(($rootScope, $controller, $timeout) => {
     $scope = $rootScope.$new();
-    $state = {go: sinon.spy()};
     ionicSideMenuDelegateStub = {canDragContent: sinon.spy(), isOpenLeft: sinon.spy(), toggleLeft: sinon.spy};
-    localStorageManagerStub = {getDataFor: sinon.stub(), save: sinon.stub()};
-    userRepository = {login: sinon.stub()};
+    $state = {go: sinon.spy()};
+    userRepository = {register: sinon.stub()};
     timeout = $timeout;
-    $ionicPopup = {alert: sinon.spy()};
+    $ionicPopup = {alert: sinon.stub()};
     $translate = {instant: sinon.spy()};
 
-    controller = $controller('LoginController', {
+    controller = $controller('RegisterController', {
       $scope: $scope,
       $ionicSideMenuDelegate: ionicSideMenuDelegateStub,
-      $state: $state,
       $timeout: timeout,
       $ionicPopup: $ionicPopup,
       $translate: $translate,
-      userRepository: userRepository,
-      localStorageManager: localStorageManagerStub
+      $state: $state,
+      userRepository: userRepository
     });
 
-    controller.form = {$valid: true, $setPristine: sinon.stub(), $setUntouched: sinon.stub()};
+    controller.form = {$valid: true};
   }));
 
   it('should set up side menu events', () => {
@@ -42,16 +37,16 @@ describe('Login controller', () => {
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(true)).to.be.calledOnce;
   });
 
-  it('on submit should not try to login when form invalid', () => {
+  it('should not try to register when form submit invalid', () => {
     controller.form.$valid = false;
 
     controller.onSubmit();
 
-    expect(userRepository.login).to.not.be.called;
+    expect(userRepository.register).to.not.be.called;
   });
 
-  it('on submit should show alert when no internet', done => {
-    userRepository.login.returns(Promise.reject(new Error('internet')));
+  it('should show alert when submit without internet', done => {
+    userRepository.register.returns(Promise.reject(new Error('internet')));
 
     const onSubmitPromise = controller.onSubmit();
 
@@ -61,8 +56,8 @@ describe('Login controller', () => {
     });
   });
 
-  it('on submit should show error and empty password when login invalid', done => {
-    userRepository.login.returns(Promise.reject(new Error('invalid')));
+  it('should show error and empty password when register submit failed', done => {
+    userRepository.register.returns(Promise.reject(new Error('invalid')));
 
     const onSubmitPromise = controller.onSubmit();
 
@@ -75,16 +70,27 @@ describe('Login controller', () => {
     });
   });
 
-  it('on submit should save user and go to animal selection when successful', done => {
-    userRepository.login.returns(Promise.resolve({isOlmixUser: true}));
+  it('should remind user to check email when successful register submit', done => {
+    userRepository.register.returns(Promise.resolve({isOlmixUser: true}));
+
+    const onSubmitPromise = controller.onSubmit();
+
+    onSubmitPromise.then(() => {
+      expect($ionicPopup.alert).to.be.calledOnce;
+      done();
+    });
+  });
+
+  it('should go to login when successful submit and pressed ok on popup', done => {
+    userRepository.register.returns(Promise.resolve({isOlmixUser: true}));
+    $ionicPopup.alert.returns(Promise.resolve());
 
     const onSubmitPromise = controller.onSubmit();
 
     expect(controller.showLoadingIcon).to.be.true;
     onSubmitPromise.then(() => {
       expect(controller.showLoadingIcon).to.be.false;
-      expect(localStorageManagerStub.save.withArgs('user', {isOlmixUser: true})).to.be.calledOnce;
-      expect($state.go.withArgs('animalSelection')).to.be.calledOnce;
+      expect($state.go.withArgs('login')).to.be.calledOnce;
       done();
     });
   });

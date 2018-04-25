@@ -19,6 +19,7 @@ import formModule from './views/forms/form.module';
 import animalSelectionModule from './views/animalSelection/animalSelection.module';
 import evaluationResultModule from './views/evaluationResult/evaluationResult.module';
 import loginModule from './views/login/login.module';
+import registerModule from './views/register/register.module';
 import localStorageManagerService from './services/localStorageManagerService/localStorageManager.services';
 import userRepositoryService from './services/userRepositoryService/userRepository.services';
 
@@ -35,6 +36,7 @@ const appModule = angular
       evaluationResultModule.name,
       localStorageManagerService.name,
       loginModule.name,
+      registerModule.name,
       userRepositoryService.name
     ])
     .config(appConfig)
