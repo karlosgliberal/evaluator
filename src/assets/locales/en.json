@@ -257,7 +257,6 @@
     "register": "Sign up",
     "email_confirmation": "An email has been sent to you. It contains an activation link you must click to activate your account"
   },
-
   "register": {
     "name": {
       "placeholder": "Name",

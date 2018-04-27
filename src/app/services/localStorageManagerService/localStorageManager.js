@@ -1,5 +1,7 @@
 import {assign} from 'lodash';
 
+const languageKey = 'language';
+
 export default class localStorageManager {
   /*@ngInject*/
   constructor($window) {
@@ -18,8 +20,12 @@ export default class localStorageManager {
     this.$window.localStorage.removeItem(key);
   }
 
-  removeAll() {
+  clearSession() {
+    const language = JSON.parse(this.getDataFor(languageKey));
+
     this.$window.localStorage.clear();
+
+    this.save(languageKey, language);
   }
 
   getAllDataKeys(){
