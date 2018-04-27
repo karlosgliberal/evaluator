@@ -11,7 +11,7 @@ describe('Logout controller', () => {
   beforeEach(inject(($controller) => {
     $state = {go: sinon.spy()};
     $translate = {instant: sinon.spy()};
-    localStorageManagerStub = {removeAll: sinon.spy()};
+    localStorageManagerStub = {clearSession: sinon.spy()};
     popupManagerStub = {prompt: sinon.stub()};
 
     controller = $controller('LogoutController', {
@@ -22,24 +22,24 @@ describe('Logout controller', () => {
     });
   }));
 
-  it('should not remove all data when user cancelled', done => {
+  it('should not clear session when user cancelled', done => {
     popupManagerStub.prompt.returns(Promise.resolve(false));
 
     const confirmPromise = controller.prompt();
 
     confirmPromise.then(() => {
-      expect(localStorageManagerStub.removeAll).to.not.be.called;
+      expect(localStorageManagerStub.clearSession).to.not.be.called;
       done();
     });
   });
 
-  it('should remove all data and redirect when user confirmed', done => {
+  it('should clear session and redirect when user confirmed', done => {
     popupManagerStub.prompt.returns(Promise.resolve(true));
 
     const confirmPromise = controller.prompt();
 
     confirmPromise.then(() => {
-      expect(localStorageManagerStub.removeAll).to.be.calledOnce;
+      expect(localStorageManagerStub.clearSession).to.be.calledOnce;
       expect($state.go.withArgs('login')).to.be.calledOnce;
       done();
     });

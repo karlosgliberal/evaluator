@@ -11,13 +11,9 @@ export default class LogoutController {
       .prompt('logout.question', 'logout.ok', 'logout.cancel')
       .then(confirmed => {
         if (confirmed) {
-          this.removeDataFromLocalStorage();
+          this.localStorageManager.clearSession();
           this.$state.go('login');
         }
       });
-  }
-
-  removeDataFromLocalStorage() {
-    return this.localStorageManager.removeAll();
   }
 }

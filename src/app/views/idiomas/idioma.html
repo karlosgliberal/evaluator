@@ -1,5 +1,7 @@
 <ion-view>
-  <ion-nav-buttons ng-show="idioma.previousStateHome"></ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button ng-if="!idioma.previousStateHome" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
   <ion-nav-title>
       <div class="row">
           <div class="titulo col col-50">

@@ -42,12 +42,13 @@ describe('Login controller', () => {
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(true)).to.be.calledOnce;
   });
 
-  it('on submit should not try to login when form invalid', () => {
+  it('on submit should not try to login but show error when form invalid', () => {
     controller.form.$valid = false;
 
     controller.onSubmit();
 
     expect(userRepository.login).to.not.be.called;
+    expect(controller.showErrorText).to.be.true;
   });
 
   it('on submit should show alert when no internet', done => {
