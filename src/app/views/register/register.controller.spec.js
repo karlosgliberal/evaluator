@@ -37,12 +37,13 @@ describe('Register controller', () => {
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(true)).to.be.calledOnce;
   });
 
-  it('should not try to register when form submit invalid', () => {
+  it('should not try to register but show error when form submit invalid', () => {
     controller.form.$valid = false;
 
     controller.onSubmit();
 
     expect(userRepository.register).to.not.be.called;
+    expect(controller.showErrorText).to.be.true;
   });
 
   it('should show alert when submit without internet', done => {

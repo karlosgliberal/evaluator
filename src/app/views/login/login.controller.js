@@ -34,25 +34,35 @@ export default class LoginController {
   }
 
   onSubmit() {
-    if (this.form.$valid) {
-      this.showLoadingIcon = true;
-      return this.userRepository
-        .login(this.fields.email, this.fields.password)
-        .then(user => {
-          this.saveUserInLocalStorage(user);
-          this.goToAnimalSelection();
-        })
-        .catch(error => {
-          if (error.message === 'internet') {
-            this.showInternetError();
-          } else {
-            this.showErrorAndResetForm();
-          }
-        })
-        .finally(() => {
-          this.showLoadingIcon = false;
-        });
+    if (!this.form.$valid) {
+      this.handleError();
+      return;
     }
+
+    this.showLoadingIcon = true;
+    return this.userRepository
+      .login(this.fields.email, this.fields.password)
+      .then(user => {
+        this.saveUserInLocalStorage(user);
+        this.goToAnimalSelection();
+      })
+      .catch(error => {
+        if (error.message === 'internet') {
+          this.showInternetError();
+        } else {
+          this.showErrorAndResetForm();
+        }
+      })
+      .finally(() => {
+        this.showLoadingIcon = false;
+      });
+  }
+
+  handleError() {
+    this.showErrorText = true;
+    this.$timeout(() => {
+      this.showErrorText = false;
+    }, 3000);
   }
 
   showInternetError() {

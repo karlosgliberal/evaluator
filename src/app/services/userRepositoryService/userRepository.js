@@ -1,4 +1,4 @@
-import { assign } from 'lodash';
+import { assign, clone } from 'lodash';
 
 const requestConfig = {
   headers: {
@@ -8,8 +8,8 @@ const requestConfig = {
 
 export default class userRepository {
   /*@ngInject*/
-  constructor($http, networkManagerService){
-    assign(this, {$http, networkManagerService});
+  constructor($http, networkManagerService, localStorageManager){
+    assign(this, {$http, networkManagerService, localStorageManager});
   };
 
   login(email, password) {
@@ -29,8 +29,17 @@ export default class userRepository {
       return Promise.reject(new Error('internet'));
     }
 
+    const payload = this.getPayloadWithLocale(registerFields);
+
     return this.$http
-      .post('/api/register', registerFields, requestConfig)
+      .post('/api/register', payload, requestConfig)
       .then(response => response.data);
+  }
+
+  getPayloadWithLocale(registerFields) {
+    const payload = clone(registerFields);
+    payload.locale = JSON.parse(this.localStorageManager.getDataFor('language'));
+
+    return payload;
   }
 }

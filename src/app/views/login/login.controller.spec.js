@@ -42,15 +42,16 @@ describe('Login controller', () => {
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(true)).to.be.calledOnce;
   });
 
-  it('on submit should not try to login when form invalid', () => {
+  it('should not try to login but show error when form submit invalid', () => {
     controller.form.$valid = false;
 
     controller.onSubmit();
 
     expect(userRepository.login).to.not.be.called;
+    expect(controller.showErrorText).to.be.true;
   });
 
-  it('on submit should show alert when no internet', done => {
+  it('should show alert when submit without internet', done => {
     userRepository.login.returns(Promise.reject(new Error('internet')));
 
     const onSubmitPromise = controller.onSubmit();
@@ -61,7 +62,7 @@ describe('Login controller', () => {
     });
   });
 
-  it('on submit should show error and empty password when login invalid', done => {
+  it('should show error and empty password when login submit invalid', done => {
     userRepository.login.returns(Promise.reject(new Error('invalid')));
 
     const onSubmitPromise = controller.onSubmit();
@@ -75,7 +76,7 @@ describe('Login controller', () => {
     });
   });
 
-  it('on submit should save user and go to animal selection when successful', done => {
+  it('should save user and go to animal selection when successful login submit', done => {
     userRepository.login.returns(Promise.resolve({isOlmixUser: true}));
 
     const onSubmitPromise = controller.onSubmit();

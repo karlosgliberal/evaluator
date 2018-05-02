@@ -52,16 +52,21 @@ describe('Local storage manager service', () => {
     expect(store[localStorageKey]).to.be.undefined;
   });
 
-  it('should remove all data', () => {
+  it('should clear session', () => {
+    let keyToKeep = 'language';
     let localStorageKey = '::key::';
     let otherLocalStorageKey = '::another-key::';
-    let store = {[localStorageKey]: {}, [otherLocalStorageKey]: []};
+    let store = {[localStorageKey]: {}, [otherLocalStorageKey]: [], [keyToKeep]: '"value"'};
+    sandbox.stub(window.localStorage, 'getItem').returns('"value"');
+    sandbox.stub(window.localStorage, 'setItem').callsFake((key, value) => {
+      store[key] = value;
+    });
     sandbox.stub(window.localStorage, 'clear').callsFake(() => {
       store = {};
     });
 
-    localStorageManager.removeAll();
+    localStorageManager.clearSession();
 
-    expect(store).to.be.eql({});
+    expect(store).to.be.eql({[keyToKeep]: '"value"'});
   });
 });

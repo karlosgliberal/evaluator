@@ -64,7 +64,10 @@ export default class ContactController {
 
   userIsOlmixUser() {
     const user = JSON.parse(this.localStorageManager.getDataFor(userStorageKey));
+    if (!user) {
+      return false;
+    }
 
-    return user.isOlmixUser;
+    return user.is_olmix_user;
   }
 }
