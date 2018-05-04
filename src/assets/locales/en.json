@@ -278,6 +278,11 @@
       "placeholder": "Password",
       "error": "A valid password is required"
     },
+    "lopd": {
+      "text": "I accept the protection of my personal data by",
+      "link": "Olmix S.A."
+    },
+    "mailing": "I accept receiving mailing campaigns",
     "submit": "Submit",
     "have_account": "Already have an account?",
     "login": "Log in",

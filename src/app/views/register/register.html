@@ -60,6 +60,14 @@
             condition="(register.form.password.$error.required || register.form.password.$error.minLength) && register.form.password.$dirty">
           </error-label>
         </div>
+        <div>
+          <input type="checkbox" name="lopd" ng-model="register.fields.lopd" ng-required="true"/>
+          {{'register.lopd.text'|translate}} <a href="https://www.olmix.com/legal">{{'register.lopd.link'|translate}}</a>
+        </div>
+        <div>
+          <input type="checkbox" name="mailing" ng-model="register.fields.mailing"/>
+          {{'register.mailing'|translate}}
+        </div>
         <button type="submit" class="button submit-form">{{'register.submit' | translate}}</button>
         <div class="center" ng-if="register.showLoadingIcon">
           <ion-spinner></ion-spinner>
