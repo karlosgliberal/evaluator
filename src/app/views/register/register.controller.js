@@ -14,7 +14,9 @@ export default class RegisterController {
       surname: '',
       company: '',
       email: '',
-      password: ''
+      password: '',
+      lopd: false,
+      mailing: false,
     };
   }
 

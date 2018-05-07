@@ -278,6 +278,11 @@
       "placeholder": "Contraseña",
       "error": "Debe introducir una contraseña válida"
     },
+    "lopd": {
+      "text": "Acepto la protección de mis datos por parte de",
+      "link": "Olmix S.A."
+    },
+    "mailing": "Acepto recibir campañas de mailing",
     "submit": "Enviar",
     "have_account": "¿Ya tienes una cuenta?",
     "login": "Inicia sesión",
