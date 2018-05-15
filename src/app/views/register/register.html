@@ -15,7 +15,7 @@
       <form ng-submit="register.onSubmit()" class="register__form" name="register.form" novalidate>
         <div>
           <span class="item item-input">
-            <input type="text" name="name" placeholder="{{'register.name.placeholder'|translate}}"
+            <input type="text" name="name" placeholder="{{'register.name.placeholder'|translate}}*"
                    ng-model="register.fields.name" ng-required="true"/>
           </span>
           <error-label
@@ -24,7 +24,7 @@
         </div>
         <div>
           <span class="item item-input">
-            <input type="text" name="surname" placeholder="{{'register.surname.placeholder'|translate}}"
+            <input type="text" name="surname" placeholder="{{'register.surname.placeholder'|translate}}*"
                    ng-model="register.fields.surname" ng-required="true"/>
           </span>
           <error-label
@@ -33,7 +33,7 @@
         </div>
         <div>
           <span class="item item-input">
-            <input type="text" name="company" placeholder="{{'register.company.placeholder'|translate}}"
+            <input type="text" name="company" placeholder="{{'register.company.placeholder'|translate}}*"
                    ng-model="register.fields.company" ng-required="true"/>
           </span>
           <error-label
@@ -42,7 +42,7 @@
         </div>
         <div>
           <span class="item item-input">
-            <input type="email" name="email" placeholder="{{'register.email.placeholder'|translate}}"
+            <input type="email" name="email" placeholder="{{'register.email.placeholder'|translate}}*"
                    ng-model="register.fields.email" ng-required="true"/>
           </span>
           <error-label
@@ -52,7 +52,7 @@
         </div>
         <div>
           <span class="item item-input">
-            <input type="password" name="password" placeholder="{{'register.password.placeholder'|translate}}"
+            <input type="password" name="password" placeholder="{{'register.password.placeholder'|translate}}*"
                    ng-model="register.fields.password" ng-required="true" ng-minLength="6"/>
           </span>
           <error-label
@@ -61,19 +61,19 @@
           </error-label>
         </div>
         <div>
-          <input type="checkbox" name="lopd" ng-model="register.fields.lopd" ng-required="true"/>
-          {{'register.lopd.text'|translate}} <a href="https://www.olmix.com/legal">{{'register.lopd.link'|translate}}</a>
-        </div>
-        <div>
           <input type="checkbox" name="mailing" ng-model="register.fields.mailing"/>
           {{'register.mailing'|translate}}
+        </div>
+        <div>
+          <input type="checkbox" name="lopd" ng-model="register.fields.lopd" ng-required="true"/>
+          {{'register.lopd.text'|translate}} <a href="https://www.olmix.com/legal">{{'register.lopd.link'|translate}}</a>*
         </div>
         <button type="submit" class="button submit-form">{{'register.submit' | translate}}</button>
         <div class="center" ng-if="register.showLoadingIcon">
           <ion-spinner></ion-spinner>
         </div>
         <div class="center">
-          <error-label error-translate-key="register.error" condition="register.showErrorText"></error-label>
+          <error-label error-translate-key="{{register.errorTextKey}}" condition="register.errorTextKey.length"></error-label>
         </div>
         <hr />
         <p>{{'register.have_account'|translate}} <a ng-click="register.goToLogin()" class="text-brand">{{'register.login'|translate}}</a></p>

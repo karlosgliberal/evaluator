@@ -2,13 +2,13 @@ import { assign } from 'lodash';
 
 export default class RegisterController {
   /*@ngInject*/
-  constructor($scope, $ionicSideMenuDelegate, $timeout, $translate, $state, userRepository, popupManager) {
-    assign(this, {$scope, $ionicSideMenuDelegate, $timeout, $translate, $state, userRepository, popupManager});
+  constructor($scope, $ionicSideMenuDelegate, $timeout, $state, userRepository, popupManager) {
+    assign(this, {$scope, $ionicSideMenuDelegate, $timeout, $state, userRepository, popupManager});
 
     this.setUpSideMenu();
 
     this.showLoadingIcon = false;
-    this.showErrorText = false;
+    this.errorTextKey = '';
     this.fields = {
       name: '',
       surname: '',
@@ -33,8 +33,13 @@ export default class RegisterController {
   }
 
   onSubmit() {
+    if (!this.form.lopd.$valid) {
+      this.handleError('register.lopd.error');
+      return;
+    }
+
     if (!this.form.$valid) {
-      this.handleError();
+      this.handleError('register.invalid');
       return;
     }
 
@@ -48,7 +53,7 @@ export default class RegisterController {
         if (error.message === 'internet') {
           this.showInternetError();
         } else {
-          this.showErrorAndResetForm();
+          this.showErrorAndResetForm('register.error');
         }
       })
       .finally(() => {
@@ -56,10 +61,10 @@ export default class RegisterController {
       });
   }
 
-  handleError() {
-    this.showErrorText = true;
+  handleError(errorTextKey) {
+    this.errorTextKey = errorTextKey;
     this.$timeout(() => {
-      this.showErrorText = false;
+      this.errorTextKey = '';
     }, 3000);
   }
 
@@ -75,13 +80,9 @@ export default class RegisterController {
       });
   }
 
-  showErrorAndResetForm() {
+  showErrorAndResetForm(errorTextKey) {
     this.fields.password = '';
-    this.showErrorText = true;
-
-    this.$timeout(() => {
-      this.showErrorText = false;
-    }, 3000);
+    this.handleError(errorTextKey);
   }
 
   goToLogin() {

@@ -2,8 +2,8 @@ import {assign} from 'lodash';
 
 export default class LogoutController {
   /*@ngInject*/
-  constructor($translate, $state, localStorageManager, popupManager) {
-    assign(this, {$translate, $state, localStorageManager, popupManager});
+  constructor($state, localStorageManager, popupManager) {
+    assign(this, {$state, localStorageManager, popupManager});
   }
 
   prompt() {
