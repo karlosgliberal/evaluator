@@ -28,6 +28,7 @@ describe('Register controller', () => {
     });
 
     controller.form = {$valid: true};
+    controller.form.lopd = { $valid: true };
   }));
 
   it('should set up side menu events', () => {
@@ -37,13 +38,22 @@ describe('Register controller', () => {
     expect(ionicSideMenuDelegateStub.canDragContent.withArgs(true)).to.be.calledOnce;
   });
 
+  it('should not try to register but show error when lopd not filled in', () => {
+    controller.form.lopd.$valid = false;
+
+    controller.onSubmit();
+
+    expect(userRepository.register).to.not.be.called;
+    expect(controller.errorTextKey).to.equal('register.lopd.error');
+  });
+
   it('should not try to register but show error when form submit invalid', () => {
     controller.form.$valid = false;
 
     controller.onSubmit();
 
     expect(userRepository.register).to.not.be.called;
-    expect(controller.showErrorText).to.be.true;
+    expect(controller.errorTextKey).to.equal('register.invalid');
   });
 
   it('should show alert when submit without internet', done => {
@@ -64,9 +74,9 @@ describe('Register controller', () => {
 
     onSubmitPromise.then(() => {
       expect(controller.fields.password).to.be.empty;
-      expect(controller.showErrorText).to.be.true;
+      expect(controller.errorTextKey).to.equal('register.error');
       timeout.flush();
-      expect(controller.showErrorText).to.be.false;
+      expect(controller.errorTextKey).to.equal('');
       done();
     });
   });

@@ -280,13 +280,15 @@
     },
     "lopd": {
       "text": "I accept the protection of my personal data by",
-      "link": "Olmix S.A."
+      "link": "Olmix S.A.",
+      "error": "You have to accept the data protection before registering"
     },
     "mailing": "I accept receiving mailing campaigns",
     "submit": "Submit",
     "have_account": "Already have an account?",
     "login": "Log in",
-    "error": "A problem has happened during your registration"
+    "error": "A problem has happened during your registration",
+    "invalid": "All the required data is needed to register, please fill them in"
   },
   "internet_error": "Network is not available",
   "logout": {
