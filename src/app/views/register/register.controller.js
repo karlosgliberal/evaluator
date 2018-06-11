@@ -16,6 +16,7 @@ export default class RegisterController {
       email: '',
       password: '',
       lopd: false,
+      appMailing: true,
       mailing: false,
     };
   }
@@ -44,6 +45,11 @@ export default class RegisterController {
   handleFormValidation() {
     if (!this.form.lopd.$valid) {
       this.handleError('register.lopd.error');
+      return false;
+    }
+
+    if (!this.form.appMailing.$valid) {
+      this.handleError('register.app_mailing.error');
       return false;
     }
 

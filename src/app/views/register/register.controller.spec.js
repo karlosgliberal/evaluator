@@ -29,6 +29,7 @@ describe('Register controller', () => {
 
     controller.form = {$valid: true};
     controller.form.lopd = { $valid: true };
+    controller.form.appMailing = { $valid: true };
   }));
 
   it('should set up side menu events', () => {
@@ -45,6 +46,15 @@ describe('Register controller', () => {
 
     expect(userRepository.register).to.not.be.called;
     expect(controller.errorTextKey).to.equal('register.lopd.error');
+  });
+
+  it('should not try to register but show error when app mailing not filled in', () => {
+    controller.form.appMailing.$valid = false;
+
+    controller.onSubmit();
+
+    expect(userRepository.register).to.not.be.called;
+    expect(controller.errorTextKey).to.equal('register.app_mailing.error');
   });
 
   it('should not try to register but show error when form submit invalid', () => {
