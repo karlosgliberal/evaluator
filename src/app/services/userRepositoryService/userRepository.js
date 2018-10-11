@@ -19,7 +19,7 @@ export default class userRepository {
     }
 
     return this.$http
-      .post('/api/login', {email: email, password: password}, requestConfig)
+      .post('http://13.93.25.38/api/login', {email: email, password: password}, requestConfig)
       .then(response => response.data);
   }
 
@@ -32,7 +32,7 @@ export default class userRepository {
     const payload = this.getPayloadWithLocale(registerFields);
 
     return this.$http
-      .post('/api/register', payload, requestConfig)
+      .post('http://13.93.25.38/api/register', payload, requestConfig)
       .then(response => response.data);
   }
 

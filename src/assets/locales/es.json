@@ -270,6 +270,10 @@
       "placeholder": "Empresa",
       "error": "Debe introducir una empresa"
     },
+    "country": {
+      "placeholder": "País",
+      "error": "Debe introducir un país de origen"
+    },
     "email": {
       "placeholder": "Correo electrónico",
       "error": "Debe introducir un correo electrónico válido"

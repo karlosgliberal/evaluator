@@ -42,6 +42,15 @@
         </div>
         <div>
           <span class="item item-input">
+            <input type="text" name="country" placeholder="{{'register.country.placeholder'|translate}}*"
+                   ng-model="register.fields.country" ng-required="true"/>
+          </span>
+          <error-label
+            error-translate-key="register.country.error"
+            condition="register.form.country.$error.required && register.form.country.$dirty"></error-label>
+        </div>
+        <div>
+          <span class="item item-input">
             <input type="email" name="email" placeholder="{{'register.email.placeholder'|translate}}*"
                    ng-model="register.fields.email" ng-required="true"/>
           </span>
