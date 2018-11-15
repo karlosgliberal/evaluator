@@ -65,8 +65,12 @@
           {{'register.mailing'|translate}}
         </div>
         <div>
+          <input type="checkbox" name="appMailing" ng-model="register.fields.appMailing" ng-required="true"/>
+          {{'register.app_mailing.text'|translate}}*
+        </div>
+        <div>
           <input type="checkbox" name="lopd" ng-model="register.fields.lopd" ng-required="true"/>
-          {{'register.lopd.text'|translate}} <a href="https://www.olmix.com/legal">{{'register.lopd.link'|translate}}</a>*
+          {{'register.lopd.text'|translate}} <a href="https://www.olmix.com/privacy-policy">{{'register.lopd.link'|translate}}</a>*
         </div>
         <button type="submit" class="button submit-form">{{'register.submit' | translate}}</button>
         <div class="center" ng-if="register.showLoadingIcon">

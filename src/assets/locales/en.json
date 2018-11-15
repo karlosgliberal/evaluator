@@ -283,7 +283,11 @@
       "link": "Olmix S.A.",
       "error": "You have to accept the data protection before registering"
     },
-    "mailing": "I accept receiving mailing campaigns",
+    "app_mailing": {
+      "text": "I confirm that I wish to receive information about notifications and updates of this application",
+      "error": "You have to accept receiving information about updates"
+    },
+    "mailing": "I confirm that I wish to receive Olmix Group's commercial information, promotions and product offers",
     "submit": "Submit",
     "have_account": "Already have an account?",
     "login": "Log in",

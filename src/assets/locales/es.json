@@ -283,7 +283,11 @@
       "link": "Olmix S.A.",
       "error": "Tiene que aceptar la protección de datos para poder registrarse"
     },
-    "mailing": "Acepto recibir campañas de mailing",
+    "app_mailing": {
+      "text": "Confirmo que deseo recibir información de notificaciones y actualizaciones referentes a esta aplicación",
+      "error": "Tiene que aceptar recibir información de actualizaciones"
+    },
+    "mailing": "Confirmo que deseo recibir información comercial, promociones y ofertas de producto de Olmix Group",
     "submit": "Enviar",
     "have_account": "¿Ya tienes una cuenta?",
     "login": "Inicia sesión",
