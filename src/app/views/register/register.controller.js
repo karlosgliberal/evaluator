@@ -15,6 +15,7 @@ export default class RegisterController {
       company: '',
       email: '',
       password: '',
+      country: '',
       lopd: false,
       appMailing: true,
       mailing: false,

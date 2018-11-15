@@ -270,6 +270,10 @@
       "placeholder": "Company",
       "error": "Company is required"
     },
+    "country": {
+      "placeholder": "Country",
+      "error": "Country is required"
+    },
     "email": {
       "placeholder": "Email",
       "error": "A valid email is required"
