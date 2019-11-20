@@ -5,7 +5,7 @@
   "repository": "https://github.com/karlosgliberal/olmix-evaluator",
   "license": "MIT",
   "dependencies": {
-    "angular": "~1.6.9",
+    "angular": "~1.7.9",
     "angular-animate": "~1.6.9",
     "angular-formly": "^7.5.0",
     "angular-formly-templates-ionic": "^1.2.2",
