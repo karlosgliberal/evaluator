@@ -1,6 +1,5 @@
 import {assign} from 'lodash';
 import './images/logo-olmix.png';
-import './images/logos-mtx.png';
 
 const emailPattern = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+(\s*[,.]\s*(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+)*$/;
 
@@ -24,7 +23,6 @@ export default class EvaluationResultController {
     this.animales = this.$stateParams.animal;
     this.validForm = true;
     this.logoOlmix = './assets/images/logo-olmix.png';
-    this.logoMtx = './assets/images/logos-mtx.png';
     this.textImageObj = this.languageFormService.getTextImagen(this.$stateParams, this.animales);
   }
 
