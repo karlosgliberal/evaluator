@@ -20,10 +20,10 @@ export default class languageFormService {
       textoImagenAnimal.image = './assets/images/vaca-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.COW);
     } else if (state.animal === animals.POULTRY){
-      textoImagenAnimal.image = './assets/images/poultry-interior.png';
+      textoImagenAnimal.image = './assets/images/chicken-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.POULTRY);
     } else {
-      textoImagenAnimal.image = './assets/images/swine-interior.png';
+      textoImagenAnimal.image = './assets/images/pig-interior.png';
       textoImagenAnimal.texto = this.$translate.instant('animal.' + animals.SWINE);
     }
 
