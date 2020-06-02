@@ -14,10 +14,11 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
         prefix: 'assets/locales/',
         suffix: '.json'
       })
-       .registerAvailableLanguageKeys(['br', 'de', 'en', 'es', 'fr', 'hu', 'it', 'nl', 'pl', 'ru', 'tr', 'vn', 'zh'], {
+       .registerAvailableLanguageKeys(['br', 'de', 'en', 'en2', 'es', 'fr', 'hu', 'it', 'nl', 'pl', 'ru', 'tr', 'vn', 'zh'], {
          br: 'br',
          de: 'de',
          en: 'en',
+         en2: 'en2',
          es: 'es',
          fr: 'fr',
          hu: 'hu',
@@ -29,8 +30,8 @@ const AppConfig = ($stateProvider, $urlRouterProvider, $translateProvider) => {
          vn: 'vn',
          zh: 'zh'
        })
-      .preferredLanguage('en')
-      .fallbackLanguage('en')
+      .preferredLanguage('en2')
+      .fallbackLanguage('en2')
       .forceAsyncReload(true)
       .useSanitizeValueStrategy('sanitizeParameters');
   $urlRouterProvider.otherwise('/');
