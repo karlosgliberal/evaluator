@@ -25,7 +25,8 @@
     "riskHigh": "Risque important",
     "riskExtreme": "Risque extrême",
     "personalReport": "Rapport personnel Myco’Evaluator",
-    "selected": "Déclarations choisies:"
+    "selected": "Déclarations choisies:",
+    "invalidEmail": "Adresse email invalide"
   },
   "menu": {
     "welcome": "Bienvenue",

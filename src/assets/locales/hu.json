@@ -25,7 +25,8 @@
     "riskHigh": "Magas kockázat",
     "riskExtreme": "Extrém kockázat",
     "personalReport": "Myco’Evaluator Személyes Jelentés",
-    "selected": "Kiválasztott állítások:"
+    "selected": "Kiválasztott állítások:",
+    "invalidEmail": "Érvénytelen e-mail cím"
   },
   "menu": {
     "welcome": "Üdvözöljük",

@@ -25,7 +25,8 @@
     "riskHigh": "Hoog risico",
     "riskExtreme": "Extreem hoog risico",
     "personalReport": "Myco’Evaluator Persoonlijk Rapport",
-    "selected": "Geselecteerde stellingen"
+    "selected": "Geselecteerde stellingen",
+    "invalidEmail": "Het emailadres is niet correct"
   },
   "menu": {
     "welcome": "Welkom",

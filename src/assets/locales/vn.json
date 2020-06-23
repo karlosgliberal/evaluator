@@ -25,7 +25,8 @@
     "riskHigh": "Nguy cơ cao",
     "riskExtreme": "Nguy cơ cực cao",
     "personalReport": "Báo cáo Myco’Evaluator Cá nhân",
-    "selected": "Lựa chọn câu"
+    "selected": "Lựa chọn câu",
+    "invalidEmail": "Địa chỉ email không hợp lệ."
   },
   "menu": {
     "welcome": "Xin chào",

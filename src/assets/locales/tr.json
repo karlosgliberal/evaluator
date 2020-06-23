@@ -25,7 +25,8 @@
     "riskHigh": "Yüksek risk",
     "riskExtreme": "Aşırı risk",
     "personalReport": "Myco’Evaluator Kişisel Rapor",
-    "selected": "İşaretli durumlar"
+    "selected": "İşaretli durumlar",
+    "invalidEmail": "Geçersiz email adresi"
   },
   "menu": {
     "welcome": "Hoşgeldiniz",

@@ -25,7 +25,8 @@
     "riskHigh": "高风险",
     "riskExtreme": "极高风险",
     "personalReport": "个人化毒素评估",
-    "selected": "选择"
+    "selected": "选择",
+    "invalidEmail": "您好，您输入的邮件地址不正确，请重新输入。 谢谢。"
   },
   "menu": {
     "welcome": "欢迎",

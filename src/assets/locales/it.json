@@ -25,7 +25,8 @@
     "riskHigh": "Alto rischio",
     "riskExtreme": "Rischio estremo",
     "personalReport": "Report personale dal valutatore di tossine",
-    "selected": "Dichiarazioni selezionate"
+    "selected": "Dichiarazioni selezionate",
+    "invalidEmail": "Indirizzo mail non corretto"
   },
   "menu": {
     "welcome": "Benvenuto",
